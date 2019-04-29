@@ -1,0 +1,23 @@
+#topBox {
+    width: 100%;
+    height: 130px;
+}
+
+#mainBox {
+    width: 100%;
+    height: 500px;
+    background-color: grey;
+
+}
+
+#searchBox {
+    width: 300px;
+    height: 50px;
+}
+
+
+
+#botBox {
+    width: 100%;
+    height: 100px;
+}
