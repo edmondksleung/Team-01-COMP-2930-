@@ -5,5 +5,14 @@ html {
 body {
     margin: 0px;
     padding: 0px;
+    background-color: azure;
+    display: grid;
+    grid-template-areas: 
+        "top"
+        "middle"
+        "bottom";
+    grid-template-rows: 20% 50% 30%;
+
 }
+
 
