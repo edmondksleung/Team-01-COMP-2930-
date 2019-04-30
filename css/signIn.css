@@ -5,14 +5,39 @@ html {
 body {
     margin: 0px;
     padding: 0px;
-    background-color: azure;
+    background-color: grey;
     display: grid;
     grid-template-areas: 
-        "top"
-        "middle"
+        "logo"
+        "title"
         "bottom";
-    grid-template-rows: 20% 50% 30%;
+    grid-template-rows: 330px 300px 300px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
 
+#top {
+    grid-area: logo;
+    display: flex;
+    padding-top: 100px;
+}
+
+#top img {
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+}
+
+#middle {
+    grid-area: title;
+    font-size: 30pt;
+    text-align: center;
+}
+
+#bottom {
+    grid-area: bottom;
+    padding-left: 25px;
+    text-align: center;
 }
 
 
