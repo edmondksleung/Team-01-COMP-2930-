@@ -16,8 +16,9 @@ body {
         "email"
         "password"
         "button"
-        "empty3";
-    grid-template-rows: 10vh 30vh 6vh 13vh 10vh 10vh 10vh 11vh;
+        "empty3"
+        "signUp";
+    grid-template-rows: 10vh 30vh 6vh 13vh 10vh 10vh 10vh 5vh 6vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
 }
@@ -72,7 +73,6 @@ body {
     grid-area: button;
     width: 100px;
     height: 30px;
-    border: 2px solid white;
     background-color:  rgb(107, 214, 74);
     border: 2px solid  rgb(107, 214, 74);
     border-radius: 10px;
@@ -86,6 +86,25 @@ body {
 #logInButton:hover {
     cursor: pointer;
 }
+
+#signUp {
+    grid-area: signUp;
+    text-align: center;
+    font-size: 9pt;
+}
+
+#signUpText {
+    width: 140px;
+    height: 18px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#signUpText:hover {
+    cursor: pointer;
+    color: rgb(107, 214, 74);
+}
+
 
 
 
