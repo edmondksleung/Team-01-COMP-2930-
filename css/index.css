@@ -2,16 +2,14 @@ html {
     box-sizing: border-box;
 }
 
-body {
-    margin: 0px;
-    padding: 0px;
-}
-
 #topBox {
     width: 100%;
     height: 130px;
+    display: grid;
+    grid-template-areas: 
+        "header header header"
 }
-
+/*
 #mainBox {
     width: 100%;
     height: 500px;
@@ -28,3 +26,4 @@ body {
     width: 100%;
     height: 100px;
 }
+*/
