@@ -4,40 +4,78 @@ html {
 
 body {
     margin: 0px;
-    padding: 0px;
-    background-color: grey;
+    padding: 0px;   
+    background: url(/Images/signInBackground.png) no-repeat;
+    background-size: 100% 100%;
     display: grid;
     grid-template-areas: 
+        "empty1"
         "logo"
         "title"
-        "bottom";
-    grid-template-rows: 330px 300px 300px;
+        "empty2"
+        "text"
+        "studentLogin"
+        "organizationLogin"
+        "empty3";
+    grid-template-rows: 15vh 30vh 6vh 15vh 4vh 10vh 10vh 10vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
 }
 
-#top {
+#logo {
     grid-area: logo;
     display: flex;
-    padding-top: 100px;
 }
 
-#top img {
-    margin: 0 auto;
+#logo img {
+    margin: auto;
     width: 200px;
     height: 200px;
 }
 
-#middle {
+#title {
     grid-area: title;
     font-size: 30pt;
     text-align: center;
+    letter-spacing: 8px;
 }
 
-#bottom {
-    grid-area: bottom;
-    padding-left: 25px;
-    text-align: center;
+#title span {
+    color: rgb(118, 228, 85);
 }
+
+#text {
+    grid-area: text;
+    text-align: center;
+    font-size: 10pt;
+}
+
+#studentLogin {
+    grid-area: studentLogin;
+}
+
+#organizationLogin {
+    grid-area: organizationLogin;
+}
+
+.button {
+    width: 175px;
+    height: 40px;
+    border: 3px solid white;
+    border-radius: 100px;
+    margin: auto auto auto auto;
+    text-align: center;
+    line-height: 40px;
+    vertical-align: middle;
+}
+
+.button:hover {
+    background-color: rgb(87, 194, 55);
+    border: 3px solid rgb(87, 194, 55);
+    cursor: pointer;
+}
+
+
+
 
 
