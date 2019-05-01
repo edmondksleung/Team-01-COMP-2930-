@@ -1,5 +1,5 @@
 // Reference messages collection
-var messagesRef = firebase.database().ref('messages');
+var messagesRef = firebase.database().ref('events');
 
 
 // Listen for form submission
@@ -24,11 +24,17 @@ function submitForm(e) {
   document.querySelector('.alert').style.display = "block";
 
   // Hide Alert after certain time
-  var seconds = 3;
-
   setTimeout(function(){
     document.querySelector('.alert').style.display = "none";
-  }, (seconds * 1000));
+  }, 3000);
+
+  // Resets the form
+  document.getElementById('post').reset();
+
+  // Directs to the previous page
+  setTimeout(function(){
+    window.location.href= '../public/index.html';
+  }, 3000);
 }
 
 
