@@ -18,17 +18,26 @@ body {
 
 #header {
     grid-area: header;
+    display: grid;
+    grid-template-areas: 
+        "topLeft topMiddle topRight"
+        "bottom bottom bottomn";
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 10vh 5vh;     
 }
 
-#logo {
-    grid-area: logo;
-    display: flex;
+#title {
+    grid-area: topMiddle;
+    font-size: 20pt;
+    text-align: center;
+    letter-spacing: 8px;
+    line-height: 10vh;
+    vertical-align: middle;
+    color: white;
 }
 
-#logo img {
-    margin: auto;
-    width: 200px;
-    height: 200px;
+#title span {
+    color: rgb(118, 228, 85);
 }
 
 #mainImage {
