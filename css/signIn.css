@@ -5,7 +5,7 @@ html {
 body {
     margin: 0px;
     padding: 0px;   
-    background: url(/Images/signInBackground.png) no-repeat;
+    background: url(../Images/signInBackground.png) no-repeat;
     background-size: 100% 100%;
     display: grid;
     grid-template-areas: 
@@ -13,11 +13,12 @@ body {
         "logo"
         "title"
         "empty2"
-        "text"
-        "studentLogin"
-        "organizationLogin"
-        "empty3";
-    grid-template-rows: 15vh 30vh 6vh 15vh 4vh 10vh 10vh 10vh;
+        "email"
+        "password"
+        "button"
+        "empty3"
+        "signUp";
+    grid-template-rows: 10vh 30vh 6vh 13vh 10vh 10vh 10vh 5vh 6vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
 }
@@ -44,38 +45,67 @@ body {
     color: rgb(118, 228, 85);
 }
 
-#text {
-    grid-area: text;
+#emailForm {
+    grid-area: email;
+}
+
+#passwordForm {
+    grid-area: password;
+}
+
+.form {
+    width: 250px;
+    height: 35px;
+    display: flex;
+    margin: 0 auto;
+    border: 2px solid white;
+    border-radius: 10px;
     text-align: center;
-    font-size: 10pt;
+    font-size: 11pt;
+    color: rgb(63, 63, 63);
 }
 
-#studentLogin {
-    grid-area: studentLogin;
+.form:hover {
+    border: 2px solid rgb(87, 194, 55);
 }
 
-#organizationLogin {
-    grid-area: organizationLogin;
+/** Gets rid of default blue border that Chrome has. */
+input:focus, textarea {
+    outline: none !important;
 }
 
-.button {
-    width: 175px;
-    height: 40px;
-    border: 3px solid white;
-    border-radius: 100px;
-    margin: auto auto auto auto;
+#logInButton {
+    grid-area: button;
+    width: 100px;
+    height: 30px;
+    background-color:  rgb(97, 204, 65);
+    border: 2px solid  rgb(97, 204, 65);
+    border-radius: 10px;
+    margin: 0 auto;
     text-align: center;
-    line-height: 40px;
+    line-height: 30px;
     vertical-align: middle;
+    font-size: 11pt;
 }
 
-.button:hover {
-    background-color: rgb(87, 194, 55);
-    border: 3px solid rgb(87, 194, 55);
+#logInButton:hover {
     cursor: pointer;
 }
 
+#signUp {
+    grid-area: signUp;
+    text-align: center;
+    font-size: 9pt;
+}
 
+#signUpText {
+    width: 140px;
+    height: 18px;
+    text-align: center;
+    margin: 0 auto;
+}
 
-
-
+#signUpText:hover {
+    cursor: pointer;
+    color: rgb(118, 228, 85);
+}
