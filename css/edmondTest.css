@@ -7,6 +7,7 @@ body {
     padding: 0px; 
     display: grid;
     background: url(../Images/mobileBackground.png) no-repeat;
+    background-size: 100% 100%;
     grid-template-areas: 
         "header"
         "mainImage"
@@ -17,8 +18,17 @@ body {
 
 #header {
     grid-area: header;
-    background: url(../Images/headerBackground.png) no-repeat;
-    background-size: 100% 100%;
+}
+
+#logo {
+    grid-area: logo;
+    display: flex;
+}
+
+#logo img {
+    margin: auto;
+    width: 200px;
+    height: 200px;
 }
 
 #mainImage {
