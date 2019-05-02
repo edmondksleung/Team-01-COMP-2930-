@@ -1,0 +1,31 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px; 
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "mainImage"
+        "content";
+    grid-template-rows: 15vh 60vh 25vh; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#header {
+    grid-area: header;
+    background: url(../Images/headerBackground.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+#mainImage {
+    grid-area: mainImage;
+    background-color: grey;
+}
+
+#content {
+    grid-area: content;
+    background-color: blue;
+}
