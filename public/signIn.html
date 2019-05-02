@@ -3,21 +3,53 @@
 <head>
     <title>Sign in to eVolunteer</title>
     <link rel="stylesheet" type="text/css" href="../css/signIn.css">
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 <body>
-    <div id="logo">
-        <img src="https://sitejerk.com/images/eco-friendly-logo-png-7.png" alt="logoPic">
-    </div>
-    <div id="title"><span>e</span>Volunteer</div>
-    <div id="emailForm">
-        <input id="email" type="email" placeholder="Email" class="form">
-    </div>
-    <div id="passwordForm">
-        <input id="password" type="password" pattern="A-Za-z0-9" placeholder="Password" class="form">
-    </div>
-    <div id="logInButton">Sign In</div>
-    <div id="signUp">
-        <div id="signUpText">Click here and sign up!</div>
-    </div>
+        <div class="wrapper">
+                <div class="container">
+                        <div id="logo">
+                                <img src="https://sitejerk.com/images/eco-friendly-logo-png-7.png" alt="logoPic">
+                            </div>
+        
+                    <h1 id ="title"><b><span>e</span>Volunteer</b></h1>
+                    
+                    <form class="form">
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" id="login-button">Login</button>
+                        <div id="signUp">
+                                <p>No Account? Sign Up!</p>
+                            </div>
+                    </form>
+                    
+                </div>
+                
+                <ul class="bg-bubbles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                    
+            </div>
+        
+        
+            <script>
+        
+             $('#login-button').click(function(event){
+                 event.preventDefault();
+             
+             $('form').fadeOut(500);
+             $('.wrapper').addClass('form-success');
+        });
+        </script>
 </body>
 </html>
