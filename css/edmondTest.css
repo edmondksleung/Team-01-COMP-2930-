@@ -6,6 +6,7 @@ body {
     margin: 0px;
     padding: 0px; 
     display: grid;
+    background: url(../Images/mobileBackground.png) no-repeat;
     grid-template-areas: 
         "header"
         "mainImage"
@@ -22,10 +23,10 @@ body {
 
 #mainImage {
     grid-area: mainImage;
-    background-color: grey;
+    background-color: rgba(235, 14, 14, 0.507);
 }
 
 #content {
     grid-area: content;
-    background-color: blue;
+    background-color: rgba(0, 0, 255, 0.452);
 }
