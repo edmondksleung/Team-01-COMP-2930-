@@ -78,8 +78,8 @@ input:focus, textarea {
     grid-area: button;
     width: 100px;
     height: 30px;
-    background-color:  rgb(107, 214, 74);
-    border: 2px solid  rgb(107, 214, 74);
+    background-color:  rgb(97, 204, 65);
+    border: 2px solid  rgb(97, 204, 65);
     border-radius: 10px;
     margin: 0 auto;
     text-align: center;
@@ -107,5 +107,5 @@ input:focus, textarea {
 
 #signUpText:hover {
     cursor: pointer;
-    color: rgb(107, 214, 74);
+    color: rgb(118, 228, 85);
 }
