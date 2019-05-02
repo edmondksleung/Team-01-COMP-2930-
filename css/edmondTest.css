@@ -10,9 +10,9 @@ body {
     background-size: 100% 100%;
     grid-template-areas: 
         "header"
-        "mainImage"
-        "content";
-    grid-template-rows: 15vh 60vh 25vh; 
+        "form"
+        "empty";
+    grid-template-rows: 15vh 65vh 20vh; 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -40,12 +40,42 @@ body {
     color: rgb(118, 228, 85);
 }
 
-#mainImage {
-    grid-area: mainImage;
-    background-color: rgba(235, 14, 14, 0.507);
+#form {
+    grid-area: form;
+    text-align: center;
+    color: white;
+    font-size: 10pt;
 }
 
+/** Gets rid of default blue border that Chrome has. */
+input:focus, textarea {
+    outline: none !important;
+}
+
+#subject {
+    display: block;
+    width: 80%;
+    height: 20px;
+    margin: 5px auto 5px auto;
+}
+#email {
+    display: block;
+    width: 80%;
+    height: 20px;
+    margin: 5px auto 5px auto;
+}
 #content {
-    grid-area: content;
-    background-color: rgba(0, 0, 255, 0.452);
+    display: block;
+    width: 80%;
+    height: 300px;
+    margin: 5px auto 5px auto;
+}
+
+#submit {
+    width: 60px;
+    background-color:  rgb(97, 204, 65);
+}
+
+#emtpy {
+    grid-area: empty;
 }
