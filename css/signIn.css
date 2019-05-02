@@ -162,7 +162,7 @@ form button:hover {
     width: 10px;
     height: 10px;
     background-color: rgba(249, 255, 242, 0.767);
-    bottom: -160px;
+    bottom: -150px;
     -webkit-animation: circle 25s infinite;
     animation: circle 25s infinite;
     transition-timing-function: linear;
@@ -291,8 +291,8 @@ form button:hover {
     }
 
     100% {
-        -webkit-transform: translateY(-700px) rotate(600deg);
-        transform: translateY(-700px) rotate(600deg);
+        -webkit-transform: translateY(-1100px) rotate(600deg);
+        transform: translateY(-1100px) rotate(600deg);
     }
 }
 
