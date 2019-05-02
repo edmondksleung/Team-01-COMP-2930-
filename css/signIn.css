@@ -69,6 +69,11 @@ body {
     border: 2px solid rgb(87, 194, 55);
 }
 
+/** Gets rid of default blue border that Chrome has. */
+input:focus, textarea {
+    outline: none !important;
+}
+
 #logInButton {
     grid-area: button;
     width: 100px;
