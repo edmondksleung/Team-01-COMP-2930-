@@ -58,7 +58,7 @@ body :-ms-input-placeholder {
 }
 
 .wrapper {
-    background: url("https://liveinthelightguide.com/wp-content/uploads/2018/11/forest2.gif") no-repeat;
+    background: url("https://media.giphy.com/media/KnTF0hTPNDTXy/giphy.gif") no-repeat;
     background-size: 100% 100%;
     position: absolute;
     width: 100%;
@@ -161,7 +161,7 @@ form button:hover {
     box-shadow: 0 0 5px rgb(230, 238, 123);
     width: 10px;
     height: 10px;
-    background-color: rgba(249, 255, 242, 0.767);
+    background-color: rgba(255, 255, 255, 0.418);
     bottom: -150px;
     -webkit-animation: circle 25s infinite;
     animation: circle 25s infinite;
@@ -180,8 +180,8 @@ form button:hover {
     left: 20%;
     border-radius: 50%;
     box-shadow: 0 0 5px rgb(230, 238, 123);
-    width: 12px;
-    height: 12px;
+    width: 11px;
+    height: 11px;
     -webkit-animation-delay: 2s;
     animation-delay: 2s;
     -webkit-animation-duration: 17s;
@@ -200,11 +200,11 @@ form button:hover {
     left: 40%;
     border-radius: 50%;
     box-shadow: 0 0 5px rgb(230, 238, 123);
-    width: 12px;
-    height: 12px;
+    width: 8.5px;
+    height: 8.5px;
     -webkit-animation-duration: 22s;
     animation-duration: 22s;
-    background-color: rgba(249, 255, 242, 0.767);
+    background-color: rgba(255, 255, 255, 0.418);
 }
 
 .bg-bubbles li:nth-child(5) {
@@ -223,16 +223,15 @@ form button:hover {
     height: 7px;
     -webkit-animation-delay: 3s;
     animation-delay: 3s;
-    background-color: rgba(249, 255, 242, 0.767);
+    background-color: rgba(255, 255, 255, 0.418);
 }
 
 .bg-bubbles li:nth-child(7) {
     left: 32%;
     border-radius: 50%;
     box-shadow: 0 0 5px rgb(230, 238, 123);
-
-    width: 12px;
-    height: 12px;
+    width: 11px;
+    height: 11px;
     -webkit-animation-delay: 7s;
     animation-delay: 7s;
 }
@@ -241,8 +240,8 @@ form button:hover {
     left: 55%;
     border-radius: 50%;
     box-shadow: 0 0 5px rgb(230, 238, 123);
-    width: 10px;
-    height: 10px;
+    width: 9px;
+    height: 9px;
     -webkit-animation-delay: 15s;
     animation-delay: 15s;
     -webkit-animation-duration: 40s;
@@ -259,15 +258,15 @@ form button:hover {
     animation-delay: 2s;
     -webkit-animation-duration: 40s;
     animation-duration: 40s;
-    background-color: rgba(249, 255, 242, 0.767);
+    background-color: rgba(255, 255, 255, 0.418);
 }
 
 .bg-bubbles li:nth-child(10) {
     left: 90%;
     border-radius: 50%;
     box-shadow: 0 0 3px rgb(230, 238, 123);
-    width: 9px;
-    height: 9px;
+    width: 3px;
+    height: 3px;
     -webkit-animation-delay: 11s;
     animation-delay: 11s;
 }
