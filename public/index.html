@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html lang="eng">
+    <head>
+        <title>Welcome to eVolunteer! You play your part.</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="../css/index.css">
+        <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/index.js"></script>
 
-<head>
-  <title>Welcome to eVolunteer! You play your part.</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="/css/eVolunteer.css">
-  <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyCjKV-p_CGqxhRcxahylr-6LXUzNax6kek",
-      authDomain: "evolunteer-45c5d.firebaseapp.com",
-      databaseURL: "https://evolunteer-45c5d.firebaseio.com",
-      projectId: "evolunteer-45c5d",
-      storageBucket: "evolunteer-45c5d.appspot.com",
-      messagingSenderId: "412878968573"
-    };
-    firebase.initializeApp(config);
-  </script>
-</head>
 
-<body>
-  index page
-  <!--TOP WRAPPER--------------------------------------------------------------->
-  <div id="topBox">
-    <div id="searchBox">
-      <input type="search" name="search" id="searchBar">
-    </div>
-  </div>
-  <!--TOP WRAPPER--------------------------------------------------------------->
-  <div id="mainBox">
+        <script>
+            // Initialize Firebase
+            var config = {
+              apiKey: "AIzaSyCjKV-p_CGqxhRcxahylr-6LXUzNax6kek",
+              authDomain: "evolunteer-45c5d.firebaseapp.com",
+              databaseURL: "https://evolunteer-45c5d.firebaseio.com",
+              projectId: "evolunteer-45c5d",
+              storageBucket: "evolunteer-45c5d.appspot.com",
+              messagingSenderId: "412878968573"
+            };
+            firebase.initializeApp(config);
+          </script>
+    </head>
+    <body>
+      <!--TOP WRAPPER-->
+        <div id="topBox">
+            <div id="evolunteer">eVolunteer</div>
+            <div id="signin"><a href="../public/sign.html"><img id="signInLogo" src="../Images/signin.png"></a></div>
 
-  </div>
-  <!--TOP WRAPPER--------------------------------------------------------------->
-  <div id="botBox">
+        </div>
 
-  </div>
-</body>
 
+      <!--MAIN WRAPPER-->
+        <div id="mainBox"><img id="globeSpin" src="../Images/globeSpin.gif">
+            <div id="city1">VANCOUVER</div>
+            <div id="city2">BURNABY</div>
+            <div id="city3">PORT COQUITLAM</div>
+        </div>
+
+
+
+      <!--BOTTOM WRAPPER-->
+        <div id="botBox">
+
+        </div>
+    </body>
 </html>
