@@ -7,42 +7,35 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 <body>
-        <div class="wrapper">
-                <div class="container">
-                        <div id="logo">
-                                <img src="https://sitejerk.com/images/eco-friendly-logo-png-7.png" alt="logoPic">
-                            </div>
-        
-                    <h1 id ="title"><b><span>e</span>Volunteer</b></h1>
-                    
-                    <form class="form">
-                        <input type="text" placeholder="Username">
-                        <input type="password" placeholder="Password">
-                        <button type="submit" id="login-button">Login</button>
-                        <div id="signUp">
-                                <p>No Account? Sign Up!</p>
-                            </div>
-                    </form>
-                    
-                </div>
-                
-                <ul class="bg-bubbles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                    
+    <div class="wrapper">
+        <div class="container">
+            <div id="logo">
+                <img src="https://sitejerk.com/images/eco-friendly-logo-png-7.png" alt="logoPic">
             </div>
-        
-        
-            <script>
+            <h1 id ="title"><b><span>e</span>Volunteer</b></h1>
+            <form class="form">
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <button type="submit" id="login-button">Login</button>
+                <div id="signUp">
+                    <p>No Account? Sign Up!</p>
+                </div>
+            </form>
+        </div>
+        <ul class="bg-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script>
         
              $('#login-button').click(function(event){
                  event.preventDefault();
@@ -50,6 +43,6 @@
              $('form').fadeOut(500);
              $('.wrapper').addClass('form-success');
         });
-        </script>
+    </script>
 </body>
 </html>
