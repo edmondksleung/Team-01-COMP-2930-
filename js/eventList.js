@@ -1,16 +1,29 @@
-var database = firebase.database();
-var dbref = database.ref('events');
+let database = firebase.database();
+let dbref = database.ref('events');
 dbref.on('value', gotData, errData);
 
+// Grabs data from firebase
 function gotData(data) {
   //console.log(data.val());
-  var events = data.val();
-  var keys = Object.keys(events);
-  console.log(keys);
-  for (var i = 0; i < keys.length; i++){
-    var k = keys[i];
-    var event = events[k].subject;
-    console.log(event);
+  let events = data.val();
+  let keys = Object.keys(events);
+  //console.log(keys);
+
+  // Loop that creates list for each event
+  for (let i = 0; i < keys.length; i++){
+    let k = keys[i];
+    let event = events[k].subject;
+    //console.log(event);
+    let list = document.createElement('li');
+    // Giving attibute to list that redirects to the detail page
+    let link = document.createElement('a');
+    link.setAttribute('href', '../public/eventDetail.html');
+    // Append event data in the anchor
+    link.append(event);
+    // Append anchor in the list
+    list.append(link);
+    let eventsList = document.getElementById('eventsList');
+    eventsList.append(list);
   }
 }
 

@@ -1,5 +1,5 @@
 // Reference messages collection
-var messagesRef = firebase.database().ref('events');
+let messagesRef = firebase.database().ref('events');
 
 
 // Listen for form submission
@@ -12,9 +12,9 @@ function submitForm(e) {
 
 
   // get value from the text fields
-  var subject = getInputVal('subject');
-  var email = getInputVal('email');
-  var content = getInputVal('content');
+  let subject = getInputVal('subject');
+  let email = getInputVal('email');
+  let content = getInputVal('content');
 
 
   // Saves message
@@ -26,14 +26,14 @@ function submitForm(e) {
   // Hide Alert after certain time
   setTimeout(function(){
     document.querySelector('.alert').style.display = "none";
-  }, 3000);
+  }, 2000);
 
   // Resets the form
   document.getElementById('post').reset();
 
   // Directs to the previous page
   setTimeout(function(){
-    window.location.href= '../public/index.html';
+    window.location.href= '../public/eventList.html';
   }, 3000);
 }
 
@@ -46,7 +46,7 @@ function getInputVal(id) {
 
 // save message to firebase
 function saveMessage(subject, email, content){
-  var newMessageRef = messagesRef.push();
+  let newMessageRef = messagesRef.push();
   newMessageRef.set({
     subject: subject,
     email: email,
