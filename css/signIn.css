@@ -13,11 +13,11 @@ body {
         "logo"
         "title"
         "empty2"
-        "text"
-        "studentLogin"
-        "organizationLogin"
+        "email"
+        "password"
+        "button"
         "empty3";
-    grid-template-rows: 15vh 30vh 6vh 15vh 4vh 10vh 10vh 10vh;
+    grid-template-rows: 10vh 30vh 6vh 13vh 10vh 10vh 10vh 11vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
 }
@@ -44,36 +44,52 @@ body {
     color: rgb(118, 228, 85);
 }
 
-#text {
-    grid-area: text;
+#emailForm {
+    grid-area: email;
+}
+
+#passwordForm {
+    grid-area: password;
+}
+
+.form {
+    width: 250px;
+    height: 35px;
+    display: flex;
+    margin: 0 auto;
+    border: 2px solid white;
+    border-radius: 10px;
     text-align: center;
-    font-size: 10pt;
+    font-size: 11pt;
+    color: rgb(63, 63, 63);
 }
 
-#studentLogin {
-    grid-area: studentLogin;
+.form:hover {
+    border: 2px solid rgb(87, 194, 55);
 }
 
-#organizationLogin {
-    grid-area: organizationLogin;
-}
-
-.button {
-    width: 175px;
-    height: 40px;
-    border: 3px solid white;
-    border-radius: 100px;
-    margin: auto auto auto auto;
+#logInButton {
+    grid-area: button;
+    width: 100px;
+    height: 30px;
+    border: 2px solid white;
+    background-color:  rgb(107, 214, 74);
+    border: 2px solid  rgb(107, 214, 74);
+    border-radius: 10px;
+    margin: 0 auto;
     text-align: center;
-    line-height: 40px;
+    line-height: 30px;
     vertical-align: middle;
+    font-size: 11pt;
 }
 
-.button:hover {
-    background-color: rgb(87, 194, 55);
-    border: 3px solid rgb(87, 194, 55);
+#logInButton:hover {
     cursor: pointer;
 }
+
+
+
+
 
 
 
