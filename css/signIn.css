@@ -58,7 +58,7 @@ body :-ms-input-placeholder {
 }
 
 .wrapper {
-    background: url("https://thumbs.gfycat.com/PolishedDeadCollie-size_restricted.gif") no-repeat;
+    background: url("http://i.imgur.com/SYBPg6L.jpg") no-repeat;
     background-size: 100% 100%;
     position: absolute;
     width: 100%;
@@ -159,8 +159,8 @@ form button:hover {
     display: block;
     border-radius: 50%;
     box-shadow: 0 0 5px rgb(230, 238, 123);
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     background-color: rgba(255, 255, 255, 0.418);
     bottom: -150px;
     -webkit-animation: circle 25s infinite;
@@ -180,8 +180,8 @@ form button:hover {
     left: 20%;
     border-radius: 50%;
     box-shadow: 0 0 5px rgb(230, 238, 123);
-    width: 11px;
-    height: 11px;
+    width: 4px;
+    height: 4px;
     -webkit-animation-delay: 2s;
     animation-delay: 2s;
     -webkit-animation-duration: 17s;
