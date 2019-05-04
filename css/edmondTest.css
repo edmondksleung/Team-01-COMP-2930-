@@ -6,8 +6,9 @@ body {
     margin: 0px;
     padding: 0px; 
     display: grid;
-    background: url(../Images/mobileBackground.png) no-repeat;
-    background-size: 100% 100%;
+    /** background: url(../Images/mobileBackground.png) no-repeat; 
+    background-size: 100% 100%; */
+    background-color: lightgray;
     grid-template-areas: 
         "header"
         "form";
@@ -50,7 +51,7 @@ body {
         "end"
         "description"
         "post";
-    grid-template-rows: 10vh 10vh 5vh 5vh 5vh 30vh 25vh;
+    grid-template-rows: 15vh 10vh 5vh 5vh 10vh 30vh 10vh;
     text-align: center;
     color: white;
     font-size: 10pt;
@@ -65,7 +66,7 @@ input:focus, textarea {
     grid-area: title;
     padding: 10px;
     font-size: 15pt;
-    margin-bottom: 5px;
+    margin-bottom: 50px;
 }
 
 #eventPhoto {
@@ -89,7 +90,7 @@ input:focus, textarea {
 #eventEnd {
     grid-area: end;
     padding: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 43px;
 }
 
 #eventDescription {
