@@ -10,9 +10,8 @@ body {
     background-size: 100% 100%;
     grid-template-areas: 
         "header"
-        "form"
-        "empty";
-    grid-template-rows: 15vh 65vh 20vh; 
+        "form";
+    grid-template-rows: 10vh 90vh; 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -42,6 +41,16 @@ body {
 
 #form {
     grid-area: form;
+    display: grid;
+    grid-template-areas: 
+        "title"
+        "photo"
+        "location"
+        "start"
+        "end"
+        "description"
+        "post";
+    grid-template-rows: 10vh 10vh 5vh 5vh 5vh 30vh 25vh;
     text-align: center;
     color: white;
     font-size: 10pt;
@@ -52,30 +61,40 @@ input:focus, textarea {
     outline: none !important;
 }
 
-#subject {
-    display: block;
-    width: 80%;
-    height: 20px;
-    margin: 5px auto 5px auto;
-}
-#email {
-    display: block;
-    width: 80%;
-    height: 20px;
-    margin: 5px auto 5px auto;
-}
-#content {
-    display: block;
-    width: 80%;
-    height: 300px;
-    margin: 5px auto 5px auto;
+#eventName {
+    grid-area: title;
+    padding: 10px;
+    font-size: 15pt;
+    margin-bottom: 5px;
 }
 
-#submit {
-    width: 60px;
-    background-color:  rgb(97, 204, 65);
+#eventPhoto {
+    grid-area: photo;
+    padding: 10px;
+    margin-bottom: 5px;
 }
 
-#emtpy {
-    grid-area: empty;
+#eventLocation {
+    grid-area: location;
+    padding: 10px;
+    margin-bottom: 5px;
 }
+
+#eventStart {
+    grid-area: start;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+#eventEnd {
+    grid-area: end;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+#eventDescription {
+    grid-area: description;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
