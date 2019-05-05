@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Sign in to eVolunteer</title>
     <link rel="stylesheet" type="text/css" href="../css/signIn.css">
     <!--JQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
     <!-- Initialize Firebase -->
     <script>
-    var config = {
-        apiKey: "AIzaSyCjKV-p_CGqxhRcxahylr-6LXUzNax6kek",
-        authDomain: "evolunteer-45c5d.firebaseapp.com",
-        databaseURL: "https://evolunteer-45c5d.firebaseio.com",
-        projectId: "evolunteer-45c5d",
-        storageBucket: "evolunteer-45c5d.appspot.com",
-        messagingSenderId: "412878968573"
-      };
-      firebase.initializeApp(config);
+        var config = {
+            apiKey: "AIzaSyCjKV-p_CGqxhRcxahylr-6LXUzNax6kek",
+            authDomain: "evolunteer-45c5d.firebaseapp.com",
+            databaseURL: "https://evolunteer-45c5d.firebaseio.com",
+            projectId: "evolunteer-45c5d",
+            storageBucket: "evolunteer-45c5d.appspot.com",
+            messagingSenderId: "412878968573"
+        };
+        firebase.initializeApp(config);
+        var rootRef = firebase.database().ref();
     </script>
 </head>
+
 <body>
     <div class="wrapper">
         <div class="container">
             <div id="logo">
                 <img src="https://sitejerk.com/images/eco-friendly-logo-png-7.png" alt="logoPic">
             </div>
-            <h1 id ="title"><b><span>e</span>Volunteer</b></h1>
+            <h1 id="title">
+                <b>
+                    <span>e</span>Volunteer</b>
+            </h1>
             <form class="form">
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
-                <button type="submit" id="login-button">Login</button>
+                <input type="text" placeholder="Username" id="emailField">
+                <input type="password" placeholder="Password" id="passField">
+                <button type="submit" id="loginButton">Login</button>
                 <div id="signUp">
-                    <p>No Account? Sign Up!</p>
+                    <p id="firebaseui-auth-container">No Account? Sign Up!</p>
                 </div>
             </form>
         </div>
@@ -48,15 +58,139 @@
         </ul>
     </div>
 
+    <div class="mainPageWrapper">
+        <div id="userStatus"></div>
+
+
+
+
+    </div>
+
+
     <script>
-             $('#login-button').click(function(event){
-                 event.preventDefault();
-             
-             $('form').fadeOut(500);
-             $('.wrapper').addClass('form-success');
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                // User is signed in.
+
+                document.getElementsByClassName("wrapper").style.display = "none";
+                document.getElementsByClassName("mainPageWrapper").style.display = "block";
+
+                var user = firebase.auth().currentUser;
+
+                if (user != null) {
+
+                    var email_id = user.email;
+                    document.getElementById("userStatus").innerHTML = "Welcome User : " + email_id;
+
+                }
+
+            } else {
+                // No user is signed in.
+
+                document.getElementsByClassName("wrapper").style.display = "block";
+                document.getElementsByClassName("mainPageWrapper").style.display = "none";
+
+            }
         });
+
+        // function login() {
+
+        //     var userEmail = document.getElementById("email_field").value;
+        //     var userPass = document.getElementById("password_field").value;
+
+        //     firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function (error) {
+        //         // Handle Errors here.
+        //         var errorCode = error.code;
+        //         var errorMessage = error.message;
+
+        //         window.alert("Error : " + errorMessage);
+
+        //         // ...
+        //     });
+
+        // }
+        // firebase.auth().onAuthStateChanged(user => {
+        //     if (user) {
+        //         window.location = 'index.html'; //After successful login, user will be redirected to index.html
+        //     }
+        // });
+
+    </script>
+    <script>
+        // var user = firebase.auth().currentUser;
+
+        //Function event jquery function upon clicking login button
+        $('#loginButton').click(function (event) {
+            // firebase.auth().onAuthStateChanged(user => {
+            // if (user) {
+            event.preventDefault();
+            $('form').fadeOut(500);
+            $('.wrapper').addClass('form-success');
+            $('.form-success').fadeOut(1000);
+
+            // } else {
+            //User is signed out.
+        });
+
+        //If firebase user recognized...
+        //Fades out the login form,
+        //Shifts the eVolunteer h1 header downwards,
+        //Fades out the signIn page
+
+        // var userEmail = document.getElementById("emailField").value;
+        // var userPass = document.getElementById("passField").value;
+
+        // firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function (error) {
+        //     // Handle Errors here.
+        //     var errorCode = error.code;
+        //     var errorMessage = error.message;
+
+        //     $('#login-button').addClass('invalid');
+        //     setTimeout(function () {
+        //         $('#login-button').removeClass('invalid');
+        //     }, 2000);
 
 
     </script>
+
+    <script>
+
+        $('#signUp').click(function (event) {
+            var uiConfig = {
+                callbacks: {
+                    signInSuccessWithAuthResult: function (authResult, redirectUrl) {
+                        // User successfully signed in.
+                        // Return type determines whether we continue the redirect automatically
+                        // or whether we leave that to developer to handle.
+                        return true;
+                    },
+                    uiShown: function () {
+                        // The widget is rendered.
+                        // Hide the loader.
+                        document.getElementById('loader').style.display = 'none';
+                    }
+                },
+                // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+                signInFlow: 'popup',
+                signInSuccessUrl: 'index.html',
+                signInOptions: [
+                    // Leave the lines as is for the providers you want to offer your users.
+                    firebase.auth.EmailAuthProvider.PROVIDER_ID,
+                    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                    firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+                    firebase.auth.GithubAuthProvider.PROVIDER_ID,
+                ],
+                // Terms of service url.
+                tosUrl: 'index.html',
+                // Privacy policy url.
+                privacyPolicyUrl: 'index.html'
+            };
+
+            // The start method will wait until the DOM is loaded.
+            ui.start('#firebaseui-auth-container', uiConfig);
+        });
+
+    </script>
 </body>
+
 </html>
