@@ -61,6 +61,18 @@
     <div class="mainPageWrapper">
         <div id="userStatus"></div>
 
+        <div class = "cityImage" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/a0/FuturebigToronto.jpg);">
+            <h1>VANCOUVER</h1>
+        </div>
+    
+        <div class = "cityImage" style="background-image: url(https://res.cloudinary.com/g5-assets-cld/image/upload/x_0,y_326,h_3389,w_5648,c_crop/q_auto,f_auto,fl_lossy,g_center,h_1200,w_2000/g5/g5-c-5cpnmi9wp-quadreal/g5-cl-1hj4q9obd6-parkview-towers/uploads/0Z8A6304_d5hshm.jpg);">
+            <h1>BURNABY</h1>
+        </div>
+    
+        <div class = "cityImage" style="background-image: url(http://greatplacesincanada.ca/wp-content/uploads/2017/10/Town_Centre_Park.jpg);">
+            <h1>COQUITLAM</h1>
+        </div>
+    
 
 
 
@@ -68,30 +80,30 @@
 
 
     <script>
-        firebase.auth().onAuthStateChanged(function (user) {
-            if (user) {
+        // firebase.auth().onAuthStateChanged(function (user) {
+        //     if (user) {
                 // User is signed in.
 
-                document.getElementsByClassName("wrapper").style.display = "none";
-                document.getElementsByClassName("mainPageWrapper").style.display = "block";
+                // document.getElementsByClassName("wrapper").style.display = "none";
+                // document.getElementsByClassName("mainPageWrapper").style.display = "block";
 
-                var user = firebase.auth().currentUser;
+                // var user = firebase.auth().currentUser;
 
-                if (user != null) {
+        //         if (user != null) {
 
-                    var email_id = user.email;
-                    document.getElementById("userStatus").innerHTML = "Welcome User : " + email_id;
+        //             var email_id = user.email;
+        //             document.getElementById("userStatus").innerHTML = "Welcome User : " + email_id;
 
-                }
+        //         }
 
-            } else {
-                // No user is signed in.
+        //     } else {
+        //         // No user is signed in.
 
-                document.getElementsByClassName("wrapper").style.display = "block";
-                document.getElementsByClassName("mainPageWrapper").style.display = "none";
+        //         document.getElementsByClassName("wrapper").style.display = "block";
+        //         document.getElementsByClassName("mainPageWrapper").style.display = "none";
 
-            }
-        });
+        //     }
+        // });
 
         // function login() {
 
@@ -124,9 +136,13 @@
             // firebase.auth().onAuthStateChanged(user => {
             // if (user) {
             event.preventDefault();
-            $('form').fadeOut(500);
+            $('form').fadeOut(50);
             $('.wrapper').addClass('form-success');
-            $('.form-success').fadeOut(1000);
+            $('.form-success').fadeOut(2000);
+            setTimeout(function () {
+            $('.mainPageWrapper').fadeIn(2000);
+            }, 1000);
+            $('.mainPageWrapper').display('block');
 
             // } else {
             //User is signed out.
