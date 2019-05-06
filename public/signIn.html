@@ -39,14 +39,16 @@
                 <input type="text" placeholder="Username" id="emailField">
                 <input type="password" placeholder="Password" id="passField">
                 <button type="submit" id="loginButton">Login</button>
-                <div id="signUp">
-                    No Account? Sign Up!
-                        <div id="myModal" class="modal">
-                                <!-- Modal content -->
-                                <p id="firebaseui-auth-container"></p>
-                              </div>
-                              
+
+                <div id="signUpMargin">
+        <a id="signUp">No Account? Sign Up</a>
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div id="firebaseui-auth-container">
+          </div>
+        </div>             
                 </div>
+                
             </form>
         </div>
         <ul class="bg-bubbles">
@@ -210,7 +212,7 @@
                 },
                 // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
                 signInFlow: 'popup',
-                signInSuccessUrl: 'index.html',
+                signInSuccessUrl: 'signIn.html',
                 signInOptions: [
                     // Leave the lines as is for the providers you want to offer your users.
                     firebase.auth.EmailAuthProvider.PROVIDER_ID,
@@ -219,9 +221,9 @@
                     firebase.auth.GithubAuthProvider.PROVIDER_ID,
                 ],
                 // Terms of service url.
-                tosUrl: 'index.html',
+                tosUrl: 'signIn.html',
                 // Privacy policy url.
-                privacyPolicyUrl: 'index.html'
+                privacyPolicyUrl: 'signIn.html'
             };
 
             // The start method will wait until the DOM is loaded.

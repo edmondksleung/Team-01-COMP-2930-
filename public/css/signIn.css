@@ -88,7 +88,6 @@ body :-ms-input-placeholder {
 }
 
 .container h1 {
-    font-size: 40px;
     transition-duration: 1s;
     /* transition-timing-function: ease-in-put; */
     font-weight: 200;
@@ -320,11 +319,9 @@ form button:hover {
     color: rgb(118, 228, 85);
 }
 
+
 #signUp {
     font-size: 10pt;
-}
-
- #signUp {
     margin: 0 auto;
     width: 140px;
 } 
@@ -333,6 +330,7 @@ form button:hover {
     cursor: pointer;
     color: rgb(118, 228, 85);
 }
+
 
 #loginButton.invalid {
     background-color:red;
@@ -484,6 +482,4 @@ div.cityImage h1 {
     }
   }
 
-  .firebaseui-form-actions {
-      text-align: left;
-  }
+ 
