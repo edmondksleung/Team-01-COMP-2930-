@@ -4,28 +4,27 @@
 <head>
     <title>Sign in to eVolunteer</title>
     <link rel="stylesheet" type="text/css" href="css/signIn.css">
-    
+
     <!--JQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     <script>
-            //skip login page while signed in.
-            $(document).ready(function() {
+        //skip login page while signed in.
+        $(document).ready(function () {
             firebase.auth().onAuthStateChanged(user => {
-        if(user) {
-                        setTimeout(function () {
-                            $('.subPageWrapper').fadeIn(500);
-                        }, 1000);
-                        $('.subPageWrapper').display('block');
-                    }
-                    else {
-                        $(".wrapper").show();
-                    }
-                });
+                if (user) {
+                    setTimeout(function () {
+                        $('.subPageWrapper').fadeIn(500);
+                    }, 1000);
+                    $('.subPageWrapper').display('block');
+                } else {
+                    $(".wrapper").show();
+                }
             });
-        </script>
+        });
+    </script>
     <!-- Initialize Firebase -->
     <script>
         var config = {
@@ -39,7 +38,7 @@
         firebase.initializeApp(config);
         var rootRef = firebase.database().ref();
     </script>
-    
+
 </head>
 
 <body>
@@ -58,14 +57,14 @@
                 <button type="submit" id="loginButton">Login</button>
 
                 <div id="signUpMargin">
-        <a id="signUp">No Account? Sign Up</a>
-        <div id="myModal" class="modal">
-          <!-- Modal content -->
-          <div id="firebaseui-auth-container">
-          </div>
-        </div>             
+                    <a id="signUp">No Account? Sign Up</a>
+                    <div id="myModal" class="modal">
+                        <!-- Modal content -->
+                        <div id="firebaseui-auth-container">
+                        </div>
+                    </div>
                 </div>
-                
+
             </form>
         </div>
         <ul class="bg-bubbles">
@@ -81,10 +80,13 @@
             <li></li>
         </ul>
     </div>
+    <!------------------------NAV PAGE----------------------------------->
     <div class="subPageWrapper">
         <div id="topBox">
             <div id="evolunteer">Welcome!</div>
             <div id="signin"><a href="../public/sign.html"><img id="signInLogo" src="../Images/signin.png" alt=""></a>
+                <button onclick="logout()" type="submit" id="logoutButton">Log Out</button>
+
             </div>
         </div>
         <!--MAIN SUB WRAPPER-->
@@ -172,36 +174,44 @@
 
 
             //If firebase user recognized...
-        //Fades out the login form,
-        //Shifts the eVolunteer h1 header downwards,
-        //Fades out the signIn page
-    var user = firebase.auth().currentUser;
-  var userEmail = $("#emailField").val();
-  var userPass = $("#passField").val();
+            //Fades out the login form,
+            //Shifts the eVolunteer h1 header downwards,
+            //Fades out the signIn page
+            var user = firebase.auth().currentUser;
+            var userEmail = $("#emailField").val();
+            var userPass = $("#passField").val();
 
-            firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
-        
-     $('#loginButton').addClass('invalid');
+            firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function (error) {
+
+                $('#loginButton').addClass('invalid');
                 setTimeout(function () {
-                $('#loginButton').removeClass('invalid');
-                }, 1000);  
-            });
-   
-            firebase.auth().onAuthStateChanged(user => {
-                    if(user) {
-                    $('form').fadeOut(50);
-                $('.wrapper').addClass('form-success');
-                $('.form-success').fadeOut(2000);
-                setTimeout(function () {
-                    $('.subPageWrapper').fadeIn(2000);
+                    $('#loginButton').removeClass('invalid');
                 }, 1000);
-                $('.subPageWrapper').display('block');
-            }
-                
-        });
-});
+            });
 
-        
+            firebase.auth().onAuthStateChanged(user => {
+                if (user) {
+                    $('form').fadeOut(50);
+                    $('.wrapper').addClass('form-success');
+                    $('.form-success').fadeOut(2000);
+                    setTimeout(function () {
+                        $('.subPageWrapper').fadeIn(2000);
+                    }, 1000);
+                    $('.subPageWrapper').display('block');
+                }
+
+            });
+        });
+    </script>
+
+
+    <script>
+        //---------------------SIGN OUT------------------------
+        function logout() {
+            firebase.auth().signOut();
+            alert('Logged Out');
+            window.location = 'signIn.html';
+        }
     </script>
 
 
@@ -229,7 +239,7 @@
                         // or whether we leave that to developer to handle.
                         return true;
                     },
-                    
+
                 },
                 // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
                 signInFlow: 'popup',
@@ -252,22 +262,22 @@
         });
     </script>
     <script>
-       var modal = document.getElementById("myModal");
-      
-      // Get the button that opens the modal
-      var signUpButton = document.getElementById("signUp");
-      
-      // When the user clicks on the button, open the modal 
-      signUpButton.onclick = function() {
-      modal.style.display = "block";
-      }
-      
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-      if (event.target == modal) {
-      modal.style.display = "none";
-      }
-      }
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var signUpButton = document.getElementById("signUp");
+
+        // When the user clicks on the button, open the modal 
+        signUpButton.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
     </script>
 </body>
 

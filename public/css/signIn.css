@@ -396,7 +396,7 @@ div.cityImage h1 {
 
 #topBox {
     width: 100%;
-    height: 180px;
+    height: 100px;
     display: grid;
     grid-template-areas:
         "header1 header2 header3";
@@ -405,8 +405,11 @@ div.cityImage h1 {
 }
 
 #evolunteer {
+    height: 100px;
     grid-area: header2;
-    margin: auto;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 30pt;
     z-index: 1;
 }
@@ -418,10 +421,16 @@ div.cityImage h1 {
 }
 
 #signInLogo {
+    margin-top: 70px;
     height: 100px;
     width: 100px;
 }
 
+#logoutButton {
+    background: none;
+    color: white;
+    border: none;
+}
 #mainBox {
     text-align: center;
 }
