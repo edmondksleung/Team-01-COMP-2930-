@@ -151,37 +151,35 @@
 
         //Function event jquery function upon clicking login button
         $('#loginButton').click(function (event) {
-            // firebase.auth().onAuthStateChanged(user => {
-            // if (user) {
             event.preventDefault();
-            
-            $('form').fadeOut(50);
-            $('.wrapper').addClass('form-success');
-            $('.form-success').fadeOut(2000);
-            setTimeout(function () {
-                $('.subPageWrapper').fadeIn(2000);
-            }, 1000);
-            $('.subPageWrapper').display('block');
-            // } else {
-            //User is signed out.
-        });
-        //If firebase user recognized...
+
+            firebase.auth().onAuthStateChanged(user => {
+                    if(user) {
+                    $('form').fadeOut(50);
+                $('.wrapper').addClass('form-success');
+                $('.form-success').fadeOut(2000);
+                setTimeout(function () {
+                    $('.subPageWrapper').fadeIn(2000);
+                }, 1000);
+                $('.subPageWrapper').display('block');
+            } else {
+                //If firebase user recognized...
         //Fades out the login form,
         //Shifts the eVolunteer h1 header downwards,
         //Fades out the signIn page
+  var userEmail = $("#emailField").val();
+  var userPass = $("#passField").val();
 
-        // var userEmail = document.getElementById("emailField").value;
-        // var userPass = document.getElementById("passField").value;
-
-        // firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function (error) {
-        //     // Handle Errors here.
-        //     var errorCode = error.code;
-        //     var errorMessage = error.message;
-
-        //     $('#loginButton').addClass('invalid');
-        //     setTimeout(function () {
-        //         $('#loginButton').removeClass('invalid');
-        //     }, 2000);
+  firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
+    error.preventDefault;
+     $('#loginButton').addClass('invalid');
+                setTimeout(function () {
+                $('#loginButton').removeClass('invalid');
+                }, 1000);  });
+            }
+    });
+        });
+        
     </script>
 
     <script>
