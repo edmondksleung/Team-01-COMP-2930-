@@ -1,0 +1,101 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px; 
+    display: grid;
+    /** background: url(../Images/mobileBackground.png) no-repeat; 
+    background-size: 100% 100%; */
+    background-color: lightgray;
+    grid-template-areas: 
+        "header"
+        "form";
+    grid-template-rows: 10vh 90vh; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#header {
+    grid-area: header;
+    display: grid;
+    grid-template-areas: 
+        "topLeft topMiddle topRight"
+        "bottom bottom bottomn";
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 10vh 5vh;     
+}
+
+#title {
+    grid-area: topMiddle;
+    font-size: 20pt;
+    text-align: center;
+    letter-spacing: 8px;
+    line-height: 10vh;
+    vertical-align: middle;
+    color: white;
+}
+
+#title span {
+    color: rgb(118, 228, 85);
+}
+
+#form {
+    grid-area: form;
+    display: grid;
+    grid-template-areas: 
+        "title"
+        "photo"
+        "location"
+        "start"
+        "end"
+        "description"
+        "post";
+    grid-template-rows: 15vh 10vh 5vh 5vh 10vh 30vh 10vh;
+    text-align: center;
+    color: white;
+    font-size: 10pt;
+}
+
+/** Gets rid of default blue border that Chrome has. */
+input:focus, textarea {
+    outline: none !important;
+}
+
+#eventName {
+    grid-area: title;
+    padding: 10px;
+    font-size: 15pt;
+    margin-bottom: 50px;
+}
+
+#eventPhoto {
+    grid-area: photo;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+#eventLocation {
+    grid-area: location;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+#eventStart {
+    grid-area: start;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+#eventEnd {
+    grid-area: end;
+    padding: 10px;
+    margin-bottom: 43px;
+}
+
+#eventDescription {
+    grid-area: description;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+

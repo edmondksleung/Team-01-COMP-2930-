@@ -1,29 +1,69 @@
-html {
-    box-sizing: border-box;
+body{
+    background-color: rgb(33,49,92);
+    overflow: hidden;
 }
-
 #topBox {
     width: 100%;
-    height: 130px;
+    height: 180px;
     display: grid;
     grid-template-areas: 
-        "header header header"
+        "header1 header2 header3"; 
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 300px;
 }
-/*
-#mainBox {
-    width: 100%;
-    height: 500px;
-    background-color: grey;
-
+#evolunteer{
+    grid-area: header2;
+    margin: auto;
+    font-size: 30pt;
+    z-index: 1;
 }
-
-#searchBox {
-    width: 300px;
-    height: 50px;
+#signin{
+    grid-area: header3;
+    margin: 0 auto;
+    z-index: 1;
 }
-
-#botBox {
-    width: 100%;
+#signInLogo{
     height: 100px;
+    width: 100px;
 }
-*/
+#mainBox{
+    text-align: center;
+}
+#mainBox img{
+    z-index: -1;
+}
+#city1{
+    background-color: rgb(91, 160, 44);
+    color: white;
+    visibility: hidden;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 25pt;
+    border-radius: 20px;
+}
+#city2{
+    background-color: rgb(91, 160, 44);
+    color: white;
+    visibility: hidden;
+    margin-top: 5px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 25pt;
+    border-radius: 20px;
+}
+#city3{
+    background-color: rgb(91, 160, 44);
+    color: white;
+    visibility: hidden;
+    margin-top: 5px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 25pt;
+    border-radius: 20px;
+}
