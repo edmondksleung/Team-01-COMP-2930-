@@ -29,7 +29,7 @@
     <div class="wrapper">
         <div class="container">
             <div id="logo">
-                <img src="Images/globeSpin.gif" alt="logoPic">
+                <img src="https://media1.giphy.com/media/l1KVcrdl7rJpFnY2s/giphy.gif" alt="logoPic">
             </div>
             <h1 id="title">
                 <b>
@@ -58,29 +58,33 @@
         </ul>
     </div>
     <div class="subPageWrapper">
-            <div id="topBox">
-                    <div id="evolunteer">Click to Choose Your City!</div>
-                    <div id="signin"><a href="../public/sign.html"><img id="signInLogo" src="Image/signin.png" alt=""></a></div>
-                </div>
-    <!--MAIN SUB WRAPPER-->
-<div id="mainBox"><img id="globeLogo" src="https://media1.giphy.com/media/l1KVcrdl7rJpFnY2s/giphy.gif" alt="">
-</div>
+        <div id="topBox">
+            <div id="evolunteer">Click to Choose Your City!</div>
+            <div id="signin"><a href="../public/sign.html"><img id="signInLogo" src="../Images/signin.png" alt=""></a>
+            </div>
+        </div>
+        <!--MAIN SUB WRAPPER-->
+        <div id="mainBox"><img id="globeLogo" src="https://media1.giphy.com/media/l1KVcrdl7rJpFnY2s/giphy.gif" alt="">
+        </div>
     </div>
     <div class="mainPageWrapper">
         <div id="userStatus"></div>
 
-        <div class = "cityImage" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/a0/FuturebigToronto.jpg);">
+        <div class="cityImage"
+            style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/a0/FuturebigToronto.jpg);">
             <h1>VANCOUVER</h1>
-        </div>  
-    
-        <div class = "cityImage" style="background-image: url(https://res.cloudinary.com/g5-assets-cld/image/upload/x_0,y_326,h_3389,w_5648,c_crop/q_auto,f_auto,fl_lossy,g_center,h_1200,w_2000/g5/g5-c-5cpnmi9wp-quadreal/g5-cl-1hj4q9obd6-parkview-towers/uploads/0Z8A6304_d5hshm.jpg);">
+        </div>
+
+        <div class="cityImage"
+            style="background-image: url(https://res.cloudinary.com/g5-assets-cld/image/upload/x_0,y_326,h_3389,w_5648,c_crop/q_auto,f_auto,fl_lossy,g_center,h_1200,w_2000/g5/g5-c-5cpnmi9wp-quadreal/g5-cl-1hj4q9obd6-parkview-towers/uploads/0Z8A6304_d5hshm.jpg);">
             <h1>BURNABY</h1>
         </div>
-    
-        <div class = "cityImage" style="background-image: url(http://greatplacesincanada.ca/wp-content/uploads/2017/10/Town_Centre_Park.jpg);">
+
+        <div class="cityImage"
+            style="background-image: url(http://greatplacesincanada.ca/wp-content/uploads/2017/10/Town_Centre_Park.jpg);">
             <h1>COQUITLAM</h1>
         </div>
-    
+
 
 
 
@@ -90,12 +94,12 @@
     <script>
         // firebase.auth().onAuthStateChanged(function (user) {
         //     if (user) {
-                // User is signed in.
+        // User is signed in.
 
-                // document.getElementsByClassName("wrapper").style.display = "none";
-                // document.getElementsByClassName("mainPageWrapper").style.display = "block";
+        // document.getElementsByClassName("wrapper").style.display = "none";
+        // document.getElementsByClassName("mainPageWrapper").style.display = "block";
 
-                // var user = firebase.auth().currentUser;
+        // var user = firebase.auth().currentUser;
 
         //         if (user != null) {
 
@@ -134,7 +138,6 @@
         //         window.location = 'index.html'; //After successful login, user will be redirected to index.html
         //     }
         // });
-
     </script>
     <script>
         // var user = firebase.auth().currentUser;
@@ -148,7 +151,7 @@
             $('.wrapper').addClass('form-success');
             $('.form-success').fadeOut(2000);
             setTimeout(function () {
-            $('.subPageWrapper').fadeIn(2000);
+                $('.subPageWrapper').fadeIn(2000);
             }, 1000);
             $('.subPageWrapper').display('block');
             // } else {
@@ -174,17 +177,21 @@
     </script>
 
     <script>
-     $("#globeLogo").click(function(){
-         $(".subPageWrapper").fadeOut(500);
-      setTimeout(function () {
-        $('.mainPageWrapper').fadeIn(2000);
-        }, 1000);
-        $('.mainPageWrapper').display('block');
-    });
-        </script>
+        $("#globeLogo").click(function () {
+            $(".subPageWrapper").fadeOut(500);
+            setTimeout(function () {
+                $('.mainPageWrapper').fadeIn(2000);
+            }, 1000);
+            $('.mainPageWrapper').display('block');
+        });
+    </script>
 
     <script>
         $('#signUp').click(function (event) {
+
+            // Initialize the FirebaseUI widget using Firebase.
+            var ui = new firebaseui.auth.AuthUI(firebase.auth());
+
             var uiConfig = {
                 callbacks: {
                     signInSuccessWithAuthResult: function (authResult, redirectUrl) {
@@ -218,7 +225,6 @@
             // The start method will wait until the DOM is loaded.
             ui.start('#firebaseui-auth-container', uiConfig);
         });
-
     </script>
 </body>
 
