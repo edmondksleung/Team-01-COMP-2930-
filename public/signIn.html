@@ -29,7 +29,7 @@
     <div class="wrapper">
         <div class="container">
             <div id="logo">
-                <img src="https://sitejerk.com/images/eco-friendly-logo-png-7.png" alt="logoPic">
+                <img src="https://media1.giphy.com/media/l1KVcrdl7rJpFnY2s/giphy.gif" alt="logoPic">
             </div>
             <h1 id="title">
                 <b>
@@ -57,7 +57,15 @@
             <li></li>
         </ul>
     </div>
-
+    <div class="subPageWrapper">
+            <div id="topBox">
+                    <div id="evolunteer">Click to Choose Your City!</div>
+                    <div id="signin"><a href="../public/sign.html"><img id="signInLogo" src="../Images/signin.png" alt=""></a></div>
+                </div>
+    <!--MAIN SUB WRAPPER-->
+<div id="mainBox"><img id="globeLogo" src="https://media1.giphy.com/media/l1KVcrdl7rJpFnY2s/giphy.gif" alt="">
+</div>
+    </div>
     <div class="mainPageWrapper">
         <div id="userStatus"></div>
 
@@ -140,14 +148,12 @@
             $('.wrapper').addClass('form-success');
             $('.form-success').fadeOut(2000);
             setTimeout(function () {
-            $('.mainPageWrapper').fadeIn(2000);
+            $('.subPageWrapper').fadeIn(2000);
             }, 1000);
-            $('.mainPageWrapper').display('block');
-
+            $('.subPageWrapper').display('block');
             // } else {
             //User is signed out.
         });
-
         //If firebase user recognized...
         //Fades out the login form,
         //Shifts the eVolunteer h1 header downwards,
@@ -165,12 +171,19 @@
         //     setTimeout(function () {
         //         $('#login-button').removeClass('invalid');
         //     }, 2000);
-
-
     </script>
 
     <script>
+     $("#globeLogo").click(function(){
+         $(".subPageWrapper").fadeOut(500);
+      setTimeout(function () {
+        $('.mainPageWrapper').fadeIn(2000);
+        }, 1000);
+        $('.mainPageWrapper').display('block');
+    });
+        </script>
 
+    <script>
         $('#signUp').click(function (event) {
             var uiConfig = {
                 callbacks: {
