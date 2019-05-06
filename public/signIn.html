@@ -4,12 +4,28 @@
 <head>
     <title>Sign in to eVolunteer</title>
     <link rel="stylesheet" type="text/css" href="css/signIn.css">
+    
     <!--JQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-
+    <script>
+            //skip login page while signed in.
+            $(document).ready(function() {
+            firebase.auth().onAuthStateChanged(user => {
+        if(user) {
+                        setTimeout(function () {
+                            $('.subPageWrapper').fadeIn(500);
+                        }, 1000);
+                        $('.subPageWrapper').display('block');
+                    }
+                    else {
+                        $(".wrapper").show();
+                    }
+                });
+            });
+        </script>
     <!-- Initialize Firebase -->
     <script>
         var config = {
@@ -23,6 +39,7 @@
         firebase.initializeApp(config);
         var rootRef = firebase.database().ref();
     </script>
+    
 </head>
 
 <body>
@@ -66,7 +83,7 @@
     </div>
     <div class="subPageWrapper">
         <div id="topBox">
-            <div id="evolunteer">Click to Choose Your City!</div>
+            <div id="evolunteer">Welcome!</div>
             <div id="signin"><a href="../public/sign.html"><img id="signInLogo" src="../Images/signin.png" alt=""></a>
             </div>
         </div>
@@ -163,10 +180,6 @@
   var userPass = $("#passField").val();
 
             firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-
-    window.alert("Error : " + errorMessage);
         
      $('#loginButton').addClass('invalid');
                 setTimeout(function () {
@@ -191,20 +204,7 @@
         
     </script>
 
-<script>
-    //skip login page while signed in.
-    document.onload();
-    firebase.auth().onAuthStateChanged(user => {
-if(user) {
-                $('.wrapper').display(none);
-                setTimeout(function () {
-                    $('.subPageWrapper').fadeIn(2000);
-                }, 1000);
-                $('.subPageWrapper').display('block');
-            }
-        }
 
-</script>
     <script>
         $("#globeLogo").click(function () {
             $(".subPageWrapper").fadeOut(500);
