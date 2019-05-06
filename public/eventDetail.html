@@ -1,11 +1,27 @@
 <!doctype html>
 <html>
-  <head>
 
-  </head>
-  <body>
-    <p>Subject</p>
-    <p>Email</p>
-    <p>Content</p>
-  </body>
+<head>
+  <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCjKV-p_CGqxhRcxahylr-6LXUzNax6kek",
+      authDomain: "evolunteer-45c5d.firebaseapp.com",
+      databaseURL: "https://evolunteer-45c5d.firebaseio.com",
+      projectId: "evolunteer-45c5d",
+      storageBucket: "evolunteer-45c5d.appspot.com",
+      messagingSenderId: "412878968573"
+    };
+    firebase.initializeApp(config);
+  </script>
+</head>
+
+<body>
+  <p><b>Event: </b><span id="subject"></span></p>
+  <p><b>Email: </b><span id="email"></span></p>
+  <p><b>Content: </b><span id="content"></span></p>
+  <script src="js/eventDetail.js"></script>
+</body>
+
 </html>

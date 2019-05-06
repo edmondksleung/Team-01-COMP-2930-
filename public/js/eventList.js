@@ -4,20 +4,21 @@ dbref.on('value', gotData, errData);
 
 // Grabs data from firebase
 function gotData(data) {
-  //console.log(data.val());
+  // console.log(data.val());
   let events = data.val();
   let keys = Object.keys(events);
-  //console.log(keys);
+  // console.log(keys);
 
   // Loop that creates list for each event
   for (let i = 0; i < keys.length; i++){
     let k = keys[i];
     let event = events[k].subject;
-    //console.log(event);
+    console.log(k);
     let list = document.createElement('li');
     // Giving attibute to list that redirects to the detail page
     let link = document.createElement('a');
-    link.setAttribute('href', '../public/eventDetail.html');
+    // Giving unique id to url(template literal)
+    link.setAttribute('href', `./eventDetail.html?${k}`);
     // Append event data in the anchor
     link.append(event);
     // Append anchor in the list
@@ -31,4 +32,5 @@ function errData(err) {
   console.log('Error!');
   console.log(err);
 }
+
 
