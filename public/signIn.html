@@ -40,7 +40,12 @@
                 <input type="password" placeholder="Password" id="passField">
                 <button type="submit" id="loginButton">Login</button>
                 <div id="signUp">
-                    <p id="firebaseui-auth-container">No Account? Sign Up!</p>
+                    No Account? Sign Up!
+                        <div id="myModal" class="modal">
+                                <!-- Modal content -->
+                                <p id="firebaseui-auth-container"></p>
+                              </div>
+                              
                 </div>
             </form>
         </div>
@@ -147,6 +152,7 @@
             // firebase.auth().onAuthStateChanged(user => {
             // if (user) {
             event.preventDefault();
+            
             $('form').fadeOut(50);
             $('.wrapper').addClass('form-success');
             $('.form-success').fadeOut(2000);
@@ -200,11 +206,7 @@
                         // or whether we leave that to developer to handle.
                         return true;
                     },
-                    uiShown: function () {
-                        // The widget is rendered.
-                        // Hide the loader.
-                        document.getElementById('loader').style.display = 'none';
-                    }
+                    
                 },
                 // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
                 signInFlow: 'popup',
@@ -225,6 +227,24 @@
             // The start method will wait until the DOM is loaded.
             ui.start('#firebaseui-auth-container', uiConfig);
         });
+    </script>
+    <script>
+       var modal = document.getElementById("myModal");
+      
+      // Get the button that opens the modal
+      var signUpButton = document.getElementById("signUp");
+      
+      // When the user clicks on the button, open the modal 
+      signUpButton.onclick = function() {
+      modal.style.display = "block";
+      }
+      
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+      if (event.target == modal) {
+      modal.style.display = "none";
+      }
+      }
     </script>
 </body>
 
