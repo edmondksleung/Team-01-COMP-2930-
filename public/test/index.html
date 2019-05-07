@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Welcome to eVolunteer! You play your part.</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="../css/index.css">
+        <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="../js/index.js"></script>
+
+
+        <script>
+            // Initialize Firebase
+            var config = {
+              apiKey: "AIzaSyCjKV-p_CGqxhRcxahylr-6LXUzNax6kek",
+              authDomain: "evolunteer-45c5d.firebaseapp.com",
+              databaseURL: "https://evolunteer-45c5d.firebaseio.com",
+              projectId: "evolunteer-45c5d",
+              storageBucket: "evolunteer-45c5d.appspot.com",
+              messagingSenderId: "412878968573"
+            };
+            firebase.initializeApp(config);
+          </script>
+        
+    </head>
+    <body>
+      <!--TOP WRAPPER-->
+        <div id="topBox">
+            <div id="evolunteer">Click to Choose Your City!</div>
+            <div id="signin"><a href="../public/sign.html"><img id="signInLogo" src="../Images/signin.png" alt=""></a></div>
+
+        </div>
+
+
+      <!--MAIN WRAPPER-->
+        <div id="mainBox"><img id="globeSpin" src="https://media1.giphy.com/media/l1KVcrdl7rJpFnY2s/giphy.gif" alt="">
+            <div id="city1">VANCOUVER</div>
+            <div id="city2">BURNABY</div>
+            <div id="city3">PORT COQUITLAM</div>
+        </div>
+
+
+
+      <!--BOTTOM WRAPPER-->
+        <div id="botBox">
+
+        </div>
+    </body>
+</html>

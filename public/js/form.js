@@ -1,7 +1,3 @@
-// Reference messages collection
-let messagesRef = firebase.database().ref('events');
-
-
 // Listen for form submission
 document.getElementById('post').addEventListener('submit', submitForm);
 
@@ -15,10 +11,11 @@ function submitForm(e) {
   let subject = getInputVal('subject');
   let email = getInputVal('email');
   let content = getInputVal('content');
+  let city = getInputVal('city')
 
 
   // Saves message
-  saveMessage(subject, email, content);
+  saveMessage(subject, email, content, city);
 
   // Shows alert when submitted
   document.querySelector('.alert').style.display = "block";
@@ -33,7 +30,7 @@ function submitForm(e) {
 
   // Directs to the previous page
   setTimeout(function(){
-    window.location.href= '../public/eventList.html';
+    window.location.href= `../public/eventList.html?city=${city}`;
   }, 3000);
 }
 
@@ -45,11 +42,12 @@ function getInputVal(id) {
 
 
 // save message to firebase
-function saveMessage(subject, email, content){
-  let newMessageRef = messagesRef.push();
+function saveMessage(subject, email, content, city){
+  let newMessageRef = firebase.database().ref('events/' + city).push();
   newMessageRef.set({
     subject: subject,
     email: email,
-    content: content
+    content: content,
+    city: city
   });
 }

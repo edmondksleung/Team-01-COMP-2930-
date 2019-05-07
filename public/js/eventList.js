@@ -1,5 +1,10 @@
 let database = firebase.database();
-let dbref = database.ref('events');
+// Fetching and assigning URL parameter
+let params = (new URL(document.location)).searchParams;
+let cityName = params.get("city");
+
+// console.log(cityName);
+let dbref = database.ref(`events/${cityName}`);
 dbref.on('value', gotData, errData);
 
 // Grabs data from firebase
@@ -18,7 +23,7 @@ function gotData(data) {
     // Giving attibute to list that redirects to the detail page
     let link = document.createElement('a');
     // Giving unique id to url(template literal)
-    link.setAttribute('href', `./eventDetail.html?${k}`);
+    link.setAttribute('href', `./eventDetail.html?city=${cityName}&key=${k}`);
     // Append event data in the anchor
     link.append(event);
     // Append anchor in the list
