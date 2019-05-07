@@ -1,154 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Events</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="/css/events.css">
-        <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
-        <script>
-            // Initialize Firebase
-            var config = {
-              apiKey: "AIzaSyCjKV-p_CGqxhRcxahylr-6LXUzNax6kek",
-              authDomain: "evolunteer-45c5d.firebaseapp.com",
-              databaseURL: "https://evolunteer-45c5d.firebaseio.com",
-              projectId: "evolunteer-45c5d",
-              storageBucket: "evolunteer-45c5d.appspot.com",
-              messagingSenderId: "412878968573"
-            };
-            firebase.initializeApp(config);
-          </script>
-    </head>
-    <body>
-        <!--EVENTS CONTAINER--------------------------------------------->
-        <div class="grid-container">
-            <div id="topContainer">
-                <div id="profileBox">
 
-                </div>
-                <div id="locationBox">
-                    Vancouver
-                </div>
-                <div id="menuBox">
+<head>
+    <title>Events</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/events.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:900" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCjKV-p_CGqxhRcxahylr-6LXUzNax6kek",
+            authDomain: "evolunteer-45c5d.firebaseapp.com",
+            databaseURL: "https://evolunteer-45c5d.firebaseio.com",
+            projectId: "evolunteer-45c5d",
+            storageBucket: "evolunteer-45c5d.appspot.com",
+            messagingSenderId: "412878968573"
+        };
+        firebase.initializeApp(config);
+    </script>
+</head>
 
-                </div>
+<body>
+    <!--EVENTS PAGE-------------------------------->
+    <div id="eventsWrapper">
+        <!--EVENTS NAV BAR------------------------->
+        <div id="eventsNavBar">
+            <!--BACK BUTTON-->
+            <div id="backBox">
+                <button id="backButton">
+                    <img alt="back" id="backPic" src="./Images/back.png">
+                </button>
             </div>
-            <!--EVENT------------------------------------------------->
-            <div class="grid-item">
-                <div class="events">
-                    Tree Hugger
-                </div>
-                <div class="description">
-                    Involves planting trees
-                </div>
-                <div class="specContainer">
-                    <div class="placeLabel">
-                        Location:
-                    </div>
-                    <div class="place">
-                        Amsterdam
-                    </div>
-                    <div class="timeLabel">
-                        Time:
-                    </div>
-                    <div class=""> 
-                        11:11pm
-                    </div>
-                </div>
-            </div>  
-            <!--EVENT------------------------------------------------->
-            <div class="grid-item">
-                <div class="events">
-                    Tree Hugger
-                </div>
-                <div class="description">
-                    Involves planting trees
-                </div>
-                <div class="specContainer">
-                    <div class="placeLabel">
-                        Location:
-                    </div>
-                    <div class="place">
-                        Amsterdam
-                    </div>
-                    <div class="timeLabel">
-                        Time:
-                    </div>
-                    <div class=""> 
-                        11:11pm
-                    </div>
-                </div>
-            </div>  
-            <!--EVENT------------------------------------------------->
-            <div class="grid-item">
-                <div class="events">
-                    Tree Hugger
-                </div>
-                <div class="description">
-                    Involves planting trees
-                </div>
-                <div class="specContainer">
-                    <div class="placeLabel">
-                        Location:
-                    </div>
-                    <div class="place">
-                        Amsterdam
-                    </div>
-                    <div class="timeLabel">
-                        Time:
-                    </div>
-                    <div class=""> 
-                        11:11pm
-                    </div>
-                </div>
-            </div>  
-            <!--EVENT------------------------------------------------->
-            <div class="grid-item">
-                <div class="events">
-                    Tree Hugger
-                </div>
-                <div class="description">
-                    Involves planting trees
-                </div>
-                <div class="specContainer">
-                    <div class="placeLabel">
-                        Location:
-                    </div>
-                    <div class="place">
-                        Amsterdam
-                    </div>
-                    <div class="timeLabel">
-                        Time:
-                    </div>
-                    <div class=""> 
-                        11:11pm
-                    </div>
-                </div>
-            </div>  
-            <!--EVENT------------------------------------------------->
-            <div class="grid-item">
-                <div class="events">
-                    Tree Hugger
-                </div>
-                <div class="description">
-                    Involves planting trees
-                </div>
-                <div class="specContainer">
-                    <div class="placeLabel">
-                        Location:
-                    </div>
-                    <div class="place">
-                        Amsterdam
-                    </div>
-                    <div class="timeLabel">
-                        Time:
-                    </div>
-                    <div class=""> 
-                        11:11pm
-                    </div>
-                </div>
-            </div>  
-            
+            <!--LOCATION TEXT-->
+            <div id="location">VANCOUVER</div>
+            <!--MENU BUTTON-->
+            <div id="menuBox">
+                <button id="menuButton">
+                    <img alt="menu" id="menuPic" src="./images/menu.png">
+                </button>
+            </div>
         </div>
-    </body>
+        <!--TABS BAR--------------------------------->
+        <div id="tabsBox">
+            <button class="tabs" onclick="selection(event, 'events')">Volunteer</button>
+            <button class="tabs" onclick="selection(event, 'myEvents')">Joined</button>
+        </div>
+        <!--EVENTS PAGE---------------------------------->
+        <div id="eventsBox">
+            <div class='events'>
+                <div id="credits">
+                    3 HOURS CREDIT
+                </div>
+                <!--EVENT PICTURE-->
+                <div id="eventPicBox">
+                    <img alt="eventImage" id="eventPic" src="Images/planting.jpeg">
+                </div>
+                <!--PREVIEW DETAIL BAR-->
+                <div id="previewBox">
+                    <div id="date">
+                        <p id="month">MAY</p>
+                        <p id="day">06</p>
+
+                    </div>
+                    <div id="eventMessage">
+                        Join us, and be apart of making our city a greener place!
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!--MY EVENTS PAGE------------------------------->
+        <div id="myEvents">
+
+        </div>
+
+    </div>
+
+</body>
+
 </html>
