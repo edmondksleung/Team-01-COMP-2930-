@@ -1,42 +1,52 @@
+body {
+    margin: 0;
+    max-width: 600px;
+    min-width: 500px;
+}
 #eventsWrapper {
     width: 100%;
     height: 100%;
 }
 
 #eventsNavBar {
-    height: 120px;
+    height: 50px;
     display: grid;
     grid-template-columns: 20% 60% 20%;
     align-items: center;
-    
+    border-bottom: 1px solid rgb(216, 208, 208);
+
 }
 
 #backBox {
     display: grid;
-    justify-items: center;
+    justify-items: start;
 }
+
 #backButton {
     width: 50px;
     height: 50px;
     background: none;
     border: none;
 }
+
 #backPic {
-    width: 30px;
-    height: 30px;
-    
+    width: 20px;
+    height: 20px;
+
 }
 
 #location {
-    text-align: center;    
+    text-align: center;
     font-size: 20pt;
     font-weight: bold;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 #menuBox {
     display: grid;
-    justify-items: center;
+    justify-items: end;
 }
+
 #menuButton {
     width: 50px;
     height: 50px;
@@ -45,6 +55,89 @@
 }
 
 #menuPic {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
+}
+
+#tabsBox {
+    display: block;
+    height: 50px;
+    border-bottom: 2px solid rgb(216, 208, 208);
+
+}
+
+.tabs {
+    width: 50%;
+    height: 50px;
+    float: left;
+    font-size: 15pt;
+    background: none;
+    border: none;
+    font-weight: bold;
+    color: grey;
+}
+
+.tabs:hover {
+    border-bottom: 3px solid rgb(23, 175, 23);
+    color: black;
+}
+
+#event {
+    width: 100%;
+    height: auto;
+    font-size: 13pt;
+}
+
+#credits {
+    height: 40px;
+    display: grid;
+    align-items: center;
+    text-align: left;
+    text-indent: 20px;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: bold;
+    font-size: 15pt;
+}
+
+#eventPic {
+    width: 100%;
+    height: 250px;
+}
+
+#previewBox {
+    height: 60px;
+    display: grid;
+    align-items: center;
+    grid-template-columns:  15% 65% 20%;
+}
+
+#date {
+    font-family: 'Titillium Web', sans-serif;
+    line-height: 0;
+    text-indent: 20px;
+
+}
+
+#month {
+    margin: 0;
+    height: 20px;
+    display: grid;
+    align-items: center;
+}
+#day {
+    display: grid;
+    align-items: center;
+    margin: 0;
+    height: 20px;
+    line-height: 0;
+    font-size: 15pt;
+    text-indent: 24px;
+}
+
+#eventMessage {
+    font-family: 'Arial', sans-serif;
+    display: grid;
+    align-items: center;
+    font-weight: bold;
+    font-size: 11pt;
 }
