@@ -72,6 +72,7 @@ body :-ms-input-placeholder {
     height: 100%;
     overflow: hidden;
     z-index: 1;
+    display: none;
 }
 
 .wrapper.form-success .container h1 {
@@ -88,7 +89,6 @@ body :-ms-input-placeholder {
 }
 
 .container h1 {
-    font-size: 40px;
     transition-duration: 1s;
     /* transition-timing-function: ease-in-put; */
     font-weight: 200;
@@ -143,6 +143,8 @@ form button {
     cursor: pointer;
     font-size: 18px;
     transition-duration: 0.25s;
+    margin-bottom: 100px;
+
 }
 
 form button:hover {
@@ -217,8 +219,6 @@ form button:hover {
     left: 70%;
     border-radius: 50%;
     box-shadow: 0 0 3px rgb(230, 238, 123);
-
-
 }
 
 .bg-bubbles li:nth-child(6) {
@@ -320,23 +320,22 @@ form button:hover {
     color: rgb(118, 228, 85);
 }
 
+
 #signUp {
     font-size: 10pt;
-    margin-top: 50px;
-}
-
-#signUp p {
     margin: 0 auto;
     width: 140px;
-}
+} 
 
-#signUp p:hover {
+#signUp:hover {
     cursor: pointer;
     color: rgb(118, 228, 85);
 }
 
-#login-button.invalid {
-    border: 0 5px solid red;
+
+#loginButton.invalid {
+    background-color:red;
+    color: white;
     /* also need animation and -moz-animation */
     -webkit-animation: shake .5s linear;
 }
@@ -397,7 +396,7 @@ div.cityImage h1 {
 
 #topBox {
     width: 100%;
-    height: 180px;
+    height: 100px;
     display: grid;
     grid-template-areas:
         "header1 header2 header3";
@@ -406,8 +405,11 @@ div.cityImage h1 {
 }
 
 #evolunteer {
+    height: 100px;
     grid-area: header2;
-    margin: auto;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 30pt;
     z-index: 1;
 }
@@ -419,8 +421,15 @@ div.cityImage h1 {
 }
 
 #signInLogo {
+    margin-top: 70px;
     height: 100px;
     width: 100px;
+}
+
+#logoutButton {
+    background: none;
+    color: white;
+    border: none;
 }
 
 #mainBox {
@@ -434,3 +443,54 @@ div.cityImage h1 {
 #mainBox img:hover {
     cursor: pointer;
 }
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  #firebaseui-auth-container {
+    position: absolute;
+    background-color: #fefefe;
+    margin-top: 220px;
+    margin-left: 35%;
+    padding: 0;
+    border: 1px solid #888;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+
+  /* Add Animation */
+  @keyframes animatetop {
+    from {
+      top: -300px;
+      opacity: 0
+    }
+
+    to {
+      top: 0;
+      opacity: 1
+    }
+  }
+
+ 
