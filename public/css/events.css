@@ -1,8 +1,9 @@
 body {
     margin: 0;
-    max-width: 600px;
-    min-width: 500px;
+    max-width: 450px;
+    min-width: 450px;
 }
+
 #eventsWrapper {
     width: 100%;
     height: 100%;
@@ -13,7 +14,6 @@ body {
     display: grid;
     grid-template-columns: 20% 60% 20%;
     align-items: center;
-    border-bottom: 1px solid rgb(216, 208, 208);
 
 }
 
@@ -32,8 +32,14 @@ body {
 #backPic {
     width: 20px;
     height: 20px;
-
 }
+
+#backPic:hover {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
 
 #location {
     text-align: center;
@@ -59,9 +65,16 @@ body {
     height: 20px;
 }
 
+#menuPic:hover {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
 #tabsBox {
     display: block;
     height: 50px;
+    border-bottom-style: outset;
     border-bottom: 2px solid rgb(216, 208, 208);
 
 }
@@ -78,7 +91,7 @@ body {
 }
 
 .tabs:hover {
-    border-bottom: 3px solid rgb(23, 175, 23);
+    border-bottom: 4px solid rgb(34, 189, 34);
     color: black;
 }
 
@@ -89,26 +102,126 @@ body {
 }
 
 #credits {
-    height: 40px;
+    height: 50px;
     display: grid;
+    grid-template-columns: 200px 250px;
     align-items: center;
     text-align: left;
     text-indent: 20px;
     font-family: 'Titillium Web', sans-serif;
     font-weight: bold;
-    font-size: 15pt;
+    font-size: 18pt;
+    border-bottom: 2px solid rgb(216, 208, 208);
+}
+
+#readMoreBox {
+    display: grid;
+    transform: translate(375px, 10px);
+    position: absolute;
+}
+
+#readMoreButton {
+    border: none;
+    width: 64px;
+    height: 33px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 2);
+    background: white;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 12pt;
+    outline: none;
+    text-align: center;
+    color: grey;
+}
+
+#readMoreButton:hover {
+    background: rgb(62, 201, 57);
+    color: black;
+
+
 }
 
 #eventPic {
     width: 100%;
     height: 250px;
+    border-top: 2px solid rgb(216, 208, 208);
+    border-bottom: 2px solid rgb(216, 208, 208);
+}
+
+#eventInfo {
+    width: 100%;
+    max-width: 450px;
+    height: 256px;
+    display: none;
+    text-indent: 20px;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    border-bottom: 2px solid rgb(216, 208, 208);
+}
+
+
+#eventAddTime {
+    display: grid;
+    grid-template-rows: 30px 25px;
+    border-bottom: 2px solid rgb(216, 208, 208);
+}
+
+#eventAddress {
+    display: grid;
+    align-items: center;
+    font-weight: bold;
+}
+
+#eventTime {
+    font-weight: bold;
+}
+
+#eventFullDetails {
+    height: 100px;
+    display: grid;
+    align-items: center;
+    text-align: justify;
+    text-indent: 0;
+    padding-left: 20px;
+    border-bottom: 2px solid rgb(216, 208, 208);
+}
+
+#organizerBox {
+    display: grid;
+    grid-template-columns: 45% 22% 33%;
+    grid-template-rows: 25px 35px 38px;
+    grid-template-areas: "profile label content"
+        "profile label2 content2"
+        "profile label3 content3";
+    align-items: center;
+}
+
+#profileBox {
+    display: grid;
+    justify-items: center;
+    grid-area: profile;
+}
+
+.label {
+    font-weight: bold;
+    text-align: left;
+
+}
+
+.content {
+    text-align: left;
+    ;
+    ;
 }
 
 #previewBox {
-    height: 60px;
     display: grid;
+    grid-template-areas: "date msg button"
+        "date msg button";
     align-items: center;
-    grid-template-columns:  15% 65% 20%;
+    grid-template-columns: 15% 65% 20%;
+    grid-template-rows: 60px 60px
 }
 
 #date {
@@ -124,6 +237,7 @@ body {
     display: grid;
     align-items: center;
 }
+
 #day {
     display: grid;
     align-items: center;
@@ -140,4 +254,45 @@ body {
     align-items: center;
     font-weight: bold;
     font-size: 11pt;
+}
+
+#toggleBox {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    ;
+}
+
+#toggleButton {
+    width: 60px;
+    height: 30px;
+    -webkit-appearance: none;
+    background: #c6c6c6;
+    outline: none;
+    border-radius: 20px;
+    transition: 0.2s;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, .5);
+
+}
+
+#toggleButton:checked {
+    background: rgb(15, 163, 15);
+
+}
+
+#toggleButton:before {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 20px;
+    background: #fff;
+    transition: 0.5s;
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 5);
+
+}
+
+#toggleButton:checked:before {
+    left: 405px;
 }

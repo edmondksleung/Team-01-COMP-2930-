@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/events.css">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:900" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
     <script>
         // Initialize Firebase
@@ -51,21 +52,69 @@
         <div id="eventsBox">
             <div class='events'>
                 <div id="credits">
-                    3 HOURS CREDIT
+                    <div>3 HOURS CREDIT</div>
                 </div>
+
                 <!--EVENT PICTURE-->
-                <div id="eventPicBox">
-                    <img alt="eventImage" id="eventPic" src="Images/planting.jpeg">
+                <div>
+                    <div id="eventPicBox">
+                        <!--READ MORE BUTTON-->
+                        <div id="readMoreBox">
+                            <button id="readMoreButton">View</button>
+                        </div>
+                        <!--EVENT IMAGE-->
+                        <img alt="eventImage" id="eventPic" src="Images/planting.jpeg">
+                        <!--EVENT INFO-->
+                        <div id="eventInfo">
+                            <!--EVENT ADDRESS AND TIME-->
+                            <div id="eventAddTime">
+                                <!--EVENT ADDRESS-->
+                                <div id="eventAddress">
+                                    888 Neverland Drive, V0A-0S0
+                                </div>
+                                <!--EVENT TIME-->
+                                <div id="eventTime">
+                                    08:18am-12:18pm
+                                </div>
+                            </div>
+                            <!--EVENT DETAILS-->
+                            <div id="eventFullDetails">
+                                If your in need of volunteering hours and want to help
+                                your commnunity become greener, then this opportunity
+                                is perfect for you! Come join us plant trees and
+                                in our lovely regional park and help regrow what was there before!
+                            </div>
+                            <div id="organizerBox">
+                                <div id="profileBox">PROFILE PICTURE</div>
+                                <div class="label">Organizer:</div>
+                                <div class="content">Shane F</div>
+                                <div class="label">Contact:</div>
+                                <div class="content">778-888-9999</div>
+                                <div class="label">Email:</div>
+                                <div class="content">shane@bcit.ca</div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
                 </div>
                 <!--PREVIEW DETAIL BAR-->
                 <div id="previewBox">
+                    <!--DATE-->
                     <div id="date">
                         <p id="month">MAY</p>
                         <p id="day">06</p>
 
                     </div>
+                    <!--MESSAGE-->
                     <div id="eventMessage">
                         Join us, and be apart of making our city a greener place!
+                    </div>
+                    <!--JOIN TOGGLE BUTTON-->
+                    <div id="toggleBox">
+                        <input type="checkbox" id="toggleButton" name="">
                     </div>
                 </div>
 
@@ -76,8 +125,24 @@
         <div id="myEvents">
 
         </div>
-
     </div>
+    <!--SHOW EVENT DETAILS BUTTON--------------------------------------------------->
+    <script>
+        $(document).ready(function () {
+            $("#readMoreButton").click(function() {
+                $("#readMoreBox").fadeOut("fast", function() {
+                    $("#eventPic").fadeOut("slow", function() {
+                    $("#eventInfo").fadeIn(600);
+                });
+                });
+                
+                
+            });
+        });
+    </script>
+    <!--HIDE EVENT DETAILS BUTTON--------------------------------------------------->
+
+
 
 </body>
 
