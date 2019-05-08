@@ -94,7 +94,9 @@ body {
     border-bottom: 4px solid rgb(34, 189, 34);
     color: black;
 }
-
+.events {
+    border-bottom: 2px solid rgb(216, 208, 208);
+}
 #event {
     width: 100%;
     height: auto;
@@ -211,8 +213,6 @@ body {
 
 .content {
     text-align: left;
-    ;
-    ;
 }
 
 #previewBox {
