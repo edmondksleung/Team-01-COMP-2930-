@@ -403,6 +403,7 @@ div.cityImage h1 {
         "header1 header2 header3";
     grid-template-columns: 20% 60% 20%;
     grid-template-rows: 80px;
+    z-index: 2;
 }
 
 #evolunteer {
@@ -427,6 +428,7 @@ div.cityImage h1 {
     align-items: center;
     justify-items: center;
 }
+
 #logoutButton {
     line-height: 0;
     width: 70px;
@@ -466,10 +468,11 @@ div.cityImage h1 {
 
 #mainBox {
     text-align: center;
+    z-index: 2;
 }
 
 #mainBox img {
-    z-index: -1;
+    z-index: 2;
 }
 
 #mainBox img:hover {
@@ -529,3 +532,11 @@ div.cityImage h1 {
     color: rgb(118, 228, 85);
     cursor: pointer;
 }
+
+canvas {
+	cursor: crosshair;
+    display: block;
+    position: absolute;
+    display: none;
+}
+
