@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     <script>
         //skip login page while signed in.
@@ -84,15 +85,15 @@
     <div class="subPageWrapper">
         <div id="topBox">
             <div></div>
-            <div id="evolunteer">W<span id = "eAudio">e</span>lcome!</div>
+            <div id="evolunteer">W<span id="eAudio">e</span>lcome!</div>
             <div id="logoutBox">
                 <button onclick="logout()" type="submit" id="logoutButton">Log Out</button>
             </div>
         </div>
         <div id="mainBox"><img id="globeLogo" src="https://media1.giphy.com/media/l1KVcrdl7rJpFnY2s/giphy.gif" alt="">
         </div>
-        </div>
-            <!--MAIN SUB WRAPPER-->
+    </div>
+    <!--MAIN SUB WRAPPER-->
     <div class="mainPageWrapper">
         <div id="userStatus"></div>
 
@@ -115,6 +116,7 @@
 
 
     </div>
+
 
 
     <script>
@@ -280,18 +282,19 @@
         }
     </script>
     <script>
-       var helloSound = new Audio('../public/Audio/test.mp3');
-helloSound.src = "../public/Audio/test.mp3"; 
+        var helloSound = new Audio('../public/Audio/test.mp3');
+        helloSound.src = "../public/Audio/test.mp3";
 
-// var goodbyeSound = new Audio('goodbye.mp3');
-// goodbyeSound.src = "goodbye.mp3";
+        // var goodbyeSound = new Audio('goodbye.mp3');
+        // goodbyeSound.src = "goodbye.mp3";
 
-var homeLink = document.getElementById('eAudio');
+        var homeLink = document.getElementById('eAudio');
 
-homeLink.addEventListener('click', function () {
-        helloSound.play();
-}); 
+        homeLink.addEventListener('click', function () {
+            helloSound.play();
+        }); 
     </script>
+    <script src="js/userInit.js"></script>
 </body>
 
 </html>
