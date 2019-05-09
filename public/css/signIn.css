@@ -307,9 +307,10 @@ form button:hover {
     width: 400px;
     height: 310px;
 }
-
+#e {
+    cursor: pointer;
+}
 #title {
-    grid-area: title;
     font-size: 30pt;
     text-align: center;
     letter-spacing: 8px;
@@ -318,6 +319,8 @@ form button:hover {
 
 #title span {
     color: rgb(118, 228, 85);
+    z-index: 4;
+    cursor: pointer;
 }
 
 
