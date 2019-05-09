@@ -213,7 +213,6 @@ body {
     display: grid;
     align-items: center;
     justify-items: center;
-    ;
 }
 
 #eventInfoBox {
@@ -227,6 +226,14 @@ body {
     border-bottom: 2px solid rgb(216, 208, 208);
 } 
 
+.contentBox {
+    background: grey;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
 #eventInfo {
     display: grid;
     grid-template-rows: 40px 40px 40px;
