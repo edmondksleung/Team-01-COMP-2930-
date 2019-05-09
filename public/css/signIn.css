@@ -319,8 +319,6 @@ form button:hover {
 
 #title span {
     color: rgb(118, 228, 85);
-    z-index: 4;
-    cursor: pointer;
 }
 
 
@@ -526,4 +524,8 @@ div.cityImage h1 {
         top: 0;
         opacity: 1
     }
+}
+
+#eAudio {
+    color: rgb(118, 228, 85);
 }
