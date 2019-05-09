@@ -527,4 +527,5 @@ div.cityImage h1 {
 
 #eAudio {
     color: rgb(118, 228, 85);
+    cursor: pointer;
 }
