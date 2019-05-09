@@ -42,7 +42,6 @@
 </head>
 
 <body>
-        <div id="e">test</div>
     <div class="wrapper">
         <div class="container">
             <div id="logo">
@@ -85,7 +84,7 @@
     <div class="subPageWrapper">
         <div id="topBox">
             <div></div>
-            <div id="evolunteer">Welcome!</div>
+            <div id="evolunteer">W<span id = "eAudio">e</span>lcome!</div>
             <div id="logoutBox">
                 <button onclick="logout()" type="submit" id="logoutButton">Log Out</button>
             </div>
@@ -287,7 +286,7 @@ helloSound.src = "/Users/erickim/Desktop/Comp2930/public/Audio/test.mp3";
 // var goodbyeSound = new Audio('goodbye.mp3');
 // goodbyeSound.src = "goodbye.mp3";
 
-var homeLink = document.getElementById('e');
+var homeLink = document.getElementById('eAudio');
 
 homeLink.addEventListener('click', function () {
         helloSound.play();
