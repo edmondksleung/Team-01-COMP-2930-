@@ -20,7 +20,7 @@ function gotData(data) {
     let event = events[k].subject;
     console.log(k);
     let list = document.createElement('li');
-    // Giving attibute to list that redirects to the detail page
+    // Giving attribute to list that redirects to the detail page
     let link = document.createElement('a');
     // Giving unique id to url(template literal)
     link.setAttribute('href', `./eventDetail.html?city=${cityName}&key=${k}`);
