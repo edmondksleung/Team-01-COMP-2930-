@@ -226,13 +226,22 @@ body {
     border-bottom: 2px solid rgb(216, 208, 208);
 } 
 
+.label {
+    font-size: 10pt;
+    font-weight: bold;
+}
 .contentBox {
-    background: grey;
+    background: rgb(196, 192, 192);
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 10px;
     margin-right: 10px;
-    border-radius: 10px;
+    border-radius: 7px;
+}
+
+.timeLabel {
+    font-size: 10pt;
+    font-weight: bold;
 }
 #eventInfo {
     display: grid;
@@ -251,6 +260,12 @@ body {
 
 #startTimeBox {
     display: grid;
+    grid-template-areas:
+        "apple apple"
+        "beta charlie"
+        "delta delta";
+    align-items: center;
+    grid-template-columns: 60% 40%;
     grid-template-rows: 20px 40px 40px;
 }
 
