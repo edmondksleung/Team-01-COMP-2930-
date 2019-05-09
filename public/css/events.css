@@ -213,7 +213,6 @@ body {
     display: grid;
     align-items: center;
     justify-items: center;
-    ;
 }
 
 #eventInfoBox {
@@ -227,18 +226,54 @@ body {
     border-bottom: 2px solid rgb(216, 208, 208);
 } 
 
+.label {
+    font-size: 10pt;
+    font-weight: bold;
+}
+.contentBox {
+    background: rgb(196, 192, 192);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 7px;
+}
+
+.timeLabel {
+    font-size: 10pt;
+    font-weight: bold;
+}
 #eventInfo {
     display: grid;
-    grid-template-rows: 30px 30px 30px 30px 30px 100px;
+    grid-template-rows: 40px 40px 40px;
     grid-template-areas: "organization",
     "event",
     "location",
     "date time",
-    
 }
 
+#eventTimeBox {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 100px 100px;
+}
 
+#startTimeBox {
+    display: grid;
+    grid-template-areas:
+        "apple apple"
+        "beta charlie"
+        "delta delta";
+    align-items: center;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 20px 40px 40px;
+}
 
+#endTimeBox {
+    display: grid;
+    grid-template-rows: 20px 40px 40px;
+
+}
 #toggleButton {
     width: 60px;
     height: 30px;
