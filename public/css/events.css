@@ -229,16 +229,29 @@ body {
 
 #eventInfo {
     display: grid;
-    grid-template-rows: 30px 30px 30px 30px 30px 100px;
+    grid-template-rows: 40px 40px 40px;
     grid-template-areas: "organization",
     "event",
     "location",
     "date time",
-    
 }
 
+#eventTimeBox {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 100px 100px;
+}
 
+#startTimeBox {
+    display: grid;
+    grid-template-rows: 20px 40px 40px;
+}
 
+#endTimeBox {
+    display: grid;
+    grid-template-rows: 20px 40px 40px;
+
+}
 #toggleButton {
     width: 60px;
     height: 30px;
