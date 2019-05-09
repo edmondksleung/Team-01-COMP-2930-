@@ -45,317 +45,109 @@
         </div>
         <!--TABS BAR--------------------------------->
         <div id="tabsBox">
-            <button class="tabs" onclick="selection(event, 'events')">Volunteer</button>
-            <button class="tabs" onclick="selection(event, 'myEvents')">Joined</button>
+            <button class="tabs" id="volunteerTab">Volunteer</button>
+            <button class="tabs" id="appliedTab">Applied</button>
         </div>
-        <!--EVENTS PAGE---------------------------------->
+        <!--EVENTS BOX----------------------------------------------------------->
         <div id="eventsBox">
             <!--INDIVIDUAL EVENTS------------------------------------------------>
-            <div class='events'>
+            <div class="events">
                 <div id="credits">
                     <div>3 HOURS CREDIT</div>
                 </div>
-
                 <!--EVENT PICTURE-->
                 <div>
                     <div id="eventPicBox">
                         <!--READ MORE BUTTON-->
                         <div id="readMoreBox">
-                            <button id="readMoreButton">View</button>
+                            <button id="readMoreButton">Info</button>
                         </div>
                         <!--EVENT IMAGE-->
                         <img alt="eventImage" id="eventPic" src="Images/planting.jpeg">
-                        <!--EVENT INFO-->
-                        <div id="eventInfo">
-                            <!--EVENT ADDRESS AND TIME-->
-                            <div id="eventAddTime">
-                                <!--EVENT ADDRESS-->
-                                <div id="eventAddress">
-                                    888 Neverland Drive, V0A-0S0
-                                </div>
-                                <!--EVENT TIME-->
-                                <div id="eventTime">
-                                    08:18am-12:18pm
-                                </div>
-                            </div>
-                            <!--EVENT DETAILS-->
-                            <div id="eventFullDetails">
-                                If your in need of volunteering hours and want to help
-                                your commnunity become greener, then this opportunity
-                                is perfect for you! Come join us plant trees and
-                                in our lovely regional park and help regrow what was there before!
-                            </div>
-                            <div id="organizerBox">
-                                <div id="profileBox">PROFILE PICTURE</div>
-                                <div class="label">Organizer:</div>
-                                <div class="content">Shane F</div>
-                                <div class="label">Contact:</div>
-                                <div class="content">778-888-9999</div>
-                                <div class="label">Email:</div>
-                                <div class="content">shane@bcit.ca</div>
-                            </div>
-
-
-
-                        </div>
-                    </div>
-
-                </div>
-                <!--PREVIEW DETAIL BAR-->
-                <div id="previewBox">
-                    <!--DATE-->
-                    <div id="date">
-                        <p id="month">MAY</p>
-                        <p id="day">06</p>
-
-                    </div>
-                    <!--MESSAGE-->
-                    <div id="eventMessage">
-                        Join us, and be apart of making our city a greener place!
-                    </div>
-                    <!--JOIN TOGGLE BUTTON-->
-                    <div id="toggleBox">
-                        <input type="checkbox" id="toggleButton" name="">
                     </div>
                 </div>
-
             </div>
-            <!--INDIVIDUAL EVENTS------------------------------------------------>
-            <div class='events'>
-                <div id="credits">
-                    <div>3 HOURS CREDIT</div>
+            <!--PREVIEW DETAIL BOX------------------------------------------------------>
+            <div id="previewBox">
+                <!--DATE-->
+                <div id="date">
+                    <p id="month">MAY</p>
+                    <p id="day">06</p>
                 </div>
-
-                <!--EVENT PICTURE-->
-                <div>
-                    <div id="eventPicBox">
-                        <!--READ MORE BUTTON-->
-                        <div id="readMoreBox">
-                            <button id="readMoreButton">View</button>
-                        </div>
-                        <!--EVENT IMAGE-->
-                        <img alt="eventImage" id="eventPic" src="Images/recycling.jpeg">
-                        <!--EVENT INFO-->
-                        <div id="eventInfo">
-                            <!--EVENT ADDRESS AND TIME-->
-                            <div id="eventAddTime">
-                                <!--EVENT ADDRESS-->
-                                <div id="eventAddress">
-                                    888 Neverland Drive, V0A-0S0
-                                </div>
-                                <!--EVENT TIME-->
-                                <div id="eventTime">
-                                    08:18am-12:18pm
-                                </div>
-                            </div>
-                            <!--EVENT DETAILS-->
-                            <div id="eventFullDetails">
-                                If your in need of volunteering hours and want to help
-                                your commnunity become greener, then this opportunity
-                                is perfect for you! Come join us plant trees and
-                                in our lovely regional park and help regrow what was there before!
-                            </div>
-                            <div id="organizerBox">
-                                <div id="profileBox">PROFILE PICTURE</div>
-                                <div class="label">Organizer:</div>
-                                <div class="content">Shane F</div>
-                                <div class="label">Contact:</div>
-                                <div class="content">778-888-9999</div>
-                                <div class="label">Email:</div>
-                                <div class="content">shane@bcit.ca</div>
-                            </div>
-
-
-
-                        </div>
-                    </div>
-
+                <!--MESSAGE-->
+                <div id="eventMessage">
+                    Join us, and be apart of making our city a greener place!
                 </div>
-                <!--PREVIEW DETAIL BAR-->
-                <div id="previewBox">
-                    <!--DATE-->
-                    <div id="date">
-                        <p id="month">MAY</p>
-                        <p id="day">06</p>
-
-                    </div>
-                    <!--MESSAGE-->
-                    <div id="eventMessage">
-                        Join us, and be apart of making our city a greener place!
-                    </div>
-                    <!--JOIN TOGGLE BUTTON-->
-                    <div id="toggleBox">
-                        <input type="checkbox" id="toggleButton" name="">
-                    </div>
+                <!--CURRENT PEOPLE JOINED-->
+                <div id="peopleBox">
+                    <img alt="people" id="peoplePic" src="./Images/people.png">
+                    <p id="peopleCount">1</p>
                 </div>
-
             </div>
-            <!--INDIVIDUAL EVENTS------------------------------------------------>
-            <div class='events'>
-                <div id="credits">
-                    <div>3 HOURS CREDIT</div>
-                </div>
-
-                <!--EVENT PICTURE-->
-                <div>
-                    <div id="eventPicBox">
-                        <!--READ MORE BUTTON-->
-                        <div id="readMoreBox">
-                            <button id="readMoreButton">View</button>
-                        </div>
-                        <!--EVENT IMAGE-->
-                        <img alt="eventImage" id="eventPic" src="Images/growing.jpeg">
-                        <!--EVENT INFO-->
-                        <div id="eventInfo">
-                            <!--EVENT ADDRESS AND TIME-->
-                            <div id="eventAddTime">
-                                <!--EVENT ADDRESS-->
-                                <div id="eventAddress">
-                                    888 Neverland Drive, V0A-0S0
-                                </div>
-                                <!--EVENT TIME-->
-                                <div id="eventTime">
-                                    08:18am-12:18pm
-                                </div>
-                            </div>
-                            <!--EVENT DETAILS-->
-                            <div id="eventFullDetails">
-                                If your in need of volunteering hours and want to help
-                                your commnunity become greener, then this opportunity
-                                is perfect for you! Come join us plant trees and
-                                in our lovely regional park and help regrow what was there before!
-                            </div>
-                            <div id="organizerBox">
-                                <div id="profileBox">PROFILE PICTURE</div>
-                                <div class="label">Organizer:</div>
-                                <div class="content">Shane F</div>
-                                <div class="label">Contact:</div>
-                                <div class="content">778-888-9999</div>
-                                <div class="label">Email:</div>
-                                <div class="content">shane@bcit.ca</div>
-                            </div>
-
-
-
-                        </div>
-                    </div>
-
-                </div>
-                <!--PREVIEW DETAIL BAR-->
-                <div id="previewBox">
-                    <!--DATE-->
-                    <div id="date">
-                        <p id="month">MAY</p>
-                        <p id="day">06</p>
-
-                    </div>
-                    <!--MESSAGE-->
-                    <div id="eventMessage">
-                        Join us, and be apart of making our city a greener place!
-                    </div>
-                    <!--JOIN TOGGLE BUTTON-->
-                    <div id="toggleBox">
-                        <input type="checkbox" id="toggleButton" name="">
-                    </div>
-                </div>
-
-            </div>
-            <!--INDIVIDUAL EVENTS------------------------------------------------>
-            <div class='events'>
-                    <div id="credits">
-                        <div>3 HOURS CREDIT</div>
-                    </div>
-    
-                    <!--EVENT PICTURE-->
-                    <div>
-                        <div id="eventPicBox">
-                            <!--READ MORE BUTTON-->
-                            <div id="readMoreBox">
-                                <button id="readMoreButton">View</button>
-                            </div>
-                            <!--EVENT IMAGE-->
-                            <img alt="eventImage" id="eventPic" src="Images/volunteer.jpeg">
-                            <!--EVENT INFO-->
-                            <div id="eventInfo">
-                                <!--EVENT ADDRESS AND TIME-->
-                                <div id="eventAddTime">
-                                    <!--EVENT ADDRESS-->
-                                    <div id="eventAddress">
-                                        888 Neverland Drive, V0A-0S0
-                                    </div>
-                                    <!--EVENT TIME-->
-                                    <div id="eventTime">
-                                        08:18am-12:18pm
-                                    </div>
-                                </div>
-                                <!--EVENT DETAILS-->
-                                <div id="eventFullDetails">
-                                    If your in need of volunteering hours and want to help
-                                    your commnunity become greener, then this opportunity
-                                    is perfect for you! Come join us plant trees and
-                                    in our lovely regional park and help regrow what was there before!
-                                </div>
-                                <div id="organizerBox">
-                                    <div id="profileBox">PROFILE PICTURE</div>
-                                    <div class="label">Organizer:</div>
-                                    <div class="content">Shane F</div>
-                                    <div class="label">Contact:</div>
-                                    <div class="content">778-888-9999</div>
-                                    <div class="label">Email:</div>
-                                    <div class="content">shane@bcit.ca</div>
-                                </div>
-    
-    
-    
-                            </div>
-                        </div>
-    
-                    </div>
-                    <!--PREVIEW DETAIL BAR-->
-                    <div id="previewBox">
-                        <!--DATE-->
-                        <div id="date">
-                            <p id="month">MAY</p>
-                            <p id="day">06</p>
-    
-                        </div>
-                        <!--MESSAGE-->
-                        <div id="eventMessage">
-                            Join us, and be apart of making our city a greener place!
-                        </div>
-                        <!--JOIN TOGGLE BUTTON-->
-                        <div id="toggleBox">
-                            <input type="checkbox" id="toggleButton" name="">
-                        </div>
-                    </div>
-    
-                </div>
-
         </div>
+
+        <!--EVENT INFO----------------------------------------------------------->
+        <div id="eventInfoBox">
+            <div id="eventInfo">
+                <!--ORGANIZATION BOX-->
+                <div class="contentBox">
+                    <div class="label" id="">Organization</div>
+                    <div id="organizationDetails">Coca Cola</div>
+                </div>
+                <!--EVENT NAME BOX-->
+                <div class="contentBox">
+                    <div class="label" id="">Event Name</div>
+                    <div id="eventDetails">Can you pick up?</div>
+                </div>
+                <!--LOCATION BOX-->
+                <div class="contentBox">
+                    <div class="label" id="">Location</div>
+                    <div id="locationDetails">Vancouver</div>
+                </div>
+            </div>
+            <!--EVENT TIME BOX-->
+            <div id="eventTimeBox">
+                <!--START DATE-->
+                <div id="startDateBox">
+                    
+                    <p id="startDate">MM/DD/YYYY</p>
+                    <img alt="calender" class="calender" src="">
+                </div>
+                <!--START TIME-->
+                <div id="startTimeBox">
+                    <p id="startTime">00:00</p>
+                    <img alt="clock" class="clock" src="">
+                </div>
+                <!--END DATE-->
+                <div id="endDateBox">
+                        <p id="endDate">MM/DD/YYYY</p>
+                        <img alt="calender" class="calender" src="">
+                    </div>
+                    <!--END TIME-->
+                    <div id="startTimeBox">
+                        <p id="endTime">00:00</p>
+                        <img alt="clock" class="clock" src="">
+                    </div>
+                
+            </div>
+        </div>
+
+
+
+
+        <!--JOIN TOGGLE BUTTON-->
+        <div id="toggleBox">
+            <input type="checkbox" id="toggleButton" name="">
+        </div>
+
+
 
         <!--MY EVENTS PAGE------------------------------->
         <div id="myEvents">
 
         </div>
     </div>
-    <!--SHOW EVENT DETAILS BUTTON--------------------------------------------------->
-    <script>
-        $(document).ready(function () {
-            $("#readMoreButton").click(function () {
-                $("#readMoreBox").fadeOut("fast", function () {
-                    $("#eventPic").fadeOut("slow", function () {
-                        $("#eventInfo").fadeIn(600);
-                    });
-                });
-
-
-            });
-        });
-    </script>
-    <!--HIDE EVENT DETAILS BUTTON--------------------------------------------------->
-
-
-
+    <script src="./js/events.js"></script>
 </body>
 
 </html>
