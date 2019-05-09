@@ -12,7 +12,13 @@ function submitForm(e) {
   let email = getInputVal('email');
   let content = getInputVal('content');
   let city = getInputVal('city');
-  let timeStamp  = getInputVal('time');
+  let date  = getInputVal('date');
+
+  // Converts yyyy-mm-dd into millisecond timestamp
+  // Parses "-"
+  tempDate=date.split("-");
+  // Reorganizes format into mm,dd,yyyy and converts into timestamp
+  let timeStamp = new Date(tempDate[1]+","+tempDate[2]+","+tempDate[0]).getTime();
 
   // Saves message
   saveMessage(subject, email, content, city, timeStamp);
