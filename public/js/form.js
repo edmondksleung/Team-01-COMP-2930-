@@ -11,11 +11,17 @@ function submitForm(e) {
   let subject = getInputVal('subject');
   let email = getInputVal('email');
   let content = getInputVal('content');
-  let city = getInputVal('city')
+  let city = getInputVal('city');
+  let date  = getInputVal('date');
 
+  // Converts yyyy-mm-dd into millisecond timestamp
+  // Parses "-"
+  tempDate=date.split("-");
+  // Reorganizes format into mm,dd,yyyy and converts into timestamp
+  let timeStamp = new Date(tempDate[1]+","+tempDate[2]+","+tempDate[0]).getTime();
 
   // Saves message
-  saveMessage(subject, email, content, city);
+  saveMessage(subject, email, content, city, timeStamp);
 
   // Shows alert when submitted
   document.querySelector('.alert').style.display = "block";
@@ -42,12 +48,13 @@ function getInputVal(id) {
 
 
 // save message to firebase
-function saveMessage(subject, email, content, city){
+function saveMessage(subject, email, content, city, timeStamp){
   let newMessageRef = firebase.database().ref('events/' + city).push();
   newMessageRef.set({
     subject: subject,
     email: email,
     content: content,
-    city: city
+    city: city,
+    timeStamp: timeStamp
   });
 }

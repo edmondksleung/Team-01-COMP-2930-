@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     <script>
         //skip login page while signed in.
@@ -18,7 +19,7 @@
                     setTimeout(function () {
                         $('.subPageWrapper').fadeIn(500);
                     }, 1000);
-                    $('.subPageWrapper').css('display', 'block');
+                    $('.subPageWrapper').css('display: block');
                 } else {
                     $(".wrapper").show();
                 }
@@ -87,15 +88,15 @@
 
         <div id="topBox">
             <div></div>
-            <div id="evolunteer">W<span id = "eAudio">e</span>lcome!</div>
+            <div id="evolunteer">W<span id="eAudio">e</span>lcome!</div>
             <div id="logoutBox">
                 <button onclick="logout()" type="submit" id="logoutButton">Log Out</button>
             </div>
         </div>
         <div id="mainBox"><img id="globeLogo" src="https://media1.giphy.com/media/l1KVcrdl7rJpFnY2s/giphy.gif" alt="">
         </div>
-        </div>
-            <!--MAIN SUB WRAPPER-->
+    </div>
+    <!--MAIN SUB WRAPPER-->
     <div class="mainPageWrapper">
         <div id="userStatus"></div>
 
@@ -118,6 +119,7 @@
 
 
     </div>
+
 
 
     <script>
@@ -200,9 +202,8 @@
                     setTimeout(function () {
                         $('.subPageWrapper').fadeIn(4000);
                     }, 1000);
-                    $('.subPageWrapper').css('display', 'block');
+                    $('.subPageWrapper').css('display: block');
                 }
-
             });
         });
     </script>
@@ -224,7 +225,7 @@
             setTimeout(function () {
                 $('.mainPageWrapper').fadeIn(2000);
             }, 1000);
-            $('.mainPageWrapper').css('display', 'block');
+            $('.mainPageWrapper').css('display: block');
         });
     </script>
 
