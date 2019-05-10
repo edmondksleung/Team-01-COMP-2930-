@@ -221,10 +221,9 @@ body {
     justify-items: center;
 }
 
-#eventInfoBox {
+#createEventBox {
     width: 100%;
     height: 700px;
-    display: none;
     text-indent: 20px;
     font-family: 'Arial', sans-serif;
     margin: 0;

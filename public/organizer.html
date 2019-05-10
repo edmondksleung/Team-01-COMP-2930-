@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Events</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/events.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:900" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCjKV-p_CGqxhRcxahylr-6LXUzNax6kek",
+            authDomain: "evolunteer-45c5d.firebaseapp.com",
+            databaseURL: "https://evolunteer-45c5d.firebaseio.com",
+            projectId: "evolunteer-45c5d",
+            storageBucket: "evolunteer-45c5d.appspot.com",
+            messagingSenderId: "412878968573"
+        };
+        firebase.initializeApp(config);
+    </script>
+</head>
+
+<body>
+    <!--EVENTS PAGE-------------------------------->
+    <div id="eventsWrapper">
+        <!--EVENTS NAV BAR------------------------->
+        <div id="eventsNavBar">
+            <!--BACK BUTTON-->
+            <div id="backBox">
+                <button id="backButton">
+                    <img alt="back" id="backPic" src="./Images/back.png">
+                </button>
+            </div>
+            <!--LOCATION TEXT-->
+            <div id="location">VANCOUVER</div>
+            <!--MENU BUTTON-->
+            <div id="menuBox">
+                <button id="menuButton">
+                    <img alt="menu" id="menuPic" src="./images/menu.png">
+                </button>
+            </div>
+        </div>
+        <!--TABS BAR--------------------------------->
+        <div id="tabsBox">
+            <button class="tabs" id="volunteerTab">Create</button>
+            <button class="tabs" id="appliedTab">Edit</button>
+        </div>
+
+        <!--CREATE EVENT----------------------------------------------------------->
+        <div id="createEventBox">
+            <div id="eventInfo">
+                <!--ORGANIZATION BOX-->
+                <div>
+                    <div class="label" id="">Organization</div>
+                    <div class="contentBox">
+                        <input id="organizationInput" type="text" required="required">
+                    </div>
+                </div>
+                <!--EVENT NAME BOX-->
+                <div>
+                    <div class="label" id="">Event Name</div>
+                    <div class="contentBox">
+                        <input id="eventInput" type="text" required="required">
+                    </div>
+                </div>
+                <!--LOCATION BOX-->
+                <div>
+                    <div class="label" id="">Location</div>
+                    <div class="contentBox">
+                            <input id="locationInput" type="text" required="required">
+                    </div>
+                </div>
+                <!--EMAIL BOX-->
+                <div>
+                    <div class="label" id="">Email</div>
+                    <div class="contentBox" id="locationDetails">
+                            <input id="emailInput" type="email" required="required">
+
+                    </div>
+                </div>
+            </div>
+            <!--EVENT TIME BOX-->
+            <div id="eventTimeBox">
+                <!--START DATE-->
+                <p class="label">Start</p>
+                <div id="startBox">
+                    <div id="startDateBox">
+                        <div id="startDate">
+                                <input id="startDateInput" type="date" required="required" placeholder="MM/DD/YYYY">
+                        </div>
+                        <img alt="calender" class="calender" src="./Images/calender.png">
+                    </div>
+                    <!--START TIME-->
+                    <div id="startTimeBox">
+                        <div id="startTime">
+                                <input id="startTimeInput" type="time" placeholder="hrs:mins" required="required">
+                        </div>
+                        <img alt="clock" class="clock" src="./Images/clock.png">
+                    </div>
+                    <div></div>
+
+                </div>
+                <!--END DATE-->
+                <p class="label">End</p>
+                <div id="endBox">
+                    <div id="endDateBox">
+                        <div id="endDate">
+                                <input id="endDateInput" type="date" required="required" placeholder="MM/DD/YYYY">
+                        </div>
+                        <img alt="calender" class="calender" src="./Images/calender.png">
+                    </div>
+                    <!--END TIME-->
+                    <div id="endTimeBox">
+                        <p id="endTime">00:00</p>
+                        <img alt="clock" class="clock" src="./Images/clock.png">
+                    </div>
+                </div>
+            </div>
+            <!--DETAILS-->
+            <p class="label">Description</p>
+            <div id="detailsBox">
+                <div id="detailsContent">
+                    Whether you’re a beginner gardener or experienced, start your visit here for growing guides,
+                    advice
+                    on vegetable garden planning for beginners, garden seed catalog lists, and more! Grow a Garden
+                    That
+                    Keeps Your Pantry Stocked Whether you’re a beginner gardener or experienced, start your visit
+                    here for growing guides, advice
+                    on vegetable garden planning for beginners, garden seed catalog lists, and more! Grow a Garden
+                    That
+                    Keeps Your Pantry Stocked
+                </div>
+            </div>
+            <div id="backJoinBox">
+                <button id="cancelButton">Cancel</button>
+                <button id="createButton">Create</button>
+            </div>
+        </div>
+
+
+
+        <!--MY EVENTS PAGE------------------------------->
+        <div id="myEvents">
+
+        </div>
+    </div>
+    <script src="./js/events.js"></script>
+</body>
+
+</html>
