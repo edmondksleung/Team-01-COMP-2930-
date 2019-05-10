@@ -282,7 +282,7 @@ input[type=date]::-webkit-inner-spin-button {
 
 #startBox {
     display: grid;
-    grid-template-columns: 220px 100px;
+    grid-template-columns: 220px 140px;
     grid-template-rows: 40px;
 }
 
@@ -303,20 +303,29 @@ input[type=date]::-webkit-inner-spin-button {
 #startTimeBox {
     display: grid;
     font-size: 10pt;
-    grid-template-columns: 65% 25%;
+    grid-template-columns: 70% 30%;
     align-items: center;
     justify-items: center;
     background: white;
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 7px;
-    text-indent: 0;
+    text-indent: 10px;
     border: 1px solid grey;
 }
 
+#startTimeInput {
+    width: 90px;
+}
+
+input[type="time"]::-webkit-outer-spin-button, input[type="time"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
 #endBox {
     display: grid;
-    grid-template-columns: 220px 100px;
+    grid-template-columns: 220px 140px;
     grid-template-rows: 40px;
 
 }
@@ -338,7 +347,7 @@ input[type=date]::-webkit-inner-spin-button {
 #endTimeBox {
     display: grid;
     font-size: 10pt;
-    grid-template-columns: 65% 25%;
+    grid-template-columns: 70% 30%;
     align-items: center;
     justify-items: center;
     background: white;
@@ -346,9 +355,14 @@ input[type=date]::-webkit-inner-spin-button {
     margin-right: 10px;
     border-radius: 5px;
     border: 1px solid grey;
-    text-indent: 0;
+    text-indent: 10px;
 }
 
+#endTimeInput {
+    width: 90px;
+}
+
+    
 .calender {
     width: 20px;
     height: 20px;
@@ -371,6 +385,14 @@ input[type=date]::-webkit-inner-spin-button {
 #detailsContent {
     text-indent: 0;
     padding: 10px;
+}
+
+#details {
+    width: 100%;
+    height: 165px;
+    overflow: hidden;
+    border: none;
+    resize: none;
 }
 
 #backJoinBox {

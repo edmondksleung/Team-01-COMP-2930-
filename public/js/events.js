@@ -1,4 +1,4 @@
-//P
+
 //SHOW VOLUNTEER TAB---------------------------------------------------------
 $("#volunteerTab").click(function () {
     $("#volunteerTab").css("borderBottom", "4px solid #3498db");

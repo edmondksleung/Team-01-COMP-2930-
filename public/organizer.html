@@ -24,8 +24,8 @@
 </head>
 
 <body>
-    <!--EVENTS PAGE-------------------------------->
-    <div id="eventsWrapper">
+    <!--ORGANIZER EVENTS WRAPPER PAGE-------------------------------->
+    <div class="organizerUI" id="eventsWrapper">
         <!--EVENTS NAV BAR------------------------->
         <div id="eventsNavBar">
             <!--BACK BUTTON-->
@@ -45,8 +45,8 @@
         </div>
         <!--TABS BAR--------------------------------->
         <div id="tabsBox">
-            <button class="tabs" id="volunteerTab">Create</button>
-            <button class="tabs" id="appliedTab">Edit</button>
+            <button class="tabs" id="createTab">Create</button>
+            <button class="tabs" id="createdTab">My Events</button>
         </div>
 
         <!--CREATE EVENT----------------------------------------------------------->
@@ -70,14 +70,14 @@
                 <div>
                     <div class="label" id="">Location</div>
                     <div class="contentBox">
-                            <input id="locationInput" type="text" required="required">
+                        <input id="locationInput" type="text" required="required">
                     </div>
                 </div>
                 <!--EMAIL BOX-->
                 <div>
                     <div class="label" id="">Email</div>
                     <div class="contentBox" id="locationDetails">
-                            <input id="emailInput" type="email" required="required">
+                        <input id="emailInput" type="email" required="required">
 
                     </div>
                 </div>
@@ -89,14 +89,14 @@
                 <div id="startBox">
                     <div id="startDateBox">
                         <div id="startDate">
-                                <input id="startDateInput" type="date" required="required" placeholder="MM/DD/YYYY">
+                            <input id="startDateInput" type="date" required="required" placeholder="MM/DD/YYYY">
                         </div>
                         <img alt="calender" class="calender" src="./Images/calender.png">
                     </div>
                     <!--START TIME-->
                     <div id="startTimeBox">
                         <div id="startTime">
-                                <input id="startTimeInput" type="time" placeholder="hrs:mins" required="required">
+                            <input id="startTimeInput" type="time" value="09:00" required="required">
                         </div>
                         <img alt="clock" class="clock" src="./Images/clock.png">
                     </div>
@@ -108,13 +108,15 @@
                 <div id="endBox">
                     <div id="endDateBox">
                         <div id="endDate">
-                                <input id="endDateInput" type="date" required="required" placeholder="MM/DD/YYYY">
+                            <input id="endDateInput" type="date" required="required" placeholder="MM/DD/YYYY">
                         </div>
                         <img alt="calender" class="calender" src="./Images/calender.png">
                     </div>
                     <!--END TIME-->
                     <div id="endTimeBox">
-                        <p id="endTime">00:00</p>
+                        <div id="endTime">
+                            <input id="endTimeInput" type="time" value="17:00" required="required">
+                        </div>
                         <img alt="clock" class="clock" src="./Images/clock.png">
                     </div>
                 </div>
@@ -123,15 +125,7 @@
             <p class="label">Description</p>
             <div id="detailsBox">
                 <div id="detailsContent">
-                    Whether you’re a beginner gardener or experienced, start your visit here for growing guides,
-                    advice
-                    on vegetable garden planning for beginners, garden seed catalog lists, and more! Grow a Garden
-                    That
-                    Keeps Your Pantry Stocked Whether you’re a beginner gardener or experienced, start your visit
-                    here for growing guides, advice
-                    on vegetable garden planning for beginners, garden seed catalog lists, and more! Grow a Garden
-                    That
-                    Keeps Your Pantry Stocked
+                    <textarea id="details"></textarea>
                 </div>
             </div>
             <div id="backJoinBox">
@@ -147,7 +141,8 @@
 
         </div>
     </div>
-    <script src="./js/events.js"></script>
+    <script src="./js/organizer.js"></script>
+
 </body>
 
 </html>
