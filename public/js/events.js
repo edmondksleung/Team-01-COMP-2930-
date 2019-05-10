@@ -5,14 +5,18 @@ $("#volunteerTab").click(function () {
     $("#appliedTab").css("borderBottom", "none");
     $("#eventInfoBox").hide();
     $("#eventsBox").show();
-
 });
 
-//SHOW APPLIED TAB---------------------------------------------------------
+//SHOW JOINED TAB---------------------------------------------------------
 $("#appliedTab").click(function () {
     $("#appliedTab").css("borderBottom", "4px solid #3498db");
     $("#volunteerTab").css("borderBottom", "none");
 });
+
+//MENU DROP DOWN---------------------------------------------------->
+$("#menuButton").click(function() {
+    $("#dropDownBox").toggle();
+})
 
 //MORE DETAILS BUTTON----------------------------------------------------------
 $("#readMoreButton").click(function () {
@@ -27,5 +31,3 @@ $("#cancelButton").click(function () {
     $("#eventInfoBox").hide();
     $("#eventsBox").show();
 });
-
-//JOIN EVENTS BUTTON------------------------------------------------->
