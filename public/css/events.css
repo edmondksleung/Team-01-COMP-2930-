@@ -1,6 +1,5 @@
 body {
     margin: 0;
-    max-width: 450px;
     min-width: 450px;
 }
 
@@ -91,13 +90,15 @@ body {
 }
 
 .tabs:hover {
-    border-bottom: 4px solid rgb(34, 189, 34);
+    border-bottom: 4px solid #3498db;
     color: black;
 }
+
 .events {
     height: 305px;
     border-bottom: 2px solid rgb(216, 208, 208);
 }
+
 #event {
     width: 100%;
     height: auto;
@@ -118,9 +119,11 @@ body {
 }
 
 #readMoreBox {
+    width: 100%;
     display: grid;
-    transform: translate(375px, 10px);
+    grid-template-columns: 87% 13%;
     position: absolute;
+    margin-top: 10px;
 }
 
 #readMoreButton {
@@ -139,8 +142,8 @@ body {
 }
 
 #readMoreButton:hover {
-    background: rgb(62, 201, 57);
-    color: black;
+    background: #3498db;
+    color: white;
 }
 
 #eventPic {
@@ -194,11 +197,12 @@ body {
 
 #peopleBox {
     display: grid;
-    grid-template-columns: 55% 30%;
+    grid-template-columns: 55% 20%;
     grid-template-rows: 60px;
     justify-items: end;
     align-items: center;
 }
+
 #peoplePic {
     width: 30px;
     height: 30px;
@@ -208,7 +212,9 @@ body {
     font-size: 17pt;
     font-weight: bold;
     font-family: 'Titillium Web', sans-serif;
+    color: green;
 }
+
 #toggleBox {
     display: grid;
     align-items: center;
@@ -217,93 +223,186 @@ body {
 
 #eventInfoBox {
     width: 100%;
-    max-width: 450px;
-    height: 500px;
+    height: 700px;
     display: none;
     text-indent: 20px;
     font-family: 'Arial', sans-serif;
     margin: 0;
     border-bottom: 2px solid rgb(216, 208, 208);
-} 
+    background: rgb(241, 241, 241);
+}
 
 .label {
     font-size: 10pt;
     font-weight: bold;
-}
-.contentBox {
-    background: rgb(196, 192, 192);
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
-    border-radius: 7px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-.timeLabel {
-    font-size: 10pt;
-    font-weight: bold;
+.contentBox {
+    height: 30px;
+    display: grid;
+    justify-items: center;
+    text-indent: 8px;
+    background: white;
+    border: 1px solid grey;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 11px;
+    margin-right: 11px;
+    border-radius: 5px;
 }
+
+input {
+    border: none;
+    height: 28px;
+    width: 97%;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
+}
+
 #eventInfo {
     display: grid;
-    grid-template-rows: 40px 40px 40px;
+    grid-template-rows: 70px 70px 70px 70px 10px;
     grid-template-areas: "organization",
-    "event",
-    "location",
-    "date time",
+        "event",
+        "location";
+    align-items: center;
 }
 
 #eventTimeBox {
     display: grid;
-    grid-template-columns: 60% 40%;
-    grid-template-rows: 100px 100px;
+    grid-template-rows: 20px 40px 20px 40px 20px;
+    align-items: center;
+}
+
+#startBox {
+    display: grid;
+    grid-template-columns: 220px 100px;
+    grid-template-rows: 40px;
+}
+
+#startDateBox {
+    display: grid;
+    font-size: 10pt;
+    grid-template-columns: 65% 35%;
+    align-items: center;
+    justify-items: center;
+    background: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 7px;
+    border: 1px solid grey;
+    text-indent: 0;
 }
 
 #startTimeBox {
     display: grid;
-    grid-template-areas:
-        "apple apple"
-        "beta charlie"
-        "delta delta";
+    font-size: 10pt;
+    grid-template-columns: 65% 25%;
     align-items: center;
-    grid-template-columns: 60% 40%;
-    grid-template-rows: 20px 40px 40px;
+    justify-items: center;
+    background: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 7px;
+    text-indent: 0;
+    border: 1px solid grey;
+}
+
+#endBox {
+    display: grid;
+    grid-template-columns: 220px 100px;
+    grid-template-rows: 40px;
+
+}
+
+#endDateBox {
+    display: grid;
+    font-size: 10pt;
+    grid-template-columns: 65% 35%;
+    align-items: center;
+    justify-items: center;
+    background: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 7px;
+    border: 1px solid grey;
+    text-indent: 0;
 }
 
 #endTimeBox {
     display: grid;
-    grid-template-rows: 20px 40px 40px;
-
+    font-size: 10pt;
+    grid-template-columns: 65% 25%;
+    align-items: center;
+    justify-items: center;
+    background: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    text-indent: 0;
 }
-#toggleButton {
-    width: 60px;
+
+.calender {
+    width: 20px;
+    height: 20px;
+}
+
+.clock {
+    width: 20px;
+    height: 20px;
+}
+
+#detailsBox {
+    background: white;
+    margin-left: 11px;
+    margin-right: 11px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 190px;
+}
+
+#detailsContent {
+    text-indent: 0;
+    padding: 10px;
+}
+
+#backJoinBox {
+    margin-top: 10px;
+    margin-right: 11px;
+    margin-left: 11px;
+    float: right;
+}
+
+#cancelButton {
+    width: 80px;
     height: 30px;
-    -webkit-appearance: none;
-    background: #c6c6c6;
-    outline: none;
-    border-radius: 20px;
-    transition: 0.2s;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, .5);
-
+    border-radius: 5px;
+    background: #3498db;
+    font-weight: bold;
+    color: white;
 }
 
-#toggleButton:checked {
-    background: rgb(15, 163, 15);
-
+#cancelButton:hover {
+    background: #1f4c6b;
 }
 
-#toggleButton:before {
-    content: '';
-    position: absolute;
-    width: 28px;
-    height: 28px;
-    border-radius: 20px;
-    background: #fff;
-    transition: 0.5s;
-    transform: scale(1.1);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 5);
-
+#createButton {
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    background: #3498db;
+    color: white;
 }
 
-#toggleButton:checked:before {
-    left: 405px;
+#createButton:hover {
+    background: #1f4c6b;
 }

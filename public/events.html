@@ -46,7 +46,7 @@
         <!--TABS BAR--------------------------------->
         <div id="tabsBox">
             <button class="tabs" id="volunteerTab">Volunteer</button>
-            <button class="tabs" id="appliedTab">Applied</button>
+            <button class="tabs" id="appliedTab">Joined</button>
         </div>
         <!--EVENTS BOX----------------------------------------------------------->
         <div id="eventsBox">
@@ -60,6 +60,7 @@
                     <div id="eventPicBox">
                         <!--READ MORE BUTTON-->
                         <div id="readMoreBox">
+                            <div></div>
                             <button id="readMoreButton">Info</button>
                         </div>
                         <!--EVENT IMAGE-->
@@ -85,60 +86,95 @@
                 </div>
             </div>
         </div>
-
-        <!--EVENT INFO----------------------------------------------------------->
+        <!--CREATE EVENT----------------------------------------------------------->
         <div id="eventInfoBox">
             <div id="eventInfo">
                 <!--ORGANIZATION BOX-->
                 <div>
                     <div class="label" id="">Organization</div>
-                    <div class="contentBox" id="organizationDetails">Coca Cola</div>
+                    <div class="contentBox">
+                        <input id="organizationInput" type="text" required="required">
+                    </div>
                 </div>
                 <!--EVENT NAME BOX-->
                 <div>
                     <div class="label" id="">Event Name</div>
-                    <div class="contentBox" id="eventDetails">Can you pick up?</div>
+                    <div class="contentBox">
+                        <input id="eventInput" type="text" required="required">
+                    </div>
                 </div>
                 <!--LOCATION BOX-->
                 <div>
                     <div class="label" id="">Location</div>
-                    <div class="contentBox" id="locationDetails">Vancouver</div>
+                    <div class="contentBox">
+                            <input id="locationInput" type="text" required="required">
+                    </div>
+                </div>
+                <!--EMAIL BOX-->
+                <div>
+                    <div class="label" id="">Email</div>
+                    <div class="contentBox" id="locationDetails">
+                            <input id="emailInput" type="email" required="required">
+
+                    </div>
                 </div>
             </div>
             <!--EVENT TIME BOX-->
             <div id="eventTimeBox">
                 <!--START DATE-->
-                <div id="startDateBox">
-                    <p class="timeLabel">Start</p>
-                    <p id="startDate">MM/DD/YYYY</p>
-                    <img alt="calender" class="calender" src="">
-                </div>
-                <!--START TIME-->
-                <div id="startTimeBox">
-                    <p id="startTime">00:00</p>
-                    <img alt="clock" class="clock" src="">
+                <p class="label">Start</p>
+                <div id="startBox">
+                    <div id="startDateBox">
+                        <div id="startDate">
+                                <input id="startDateInput" type="date" required="required" placeholder="MM/DD/YYYY">
+                        </div>
+                        <img alt="calender" class="calender" src="./Images/calender.png">
+                    </div>
+                    <!--START TIME-->
+                    <div id="startTimeBox">
+                        <div id="startTime">
+                                <input id="startTimeInput" type="time" required="required" placeholder="00:00">
+                        </div>
+                        <img alt="clock" class="clock" src="./Images/clock.png">
+                    </div>
+                    <div></div>
+
                 </div>
                 <!--END DATE-->
-                <div id="endDateBox">
-                    <p class="timeLabel">End</p>
-                    <p id="endDate">MM/DD/YYYY</p>
-                    <img alt="calender" class="calender" src="">
+                <p class="label">End</p>
+                <div id="endBox">
+                    <div id="endDateBox">
+                        <div id="endDate">
+                                <input id="endDateInput" type="date" required="required" placeholder="MM/DD/YYYY">
+                        </div>
+                        <img alt="calender" class="calender" src="./Images/calender.png">
+                    </div>
+                    <!--END TIME-->
+                    <div id="endTimeBox">
+                        <p id="endTime">00:00</p>
+                        <img alt="clock" class="clock" src="./Images/clock.png">
+                    </div>
                 </div>
-                <!--END TIME-->
-                <div id="startTimeBox">
-                    <p id="endTime">00:00</p>
-                    <img alt="clock" class="clock" src="">
-                </div>
-
             </div>
-        </div>
-
-
-
-
-        <!--JOIN TOGGLE BUTTON-->
-        <div id="toggleBox">
-            <input type="checkbox" id="toggleButton" name="">
+            <!--DETAILS-->
+            <p class="label">Description</p>
+            <div id="detailsBox">
+                <div id="detailsContent">
+                    Whether you’re a beginner gardener or experienced, start your visit here for growing guides,
+                    advice
+                    on vegetable garden planning for beginners, garden seed catalog lists, and more! Grow a Garden
+                    That
+                    Keeps Your Pantry Stocked Whether you’re a beginner gardener or experienced, start your visit
+                    here for growing guides, advice
+                    on vegetable garden planning for beginners, garden seed catalog lists, and more! Grow a Garden
+                    That
+                    Keeps Your Pantry Stocked
+                </div>
+            </div>
+            <div id="backJoinBox">
+                <button id="cancelButton">Cancel</button>
+                <button id="createButton">Create</button>
+            </div>
         </div>
 
 
