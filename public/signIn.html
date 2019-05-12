@@ -289,10 +289,16 @@
 
         $("#eAudio").click(function () {
             helloSound.play();
+            
             $("#canvas").css('display', 'block');
             setTimeout(function () {
                 $('canvas').css('display', 'none');
             }, 5000);
+
+            if (promise) {
+    //Older browsers may not return a promise, according to the MDN website
+    promise.catch(function(error) { console.error(error); });
+}
         });
 
     </script>
