@@ -1,7 +1,5 @@
 //EVENTS PAGE ON LOAD SHOW VOLUNTEER PAGE--------------------------------->
 $("#eventsWrapper").ready(function() {
-    $("#volunteerTab").css({"borderBottom": "4px solid #3498db", "color": "black"});
-    $("#appliedTab").css({"borderBottom": "none", "color": "grey"});
     $("#eventInfoBox").hide();
     $("#eventsBox").show();
     
