@@ -326,6 +326,7 @@ form button:hover {
     font-size: 10pt;
     margin: 0 auto;
     width: 140px;
+    color: white;
 }
 
 #signUp:hover {
