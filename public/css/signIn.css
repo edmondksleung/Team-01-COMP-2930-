@@ -354,7 +354,14 @@ div.cityImage h1:hover {
     cursor: pointer;
 }
 
-.cities:hover {
+.cities a {
+    text-decoration: none;
+    color: white;
+    font-size: 30pt;
+    letter-spacing: 10px;
+}
+
+.cities a:hover {
     font-size: 30pt;
     letter-spacing: 15px;
     color: rgb(255, 204, 0);
