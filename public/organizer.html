@@ -5,7 +5,7 @@
     <title>Events</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./css/events.css">
+    <link rel="stylesheet" type="text/css" href="./css/organizer.css">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:900" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
@@ -24,122 +24,129 @@
 </head>
 
 <body>
-    <!--ORGANIZER EVENTS WRAPPER PAGE-------------------------------->
-    <div class="organizerUI" id="eventsWrapper">
-        <!--EVENTS NAV BAR------------------------->
-        <div id="eventsNavBar">
-            <!--BACK BUTTON-->
-            <div id="backBox">
-                <button id="backButton">
-                    <img alt="back" id="backPic" src="./Images/back.png">
+    <!--ORGANIZER UI EVENTS WRAPPER PAGE-------------------------------->
+    <div class="organizerEventsWrapper">
+        <!--ORGANIZER UI EVENTS NAV BAR------------------------->
+        <div class="organizerEventsNavBar">
+            <!--ORGANIZER UI BACK BUTTON-->
+            <div class="organizerBackBox">
+                <button class="organizerBackButton">
+                    <img alt="back" class="organizerBackPic" src="./Images/back.png">
                 </button>
             </div>
-            <!--LOCATION TEXT-->
-            <div id="location">VANCOUVER</div>
-            <!--MENU BUTTON-->
-            <div id="menuBox">
-                <button id="menuButton">
-                    <img alt="menu" id="menuPic" src="./images/menu.png">
+            <!--ORGANIZER UI LOCATION TEXT-->
+            <div class="organizerLocation">VANCOUVER</div>
+            <!--ORGANIZER UI MENU BUTTON-->
+            <div class="organizerMenuBox">
+                <button class="organizerMenuButton">
+                    <img alt="menu" class="organizerMenuPic" src="./Images/menu.png">
                 </button>
             </div>
         </div>
-        <!--TABS BAR--------------------------------->
-        <div id="tabsBox">
-            <button class="tabs" id="createTab">Create</button>
-            <button class="tabs" id="createdTab">My Events</button>
+        <!--ORGANIZER UI TABS BAR--------------------------------->
+        <div class="organizerTabsBox">
+            <button class="organizerTabs" class="createTab">Create</button>
+            <button class="organizerTabs" class="createdTab">My Events</button>
         </div>
 
-        <!--CREATE EVENT----------------------------------------------------------->
-        <div id="createEventBox">
-            <div id="eventInfo">
-                <!--ORGANIZATION BOX-->
+        <!--ORGANIZER UI CREATE EVENT----------------------------------------------------------->
+        <div class="createEventBox">
+
+            <!--ORGANIZER UI MENU DROPDOWN BOX----------------------------->
+            <div class="organizerDropDownBox">
+                <div class="organizerDropDown">
+                    <button class="organizerDropButtons">Home</button>
+                    <button class="organizerDropButtons">About Us</button>
+                    <button class="organizerDropButtons">Location</button>
+                    <button class="organizerDropButtons">Logout</button>
+                </div>
+            </div>
+
+
+            <div id="organizerEventInfo">
+                <!--ORGANIZER UI ORGANIZATION BOX-->
                 <div>
                     <div class="label" id="">Organization</div>
                     <div class="contentBox">
-                        <input id="organizationInput" type="text" required="required">
+                        <input class="organizationInput" type="text" required="required">
                     </div>
                 </div>
-                <!--EVENT NAME BOX-->
+                <!--ORGANIZER UI EVENT NAME BOX-->
                 <div>
                     <div class="label" id="">Event Name</div>
                     <div class="contentBox">
-                        <input id="eventInput" type="text" required="required">
+                        <input class="eventInput" type="text" required="required">
                     </div>
                 </div>
-                <!--LOCATION BOX-->
+                <!--ORGANIZER UI LOCATION BOX-->
                 <div>
-                    <div class="label" id="">Location</div>
+                    <div class="label" class="">Location</div>
                     <div class="contentBox">
-                        <input id="locationInput" type="text" required="required">
+                        <input class="locationInput" type="text" required="required">
                     </div>
                 </div>
-                <!--EMAIL BOX-->
+                <!--ORGANIZER UI EMAIL BOX-->
                 <div>
                     <div class="label" id="">Email</div>
-                    <div class="contentBox" id="locationDetails">
-                        <input id="emailInput" type="email" required="required">
-
+                    <div class="contentBox" class="locationDetails">
+                        <input class="emailInput" type="email" required="required">
                     </div>
                 </div>
             </div>
-            <!--EVENT TIME BOX-->
-            <div id="eventTimeBox">
-                <!--START DATE-->
+            <!--ORGANIZER UI EVENT TIME BOX-->
+            <div class="eventTimeBox">
+                <!--ORGANIZER UI START DATE-->
                 <p class="label">Start</p>
-                <div id="startBox">
-                    <div id="startDateBox">
-                        <div id="startDate">
-                            <input id="startDateInput" type="date" required="required" placeholder="MM/DD/YYYY">
+                <div class="startBox">
+                    <div class="startDateBox">
+                        <div class="startDate">
+                            <input class="startDateInput" type="date" required="required" placeholder="MM/DD/YYYY">
                         </div>
                         <img alt="calender" class="calender" src="./Images/calender.png">
                     </div>
-                    <!--START TIME-->
-                    <div id="startTimeBox">
-                        <div id="startTime">
-                            <input id="startTimeInput" type="time" value="09:00" required="required">
+                    <!--ORGANIZER UI START TIME-->
+                    <div class="startTimeBox">
+                        <div class="startTime">
+                            <input class="startTimeInput" type="time" value="09:00" required="required">
                         </div>
                         <img alt="clock" class="clock" src="./Images/clock.png">
                     </div>
                     <div></div>
-
                 </div>
-                <!--END DATE-->
+                <!--ORGANIZER UI END DATE-->
                 <p class="label">End</p>
-                <div id="endBox">
-                    <div id="endDateBox">
-                        <div id="endDate">
-                            <input id="endDateInput" type="date" required="required" placeholder="MM/DD/YYYY">
+                <div class="endBox">
+                    <div class="endDateBox">
+                        <div class="endDate">
+                            <input class="endDateInput" type="date" required="required" placeholder="MM/DD/YYYY">
                         </div>
                         <img alt="calender" class="calender" src="./Images/calender.png">
                     </div>
-                    <!--END TIME-->
-                    <div id="endTimeBox">
-                        <div id="endTime">
-                            <input id="endTimeInput" type="time" value="17:00" required="required">
+                    <!--ORGANIZER UI END TIME-->
+                    <div class="endTimeBox">
+                        <div class="endTime">
+                            <input class="endTimeInput" type="time" value="17:00" required="required">
                         </div>
                         <img alt="clock" class="clock" src="./Images/clock.png">
                     </div>
                 </div>
             </div>
-            <!--DETAILS-->
+            <!--ORGANIZER UI DETAILS-->
             <p class="label">Description</p>
-            <div id="detailsBox">
-                <div id="detailsContent">
-                    <textarea id="details"></textarea>
+            <div class="detailsBox">
+                <textarea class="details"></textarea>
+            </div>
+            
+            <!--CANCEL AND JOIN BOX-->
+            <div class="backJoinBox">
+                    <button class="cancelButton">Cancel</button>
+                    <button class="createButton">Create</button>
                 </div>
-            </div>
-            <div id="backJoinBox">
-                <button id="cancelButton">Cancel</button>
-                <button id="createButton">Create</button>
-            </div>
         </div>
 
 
+    </div>
 
-        <!--MY EVENTS PAGE------------------------------->
-        <div id="myEvents">
-
-        </div>
     </div>
     <script src="./js/organizer.js"></script>
 
