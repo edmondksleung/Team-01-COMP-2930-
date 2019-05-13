@@ -168,7 +168,6 @@ form button:hover {
     color: rgb(118, 228, 85);
 }
 
-
 #signUp {
     color: white;
     font-size: 10pt;
@@ -328,6 +327,19 @@ div.cityImage h1:hover {
 
 #mainBox img:hover {
     cursor: pointer;
+}
+
+#subPageWrapperTitle {
+    font-size: 30pt;
+    text-align: center;
+    letter-spacing: 8px;
+    margin-bottom: 50px;
+    color: white;
+    position: relative;
+}
+
+#subPageWrapperTitle span {
+    color: rgb(118, 228, 85);
 }
 
 .cities {
