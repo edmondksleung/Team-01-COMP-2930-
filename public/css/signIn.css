@@ -24,7 +24,6 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: 'Source Sans Pro', sans-serif;
-    color: white;
     font-weight: 300;
 }
 
@@ -315,6 +314,7 @@ form button:hover {
     text-align: center;
     letter-spacing: 8px;
     margin-bottom: 50px;
+    color: white;
 }
 
 #title span {
@@ -390,6 +390,12 @@ div.cityImage h1 {
     font-size: 50pt;
 }
 
+/*HOVER FOR CITY SELECTION*/
+div.cityImage h1:hover {
+    cursor: pointer;
+    color: black;
+}
+
 .subPageWrapper {
     display: none;
     overflow: hidden;
@@ -414,6 +420,7 @@ div.cityImage h1 {
     margin-right: auto;
     font-size: 30pt;
     z-index: 1;
+    color: white;
 }
 
 #signInLogo {

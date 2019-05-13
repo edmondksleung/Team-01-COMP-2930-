@@ -1,5 +1,13 @@
+//SHOW EVENTS WRAPPER PAGE---------------------------------------------
+$("#omgtest").click(function() {
+    $(".mainPageWrapper").hide();
+    $("#eventsWrapper").show();
+    $(document.body).css("background", "white");
+    console.log("omg");
+});
+
 //EVENTS PAGE ON LOAD SHOW VOLUNTEER PAGE---------------------------------
-$("#eventsWrapper").ready(function() {
+$("#eventsWrapper").ready(function () {
     $("#eventsInfoBox").hide();
     $(".joinedEventsBox").hide();
     $(".eventsBox").show();
@@ -7,8 +15,14 @@ $("#eventsWrapper").ready(function() {
 
 //SHOW VOLUNTEER TAB---------------------------------------------------------
 $("#volunteerTab").click(function () {
-    $("#volunteerTab").css({"borderBottom": "4px solid #3498db", "color": "black"});
-    $("#appliedTab").css({"borderBottom": "none", "color": "grey"});
+    $("#volunteerTab").css({
+        "borderBottom": "4px solid #3498db",
+        "color": "black"
+    });
+    $("#appliedTab").css({
+        "borderBottom": "none",
+        "color": "grey"
+    });
     $("#eventsInfoBox").hide();
     $(".joinedEventsBox").hide();
     $(".joinedEventsInfoBox").hide();
@@ -17,8 +31,14 @@ $("#volunteerTab").click(function () {
 
 //SHOW JOINED TAB---------------------------------------------------------
 $("#appliedTab").click(function () {
-    $("#appliedTab").css({"borderBottom": "4px solid #3498db", "color": "black"});
-    $("#volunteerTab").css({"borderBottom": "none", "color": "grey"});
+    $("#appliedTab").css({
+        "borderBottom": "4px solid #3498db",
+        "color": "black"
+    });
+    $("#volunteerTab").css({
+        "borderBottom": "none",
+        "color": "grey"
+    });
     $(".eventsBox").hide();
     $("#eventsInfoBox").hide();
     $(".joinedEventsInfoBox").hide();
@@ -32,17 +52,17 @@ $(".menuButton").click(function () {
 
 //MORE DETAILS BUTTON----------------------------------------------------------
 $(".readMoreButton").click(function () {
-        $(".eventsBox").hide();
-        $(".joinedEventsBox").hide();
-        $("#eventsInfoBox").show();
+    $(".eventsBox").hide();
+    $(".joinedEventsBox").hide();
+    $("#eventsInfoBox").show();
 });
 
 
 //ALREADY JOINED EVENTS MORE DETAILS BUTTON---------------------------------------
 $(".joinedReadMoreButton").click(function () {
-        $(".eventsBox").hide();
-        $(".joinedEventsBox").hide();
-        $(".joinedEventsInfoBox").show();
+    $(".eventsBox").hide();
+    $(".joinedEventsBox").hide();
+    $(".joinedEventsInfoBox").show();
 });
 
 //CANCEL DETAILS WINDOW BUTTON---------------------------------------
@@ -51,5 +71,3 @@ $("#cancelButton").click(function () {
     $("#eventInfoBox").hide();
     $("#eventsBox").show();
 });
-
-

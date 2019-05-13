@@ -5,6 +5,7 @@ body {
 }
 
 #eventsWrapper {
+    display: none;
     width: 100%;
     height: 100%;
 }
@@ -175,9 +176,7 @@ body {
 
 #eventPic {
     width: 100%;
-    height: 250px;
-    border-top: 2px solid rgb(216, 208, 208);
-    border-bottom: 2px solid rgb(216, 208, 208);
+    height: 253px;
 }
 
 #previewBox {
