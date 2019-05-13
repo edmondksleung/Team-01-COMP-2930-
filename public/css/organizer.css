@@ -204,6 +204,11 @@ input[type=date]::-webkit-inner-spin-button {
     align-items: center;
 }
 
+/*ORGANIZER LABEL*/
+.organizerLabel {
+    padding-top: 20px;
+}
+
 /*ORGANIZER UI EVENT TIME BOX*/
 .eventTimeBox {
     display: grid;
@@ -356,9 +361,11 @@ input[type="time"]::-webkit-outer-spin-button, input[type="time"]::-webkit-inner
     width: 80px;
     height: 30px;
     border-radius: 5px;
+    border: none;
     background: #3498db;
     font-weight: bold;
     color: white;
+    box-shadow: 0 1px 1px rgba(0,0,0,1);
 }
 
 /*ORGANIZER UI CANCEL BUTTON HOVER*/
@@ -373,7 +380,9 @@ input[type="time"]::-webkit-outer-spin-button, input[type="time"]::-webkit-inner
     border-radius: 5px;
     font-weight: bold;
     background: #3498db;
+    border: none;
     color: white;
+    box-shadow: 0 1px 1px rgba(0,0,0,1);
 }
 
 /*ORGANIZER UI CREATE BUTTON HOVER*/
