@@ -476,7 +476,7 @@
         function logout() {
             firebase.auth().signOut();
             alert('Logged Out');
-            window.location = 'signIn.html';
+            window.location = 'index.html';
         }
     </script>
 
@@ -509,7 +509,7 @@
                 },
                 // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
                 signInFlow: 'popup',
-                signInSuccessUrl: 'signIn.html',
+                signInSuccessUrl: 'index.html',
                 signInOptions: [
                     // Leave the lines as is for the providers you want to offer your users.
                     firebase.auth.EmailAuthProvider.PROVIDER_ID,
@@ -518,9 +518,9 @@
                     firebase.auth.GithubAuthProvider.PROVIDER_ID,
                 ],
                 // Terms of service url.
-                tosUrl: 'signIn.html',
+                tosUrl: 'index.html',
                 // Privacy policy url.
-                privacyPolicyUrl: 'signIn.html'
+                privacyPolicyUrl: 'index.html'
             };
 
             // The start method will wait until the DOM is loaded.
