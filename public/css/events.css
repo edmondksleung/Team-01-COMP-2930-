@@ -6,11 +6,6 @@
     src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdr.ttf) format('truetype');
 }
 
-body {
-    margin: 0;
-    overflow-x: hidden;
-}
-
 #eventsWrapper {
     display: none;
     width: 100%;
