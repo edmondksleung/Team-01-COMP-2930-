@@ -1,6 +1,7 @@
 body {
     margin: 0;
     min-width: 450px;
+    overflow-x: hidden;
 }
 
 #eventsWrapper {
@@ -50,6 +51,7 @@ body {
 .menuBox {
     display: grid;
     justify-items: end;
+
 }
 
 .menuButton {
@@ -72,6 +74,7 @@ body {
 
 #dropDownBox {
     display: none;
+    
  }
 #dropDown {
     width: 100%;
@@ -236,7 +239,7 @@ body {
     font-size: 17pt;
     font-weight: bold;
     font-family: 'Titillium Web', sans-serif;
-    color: green;
+    color: #3498db;
 }
 
 /*EVENT INFO PAGE*/
@@ -317,6 +320,7 @@ height: 100px;
     align-items: center;
     justify-items: start;
 }
+
 /*INFO LOCATION PICTURE*/
 #locationPic {
     margin-left: 10px;
@@ -351,10 +355,11 @@ height: 100px;
     
 }
 
-/*PEOPLE COUNT INFO BOX*/
-#peopleCountBox {
+
+/*INFO ORGANIZER BOX*/
+#organizerInfoBox {
     display: grid;
-    grid-template-columns: 50px 15px 500px;
+    grid-template-columns: 50px 500px;
     grid-template-rows: 30px;
     font-family: "Arial", sans-serif;
     font-size: 13pt;
@@ -363,8 +368,8 @@ height: 100px;
     justify-items: start;
 }
 
-/*PEOPLE COUNT PICTURE*/
-#peopleCountPic {
+/*INFO ORGANIZER PICTURE*/
+#organizerPic {
     margin-left: 10px;
     width: 20px;
     height: 20px;
@@ -387,6 +392,56 @@ height: 100px;
     width: 20px;
     height: 13px;
 }
+
+/*PEOPLE COUNT INFO BOX*/
+#peopleCountBox {
+    display: grid;
+    grid-template-columns: 50px 15px 500px;
+    grid-template-rows: 30px;
+    font-family: "Arial", sans-serif;
+    font-size: 13pt;
+    color: rgb(102, 101, 101);
+    align-items: center;
+    justify-items: start;
+}
+
+/*PEOPLE COUNT PICTURE*/
+#peopleCountPic {
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+/*CREDITS INFO BOX*/
+#creditsBox {
+    display: grid;
+    grid-template-columns: 50px 15px 500px;
+    grid-template-rows: 30px;
+    font-family: "Arial", sans-serif;
+    font-size: 13pt;
+    color: rgb(102, 101, 101);
+    align-items: center;
+    justify-items: start;
+}
+
+/*CREDITS PICTURE*/
+#creditsPic {
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+/*INFO DESCRIPTION BOX*/
+#infoDescriptionBox {
+    margin: 30px;
+    font-family: "Arial", sans-serif;
+    text-emphasis: justify;
+    color: rgb(102, 101, 101);
+
+
+}
+
+
 
 #createEventBox {
     width: 100%;
