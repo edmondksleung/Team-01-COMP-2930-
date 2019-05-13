@@ -354,7 +354,14 @@ div.cityImage h1:hover {
     cursor: pointer;
 }
 
-.cities:hover {
+.cities a {
+    text-decoration: none;
+    color: white;
+    font-size: 30pt;
+    letter-spacing: 10px;
+}
+
+.cities a:hover {
     font-size: 30pt;
     letter-spacing: 15px;
     color: rgb(255, 204, 0);
@@ -424,18 +431,19 @@ canvas {
 
 /* welcome e button wiggle animation */
 @keyframes wiggle {
-    0% { transform: rotate(0deg); }
-   80% { transform: rotate(0deg); }
+    0% { transform: rotate(80deg); }
+    30% { transform: rotate(-30deg);}
+   80% { transform: rotate(20deg); }
    85% { transform: rotate(20deg); }
-   95% { transform: rotate(-20deg); }
-  100% { transform: rotate(0deg); }
-}
-
-.wiggle {
-  display: inline-block;
-  animation: wiggle 1.5s infinite;
+   95% { transform: rotate(-40deg); }
+  100% { transform: rotate(30deg); }
 }
 
 .wiggle:hover {
+  display: inline-block;
+  animation: wiggle 0.2s infinite;
+}
+
+.wiggle {
   animation: none;
 }
