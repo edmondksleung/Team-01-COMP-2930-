@@ -5,6 +5,7 @@
     <title>Sign in to eVolunteer</title>
     <link rel="stylesheet" type="text/css" href="css/signIn.css">
     <link rel="stylesheet" type="text/css" href="./css/events.css">
+    <link rel="stylesheet" type="text/css" href="css/bubbleBackground.css">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:900" rel="stylesheet">
     <!--JQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -59,6 +60,7 @@
                     <span id="eAudio" class="wiggle">e</span>Volunteer</b>
             </h1>
 
+
             <form class="form">
                 <input type="text" placeholder="Username" id="emailField">
                 <input type="password" placeholder="Password" id="passField">
@@ -90,38 +92,33 @@
     </div>
     <!------------------------NAV PAGE----------------------------------->
     <div class="subPageWrapper">
-        
-        <div id="topBox">
-            <div></div>
-            <div id="logoutBox">
-                <button onclick="logout()" type="submit" id="logoutButton">Log Out</button>
+            <div id="topBox">
+            </div>
+        <div id="mainBox">
+            <div id="logo">
+                <img src="https://media1.giphy.com/media/l1KVcrdl7rJpFnY2s/giphy.gif" alt="logoPic">
             </div>
         </div>
-        <div id="mainBox"><img id="globeLogo" src="https://media1.giphy.com/media/l1KVcrdl7rJpFnY2s/giphy.gif" alt="">
+        <div class="cities" id="city1" href="index.html?city=Vancouver">
+            VANCOUVER
         </div>
-        <div class="cities" id="vancouver"></div>
-        <div class="cities" id="burnaby"></div>
-        <div class="cities" id="coquitlam"></div>
-        <div class="cities" id="portmoody"></div>
+        <div class="cities" id="city2" href="index.html?city=Burnaby">
+            BURNABY
+        </div>
+        <div class="cities" id="city3" href="index.html?city=Coquitlam">
+            COQUITLAM
+        </div>
+            <div class="cities" id="city4" href="index.html?city=Portmoody">
+            PORT MOODY
+        </div>
+
+        <div id="logoutBox">
+                <button onclick="logout()" type="submit" id="logoutButton">Log Out</button>
+            </div>
     </div>
     <!--MAIN SUB WRAPPER-->
     <div class="mainPageWrapper">
-        <div id="userStatus"></div>
-
-        <div class="cityImage"
-            style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/a0/FuturebigToronto.jpg);">
-            <h1 id="omgtest">VANCOUVER</h1>
-        </div>
-
-        <div class="cityImage"
-            style="background-image: url(https://res.cloudinary.com/g5-assets-cld/image/upload/x_0,y_326,h_3389,w_5648,c_crop/q_auto,f_auto,fl_lossy,g_center,h_1200,w_2000/g5/g5-c-5cpnmi9wp-quadreal/g5-cl-1hj4q9obd6-parkview-towers/uploads/0Z8A6304_d5hshm.jpg);">
-            <h1>BURNABY</h1>
-        </div>
-
-        <div class="cityImage"
-            style="background-image: url(http://greatplacesincanada.ca/wp-content/uploads/2017/10/Town_Centre_Park.jpg);">
-            <h1>COQUITLAM</h1>
-        </div>
+        
     </div>
 
 
@@ -493,16 +490,6 @@
 
 
     <script>
-        $("#globeLogo").click(function () {
-            $(".subPageWrapper").fadeOut(500);
-            setTimeout(function () {
-                $('.mainPageWrapper').fadeIn(2000);
-            }, 1000);
-            $('.mainPageWrapper').css('display: block');
-        });
-    </script>
-
-    <script>
         $('#signUp').click(function (event) {
 
             // Initialize the FirebaseUI widget using Firebase.
@@ -848,6 +835,8 @@
     </script>
 
     <script src="./js/events.js"></script>
+    <script src="./js/eventNumbers.js"></script>
+    <script src="./js/transition.js"></script>
 
 </body>
 
