@@ -16,24 +16,24 @@ body {
 
 }
 
-#backBox {
+.backBox {
     display: grid;
     justify-items: start;
 }
 
-#backButton {
+.backButton {
     width: 50px;
     height: 50px;
     background: none;
     border: none;
 }
 
-#backPic {
+.backPic {
     width: 20px;
     height: 20px;
 }
 
-#backPic:hover {
+.backPic:hover {
     width: 25px;
     height: 25px;
     cursor: pointer;
@@ -47,24 +47,24 @@ body {
     font-family: 'Titillium Web', sans-serif;
 }
 
-#menuBox {
+.menuBox {
     display: grid;
     justify-items: end;
 }
 
-#menuButton {
+.menuButton {
     width: 50px;
     height: 50px;
     border: none;
     background: none;
 }
 
-#menuPic {
+.menuPic {
     width: 20px;
     height: 20px;
 }
 
-#menuPic:hover {
+.menuPic:hover {
     width: 25px;
     height: 25px;
     cursor: pointer;
@@ -239,11 +239,58 @@ body {
     color: green;
 }
 
-#toggleBox {
-    display: grid;
-    align-items: center;
-    justify-items: center;
+/*EVENT INFO PAGE*/
+#eventInfoBox {
+    display: none;
+    width: 100%;
+    height: auto;
 }
+
+/*EVENT INFO TOP BOX*/
+#detailsTopBox {
+    height: auto;
+}
+
+/*EVENT INFO PICTURE*/
+#eventInfoPic {
+    width: 100%;
+    height: 380px;
+    border-top: 2px solid rgb(216, 208, 208);
+    border-bottom: 2px solid rgb(216, 208, 208);
+}
+
+/*JOIN EVENT BOX*/
+#joinEventButtonBox {
+width: 100px;
+height: 100px;
+position: absolute;
+z-index: 1;
+margin-top: 340px;
+margin-left: 80%;
+}
+
+/*JOIN EVENT BUTTON*/
+#joinEventButton {
+    width: 80px;
+    height: 80px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    color: grey;
+    font-size: 13pt;
+    font-weight: bold;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 2);
+
+}
+
+/*JOIN EVENT BUTTON HOVER EFFECT*/
+#joinEventButton:hover {
+    background: #3498db;
+    color: white;
+    font-size: 15pt;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 2);
+}
+
 
 #createEventBox {
     width: 100%;
