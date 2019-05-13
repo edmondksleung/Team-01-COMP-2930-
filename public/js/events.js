@@ -2,6 +2,7 @@
 $(".cityImage h1").click(function () {
     $(".mainPageWrapper").fadeOut(500);
     $("#eventsWrapper").fadeIn(1500);
+    $("#dropDownBox").hide();
     $(document.body).css("background", "white");
 });
 
@@ -49,7 +50,7 @@ $(".menuButton").click(function () {
     $("#dropDownBox").toggle();
 });
 
-//UNIVERSAL BACK BUTTON-------------------------------------------------------
+//BACK BUTTON FUNCTION-------------------------------------------------------
 $(".backButton").click(function () {
     $("#eventsWrapper").fadeOut(1000);
     $(".mainPageWrapper").fadeIn(1000);
@@ -75,6 +76,29 @@ $("#cancelButton").click(function () {
     $("#eventsInfoBox").hide();
     $("#eventInfoBox").hide();
     $("#eventsBox").show();
+});
+
+//HOME BUTTON-------------------------------------------------------------------
+$(".homeButton").click(function() {
+    $("#eventsWrapper").hide();
+    $(".subPageWrapper").fadeIn(1000);
+    $(document.body).css("background", "rgb(33, 49, 92)");
+
+
+});
+
+//ABOUT US BUTTON-------------------------------------------------------------------
+$(".aboutButton").click(function() {
+    $("#eventsWrapper").fadeOut(1000);
+    $(".aboutUsWrapper").fadeIn(1000);
+    $(document.body).css("background", "rgb(33, 49, 92)");
+});
+
+//LOCATION BUTTON-------------------------------------------------------------------
+$(".locationButton").click(function() {
+    $("#eventsWrapper").fadeOut(1000);
+    $(".mainPageWrapper").fadeIn(1000);
+    $(document.body).css("background", "rgb(33, 49, 92)");
 });
 
 //LOGOUT BUTTON-------------------------------------------------------------
