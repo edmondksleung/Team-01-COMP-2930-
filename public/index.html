@@ -394,62 +394,11 @@
     </div>
 
 
-
     <script>
-        // firebase.auth().onAuthStateChanged(function (user) {
-        //     if (user) {
-        // User is signed in.
-
-        // document.getElementsByClassName("wrapper").style.display = "none";
-        // document.getElementsByClassName("mainPageWrapper").style.display = "block";
-
-        // var user = firebase.auth().currentUser;
-
-        //         if (user != null) {
-
-        //             var email_id = user.email;
-        //             document.getElementById("userStatus").innerHTML = "Welcome User : " + email_id;
-
-        //         }
-
-        //     } else {
-        //         // No user is signed in.
-
-        //         document.getElementsByClassName("wrapper").style.display = "block";
-        //         document.getElementsByClassName("mainPageWrapper").style.display = "none";
-
-        //     }
-        // });
-
-        // function login() {
-
-        //     var userEmail = document.getElementById("email_field").value;
-        //     var userPass = document.getElementById("password_field").value;
-
-        //     firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function (error) {
-        //         // Handle Errors here.
-        //         var errorCode = error.code;
-        //         var errorMessage = error.message;
-
-        //         window.alert("Error : " + errorMessage);
-
-        //         // ...
-        //     });
-
-        // }
-        // firebase.auth().onAuthStateChanged(user => {
-        //     if (user) {
-        //         window.location = 'index.html'; //After successful login, user will be redirected to index.html
-        //     }
-        // });
-    </script>
-    <script>
-        // var user = firebase.auth().currentUser;
 
         //Function event jquery function upon clicking login button
         $('#loginButton').click(function (event) {
             event.preventDefault();
-
 
             //If firebase user recognized...
             //Fades out the login form,
