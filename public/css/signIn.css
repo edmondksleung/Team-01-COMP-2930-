@@ -105,6 +105,7 @@ form input {
     outline: 0;
     border: 1px solid rgba(255, 255, 255, 0.4);
     background-color: rgba(255, 255, 255, 0.2);
+    height: 43px;
     width: 250px;
     border-radius: 3px;
     padding: 10px 15px;
@@ -152,7 +153,6 @@ form button:hover {
 }
 
 .bg-bubbles {
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -301,6 +301,7 @@ form button:hover {
 }
 
 #logo img {
+    z-index:0;
     margin-top: -90px;
     margin-bottom: -50px;
     width: 400px;
@@ -323,6 +324,7 @@ form button:hover {
 
 
 #signUp {
+    color: white;
     font-size: 10pt;
     margin: 0 auto;
     width: 140px;
@@ -463,6 +465,7 @@ div.cityImage h1:hover {
 }
 
 #logoutButton:hover {
+    cursor: pointer;
     background-color: #86c8e2;
     background-image: -webkit-(linear, left top, left bottom, from(#82bbd1), to(#193b61));
     background-image: -webkit-linear-gradient(top, #82bbd1, #193b61);
@@ -540,8 +543,9 @@ div.cityImage h1:hover {
     cursor: pointer;
 }
 
+
 canvas {
-	cursor: crosshair;
+	cursor: pointer;
     display: block;
     position: absolute;
     display: none;
@@ -549,4 +553,22 @@ canvas {
 
 .aboutUsWrapper {
     display: none;
+}
+
+/* welcome e button wiggle animation */
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+   80% { transform: rotate(0deg); }
+   85% { transform: rotate(20deg); }
+   95% { transform: rotate(-20deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.wiggle {
+  display: inline-block;
+  animation: wiggle 1.5s infinite;
+}
+
+.wiggle:hover {
+  animation: none;
 }

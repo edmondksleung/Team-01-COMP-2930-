@@ -43,16 +43,22 @@
 
 </head>
 
-<body>
+<body>        
+
     <div class="wrapper">
+        <!-- setup our canvas element -->
+<canvas id="canvas">Canvas is not supported in your browser.</canvas>
         <div class="container">
+            
             <div id="logo">
                 <img src="https://media1.giphy.com/media/l1KVcrdl7rJpFnY2s/giphy.gif" alt="logoPic">
             </div>
+
             <h1 id="title">
                 <b>
-                    <span>e</span>Volunteer</b>
+                    <span id="eAudio" class="wiggle">e</span>Volunteer</b>
             </h1>
+
             <form class="form">
                 <input type="text" placeholder="Username" id="emailField">
                 <input type="password" placeholder="Password" id="passField">
@@ -84,12 +90,9 @@
     </div>
     <!------------------------NAV PAGE----------------------------------->
     <div class="subPageWrapper">
-        <!-- setup our canvas element -->
-        <canvas id="canvas">Canvas is not supported in your browser.</canvas>
-
+        
         <div id="topBox">
             <div></div>
-            <div id="evolunteer">W<span id="eAudio">e</span>lcome!</div>
             <div id="logoutBox">
                 <button onclick="logout()" type="submit" id="logoutButton">Log Out</button>
             </div>
@@ -556,9 +559,9 @@
         $("#eAudio").click(function () {
             helloSound.play();
             $("#canvas").css('display', 'block');
-            setTimeout(function () {
-                $('canvas').css('display', 'none');
-            }, 5000);
+            // setTimeout(function () {
+            //     $('canvas').css('display', 'none');
+            // }, 10000);
         });
     </script>
     <script>
@@ -766,13 +769,12 @@
             requestAnimFrame(loop);
 
             // increase the hue to get different colored fireworks over time
-            //hue += 0.5;
+            hue += 0.5;
 
             // create random color
             hue = random(0, 360);
 
-            // normally, clearRect() would be used to clear the canvas
-            // we want to create a trailing effect though
+            // create a trailing effect though
             // setting the composite operation to destination-out will allow us to clear the canvas at a specific opacity, rather than wiping it entirely
             ctx.globalCompositeOperation = 'destination-out';
             // decrease the alpha property to create more prominent trails
@@ -837,7 +839,7 @@
             mousedown = false;
         });
 
-        // once the window loads, we are ready for some fireworks!
+        // once the window loads, ready up the fireworks
         window.onload = loop;
     </script>
 
