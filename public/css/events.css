@@ -95,6 +95,7 @@ body {
 
 .dropButtons:hover {
     background: #3498db;
+    cursor: pointer;
 }
 
 #tabsBox {

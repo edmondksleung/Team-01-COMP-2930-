@@ -1,9 +1,8 @@
 //SHOW EVENTS WRAPPER PAGE---------------------------------------------
-$("#omgtest").click(function() {
-    $(".mainPageWrapper").hide();
-    $("#eventsWrapper").show();
+$(".cityImage h1").click(function () {
+    $(".mainPageWrapper").fadeOut(500);
+    $("#eventsWrapper").fadeIn(1500);
     $(document.body).css("background", "white");
-    console.log("omg");
 });
 
 //EVENTS PAGE ON LOAD SHOW VOLUNTEER PAGE---------------------------------
@@ -50,6 +49,12 @@ $(".menuButton").click(function () {
     $("#dropDownBox").toggle();
 });
 
+//UNIVERSAL BACK BUTTON-------------------------------------------------------
+$(".backButton").click(function () {
+    $("#eventsWrapper").fadeOut(1000);
+    $(".mainPageWrapper").fadeIn(1000);
+});
+
 //MORE DETAILS BUTTON----------------------------------------------------------
 $(".readMoreButton").click(function () {
     $(".eventsBox").hide();
@@ -70,4 +75,12 @@ $("#cancelButton").click(function () {
     $("#eventsInfoBox").hide();
     $("#eventInfoBox").hide();
     $("#eventsBox").show();
+});
+
+//LOGOUT BUTTON-------------------------------------------------------------
+$(".logoutButton").click(function () {
+    firebase.auth().signOut();
+    alert('Logged Out');
+    window.location = 'signIn.html';
+    console.log("test");
 });
