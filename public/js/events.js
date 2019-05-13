@@ -1,43 +1,55 @@
-//EVENTS PAGE ON LOAD SHOW VOLUNTEER PAGE--------------------------------->
+//EVENTS PAGE ON LOAD SHOW VOLUNTEER PAGE---------------------------------
 $("#eventsWrapper").ready(function() {
-    $("#eventInfoBox").hide();
-    $("#eventsBox").show();
-    
+    $("#eventsInfoBox").hide();
+    $(".joinedEventsBox").hide();
+    $(".eventsBox").show();
 });
 
 //SHOW VOLUNTEER TAB---------------------------------------------------------
 $("#volunteerTab").click(function () {
     $("#volunteerTab").css({"borderBottom": "4px solid #3498db", "color": "black"});
     $("#appliedTab").css({"borderBottom": "none", "color": "grey"});
-    $("#eventInfoBox").hide();
-    $("#eventsBox").show();
+    $("#eventsInfoBox").hide();
+    $(".joinedEventsBox").hide();
+    $(".joinedEventsInfoBox").hide();
+    $(".eventsBox").show();
 });
 
 //SHOW JOINED TAB---------------------------------------------------------
 $("#appliedTab").click(function () {
     $("#appliedTab").css({"borderBottom": "4px solid #3498db", "color": "black"});
     $("#volunteerTab").css({"borderBottom": "none", "color": "grey"});
-    $("#eventsBox").hide();
-    $("#eventInfoBox").hide();
-    $("#joinedEventsBox").show();
+    $(".eventsBox").hide();
+    $("#eventsInfoBox").hide();
+    $(".joinedEventsInfoBox").hide();
+    $(".joinedEventsBox").show();
 });
 
-//MENU DROP DOWN---------------------------------------------------->
+//MENU DROP DOWN----------------------------------------------------
 $(".menuButton").click(function () {
     $("#dropDownBox").toggle();
 });
 
 //MORE DETAILS BUTTON----------------------------------------------------------
-$("#readMoreButton").click(function () {
-    $("#eventsBox").fadeOut("fast", function () {
-        $("#eventInfoBox").show();
-    })
+$(".readMoreButton").click(function () {
+        $(".eventsBox").hide();
+        $(".joinedEventsBox").hide();
+        $("#eventsInfoBox").show();
 });
 
-//CANCEL DETAILS WINDOW BUTTON--------------------------------------->
+
+//ALREADY JOINED EVENTS MORE DETAILS BUTTON---------------------------------------
+$(".joinedReadMoreButton").click(function () {
+        $(".eventsBox").hide();
+        $(".joinedEventsBox").hide();
+        $(".joinedEventsInfoBox").show();
+});
+
+//CANCEL DETAILS WINDOW BUTTON---------------------------------------
 $("#cancelButton").click(function () {
     $("#eventsInfoBox").hide();
     $("#eventInfoBox").hide();
     $("#eventsBox").show();
 });
+
 

@@ -144,16 +144,16 @@ body {
     border-bottom: 2px solid rgb(216, 208, 208);
 }
 
-#readMoreBox {
+.readMoreBox {
     width: 100%;
     display: grid;
-    grid-template-columns: 87% 13%;
+    grid-template-columns: 85% 15%;
     position: absolute;
     z-index: 1;
     margin-top: 10px;
 }
 
-#readMoreButton {
+.readMoreButton {
     border: none;
     width: 64px;
     height: 33px;
@@ -168,7 +168,7 @@ body {
     color: grey;
 }
 
-#readMoreButton:hover {
+.readMoreButton:hover {
     background: #3498db;
     color: white;
 }
@@ -243,7 +243,7 @@ body {
 }
 
 /*EVENT INFO PAGE*/
-#eventInfoBox {
+#eventsInfoBox {
     display: none;
     width: 100%;
     height: auto;
@@ -441,7 +441,55 @@ height: 100px;
 
 }
 
+/*JOINED EVENTS BOX*/
+.joinedEventsBox {
+    display: none;
+}
 
+/*JOINED EVENTS*/
+.joinedEvents {
+    height: 305px;
+    border-bottom: 2px solid rgb(216, 208, 208);
+}
+
+
+/*ALREADY JOINED EVENT INFO PAGE*/
+.joinedEventsInfoBox {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+/*ALREADY JOINED EVENT INFO BUTTON BOX*/
+.joinedReadMoreBox {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 85% 15%;
+    position: absolute;
+    z-index: 1;
+    margin-top: 10px;
+}
+
+/*ALREADY JOINED EVENT INFO BUTTON*/
+.joinedReadMoreButton {
+    border: none;
+    width: 64px;
+    height: 33px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 2);
+    background: white;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 12pt;
+    outline: none;
+    text-align: center;
+    color: grey;
+}
+
+/*EVENT INFO TOP BOX*/
+#joinedDetailsTopBox {
+    height: auto;
+}
 
 #createEventBox {
     width: 100%;
