@@ -185,9 +185,27 @@ input {
     height: 28px;
     width: 97%;
     font-family: 'Arial', sans-serif;
-    text-align: center;
+    text-align: left;
 }
 
+/*ORGANIZER START DATE INPUT*/
+.startDateInput {
+    text-align: center;
+}
+/*ORGANIZER ENDDATE INPUT*/
+.endDateInput {
+    text-align: center; 
+}
+
+/*ORGANIZER START TIME INPUT*/
+.startTimeInput {
+    text-align: center; 
+}
+
+/*ORGANIZER END TIME INPUT*/
+.endTimeInput {
+    text-align: center; 
+}
 /*ORGANIZER UI DATE INPUT REMOVE UP DOWN ARROWS*/
 input[type=date]::-webkit-inner-spin-button {
     -webkit-appearance: none;

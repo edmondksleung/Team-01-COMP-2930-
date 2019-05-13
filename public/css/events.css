@@ -8,9 +8,7 @@
 
 body {
     margin: 0;
-    min-width: 450px;
     overflow-x: hidden;
-
 }
 
 #eventsWrapper {
