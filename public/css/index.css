@@ -67,3 +67,10 @@ body{
     font-size: 25pt;
     border-radius: 20px;
 }
+input:focus {
+    outline:none !important;
+}
+
+button {
+    outline: none; // this one
+  }
