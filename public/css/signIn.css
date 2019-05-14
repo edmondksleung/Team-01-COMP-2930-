@@ -375,6 +375,7 @@ canvas {
     margin-top: 4%;
     height: 45px;
     text-align: center;
+    letter-spacing: 3px;
 }
 
 #nav_bar > ul > li {
