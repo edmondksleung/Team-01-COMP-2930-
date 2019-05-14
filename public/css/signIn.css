@@ -120,7 +120,6 @@ form input:focus {
     width: 300px;
     color: rgb(97, 204, 65);
     border: 2px solid rgb(97, 204, 65);
-
 }
 
 form button {
@@ -137,7 +136,6 @@ form button {
     font-size: 18px;
     transition-duration: 0.25s;
     margin-bottom: 100px;
-
 }
 
 form button:hover {
@@ -156,6 +154,7 @@ form button:hover {
 #e {
     cursor: pointer;
 }
+
 #title {
     font-size: 30pt;
     text-align: center;
@@ -329,44 +328,6 @@ div.cityImage h1:hover {
     cursor: pointer;
 }
 
-#subPageWrapperTitle {
-    font-size: 30pt;
-    text-align: center;
-    letter-spacing: 8px;
-    margin-bottom: 50px;
-    color: white;
-    position: relative;
-}
-
-#subPageWrapperTitle span {
-    color: rgb(118, 228, 85);
-}
-
-.cities {
-    width: auto;
-    height: auto;
-    color: white;
-    font-size: 30pt;
-    letter-spacing: 10px;
-    position: relative;
-    text-align: center;
-    margin: 30px auto 30px auto;
-    cursor: pointer;
-}
-
-.cities a {
-    text-decoration: none;
-    color: white;
-    font-size: 30pt;
-    letter-spacing: 10px;
-}
-
-.cities a:hover {
-    font-size: 30pt;
-    letter-spacing: 15px;
-    color: rgb(255, 204, 0);
-}
-
 /* The Modal (background) */
 .modal {
     display: none;
@@ -427,7 +388,6 @@ canvas {
     position: absolute;
     display: none;
 }
-
 
 /* welcome e button wiggle animation */
 @keyframes wiggle {

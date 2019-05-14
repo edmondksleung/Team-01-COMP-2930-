@@ -1,0 +1,37 @@
+#subPageWrapperTitle {
+    font-size: 30pt;
+    text-align: center;
+    letter-spacing: 8px;
+    margin-bottom: 50px;
+    color: white;
+    position: relative;
+}
+
+#subPageWrapperTitle span {
+    color: rgb(118, 228, 85);
+}
+
+.cities {
+    width: auto;
+    height: auto;
+    color: white;
+    font-size: 30pt;
+    letter-spacing: 10px;
+    position: relative;
+    text-align: center;
+    margin: 30px auto 30px auto;
+    cursor: pointer;
+}
+
+.cities a {
+    text-decoration: none;
+    color: white;
+    font-size: 30pt;
+    letter-spacing: 10px;
+}
+
+.cities a:hover {
+    font-size: 30pt;
+    letter-spacing: 15px;
+    color: rgb(255, 204, 0);
+}
