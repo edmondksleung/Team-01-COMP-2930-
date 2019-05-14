@@ -129,7 +129,7 @@
 }
 
 #clickDownArea {
-    height: 25vh;
+    height: 12vh;
     padding-top: 5px;
     text-align: center;
     color: white;
@@ -155,10 +155,13 @@
     height: 34px;
 }
 
+#welcomePageCities {
+    background-color: white;
+    margin-bottom:500px;
+}
 .cities {
     width: auto;
     height: auto;
-    color: white;
     font-size: 30pt;
     letter-spacing: 10px;
     position: relative;
@@ -169,7 +172,7 @@
 
 .cities a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: 30pt;
     letter-spacing: 10px;
 }

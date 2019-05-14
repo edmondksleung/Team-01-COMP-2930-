@@ -244,7 +244,8 @@ div.cityImage h1:hover {
 }
 
 #logoutBox {
-    height: 80px;
+    background: white;
+    height: auto;
     display: grid;
     align-items: center;
     justify-items: center;
