@@ -369,38 +369,4 @@ canvas {
 .wiggle {
   animation: none;
 }
-<<<<<<< HEAD
-/* Nav bar */
-#nav_bar {
-    font-size: 12pt;
-    margin-top: 4%;
-    height: 45px;
-    text-align: center;
-    letter-spacing: 3px;
-}
-
-#nav_bar > ul > li {
-    display: inline-block;
-}
-
-#nav_bar ul > li > a {
-    color: white;
-    display: block;
-    text-decoration: none;
-    font-weight: bold;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-#nav_bar ul li ul {
-    display: none;
-    list-style: none;
-    position: absolute;
-    background: #e2e2e2;
-    text-align: left;
-}
-=======
->>>>>>> d7adebee7b5f9a352466e98a53f8f47ae077a304
 
