@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/signIn.css">
     <link rel="stylesheet" type="text/css" href="css/bubbleBackground.css">
     <link rel="stylesheet" type="text/css" href="css/welcome.css">
-    <link rel="stylesheet" type="text/css" href="./css/events.css">
+    <link rel="stylesheet" type="text/css" href="./css/eventsTWO.css">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:900" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     <!-----------------------------------------------JQuery--------------------------------------------------->
@@ -93,23 +93,24 @@
     </div>
     <!-----------------------NAV PAGE----------------------------------->
     <div class="welcomePageWrapper">
+        <div id="navigation">
+            <div class="navBarPic">
+                <ul>
+                    <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png" alt="pic1" class="activePic"></li>
+                    <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png" alt="pic1"></li>
+                    <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png" alt="pic1"></li>
+                </ul>
+            </div>
+            <div class="navBar">
+                <ul>
+                    <li><a href="index.html" class="activePage">HOME</a></li>
+                    <li><a href="status.html">MISSION</a></li>
+                    <li><a href="info.html">EVENTS</a></li>
+                </ul>
+            </div>
+        </div>
         <div id="welcomePageHeader">
             <div id="welcomePageTitle">
-                    <div class="navBarPic">
-                            <ul>
-                                <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png" alt="pic1" class="activePic"></li>
-                                <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png" alt="pic1"></li>
-                                <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png" alt="pic1"></li>
-                                </ul>
-                            </div>
-
-                    <div class="navBar">
-                            <ul>
-                                <li><a href="index.html" class="activePage">HOME</a></li>
-                                <li><a href="status.html">MISSION</a></li>
-                                <li><a href="info.html">EVENTS</a></li>
-                                </ul>
-                            </div>
                 <b><span>e</span>Volunteer</b>
             </div>
         </div>
@@ -119,7 +120,7 @@
             </div>
         </div>
         <div id="missionStatement">
-            Welcome to <span>e</span>Volunteer!<br><br>Dedicated towards a healthier and eco-friendly future for all of us.<br><br>Edmond Leung<br>Chairman
+            Welcome to <span>e</span>Volunteer!<br><br>Dedicated towards a healthier and eco-friendly future for all of us.
         </div>
         <div id="clickDownArea">
             <div id="clickDownText">
@@ -147,37 +148,10 @@
     <div id="eventsWrapper">
         <!--EVENTS NAV BAR------------------------------------------------------------------------>
         <div id="eventsNavBar">
-            <!--BACK BUTTON-->
-            <div class="backBox">
-                <button class="backButton">
-                    <img alt="back" class="backPic" src="./Images/back.png">
-                </button>
-            </div>
-            <!--LOCATION TEXT-->
-            <div id="location">VANCOUVER</div>
-            <!--MENU BUTTON-->
-            <div class="menuBox">
-                <button class="menuButton">
-                    <img alt="menu" class="menuPic" src="./images/menu.png">
-                </button>
-            </div>
+      
         </div>
 
-        <!--MENU DROPDOWN BOX----------------------------->
-        <div id="dropDownBox">
-            <div id="dropDown">
-                <button class="dropButtons homeButton">Home</button>
-                <button class="dropButtons aboutButton">About Us</button>
-                <button class="dropButtons locationButton">Location</button>
-                <button class="dropButtons logoutButton">Logout</button>
-            </div>
-        </div>
-
-        <!--TABS BAR--------------------------------->
-        <div id="tabsBox">
-            <button class="tabs" id="volunteerTab">Volunteer</button>
-            <button class="tabs" id="appliedTab">Joined</button>
-        </div>
+   
         <!--EVENTS BOX----------------------------------------------------------------------------->
         <div class="eventsBox">
             <!--INDIVIDUAL EVENTS----------------------------------------------------------------->

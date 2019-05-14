@@ -1,5 +1,9 @@
+/* Navigation Bar */
+#navigation {
+    height: 18vh;
+    padding-top: 20px;
+}
 
-/* Nav bar */
 .navBar {
     font-size: 12pt;
     margin-top: 29px;
@@ -8,20 +12,19 @@
     letter-spacing: 3px;
 }
 
-
 .navBar > ul > li {
     display: inline-block;
 }
 
 .navBar ul > li > a {
-                color: white;
-                display: block;
-                text-decoration: none;
-                font-weight: bold;
-                padding-left: 10px;
-                padding-right: 10px;
-                padding-top: 5px;
-                padding-bottom: 5px;
+    color: white;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .navBar ul li ul {
@@ -37,6 +40,7 @@
     border-radius: 10%;
     color: rgb(33, 49, 92);    
 }
+
 /* Current page nav bar highlight */
   .navBar ul li a.activePage {
   background-color:white;
@@ -52,7 +56,6 @@
 .navBarPic > ul > li {
     display: inline-block;
     text-decoration: none;
-
 }
 
 .navBarPic ul li img {
@@ -60,12 +63,10 @@
     list-style: none;
     position: absolute;
     height: 60px;
-    margin-top: -20px;
-    margin-left: -107px;
+    margin-top: -26.5px;
+    margin-left: -115px;
 
 }
-
-
 
 /** current page nav bar over */
   .navBarPic ul li img.activePic {
@@ -79,7 +80,6 @@
 }
 
 #welcomePageHeader {
-    margin-bottom: 120px;
     height: 8vh;
     display: grid;
     grid-template-areas: 
@@ -116,8 +116,7 @@
 }
 
 #missionStatement {
-    height: 40vh;
-    border: 1px solid red;
+    height: 30vh;
     padding: 50px 25px 25px 25px;
     text-align: center;
     color: white;
@@ -131,8 +130,7 @@
 
 #clickDownArea {
     height: 25vh;
-    border: 1px solid red;
-    padding-top: 30px;
+    padding-top: 5px;
     text-align: center;
     color: white;
     font-size: 12pt;
