@@ -369,42 +369,4 @@ canvas {
 .wiggle {
   animation: none;
 }
-/* Nav bar */
-#nav_bar {
-    font-size: 12pt;
-    margin-top: 4%;
-    height: 45px;
-    text-align: center;
-    letter-spacing: 3px;
-}
 
-#nav_bar > ul > li {
-    display: inline-block;
-}
-
-#nav_bar ul > li > a {
-                color: white;
-                display: block;
-                text-decoration: none;
-                font-weight: bold;
-                padding-left: 10px;
-                padding-right: 10px;
-                padding-top: 5px;
-                padding-bottom: 5px;
-}
-
-#nav_bar ul li ul {
-    display: none;
-    list-style: none;
-    position: absolute;
-    background: #e2e2e2;
-    text-align: left;
-}
-
-/** current page nav bar over */
-  #nav_bar ul li a.active-page
-{
-  background-color:white;
-  border-radius: 10%;
-  color: rgb(33, 49, 92);
-}
