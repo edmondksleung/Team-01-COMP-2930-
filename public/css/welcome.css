@@ -32,10 +32,29 @@
 
 #welcomePageLogo img {
     z-index: 2;
-    margin-top: -20px;
+    margin-top: -30px;
     margin-bottom: -50px;
     width: 400px;
     height: 310px;
+}
+
+#missionStatement {
+    height: 40vh;
+    border: 1px solid red;
+    padding: 50px 25px 25px 25px;
+    text-align: center;
+    color: white;
+    font-size: 15pt;
+    letter-spacing: 2px;
+}
+
+#missionStatement span {
+    color: rgb(118, 228, 85);
+}
+
+#clickDownArea {
+    height: 25vh;
+    border: 1px solid red;
 }
 
 .cities {
@@ -63,24 +82,3 @@
     color: rgb(255, 204, 0);
 }
 
-#topBox {
-    width: 100%;
-    display: grid;
-    align-items: center;
-    grid-template-areas:
-        "header1 header2 header3";
-    grid-template-columns: 20% 60% 20%;
-    grid-template-rows: 80px;
-    z-index: 2;
-}
-
-#evolunteer {
-    height: 80px;
-    grid-area: header2;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 30pt;
-    z-index: 1;
-    color: white;
-}
