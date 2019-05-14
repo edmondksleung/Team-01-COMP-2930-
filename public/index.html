@@ -3,26 +3,26 @@
 
 <head>
     <title>Sign in to eVolunteer</title>
+    <!------------------------------------------Links to Css Pages-------------------------------------------->
     <link rel="stylesheet" type="text/css" href="css/signIn.css">
     <link rel="stylesheet" type="text/css" href="css/bubbleBackground.css">
     <link rel="stylesheet" type="text/css" href="css/welcome.css">
     <link rel="stylesheet" type="text/css" href="./css/events.css">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:900" rel="stylesheet">
-    <!--JQuery-->
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <!-----------------------------------------------JQuery--------------------------------------------------->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     <script>
         //skip login page while signed in.
         $(document).ready(function () {
             firebase.auth().onAuthStateChanged(user => {
                 if (user) {
                     setTimeout(function () {
-                        $('.subPageWrapper').fadeIn(500);
+                        $('.welcomePageWrapper').fadeIn(500);
                     }, 1000);
-                    $('.subPageWrapper').css('display: block');
+                    $('.welcomePageWrapper').css('display: block');
                 } else {
                     $(".wrapper").show();
                 }
@@ -92,41 +92,33 @@
         </ul>
     </div>
     <!-----------------------NAV PAGE----------------------------------->
-    <div class="subPageWrapper">
-            <div id="nav_bar">
-                    <ul>
-                        <li><a href="index.html" class='active-page'>HOME</a></li>
-                        <li><a href="status.html">MISSION</a></li>
-                        <li><a href="info.html">EVENTS</a></li>
-                        </ul>
+    <div class="welcomePageWrapper">
+        <div id="welcomePageHeader">
+            <div id="welcomePageTitle">
+                <b><span>e</span>Volunteer</b>
             </div>
-
-            <div id="subPageWrapperTitle">
-            <b>
-            <span>e</span>Volunteer</b>
-    </div>
-        <div id="mainBox">
-            <div>
+        </div>
+        <div id="welcomePageLogo">
+            <div id="logo">
                 <img src="https://media1.giphy.com/media/l1KVcrdl7rJpFnY2s/giphy.gif" alt="logoPic">
             </div>
         </div>
-        <div class="cities" id="city1"><a href="index.html?city=Vancouver">VANCOUVER</a></div>
-        <div class="cities" id="city2"><a href="index.html?city=Burnaby">BURNABY</a></div>
-        <div class="cities" id="city3"><a href="index.html?city=Coquitlam">COQUITLAM</a></div>
-        <div class="cities" id="city4"><a href="index.html?city=Portmoody">PORT MOODY</a></div>
-        <div class="cities" id="city5"><a href="index.html?city=Richmond">RICHMOND</a></div>
-        <div class="cities" id="city6"><a href="index.html?city=Surrey">SURREY</a></div>
-      
+        <div id="missionStatement">
+            Welcome to <span>e</span>Volunteer!<br><br>Dedicated towards a healthier and eco-friendly future for all of us.
+        </div>
+        <div id="clickDownArea"></div>
+        <div id="welcomePageCities">
+            <div class="cities" id="city1"><a href="index.html?city=Vancouver">VANCOUVER</a></div>
+            <div class="cities" id="city2"><a href="index.html?city=Burnaby">BURNABY</a></div>
+            <div class="cities" id="city3"><a href="index.html?city=Coquitlam">COQUITLAM</a></div>
+            <div class="cities" id="city4"><a href="index.html?city=Portmoody">PORT MOODY</a></div>
+            <div class="cities" id="city5"><a href="index.html? city=Richmond">RICHMOND</a></div>
+            <div class="cities" id="city6"><a href="index.html?city=Surrey">SURREY</a></div>
+        </div>
         <div id="logoutBox">
                 <button onclick="logout()" type="submit" id="logoutButton">Log Out</button>
             </div>
     </div>
-    <!--MAIN SUB WRAPPER-->
-    <div class="mainPageWrapper">
-    </div>
-
-
-
 
     <!--EVENTS PAGE----------PAUL LOOK HEREEEEEEEEEEEEEE--------------------------------------------->
     <!--*******************************************************************************************-->
@@ -416,9 +408,9 @@
                     $('.wrapper').addClass('form-success');
                     $('.form-success').fadeOut(2000);
                     setTimeout(function () {
-                        $('.subPageWrapper').fadeIn(4000);
+                        $('.welcomePageWrapper').fadeIn(4000);
                     }, 1000);
-                    $('.subPageWrapper').css('display: block');
+                    $('.welcomePageWrapper').css('display: block');
                 }
             });
         });

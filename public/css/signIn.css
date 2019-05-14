@@ -145,7 +145,7 @@ form button:hover {
 
 #logo img {
     z-index:0;
-    margin-top: -90px;
+    margin-top: -80px;
     margin-bottom: -50px;
     width: 400px;
     height: 310px;
@@ -243,33 +243,6 @@ div.cityImage h1:hover {
     color: black;
 }
 
-.subPageWrapper {
-    display: none;
-    overflow: hidden;
-}
-
-#topBox {
-    width: 100%;
-    display: grid;
-    align-items: center;
-    grid-template-areas:
-        "header1 header2 header3";
-    grid-template-columns: 20% 60% 20%;
-    grid-template-rows: 80px;
-    z-index: 2;
-}
-
-#evolunteer {
-    height: 80px;
-    grid-area: header2;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 30pt;
-    z-index: 1;
-    color: white;
-}
-
 #logoutBox {
     height: 80px;
     display: grid;
@@ -315,19 +288,7 @@ div.cityImage h1:hover {
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#82bbd1, endColorstr=#193b61);
 }
 
-#mainBox {
-    text-align: center;
-    z-index: 2;
-}
-
-#mainBox img {
-    z-index: 2;
-}
-
-#mainBox img:hover {
-    cursor: pointer;
-}
-
+/* Firebase Login Css Below */
 /* The Modal (background) */
 .modal {
     display: none;
@@ -377,6 +338,7 @@ div.cityImage h1:hover {
     }
 }
 
+/* Easter Egg Deliverable Css Below */
 #eAudio {
     color: rgb(118, 228, 85);
     cursor: pointer;
@@ -389,7 +351,7 @@ canvas {
     display: none;
 }
 
-/* welcome e button wiggle animation */
+/* Welcome e button wiggle animation */
 @keyframes wiggle {
     0% { transform: rotate(80deg); }
     30% { transform: rotate(-30deg);}
