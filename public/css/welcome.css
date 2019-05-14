@@ -64,11 +64,11 @@
     position: absolute;
     height: 60px;
     margin-top: -26.5px;
-    margin-left: -115px;
+    margin-left: -367px;
 
 }
 
-/** current page nav bar over */
+/** Current page picture show */
   .navBarPic ul li img.activePic {
   display: inline-block;
 }
