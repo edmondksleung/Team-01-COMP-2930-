@@ -1,14 +1,41 @@
+.welcomePageWrapper {
+    display: none;
+    overflow: hidden;
+}
+
+#welcomePageHeader {
+    height: 8vh;
+    display: grid;
+    grid-template-areas: 
+        "left title right";
+    grid-template-columns: 15% 70% 15%;
+}
+
 #welcomePageTitle {
+    grid-area: title;
     font-size: 30pt;
     text-align: center;
     letter-spacing: 8px;
-    margin-bottom: 50px;
     color: white;
     position: relative;
+    padding-top: 10px;
 }
 
 #welcomePageTitle span {
     color: rgb(118, 228, 85);
+}
+
+#welcomePageLogo {
+    text-align: center;
+    z-index: 2;
+}
+
+#welcomePageLogo img {
+    z-index: 2;
+    margin-top: -20px;
+    margin-bottom: -50px;
+    width: 400px;
+    height: 310px;
 }
 
 .cities {
@@ -34,24 +61,6 @@
     font-size: 30pt;
     letter-spacing: 15px;
     color: rgb(255, 204, 0);
-}
-
-#mainBox {
-    text-align: center;
-    z-index: 2;
-}
-
-#mainBox img {
-    z-index: 2;
-}
-
-#mainBox img:hover {
-    cursor: pointer;
-}
-
-.welcomePageWrapper {
-    display: none;
-    overflow: hidden;
 }
 
 #topBox {
