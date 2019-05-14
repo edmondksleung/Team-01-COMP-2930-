@@ -383,14 +383,14 @@ canvas {
 }
 
 #nav_bar ul > li > a {
-                color: white;
-                display: block;
-                text-decoration: none;
-                font-weight: bold;
-                padding-left: 10px;
-                padding-right: 10px;
-                padding-top: 5px;
-                padding-bottom: 5px;
+    color: white;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 #nav_bar ul li ul {

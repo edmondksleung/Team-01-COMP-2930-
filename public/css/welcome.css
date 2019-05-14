@@ -55,6 +55,29 @@
 #clickDownArea {
     height: 25vh;
     border: 1px solid red;
+    padding-top: 30px;
+    text-align: center;
+    color: white;
+    font-size: 12pt;
+    letter-spacing: 2px;
+}
+
+#clickDownText {
+    height: 50px;
+    width: 250px;
+    margin: auto;
+}
+
+#clickDownButton img {
+    width: 30px;
+    height: 30px;
+}
+
+#clickDownButton img:hover {
+    animation: wiggle 1s infinite;
+    cursor: pointer;
+    width: 34px;
+    height: 34px;
 }
 
 .cities {
