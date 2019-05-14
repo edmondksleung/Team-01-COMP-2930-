@@ -1,5 +1,5 @@
 $(".cities").click(function () {
-  $(".subPageWrapper").fadeOut(500);
+  $(".welcomePageWrapper").fadeOut(500);
   setTimeout(function () {
     $('#eventsWrapper').fadeIn(2000);
   }, 1000);
