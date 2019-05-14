@@ -243,33 +243,6 @@ div.cityImage h1:hover {
     color: black;
 }
 
-.welcomePageWrapper {
-    display: none;
-    overflow: hidden;
-}
-
-#topBox {
-    width: 100%;
-    display: grid;
-    align-items: center;
-    grid-template-areas:
-        "header1 header2 header3";
-    grid-template-columns: 20% 60% 20%;
-    grid-template-rows: 80px;
-    z-index: 2;
-}
-
-#evolunteer {
-    height: 80px;
-    grid-area: header2;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 30pt;
-    z-index: 1;
-    color: white;
-}
-
 #logoutBox {
     height: 80px;
     display: grid;
@@ -313,19 +286,6 @@ div.cityImage h1:hover {
     background-image: -o-linear-gradient(top, #82bbd1, #193b61);
     background-image: linear-gradient(to bottom, #82bbd1, #193b61);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#82bbd1, endColorstr=#193b61);
-}
-
-#mainBox {
-    text-align: center;
-    z-index: 2;
-}
-
-#mainBox img {
-    z-index: 2;
-}
-
-#mainBox img:hover {
-    cursor: pointer;
 }
 
 /* Firebase Login Css Below */
