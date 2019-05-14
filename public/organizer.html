@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Events</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/organizer.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:900" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCjKV-p_CGqxhRcxahylr-6LXUzNax6kek",
+            authDomain: "evolunteer-45c5d.firebaseapp.com",
+            databaseURL: "https://evolunteer-45c5d.firebaseio.com",
+            projectId: "evolunteer-45c5d",
+            storageBucket: "evolunteer-45c5d.appspot.com",
+            messagingSenderId: "412878968573"
+        };
+        firebase.initializeApp(config);
+    </script>
+</head>
+
+<body>
+    <!--ORGANIZER UI EVENTS WRAPPER PAGE-------------------------------->
+    <!------------------------------------------------------------------>
+    <div class="organizerEventsWrapper">
+        <!--ORGANIZER UI EVENTS NAV BAR------------------------->
+        <div class="organizerEventsNavBar">
+            <!--ORGANIZER UI BACK BUTTON-->
+            <div class="organizerBackBox">
+                <button class="organizerBackButton">
+                    <img alt="back" class="organizerBackPic" src="./Images/back.png">
+                </button>
+            </div>
+            <!--ORGANIZER UI LOCATION TEXT-->
+            <div class="organizerLocation">VANCOUVER</div>
+            <!--ORGANIZER UI MENU BUTTON-->
+            <div class="organizerMenuBox">
+                <button class="organizerMenuButton">
+                    <img alt="menu" class="organizerMenuPic" src="./Images/menu.png">
+                </button>
+            </div>
+        </div>
+        <!--ORGANIZER UI TABS BAR-------------------------------------->
+        <div class="organizerTabsBox">
+            <button class="organizerTabs" class="createTab">Create</button>
+            <button class="organizerTabs" class="createdTab">My Events</button>
+        </div>
+
+        <!--ORGANIZER UI MENU DROPDOWN BOX----------------------------->
+        <div class="organizerDropDownBox">
+            <div class="organizerDropDown">
+                <button class="organizerDropButtons">Home</button>
+                <button class="organizerDropButtons">About Us</button>
+                <button class="organizerDropButtons">Location</button>
+                <button class="organizerDropButtons">Logout</button>
+            </div>
+        </div>
+
+        <!--ORGANIZER UI CREATE EVENT----------------------------------------------------------->
+        <!-------------------------------------------------------------------------------------->
+        <div class="createEventBox">
+            <div id="organizerEventInfo">
+                <!--ORGANIZER UI ORGANIZATION BOX-->
+                <div>
+                    <div class="label organizerLabel">Organization</div>
+                    <div class="contentBox">
+                        <input class="organizationInput" type="text" required="required">
+                    </div>
+                </div>
+                <!--ORGANIZER UI EVENT NAME BOX-->
+                <div>
+                    <div class="label" id="">Event Name</div>
+                    <div class="contentBox">
+                        <input class="eventInput" type="text" required="required">
+                    </div>
+                </div>
+                <!--ORGANIZER UI LOCATION BOX-->
+                <div>
+                    <div class="label" class="">Location</div>
+                    <div class="contentBox">
+                        <input class="locationInput" type="text" required="required">
+                    </div>
+                </div>
+                <!--ORGANIZER UI EMAIL BOX-->
+                <div>
+                    <div class="label" id="">Email</div>
+                    <div class="contentBox" class="locationDetails">
+                        <input class="emailInput" type="email" required="required">
+                    </div>
+                </div>
+            </div>
+            <!--ORGANIZER UI EVENT TIME BOX-->
+            <div class="eventTimeBox">
+                <!--ORGANIZER UI START DATE-->
+                <p class="label">Start</p>
+                <div class="startBox">
+                    <div class="startDateBox">
+                        <div class="startDate">
+                            <input class="startDateInput" type="date" required="required" placeholder="MM/DD/YYYY">
+                        </div>
+                        <img alt="calender" class="calender" src="./Images/calender.png">
+                    </div>
+                    <!--ORGANIZER UI START TIME-->
+                    <div class="startTimeBox">
+                        <div class="startTime">
+                            <input class="startTimeInput" type="time" value="09:00" required="required">
+                        </div>
+                        <img alt="clock" class="clock" src="./Images/clock.png">
+                    </div>
+                    <div></div>
+                </div>
+                <!--ORGANIZER UI END DATE-->
+                <p class="label">End</p>
+                <div class="endBox">
+                    <div class="endDateBox">
+                        <div class="endDate">
+                            <input class="endDateInput" type="date" required="required" placeholder="MM/DD/YYYY">
+                        </div>
+                        <img alt="calender" class="calender" src="./Images/calender.png">
+                    </div>
+                    <!--ORGANIZER UI END TIME-->
+                    <div class="endTimeBox">
+                        <div class="endTime">
+                            <input class="endTimeInput" type="time" value="17:00" required="required">
+                        </div>
+                        <img alt="clock" class="clock" src="./Images/clock.png">
+                    </div>
+                </div>
+            </div>
+            <!--ORGANIZER UI DETAILS-->
+            <p class="label">Description</p>
+            <div class="detailsBox">
+                <textarea class="details"></textarea>
+            </div>
+
+            <!--CANCEL AND CREATE BOX-->
+            <div class="backJoinBox">
+                <button class="cancelButton">Cancel</button>
+                <button class="createButton">Create</button>
+            </div>
+        </div>
+
+        <!--ORGANIZER UI EDIT EVENT------------------------------------------------------------->
+        <!-------------------------------------------------------------------------------------->
+        <div class="organizerEditBox">
+            <div id="organizerEditEventInfo">
+                <!--ORGANIZER UI ORGANIZATION BOX-->
+                <div>
+                    <div class="editLabel organizerEditLabel">Organization</div>
+                    <div class="editContentBox">
+                        <input class="organizationInput" type="text" required="required">
+                    </div>
+                </div>
+                <!--ORGANIZER UI EVENT NAME BOX-->
+                <div>
+                    <div class="label" id="">Event Name</div>
+                    <div class="contentBox">
+                        <input class="eventInput" type="text" required="required">
+                    </div>
+                </div>
+                <!--ORGANIZER UI LOCATION BOX-->
+                <div>
+                    <div class="label" class="">Location</div>
+                    <div class="contentBox">
+                        <input class="locationInput" type="text" required="required">
+                    </div>
+                </div>
+                <!--ORGANIZER UI EMAIL BOX-->
+                <div>
+                    <div class="label" id="">Email</div>
+                    <div class="contentBox" class="locationDetails">
+                        <input class="emailInput" type="email" required="required">
+                    </div>
+                </div>
+            </div>
+            <!--ORGANIZER UI EVENT TIME BOX-->
+            <div class="eventTimeBox">
+                <!--ORGANIZER UI START DATE-->
+                <p class="label">Start</p>
+                <div class="startBox">
+                    <div class="startDateBox">
+                        <div class="startDate">
+                            <input class="startDateInput" type="date" required="required" placeholder="MM/DD/YYYY">
+                        </div>
+                        <img alt="calender" class="calender" src="./Images/calender.png">
+                    </div>
+                    <!--ORGANIZER UI START TIME-->
+                    <div class="startTimeBox">
+                        <div class="startTime">
+                            <input class="startTimeInput" type="time" value="09:00" required="required">
+                        </div>
+                        <img alt="clock" class="clock" src="./Images/clock.png">
+                    </div>
+                    <div></div>
+                </div>
+                <!--ORGANIZER UI END DATE-->
+                <p class="label">End</p>
+                <div class="endBox">
+                    <div class="endDateBox">
+                        <div class="endDate">
+                            <input class="endDateInput" type="date" required="required" placeholder="MM/DD/YYYY">
+                        </div>
+                        <img alt="calender" class="calender" src="./Images/calender.png">
+                    </div>
+                    <!--ORGANIZER UI END TIME-->
+                    <div class="endTimeBox">
+                        <div class="endTime">
+                            <input class="endTimeInput" type="time" value="17:00" required="required">
+                        </div>
+                        <img alt="clock" class="clock" src="./Images/clock.png">
+                    </div>
+                </div>
+            </div>
+            <!--ORGANIZER UI DETAILS-->
+            <p class="label">Description</p>
+            <div class="detailsBox">
+                <textarea class="details"></textarea>
+            </div>
+
+            <!--CANCEL AND CREATE BOX-->
+            <div class="backJoinBox">
+                <button class="cancelButton">Cancel</button>
+                <button class="createButton">Create</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./js/organizer.js"></script>
+
+</body>
+
+</html>

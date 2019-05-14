@@ -39,9 +39,9 @@
 	<!--form to post information to the firebase-->
 	<div class="alert">Event Posted</div>
 	<form id="post">
-		subject:
+		Subject:
 		<input type="text" id="subject" required/>
-		email:
+		Email:
 		<input type="text" id="email" required/>
 		City:
 		<br>
@@ -52,13 +52,17 @@
 			<option>Coquitlam</option>
 		</select>
 		<br>
+		Date:
+		<br>
+		<input type="date" id="date" required>
+		<br>
 		Content:
 		<textarea id="content"></textarea>
 		<input type="submit" value="Post" id="submit" />
 	</form>
 
 	<script src="./js/form.js"></script>
-
+	<script src="./js/eventTimeOut.js"></script>
 </body>
 
 </html>
