@@ -11,10 +11,11 @@
     height: 100%;
 }
 
-.allEventsBox{
+.allEventsBox {
     display: grid;
     justify-items: center;
 }
+
 .eventsBox {
     width: 500px;
     border: 2px solid rgb(196, 195, 195);
@@ -22,6 +23,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
 #eventsNavBar {
     height: 50px;
     display: grid;
@@ -116,31 +118,47 @@
 }
 
 #tabsBox {
-    display: block;
-    height: 50px;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px 200px 200px;
+    align-content: center;
+    height: 100px;
     border-bottom-style: outset;
+    background-color: rgb(33, 49, 92);
     border-bottom: 2px solid rgb(216, 208, 208);
 
 }
 
 .tabs {
-    width: 50%;
+    width: 150px;
     height: 50px;
     float: left;
     font-size: 15pt;
     background: none;
     border: none;
     font-weight: bold;
-    color: grey;
+    color: white;
 }
 
 .tabs:hover {
     cursor: pointer;
-    border-bottom: 4px solid #3498db;
     color: black;
+    background: white;
+    border-radius: 10px;
 }
 
-
+.eventsLocation {
+    width: 100%;
+    height: 300px;
+    display: grid;
+    font-size: 60pt;
+    color: white;
+    font-weight: bold;
+    font-family: "Titillium Web", sans-serif;
+    align-items: center;
+    justify-items: center;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/a0/FuturebigToronto.jpg);
+    background-size: cover;
+}
 
 .events {
     height: 305px;
@@ -154,10 +172,13 @@
     font-size: 13pt;
 }
 
-#credits {
+.credits {
     height: 50px;
     display: grid;
-    grid-template-columns: 200px 250px;
+    grid-template-columns: 50% 50%;
+    background: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     align-items: center;
     text-align: left;
     text-indent: 20px;
@@ -206,6 +227,9 @@
 .previewBox {
     display: grid;
     align-items: center;
+    background: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     grid-template-columns: 20% 60% 20%;
     grid-template-rows: 60px;
     border-bottom: 2px solid rgb(216, 208, 208);
@@ -731,6 +755,7 @@ input[type="time"]::-webkit-inner-spin-button {
         display: grid;
         grid-template-columns: 50% 50%;
         justify-items: center;
+        background-color: rgb(33, 49, 92);
     }
 
     .eventsBox {
