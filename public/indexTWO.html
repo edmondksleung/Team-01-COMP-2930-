@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sign in to eVolunteer</title>
+    <!------------------------------------------Links to Css Pages-------------------------------------------->
+
+    <link rel="stylesheet" type="text/css" href="./css/eventsTWO.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:900" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <!-----------------------------------------------JQuery--------------------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+
+</head>
+
+<body>
+
+
+    <!--EVENTS PAGE----------PAUL LOOK HEREEEEEEEEEEEEEE--------------------------------------------->
+    <!--*******************************************************************************************-->
+    <div id="eventsWrapper">
+        <!--EVENTS NAV BAR------------------------------------------------------------------------>
+        <div id="eventsNavBar">
+            <!--BACK BUTTON-->
+            <div class="backBox">
+                <button class="backButton">
+                    <img alt="back" class="backPic" src="./Images/back.png">
+                </button>
+            </div>
+            <!--LOCATION TEXT-->
+            <div id="location">VANCOUVER</div>
+            <!--MENU BUTTON-->
+            <div class="menuBox">
+                <button class="menuButton">
+                    <img alt="menu" class="menuPic" src="./images/menu.png">
+                </button>
+            </div>
+        </div>
+
+        <!--MENU DROPDOWN BOX----------------------------->
+        <div id="dropDownBox">
+            <div id="dropDown">
+                <button class="dropButtons homeButton">Home</button>
+                <button class="dropButtons aboutButton">About Us</button>
+                <button class="dropButtons locationButton">Location</button>
+                <button class="dropButtons logoutButton">Logout</button>
+            </div>
+        </div>
+
+        <!--TABS BAR--------------------------------->
+        <div id="tabsBox">
+            <button class="tabs" id="volunteerTab">Volunteer</button>
+            <button class="tabs" id="appliedTab">Joined</button>
+        </div>
+
+        <!--ALL EVENTS CONTAINER------------------------------------------------------------------------------>
+        <div class="allEventsBox">
+            <!--INDIVIDUAL EVENTS BOX----------------------------------------------------------------------------->
+            <div class="eventsBox">
+                <!--INDIVIDUAL EVENTS----------------------------------------------------------------->
+                <div class="events">
+                    <div id="credits">
+                        <div>3 HOURS CREDIT</div>
+                    </div>
+                    <!--EVENT PICTURE-->
+                    <div>
+                        <div class="eventPicBox">
+                            <!--READ MORE BUTTON-->
+                            <div class="readMoreBox">
+                                <div></div>
+                                <button class="readMoreButton">Info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--PREVIEW DETAIL BOX-->
+                <div class="previewBox">
+                    <!--DATE-->
+                    <div id="date">
+                        <p id="month">MAY</p>
+                        <p id="day">06</p>
+                    </div>
+                    <!--MESSAGE-->
+                    <div id="eventMessage">
+                        Join us, and be apart of making our city a greener place!
+                    </div>
+                    <!--CURRENT PEOPLE JOINED-->
+                    <div id="peopleBox">
+                        <img alt="people" id="peoplePic" src="./Images/people.png">
+                        <p id="peopleCount">1</p>
+                    </div>
+                </div>
+            </div>
+            <!--INDIVIDUAL EVENTS BOX----------------------------------------------------------------------------->
+            <div class="eventsBox">
+                <!--INDIVIDUAL EVENTS----------------------------------------------------------------->
+                <div class="events">
+                    <div id="credits">
+                        <div>3 HOURS CREDIT</div>
+                    </div>
+                    <!--EVENT PICTURE-->
+                    <div>
+                        <div class="eventPicBox">
+                            <!--READ MORE BUTTON-->
+                            <div class="readMoreBox">
+                                <div></div>
+                                <button class="readMoreButton">Info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--PREVIEW DETAIL BOX-->
+                <div class="previewBox">
+                    <!--DATE-->
+                    <div id="date">
+                        <p id="month">MAY</p>
+                        <p id="day">06</p>
+                    </div>
+                    <!--MESSAGE-->
+                    <div id="eventMessage">
+                        Join us, and be apart of making our city a greener place!
+                    </div>
+                    <!--CURRENT PEOPLE JOINED-->
+                    <div id="peopleBox">
+                        <img alt="people" id="peoplePic" src="./Images/people.png">
+                        <p id="peopleCount">1</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--INDIVIDUAL EVENTS BOX----------------------------------------------------------------------------->
+            <div class="eventsBox">
+                <!--INDIVIDUAL EVENTS----------------------------------------------------------------->
+                <div class="events">
+                    <div id="credits">
+                        <div>3 HOURS CREDIT</div>
+                    </div>
+                    <!--EVENT PICTURE-->
+                    <div>
+                        <div class="eventPicBox">
+                            <!--READ MORE BUTTON-->
+                            <div class="readMoreBox">
+                                <div></div>
+                                <button class="readMoreButton">Info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--PREVIEW DETAIL BOX-->
+                <div class="previewBox">
+                    <!--DATE-->
+                    <div id="date">
+                        <p id="month">MAY</p>
+                        <p id="day">06</p>
+                    </div>
+                    <!--MESSAGE-->
+                    <div id="eventMessage">
+                        Join us, and be apart of making our city a greener place!
+                    </div>
+                    <!--CURRENT PEOPLE JOINED-->
+                    <div id="peopleBox">
+                        <img alt="people" id="peoplePic" src="./Images/people.png">
+                        <p id="peopleCount">1</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--INDIVIDUAL EVENTS BOX----------------------------------------------------------------------------->
+            <div class="eventsBox">
+                <!--INDIVIDUAL EVENTS----------------------------------------------------------------->
+                <div class="events">
+                    <div id="credits">
+                        <div>3 HOURS CREDIT</div>
+                    </div>
+                    <!--EVENT PICTURE-->
+                    <div>
+                        <div class="eventPicBox">
+                            <!--READ MORE BUTTON-->
+                            <div class="readMoreBox">
+                                <div></div>
+                                <button class="readMoreButton">Info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--PREVIEW DETAIL BOX-->
+                <div class="previewBox">
+                    <!--DATE-->
+                    <div id="date">
+                        <p id="month">MAY</p>
+                        <p id="day">06</p>
+                    </div>
+                    <!--MESSAGE-->
+                    <div id="eventMessage">
+                        Join us, and be apart of making our city a greener place!
+                    </div>
+                    <!--CURRENT PEOPLE JOINED-->
+                    <div id="peopleBox">
+                        <img alt="people" id="peoplePic" src="./Images/people.png">
+                        <p id="peopleCount">1</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--INDIVIDUAL EVENTS BOX----------------------------------------------------------------------------->
+            <div class="eventsBox">
+                <!--INDIVIDUAL EVENTS----------------------------------------------------------------->
+                <div class="events">
+                    <div id="credits">
+                        <div>3 HOURS CREDIT</div>
+                    </div>
+                    <!--EVENT PICTURE-->
+                    <div>
+                        <div class="eventPicBox">
+                            <!--READ MORE BUTTON-->
+                            <div class="readMoreBox">
+                                <div></div>
+                                <button class="readMoreButton">Info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--PREVIEW DETAIL BOX-->
+                <div class="previewBox">
+                    <!--DATE-->
+                    <div id="date">
+                        <p id="month">MAY</p>
+                        <p id="day">06</p>
+                    </div>
+                    <!--MESSAGE-->
+                    <div id="eventMessage">
+                        Join us, and be apart of making our city a greener place!
+                    </div>
+                    <!--CURRENT PEOPLE JOINED-->
+                    <div id="peopleBox">
+                        <img alt="people" id="peoplePic" src="./Images/people.png">
+                        <p id="peopleCount">1</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--INDIVIDUAL EVENTS BOX----------------------------------------------------------------------------->
+            <div class="eventsBox">
+                <!--INDIVIDUAL EVENTS----------------------------------------------------------------->
+                <div class="events">
+                    <div id="credits">
+                        <div>3 HOURS CREDIT</div>
+                    </div>
+                    <!--EVENT PICTURE-->
+                    <div>
+                        <div class="eventPicBox">
+                            <!--READ MORE BUTTON-->
+                            <div class="readMoreBox">
+                                <div></div>
+                                <button class="readMoreButton">Info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--PREVIEW DETAIL BOX-->
+                <div class="previewBox">
+                    <!--DATE-->
+                    <div id="date">
+                        <p id="month">MAY</p>
+                        <p id="day">06</p>
+                    </div>
+                    <!--MESSAGE-->
+                    <div id="eventMessage">
+                        Join us, and be apart of making our city a greener place!
+                    </div>
+                    <!--CURRENT PEOPLE JOINED-->
+                    <div id="peopleBox">
+                        <img alt="people" id="peoplePic" src="./Images/people.png">
+                        <p id="peopleCount">1</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--EVENT DETAILS BOX----------------------------------------------------------------------->
+        <!--**************************************************************************************-->
+
+        <div id="eventsInfoBox">
+            <!--DETAILS TOP BOX-->
+            <div id="detailsTopBox">
+                <!--DETAILS PICTURE-->
+                <img alt="eventImage" id="eventInfoPic" src="Images/planting.jpeg">
+            </div>
+            <!--EVENT INFO TITLE-->
+            <div id="eventInfoTitle">
+                Planting Our Future
+            </div>
+            <!--SPECIAL DETAILS BOX-->
+            <div id="specialInfoBox">
+                <!--LOCATION INFO-->
+                <div id="locationInfoBox">
+                    <img alt="loc" id="locationPic" src="./Images/location.png">
+                    <div id="locationInfo">Vancouver</div>
+                </div>
+                <!--DATE TIME INFO-->
+                <div id="dateTimeInfoBox">
+                    <img alt="cal" id="calenderPic" src="./Images/calender.png">
+                    <div id="dateTime">
+                        <div id="dateInfo">May 12,2019</div>
+                        <div id="timeInfo">10:00-13:00</div>
+                    </div>
+                </div>
+                <!--ORGANIZER INFO-->
+                <div id="organizerInfoBox">
+                    <img alt="org" id="organizerPic" src="./Images/organizer.png">
+                    <div id="organizerInfo">Green Crusaders</div>
+                </div>
+                <!--EMAIL INFO-->
+                <div id="emailInfoBox">
+                    <img alt="email" id="emailPic" src="./Images/email.png">
+                    <div id="emailInfo">FarmBoy@bcit.ca</div>
+                </div>
+                <!--PEOPLE COUNT INFO-->
+                <div id="peopleCountBox">
+                    <img alt="count" id="peopleCountPic" src="./Images/people.png">
+                    <div class="count">1</div>
+                    People going
+                </div>
+                <!--CREDITS INFO-->
+                <div id="creditsBox">
+                    <img alt="credits" id="creditsPic" src="./Images/star.png">
+                    <div class="credits">3</div>
+                    Hours Credit
+                </div>
+            </div>
+            <!--INFO DESCRIPTION BOX-->
+            <div id="infoDescriptionBox">
+                <div>
+                    Trees give off oxygen that we need to breathe. Trees reduce the amount of storm water runoff, which
+                    reduces erosion and pollution in our waterways and may reduce the effects of flooding. Many species
+                    of wildlife depend on trees for habitat. Trees provide food, protection, and homes for many birds
+                    and mammals.
+                </div>
+            </div>
+            <footer>
+                <!--JOIN EVENT BUTTON-->
+                <div id="joinEventButtonBox">
+                    <button id="joinEventButton">Join Event</button>
+                </div>
+            </footer>
+        </div>
+
+
+        <!--JOINED EVENTS BOX---------------------------------------------------------------------------->
+        <!--**************************************************************************************-->
+        <div class="joinedEventsBox">
+            <div class="joinedEvents">
+                <div id="credits">
+                    <div>3 HOURS CREDIT</div>
+                </div>
+                <!--EVENT PICTURE-->
+                <div>
+                    <div class="eventPicBox">
+                        <!--READ MORE BUTTON-->
+                        <div class="joinedReadMoreBox">
+                            <div></div>
+                            <button class="joinedReadMoreButton">Info</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--PREVIEW DETAIL BOX-->
+            <div class="previewBox">
+                <!--DATE-->
+                <div id="date">
+                    <p id="month">MAY</p>
+                    <p id="day">06</p>
+                </div>
+                <!--MESSAGE-->
+                <div id="eventMessage">
+                    Join us, and be apart of making our city a greener place!
+                </div>
+                <!--CURRENT PEOPLE JOINED-->
+                <div id="peopleBox">
+                    <img alt="people" id="peoplePic" src="./Images/people.png">
+                    <p id="peopleCount">1</p>
+                </div>
+            </div>
+        </div>
+
+        <!--JOINED EVENT DETAILS BOX---------------------------------------------------------------------->
+        <!--********************************************************************************************-->
+        <div class="joinedEventsInfoBox">
+            <!--DETAILS TOP BOX-->
+            <div id="joinedDetailsTopBox">
+                <!--DETAILS PICTURE-->
+                <img alt="eventImage" id="eventInfoPic" src="Images/planting.jpeg">
+            </div>
+            <!--EVENT INFO TITLE-->
+            <div id="eventInfoTitle">
+                Planting Our Future
+            </div>
+            <!--SPECIAL DETAILS BOX-->
+            <div id="specialInfoBox">
+                <!--LOCATION INFO-->
+                <div id="locationInfoBox">
+                    <img alt="loc" id="locationPic" src="./Images/location.png">
+                    <div id="locationInfo">Vancouver</div>
+                </div>
+                <!--DATE TIME INFO-->
+                <div id="dateTimeInfoBox">
+                    <img alt="cal" id="calenderPic" src="./Images/calender.png">
+                    <div id="dateTime">
+                        <div id="dateInfo">May 12,2019</div>
+                        <div id="timeInfo">10:00-13:00</div>
+                    </div>
+                </div>
+                <!--ORGANIZER INFO-->
+                <div id="organizerInfoBox">
+                    <img alt="org" id="organizerPic" src="./Images/organizer.png">
+                    <div id="organizerInfo">Green Crusaders</div>
+                </div>
+                <!--EMAIL INFO-->
+                <div id="emailInfoBox">
+                    <img alt="email" id="emailPic" src="./Images/email.png">
+                    <div id="emailInfo">FarmBoy@bcit.ca</div>
+                </div>
+                <!--PEOPLE COUNT INFO-->
+                <div id="peopleCountBox">
+                    <img alt="count" id="peopleCountPic" src="./Images/people.png">
+                    <div class="count">1</div>
+                    People going
+                </div>
+                <!--CREDITS INFO-->
+                <div id="creditsBox">
+                    <img alt="credits" id="creditsPic" src="./Images/star.png">
+                    <div class="credits">3</div>
+                    Hours Credit
+                </div>
+            </div>
+            <!--INFO DESCRIPTION BOX-->
+            <div id="infoDescriptionBox">
+                <div>
+                    Trees give off oxygen that we need to breathe. Trees reduce the amount of storm water runoff,
+                    which
+                    reduces erosion and pollution in our waterways and may reduce the effects of flooding. Many
+                    species
+                    of wildlife depend on trees for habitat. Trees provide food, protection, and homes for many
+                    birds
+                    and mammals.
+                </div>
+            </div>
+            <footer>
+                <!--JOIN EVENT BUTTON-->
+                <div id="joinEventButtonBox">
+                    <button id="joinEventButton">Unjoin Event</button>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="./js/events.js"></script>
+    <script src="./js/eventNumbers.js"></script>
+    <script src="./js/transition.js"></script>
+
+</body>
+
+</html>
