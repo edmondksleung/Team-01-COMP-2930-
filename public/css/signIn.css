@@ -369,6 +369,7 @@ canvas {
 .wiggle {
   animation: none;
 }
+<<<<<<< HEAD
 /* Nav bar */
 #nav_bar {
     font-size: 12pt;
@@ -400,11 +401,6 @@ canvas {
     background: #e2e2e2;
     text-align: left;
 }
+=======
+>>>>>>> d7adebee7b5f9a352466e98a53f8f47ae077a304
 
-/** current page nav bar over */
-  #nav_bar ul li a.active-page
-{
-  background-color:white;
-  border-radius: 10%;
-  color: rgb(33, 49, 92);
-}
