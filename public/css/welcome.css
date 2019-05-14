@@ -1,4 +1,4 @@
-#subPageWrapperTitle {
+#welcomePageTitle {
     font-size: 30pt;
     text-align: center;
     letter-spacing: 8px;
@@ -7,7 +7,7 @@
     position: relative;
 }
 
-#subPageWrapperTitle span {
+#welcomePageTitle span {
     color: rgb(118, 228, 85);
 }
 

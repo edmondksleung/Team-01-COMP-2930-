@@ -243,7 +243,7 @@ div.cityImage h1:hover {
     color: black;
 }
 
-.subPageWrapper {
+.welcomePageWrapper {
     display: none;
     overflow: hidden;
 }
@@ -328,6 +328,7 @@ div.cityImage h1:hover {
     cursor: pointer;
 }
 
+/* Firebase Login Css Below */
 /* The Modal (background) */
 .modal {
     display: none;
@@ -377,6 +378,7 @@ div.cityImage h1:hover {
     }
 }
 
+/* Easter Egg Deliverable Css Below */
 #eAudio {
     color: rgb(118, 228, 85);
     cursor: pointer;
@@ -389,7 +391,7 @@ canvas {
     display: none;
 }
 
-/* welcome e button wiggle animation */
+/* Welcome e button wiggle animation */
 @keyframes wiggle {
     0% { transform: rotate(80deg); }
     30% { transform: rotate(-30deg);}
