@@ -40,26 +40,29 @@ $('.cities').click(function () {
 
                 let readMoreButton = document.createElement('button');
                 readMoreButton.setAttribute('class', 'readMoreButton');
+                $(".readMoreButton").text("info");
                 readMoreBox.append(readMoreButton);
+
+                // preview box 
 
                 let previewBox = document.createElement('div');
                 previewBox.setAttribute('class', 'previewBox');
-                events.after(previewBox);
+                eventsBox.append(previewBox);
 
                 let date = document.createElement('div');
                 date.setAttribute('class', 'date');
                 previewBox.append(date);
 
                 let month = document.createElement('p');
-                month.setAttribute('id', 'month');
+                month.setAttribute('class', 'month');
                 date.append(month);
 
                 let day = document.createElement('p');
-                day.setAttribute('id', 'day');
+                day.setAttribute('class', 'day');
                 date.append(day);
 
                 let eventMessage = document.createElement('div');
-                date.setAttribute('class', 'eventMessage');
+                eventMessage.setAttribute('class', 'eventMessage');
                 previewBox.append(eventMessage);
 
                 let peopleBox = document.createElement('div');
@@ -68,16 +71,21 @@ $('.cities').click(function () {
 
                 let peoplePic = document.createElement('img');
                 peoplePic.setAttribute('src', './Images/people.png');
-                peoplePic.setAttribute('id', 'peoplePic');
+                peoplePic.setAttribute('class', 'peoplePic');
                 peopleBox.append(peoplePic);
 
                 let peopleCount = document.createElement('p');
-                peopleCount.setAttribute('id', 'peopleCount');
+                peopleCount.setAttribute('class', 'peopleCount');
                 peopleBox.append(peopleCount);
+
+
+
 
                 // Putting value into dom element
                 let k = keys[i];
-                eventMessage.innerHTML = data[k].subject;
+                // eventMessage.innerHTML = data[k].subject;
+                // month.innerHTML = data[k].month;
+                // date.innerHTML = data[k].day;
 
             }
         }
