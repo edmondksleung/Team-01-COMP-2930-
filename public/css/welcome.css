@@ -1,6 +1,6 @@
 .welcomePageWrapper {
     display: none;
-    overflow: hidden;
+    overflow: auto;
 }
 
 #welcomePageTitle {
