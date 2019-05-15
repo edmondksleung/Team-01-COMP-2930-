@@ -109,13 +109,17 @@
                     <li><a href="info.html">MY LISTINGS</a></li>
                     <li><a href="info.html">ABOUT US</a></li>
                     <li><a href="info.html">CONTACT</a></li>
+                    <li><a>LOG OUT</a></li>
                 </ul>
             </div>
-        </div>
-        <div id="welcomePageHeader">
-            <div id="welcomePageTitle">
-                <b><span>e</span>Volunteer</b>
+            <div id="logoutButton1">
+                <div id="logoutBox">
+                    <button onclick="logout()" type="submit" id="logoutButton">Log Out</button>
+                </div>
             </div>
+        </div>
+        <div id="welcomePageTitle">
+            <b><span>e</span>Volunteer</b>
         </div>
         <div id="welcomePageLogo">
             <div>
@@ -129,6 +133,7 @@
             <div id="clickDownText">
                 Choose your city below and<br>start volunteering!
             </div>
+            <div id="breakPoint"></div>
             <div id="clickDownButton">
                 <img src="Images/scrollDown.png" alt="Scroll Down Button" id="clickButton">
             </div>
@@ -146,9 +151,6 @@
             <div class="cities" id="city9"><a href="index.html?city=Surrey">SURREY</a></div>
             <div class="cities" id="city10"><a href="index.html?city=Vancouver">VANCOUVER</a></div>
             <div class="cities" id="city11"><a href="index.html?city=WhiteRock">WHITE ROCK</a></div>
-        </div>
-        <div id="logoutBox">
-                <button onclick="logout()" type="submit" id="logoutButton">Log Out</button>
         </div>
     </div>
 
@@ -682,7 +684,7 @@
     <script>
     $("#clickButton").click(function() {
     $('html, body').animate({
-        scrollTop: $("#city1").offset().top
+        scrollTop: $("#breakPoint").offset().top
     }, 500);
 });
     </script>

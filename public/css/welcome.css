@@ -3,16 +3,8 @@
     overflow: hidden;
 }
 
-#welcomePageHeader {
-    height: 8vh;
-    display: grid;
-    grid-template-areas: 
-        "left title right";
-    grid-template-columns: 15% 70% 15%;
-}
-
 #welcomePageTitle {
-    grid-area: title;
+    height: 8vh;
     font-size: 30pt;
     text-align: center;
     letter-spacing: 8px;
@@ -40,7 +32,7 @@
 }
 
 #missionStatement {
-    height: 28vh;
+    height: 27vh;
     padding: 50px 25px 25px 25px;
     text-align: center;
     color: white;
@@ -53,7 +45,7 @@
 }
 
 #clickDownArea {
-    height: 16vh;
+    height: 17vh;
     padding-top: 5px;
     text-align: center;
     color: white;
@@ -65,6 +57,10 @@
     height: 50px;
     width: 250px;
     margin: auto;
+}
+
+#breakPoint {
+    height: 8px;
 }
 
 #clickDownButton img {
@@ -113,11 +109,16 @@
 #navigation {
     height: 18vh;
     padding-top: 20px;
+    display: grid;
+    grid-template-areas:
+        "left middle right";
+    grid-template-columns: 15% 70% 15%;
 }
 
 .navBar {
+    grid-area: middle;
     font-size: 12pt;
-    margin-top: 29px;
+    margin-top: 50px;
     height: 45px;
     text-align: center;
     letter-spacing: 3px;
@@ -148,19 +149,20 @@
 
 .navBar ul li a:hover {
     background-color:white;
-    border-radius: 10%;
+    border-radius: 5px;
     color: rgb(33, 49, 92);    
 }
 
 /* Current page nav bar highlight */
   .navBar ul li a.activePage {
   background-color:white;
-  border-radius: 10%;
+  border-radius: 5px;
   color: rgb(33, 49, 92);
 }
 
 /* Navbar picture display */
 .navBarPic {
+    grid-area: middle;
     text-align: center;
 }
 
@@ -174,13 +176,16 @@
     list-style: none;
     position: absolute;
     height: 60px;
-    margin-top: -26.5px;
-    margin-left: -367px;
-
+    margin-top: -25.5px;
+    margin-left: -365px;
 }
 
 /** Current page picture show */
   .navBarPic ul li img.activePic {
   display: inline-block;
+}
+
+#logoutButton1 {
+    grid-area: right;
 }
 
