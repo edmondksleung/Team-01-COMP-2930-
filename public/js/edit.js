@@ -24,7 +24,7 @@ $(document).ready(function(){
     updateMessage(subject, email, content, city);
 
     function updateMessage(subject, email, content, city){
-      let newMessageRef = firebase.database().ref('events/' + city).push();
+      let newMessageRef = firebase.database().ref('events/' + city + "/" + key);
       newMessageRef.update({
         subject: subject,
         email: email,
