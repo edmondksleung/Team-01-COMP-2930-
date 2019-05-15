@@ -1,13 +1,6 @@
 @font-face {
     font-family: 'Source Sans Pro';
     font-style: normal;
-    font-weight: 200;
-    src: local('Source Sans Pro ExtraLight'), local('SourceSansPro-ExtraLight'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3i94_wlxdr.ttf) format('truetype');
-}
-
-@font-face {
-    font-family: 'Source Sans Pro';
-    font-style: normal;
     font-weight: 300;
     src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdr.ttf) format('truetype');
 }
@@ -24,7 +17,6 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: 'Source Sans Pro', sans-serif;
-    color: white;
     font-weight: 300;
 }
 
@@ -63,7 +55,7 @@ body :-ms-input-placeholder {
     font-weight: 300;
 }
 
-.wrapper {
+.signInPageWrapper {
     /* background-size: cover;
     -moz-background-size: cover;  /* Firefox 3.6 */
     background-position: center;
@@ -75,13 +67,12 @@ body :-ms-input-placeholder {
     display: none;
 }
 
-.wrapper.form-success .container h1 {
+.signInPageWrapper.form-success .container h1 {
     -webkit-transform: translateY(100px);
     transform: translateY(100px);
 }
 
 .container {
-    max-width: 600px;
     margin: 0 auto;
     padding: 80px 0;
     height: 400px;
@@ -106,6 +97,7 @@ form input {
     outline: 0;
     border: 1px solid rgba(255, 255, 255, 0.4);
     background-color: rgba(255, 255, 255, 0.2);
+    height: 43px;
     width: 250px;
     border-radius: 3px;
     padding: 10px 15px;
@@ -127,7 +119,6 @@ form input:focus {
     width: 300px;
     color: rgb(97, 204, 65);
     border: 2px solid rgb(97, 204, 65);
-
 }
 
 form button {
@@ -144,7 +135,6 @@ form button {
     font-size: 18px;
     transition-duration: 0.25s;
     margin-bottom: 100px;
-
 }
 
 form button:hover {
@@ -152,187 +142,42 @@ form button:hover {
     color: white;
 }
 
-.bg-bubbles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-.bg-bubbles li {
-    position: absolute;
-    list-style: none;
-    display: block;
-    border-radius: 50%;
-    box-shadow: 0 0 3px rgb(230, 238, 123);
-    width: 8px;
-    height: 8px;
-    background-color: rgba(255, 255, 255, 0.418);
-    bottom: -150px;
-    -webkit-animation: circle 25s infinite;
-    animation: circle 25s infinite;
-    transition-timing-function: linear;
-}
-
-.bg-bubbles li:nth-child(1) {
-    left: 10%;
-    border-radius: 50%;
-    box-shadow: 0 0 3px rgb(230, 238, 123);
-
-
-}
-
-.bg-bubbles li:nth-child(2) {
-    left: 20%;
-    border-radius: 50%;
-    box-shadow: 0 0 3px rgb(230, 238, 123);
-    width: 4px;
-    height: 4px;
-    -webkit-animation-delay: 2s;
-    animation-delay: 2s;
-    -webkit-animation-duration: 17s;
-    animation-duration: 17s;
-}
-
-.bg-bubbles li:nth-child(3) {
-    left: 25%;
-    border-radius: 50%;
-    box-shadow: 0 0 3px rgb(230, 238, 123);
-    -webkit-animation-delay: 4s;
-    animation-delay: 4s;
-}
-
-.bg-bubbles li:nth-child(4) {
-    left: 40%;
-    border-radius: 50%;
-    box-shadow: 0 0 3px rgb(230, 238, 123);
-    width: 2px;
-    height: 2px;
-    -webkit-animation-duration: 22s;
-    animation-duration: 22s;
-    background-color: rgba(255, 255, 255, 0.418);
-}
-
-.bg-bubbles li:nth-child(5) {
-    left: 70%;
-    border-radius: 50%;
-    box-shadow: 0 0 3px rgb(230, 238, 123);
-}
-
-.bg-bubbles li:nth-child(6) {
-    left: 80%;
-    border-radius: 50%;
-    box-shadow: 0 0 3px rgb(230, 238, 123);
-    width: 7px;
-    height: 7px;
-    -webkit-animation-delay: 3s;
-    animation-delay: 3s;
-    background-color: rgba(255, 255, 255, 0.418);
-}
-
-.bg-bubbles li:nth-child(7) {
-    left: 32%;
-    border-radius: 50%;
-    box-shadow: 0 0 3px rgb(230, 238, 123);
-    width: 3px;
-    height: 3px;
-    -webkit-animation-delay: 7s;
-    animation-delay: 7s;
-}
-
-.bg-bubbles li:nth-child(8) {
-    left: 55%;
-    border-radius: 50%;
-    box-shadow: 0 0 3px rgb(230, 238, 123);
-    width: 7px;
-    height: 7px;
-    -webkit-animation-delay: 15s;
-    animation-delay: 15s;
-    -webkit-animation-duration: 40s;
-    animation-duration: 40s;
-}
-
-.bg-bubbles li:nth-child(9) {
-    left: 25%;
-    border-radius: 50%;
-    box-shadow: 0 0 3px rgb(230, 238, 123);
-    width: 5px;
-    height: 5px;
-    -webkit-animation-delay: 2s;
-    animation-delay: 2s;
-    -webkit-animation-duration: 40s;
-    animation-duration: 40s;
-    background-color: rgba(255, 255, 255, 0.418);
-}
-
-.bg-bubbles li:nth-child(10) {
-    left: 90%;
-    border-radius: 50%;
-    box-shadow: 0 0 3px rgb(230, 238, 123);
-    width: 3px;
-    height: 3px;
-    -webkit-animation-delay: 11s;
-    animation-delay: 11s;
-}
-
-@-webkit-keyframes circle {
-    0% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-
-    100% {
-        -webkit-transform: translateY(-700px) rotate(600deg);
-        transform: translateY(-700px) rotate(600deg);
-    }
-}
-
-@keyframes circle {
-    0% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-
-    100% {
-        -webkit-transform: translateY(-1400px) rotate(600deg);
-        transform: translateY(-1400px) rotate(600deg);
-    }
-}
-
 #logo img {
-    margin-top: -90px;
+    z-index:0;
+    margin-top: -80px;
     margin-bottom: -50px;
     width: 400px;
     height: 310px;
 }
+
 #e {
     cursor: pointer;
 }
+
 #title {
     font-size: 30pt;
     text-align: center;
     letter-spacing: 8px;
     margin-bottom: 50px;
+    color: white;
 }
 
 #title span {
     color: rgb(118, 228, 85);
 }
 
-
 #signUp {
+    color: white;
     font-size: 10pt;
     margin: 0 auto;
     width: 140px;
+    color: white;
 }
 
 #signUp:hover {
     cursor: pointer;
     color: rgb(118, 228, 85);
 }
-
 
 #loginButton.invalid {
     background-color: red;
@@ -390,40 +235,14 @@ div.cityImage h1 {
     font-size: 50pt;
 }
 
-.subPageWrapper {
-    display: none;
-    overflow: hidden;
-}
-
-#topBox {
-    width: 100%;
-    display: grid;
-    align-items: center;
-    grid-template-areas:
-        "header1 header2 header3";
-    grid-template-columns: 20% 60% 20%;
-    grid-template-rows: 80px;
-    z-index: 2;
-}
-
-#evolunteer {
-    height: 80px;
-    grid-area: header2;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 30pt;
-    z-index: 1;
-}
-
-#signInLogo {
-    margin-top: 70px;
-    height: 100px;
-    width: 100px;
+/*HOVER FOR CITY SELECTION*/
+div.cityImage h1:hover {
+    cursor: pointer;
+    color: black;
 }
 
 #logoutBox {
-    height: 80px;
+    height: auto;
     display: grid;
     align-items: center;
     justify-items: center;
@@ -456,6 +275,7 @@ div.cityImage h1 {
 }
 
 #logoutButton:hover {
+    cursor: pointer;
     background-color: #86c8e2;
     background-image: -webkit-(linear, left top, left bottom, from(#82bbd1), to(#193b61));
     background-image: -webkit-linear-gradient(top, #82bbd1, #193b61);
@@ -466,19 +286,7 @@ div.cityImage h1 {
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#82bbd1, endColorstr=#193b61);
 }
 
-#mainBox {
-    text-align: center;
-    z-index: 2;
-}
-
-#mainBox img {
-    z-index: 2;
-}
-
-#mainBox img:hover {
-    cursor: pointer;
-}
-
+/* Firebase Login Css Below */
 /* The Modal (background) */
 .modal {
     display: none;
@@ -528,15 +336,35 @@ div.cityImage h1 {
     }
 }
 
+/* Easter Egg Deliverable Css Below */
 #eAudio {
     color: rgb(118, 228, 85);
     cursor: pointer;
 }
 
 canvas {
-	cursor: crosshair;
+	cursor: pointer;
     display: block;
     position: absolute;
     display: none;
+}
+
+/* Welcome e button wiggle animation */
+@keyframes wiggle {
+    0% { transform: rotate(80deg); }
+    30% { transform: rotate(-30deg);}
+   80% { transform: rotate(20deg); }
+   85% { transform: rotate(20deg); }
+   95% { transform: rotate(-40deg); }
+  100% { transform: rotate(30deg); }
+}
+
+.wiggle:hover {
+  display: inline-block;
+  animation: wiggle 0.2s infinite;
+}
+
+.wiggle {
+  animation: none;
 }
 

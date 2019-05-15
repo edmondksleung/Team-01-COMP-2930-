@@ -3,25 +3,28 @@
 
 <head>
     <title>Sign in to eVolunteer</title>
+    <!------------------------------------------Links to Css Pages-------------------------------------------->
     <link rel="stylesheet" type="text/css" href="css/signIn.css">
-
-    <!--JQuery-->
+    <link rel="stylesheet" type="text/css" href="css/bubbleBackground.css">
+    <link rel="stylesheet" type="text/css" href="css/welcome.css">
+    <link rel="stylesheet" type="text/css" href="./css/eventsTWO.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:900" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <!-----------------------------------------------JQuery--------------------------------------------------->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     <script>
         //skip login page while signed in.
         $(document).ready(function () {
             firebase.auth().onAuthStateChanged(user => {
                 if (user) {
                     setTimeout(function () {
-                        $('.subPageWrapper').fadeIn(500);
+                        $('.welcomePageWrapper').fadeIn(500);
                     }, 1000);
-                    $('.subPageWrapper').css('display: block');
+                    $('.welcomePageWrapper').css('display: block');
                 } else {
-                    $(".wrapper").show();
+                    $(".signInPageWrapper").show();
                 }
             });
         });
@@ -42,16 +45,22 @@
 
 </head>
 
-<body>
-    <div class="wrapper">
+<body>        
+    <div class="signInPageWrapper">
+        <!-- setup our canvas element -->
+        <canvas id="canvas">Canvas is not supported in your browser.</canvas>
         <div class="container">
+
             <div id="logo">
                 <img src="https://media1.giphy.com/media/l1KVcrdl7rJpFnY2s/giphy.gif" alt="logoPic">
             </div>
+
             <h1 id="title">
                 <b>
-                    <span>e</span>Volunteer</b>
+                    <span id="eAudio" class="wiggle">e</span>Volunteer</b>
             </h1>
+
+
             <form class="form">
                 <input type="text" placeholder="Username" id="emailField">
                 <input type="password" placeholder="Password" id="passField">
@@ -81,117 +90,212 @@
             <li></li>
         </ul>
     </div>
-    <!------------------------NAV PAGE----------------------------------->
-    <div class="subPageWrapper">
-        <!-- setup our canvas element -->
-        <canvas id="canvas">Canvas is not supported in your browser.</canvas>
-
-        <div id="topBox">
-            <div></div>
-            <div id="evolunteer">W<span id="eAudio">e</span>lcome!</div>
-            <div id="logoutBox">
-                <button onclick="logout()" type="submit" id="logoutButton">Log Out</button>
+    <!-------------------------------------------WElCOME PAGE--------------------------------------------->
+    <div class="welcomePageWrapper">
+        <div id="navigation">
+            <div class="navBarPic">
+                <ul>
+                    <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png" alt="pic1" class="activePic"></li>
+                    <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png" alt="pic1"></li>
+                    <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png" alt="pic1"></li>
+                </ul>
+            </div>
+            <div class="navBar">
+                <ul>
+                    <li><a href="index.html" class="activePage">HOME</a></li>
+                    <li><a href="status.html">MISSION</a></li>
+                    <li><a href="info.html">EVENTS</a></li>
+                    <li><a href="info.html">MY EVENTS</a></li>
+                    <li><a href="info.html">MY LISTINGS</a></li>
+                    <li><a href="info.html">ABOUT US</a></li>
+                    <li><a href="info.html">CONTACT</a></li>
+                    <li><a>LOG OUT</a></li>
+                </ul>
+            </div>
+            <div id="logoutButton1">
+                <div id="logoutBox">
+                    <button onclick="logout()" type="submit" id="logoutButton">Log Out</button>
+                </div>
             </div>
         </div>
-        <div id="mainBox"><img id="globeLogo" src="https://media1.giphy.com/media/l1KVcrdl7rJpFnY2s/giphy.gif" alt="">
+        <div id="welcomePageTitle">
+            <b><span>e</span>Volunteer</b>
+        </div>
+        <div id="welcomePageLogo">
+            <div>
+                <img src="https://media1.giphy.com/media/l1KVcrdl7rJpFnY2s/giphy.gif" alt="logoPic">
+            </div>
+        </div>
+        <div id="missionStatement">
+            Welcome to <span>e</span>Volunteer!<br><br>Dedicated towards a healthy, eco-friendly future for all of us.
+        </div>
+        <div id="clickDownArea">
+            <div id="clickDownText">
+                Choose your city below and<br>start volunteering!
+            </div>
+            <div id="breakPoint"></div>
+            <div id="clickDownButton">
+                <img src="Images/scrollDown.png" alt="Scroll Down Button" id="clickButton">
+            </div>
+        </div>
+        <div id="welcomePageCities">
+            <div class="cities" name="Abbotsford"><a>ABBOTSFORD</a></div>
+            <div class="cities" name="Burnaby"><a>BURNABY</a></div>
+            <div class="cities" name="Chilliwack"><a>CHILLIWACK</a></div>
+            <div class="cities" name="Coquitlam"><a>COQUITLAM</a></div>
+            <div class="cities" name="Edmonds"><a>EDMONDS</a></div>
+            <div class="cities" name="Langley"><a>LANGLEY</a></div>
+            <div class="cities" name="MapleRidge"><a>MAPLE RIDGE</a></div>
+            <div class="cities" name="PortMoody"><a>PORT MOODY</a></div>
+            <div class="cities" name="Richmond"><a>RICHMOND</a></div>
+            <div class="cities" name="Surrey"><a>SURREY</a></div>
+            <div class="cities" name="Vancouver"><a>VANCOUVER</a></div>
+            <div class="cities" name="WhiteRock"><a>WHITE ROCK</a></div>
         </div>
     </div>
-    <!--MAIN SUB WRAPPER-->
-    <div class="mainPageWrapper">
-        <div id="userStatus"></div>
 
-        <div id="firstCityTest" class="cityImage"
-            style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/a0/FuturebigToronto.jpg);">
-            <a href="eventList.html?city=Vancouver">Vancouver</a>
-            <p>Number of events: <span id="vancouver"></span></p>
-        </div>
-
-        <div class="cityImage"
-            style="background-image: url(https://res.cloudinary.com/g5-assets-cld/image/upload/x_0,y_326,h_3389,w_5648,c_crop/q_auto,f_auto,fl_lossy,g_center,h_1200,w_2000/g5/g5-c-5cpnmi9wp-quadreal/g5-cl-1hj4q9obd6-parkview-towers/uploads/0Z8A6304_d5hshm.jpg);">
-            <a href="eventList.html?city=Burnaby">Burnaby</a>
-            <p>Number of events: <span id="burnaby"></span></p>
-        </div>
-
-        <div class="cityImage"
-            style="background-image: url(http://greatplacesincanada.ca/wp-content/uploads/2017/10/Town_Centre_Park.jpg);">
-            <a href="eventList.html?city=Coquitlam">Coquitlam</a>
-            <p>Number of events: <span id="coquitlam"></span></p>
-        </div>
-
-    </div>
-    <script>
-            let database = firebase.database();
-            let dbref = database.ref('events');
-            dbref.on('value', function(snap){
-              // function count(city){
-              //   Object.keys(snap.val().Vancouver).length;
-              // }
-              console.log(Object.keys(snap.val().Vancouver).length);
-              document.getElementById('vancouver').innerHTML = Object.keys(snap.val().Vancouver).length;
-              document.getElementById('burnaby').innerHTML = Object.keys(snap.val().Burnaby).length;
-              document.getElementById('coquitlam').innerHTML = Object.keys(snap.val().Coquitlam).length;
-            });
+    <!--EVENTS PAGE-------------------------------------------------------------------------------->
+    <!--*******************************************************************************************-->
+    <div id="eventsWrapper">
+        <!--EVENTS NAV BAR------------------------------------------------------------------------>
+        <div id="eventsNavBar">
+                        <div class="navBarPic">
+                            <ul>
+                                <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png" alt="pic1" ></li>
+                                <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png" alt="pic1"></li>
+                                <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png" alt="pic1" class="activePic"></li>
+                            </ul>
+                        </div>
+                        <div class="navBar">
+                            <ul>
+                                <li><a href="index.html" >HOME</a></li>
+                                <li><a href="status.html">MISSION</a></li>
+                                <li><a href="info.html" class="activePage">EVENTS</a></li>
+                                <li><a href="info.html">MY EVENTS</a></li>
+                                <li><a href="info.html">MY LISTINGS</a></li>
+                                <li><a href="info.html">ABOUT US</a></li>
+                                <li><a href="info.html">CONTACT</a></li>
             
-        
-          </script>
+                            </ul>
+                        </div>
+        </div>
+
+        <!--JOINED EVENTS BOX---------------------------------------------------------------------------->
+        <!--**************************************************************************************-->
+        <div class="joinedEventsBox">
+            <div class="joinedEvents">
+                <div id="credits">
+                    <div>3 HOURS CREDIT</div>
+                </div>
+                <!--EVENT PICTURE-->
+                <div>
+                    <div id="eventPicBox">
+                        <!--READ MORE BUTTON-->
+                        <div class="joinedReadMoreBox">
+                            <div></div>
+                            <button class="joinedReadMoreButton">Info</button>
+                        </div>
+                        <!--EVENT IMAGE-->
+                        <img alt="eventImage" id="eventPic" src="Images/planting.jpeg">
+                    </div>
+                </div>
+            </div>
+            <!--PREVIEW DETAIL BOX-->
+            <div id="previewBox">
+                <!--DATE-->
+                <div id="date">
+                    <p id="month">MAY</p>
+                    <p id="day">06</p>
+                </div>
+                <!--MESSAGE-->
+                <div id="eventMessage">
+                    Join us, and be apart of making our city a greener place!
+                </div>
+                <!--CURRENT PEOPLE JOINED-->
+                <div id="peopleBox">
+                    <img alt="people" id="peoplePic" src="./Images/people.png">
+                    <p id="peopleCount">1</p>
+                </div>
+            </div>
+        </div>
 
 
+        <!--JOINED EVENT DETAILS BOX---------------------------------------------------------------------->
+        <!--********************************************************************************************-->
+        <div class="joinedEventsInfoBox">
+            <!--DETAILS TOP BOX-->
+            <div id="joinedDetailsTopBox">
+                <!--DETAILS PICTURE-->
+                <img alt="eventImage" id="eventInfoPic" src="Images/planting.jpeg">
+            </div>
+            <!--EVENT INFO TITLE-->
+            <div id="eventInfoTitle">
+                Planting Our Future
+            </div>
+            <!--SPECIAL DETAILS BOX-->
+            <div id="specialInfoBox">
+                <!--LOCATION INFO-->
+                <div id="locationInfoBox">
+                    <img alt="loc" id="locationPic" src="./Images/location.png">
+                    <div id="locationInfo">Vancouver</div>
+                </div>
+                <!--DATE TIME INFO-->
+                <div id="dateTimeInfoBox">
+                    <img alt="cal" id="calenderPic" src="./Images/calender.png">
+                    <div id="dateTime">
+                        <div id="dateInfo">May 12,2019</div>
+                        <div id="timeInfo">10:00-13:00</div>
+                    </div>
+                </div>
+                <!--ORGANIZER INFO-->
+                <div id="organizerInfoBox">
+                    <img alt="org" id="organizerPic" src="./Images/organizer.png">
+                    <div id="organizerInfo">Green Crusaders</div>
+                </div>
+                <!--EMAIL INFO-->
+                <div id="emailInfoBox">
+                    <img alt="email" id="emailPic" src="./Images/email.png">
+                    <div id="emailInfo">FarmBoy@bcit.ca</div>
+                </div>
+                <!--PEOPLE COUNT INFO-->
+                <div id="peopleCountBox">
+                    <img alt="count" id="peopleCountPic" src="./Images/people.png">
+                    <div class="count">1</div>
+                    People going
+                </div>
+                <!--CREDITS INFO-->
+                <div id="creditsBox">
+                    <img alt="credits" id="creditsPic" src="./Images/star.png">
+                    <div class="credits">3</div>
+                    Hours Credit
+                </div>
+            </div>
+            <!--INFO DESCRIPTION BOX-->
+            <div id="infoDescriptionBox">
+                <div>
+                    Trees give off oxygen that we need to breathe. Trees reduce the amount of storm water runoff,
+                    which
+                    reduces erosion and pollution in our waterways and may reduce the effects of flooding. Many
+                    species
+                    of wildlife depend on trees for habitat. Trees provide food, protection, and homes for many
+                    birds
+                    and mammals.
+                </div>
+            </div>
+            <footer>
+                <!--JOIN EVENT BUTTON-->
+                <div id="joinEventButtonBox">
+                    <button id="joinEventButton">Unjoin Event</button>
+                </div>
+            </footer>
+        </div>
+    </div>
 
     <script>
-        // firebase.auth().onAuthStateChanged(function (user) {
-        //     if (user) {
-        // User is signed in.
-
-        // document.getElementsByClassName("wrapper").style.display = "none";
-        // document.getElementsByClassName("mainPageWrapper").style.display = "block";
-
-        // var user = firebase.auth().currentUser;
-
-        //         if (user != null) {
-
-        //             var email_id = user.email;
-        //             document.getElementById("userStatus").innerHTML = "Welcome User : " + email_id;
-
-        //         }
-
-        //     } else {
-        //         // No user is signed in.
-
-        //         document.getElementsByClassName("wrapper").style.display = "block";
-        //         document.getElementsByClassName("mainPageWrapper").style.display = "none";
-
-        //     }
-        // });
-
-        // function login() {
-
-        //     var userEmail = document.getElementById("email_field").value;
-        //     var userPass = document.getElementById("password_field").value;
-
-        //     firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function (error) {
-        //         // Handle Errors here.
-        //         var errorCode = error.code;
-        //         var errorMessage = error.message;
-
-        //         window.alert("Error : " + errorMessage);
-
-        //         // ...
-        //     });
-
-        // }
-        // firebase.auth().onAuthStateChanged(user => {
-        //     if (user) {
-        //         window.location = 'index.html'; //After successful login, user will be redirected to index.html
-        //     }
-        // });
-    </script>
-    <script>
-        // var user = firebase.auth().currentUser;
 
         //Function event jquery function upon clicking login button
         $('#loginButton').click(function (event) {
             event.preventDefault();
-
 
             //If firebase user recognized...
             //Fades out the login form,
@@ -212,12 +316,12 @@
             firebase.auth().onAuthStateChanged(user => {
                 if (user) {
                     $('form').fadeOut(50);
-                    $('.wrapper').addClass('form-success');
+                    $('.signInPageWrapper').addClass('form-success');
                     $('.form-success').fadeOut(2000);
                     setTimeout(function () {
-                        $('.subPageWrapper').fadeIn(4000);
+                        $('.welcomePageWrapper').fadeIn(4000);
                     }, 1000);
-                    $('.subPageWrapper').css('display: block');
+                    $('.welcomePageWrapper').css('display: block');
                 }
             });
         });
@@ -229,20 +333,10 @@
         function logout() {
             firebase.auth().signOut();
             alert('Logged Out');
-            window.location = 'signIn.html';
+            window.location = 'index.html';
         }
     </script>
 
-
-    <script>
-        $("#globeLogo").click(function () {
-            $(".subPageWrapper").fadeOut(500);
-            setTimeout(function () {
-                $('.mainPageWrapper').fadeIn(2000);
-            }, 1000);
-            $('.mainPageWrapper').css('display: block');
-        });
-    </script>
 
     <script>
         $('#signUp').click(function (event) {
@@ -262,18 +356,17 @@
                 },
                 // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
                 signInFlow: 'popup',
-                signInSuccessUrl: 'signIn.html',
+                signInSuccessUrl: 'index.html',
                 signInOptions: [
                     // Leave the lines as is for the providers you want to offer your users.
                     firebase.auth.EmailAuthProvider.PROVIDER_ID,
                     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-                    firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-                    firebase.auth.GithubAuthProvider.PROVIDER_ID,
+                   
                 ],
                 // Terms of service url.
-                tosUrl: 'signIn.html',
+                tosUrl: 'index.html',
                 // Privacy policy url.
-                privacyPolicyUrl: 'signIn.html'
+                privacyPolicyUrl: 'index.html'
             };
 
             // The start method will wait until the DOM is loaded.
@@ -305,9 +398,9 @@
         $("#eAudio").click(function () {
             helloSound.play();
             $("#canvas").css('display', 'block');
-            setTimeout(function () {
-                $('canvas').css('display', 'none');
-            }, 5000);
+             setTimeout(function () {
+                 $('canvas').css('display', 'none');
+             }, 30000);
         });
     </script>
     <script>
@@ -515,13 +608,12 @@
             requestAnimFrame(loop);
 
             // increase the hue to get different colored fireworks over time
-            //hue += 0.5;
+            hue += 0.5;
 
             // create random color
             hue = random(0, 360);
 
-            // normally, clearRect() would be used to clear the canvas
-            // we want to create a trailing effect though
+            // create a trailing effect though
             // setting the composite operation to destination-out will allow us to clear the canvas at a specific opacity, rather than wiping it entirely
             ctx.globalCompositeOperation = 'destination-out';
             // decrease the alpha property to create more prominent trails
@@ -586,9 +678,22 @@
             mousedown = false;
         });
 
-        // once the window loads, we are ready for some fireworks!
+        // once the window loads, ready up the fireworks
         window.onload = loop;
     </script>
+    <script>
+    $("#clickButton").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#breakPoint").offset().top
+    }, 500);
+});
+    </script>
+
+    <script src="./js/events.js"></script>
+    <script src="./js/transition.js"></script>
+    <script src="./js/eventList.js"></script>
+    <script src="./js/eventAjax.js"></script>
+
 </body>
 
 </html>
