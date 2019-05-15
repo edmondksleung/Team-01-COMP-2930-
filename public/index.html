@@ -132,16 +132,23 @@
                 Choose your city below and<br>start volunteering!
             </div>
             <div id="clickDownButton">
-                <img src="Images/scrollDown.png" alt="Scroll Down Button">
+                <img src="Images/scrollDown.png" alt="Scroll Down Button" id="clickButton">
             </div>
         </div>
         <div id="welcomePageCities">
-            <div class="cities" id="city1"><a href="index.html?city=Vancouver">VANCOUVER</a></div>
+            <div class="cities" id="city1"><a href="index.html?city=Abbotsford">ABBOTSFORD</a></div>
             <div class="cities" id="city2"><a href="index.html?city=Burnaby">BURNABY</a></div>
-            <div class="cities" id="city3"><a href="index.html?city=Coquitlam">COQUITLAM</a></div>
-            <div class="cities" id="city4"><a href="index.html?city=Portmoody">PORT MOODY</a></div>
-            <div class="cities" id="city5"><a href="index.html?city=Richmond">RICHMOND</a></div>
-            <div class="cities" id="city6"><a href="index.html?city=Surrey">SURREY</a></div>
+            <div class="cities" id="city3"><a href="index.html?city=Chilliwack">CHILLIWACK</a></div>
+            <div class="cities" id="city4"><a href="index.html?city=Coquitlam">COQUITLAM</a></div>
+            <div class="cities" id="city5"><a href="index.html?city=Langley">LANGLEY</a></div>
+            <div class="cities" id="city6"><a href="index.html?city=MapleRidge">MAPLE RIDGE</a></div>
+            <div class="cities" id="city7"><a href="index.html?city=Portmoody">PORT MOODY</a></div>
+            <div class="cities" id="city8"><a href="index.html?city=Richmond">RICHMOND</a></div>
+            <div class="cities" id="city9"><a href="index.html?city=Surrey">SURREY</a></div>
+            <div class="cities" id="city10"><a href="index.html?city=Vancouver">VANCOUVER</a></div>
+            <div class="cities" id="city11"><a href="index.html?city=WhiteRock">WHITE ROCK</a></div>
+
+
         </div>
         <div id="logoutBox">
                 <button onclick="logout()" type="submit" id="logoutButton">Log Out</button>
@@ -674,6 +681,13 @@
 
         // once the window loads, ready up the fireworks
         window.onload = loop;
+    </script>
+    <script>
+    $("#clickButton").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#city1").offset().top
+    }, 500);
+});
     </script>
 
     <script src="./js/events.js"></script>
