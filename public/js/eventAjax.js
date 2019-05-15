@@ -54,11 +54,11 @@ $('.cities').click(function () {
                 previewBox.append(date);
 
                 let month = document.createElement('p');
-                month.setAttribute('id', 'month');
+                month.setAttribute('class', 'month');
                 date.append(month);
 
                 let day = document.createElement('p');
-                day.setAttribute('id', 'day');
+                day.setAttribute('class', 'day');
                 date.append(day);
 
                 let eventMessage = document.createElement('div');
@@ -71,11 +71,11 @@ $('.cities').click(function () {
 
                 let peoplePic = document.createElement('img');
                 peoplePic.setAttribute('src', './Images/people.png');
-                peoplePic.setAttribute('id', 'peoplePic');
+                peoplePic.setAttribute('class', 'peoplePic');
                 peopleBox.append(peoplePic);
 
                 let peopleCount = document.createElement('p');
-                peopleCount.setAttribute('id', 'peopleCount');
+                peopleCount.setAttribute('class', 'peopleCount');
                 peopleBox.append(peopleCount);
 
 
