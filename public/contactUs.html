@@ -1,34 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="css/navigation.css">
+    <link rel="stylesheet" type="text/css" href="css/signIn.css">
+    <link rel="stylesheet" type="text/css" href="css/welcome.css">
+    <style>
+        body {
+            background-color: white;
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 300;
+            color: white;
+        }
+
+        #contactUsPageTitle {
+            height: 35vh;
+            text-align: center;
+            font-size: 30pt;
+            letter-spacing: 5px;
+            line-height: 30vh;
+            vertical-align: middle;
+            background-color: white;
+        }
+
+        #contactUsPageTitle img {
+            width: 60%;
+            margin: 0 auto;
+        }
+
+    </style>
 </head>
 <body>
+    <div class="contactUsWrapper">
         <div id="navigation">
-                <div class="navBarPic">
-                    <ul>
-                        <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png" alt="pic1" class="activePic"></li>
-                        <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png" alt="pic1"></li>
-                        <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png" alt="pic1"></li>
-                    </ul>
+            <div class="navBarPic">
+                <ul>
+                    <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png" alt="pic1" class="activePic"></li>
+                    <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png" alt="pic1"></li>
+                    <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png" alt="pic1"></li>
+                </ul>
+            </div>
+            <div class="navBar">
+                <ul>
+                    <li><a href="index.html" class="activePage">HOME</a></li>
+                    <li><a href="status.html">MISSION</a></li>
+                    <li><a href="info.html">EVENTS</a></li>
+                    <li><a href="info.html">MY EVENTS</a></li>
+                    <li><a href="info.html">MY LISTINGS</a></li>
+                    <li><a href="info.html">CONTACT</a></li>
+                    <li><a>LOG OUT</a></li>
+                </ul>
+            </div>
+            <div id="logoutButton1">
+                <div id="logoutBox">
+                    <button onclick="logout()" type="submit" id="logoutButton">Log Out</button>
                 </div>
-                <div class="navBar">
-                    <ul>
-                        <li><a href="index.html" class="activePage">HOME</a></li>
-                        <li><a href="status.html">MISSION</a></li>
-                        <li><a href="info.html">EVENTS</a></li>
-                        <li><a href="info.html">MY EVENTS</a></li>
-                        <li><a href="info.html">MY LISTINGS</a></li>
-                        <li><a href="info.html">ABOUT US</a></li>
-                        <li><a href="info.html">CONTACT</a></li>
-                        <li><a>LOG OUT</a></li>
-                    </ul>
-                </div>
-                <div id="logoutButton1">
-                    <div id="logoutBox">
-                        <button onclick="logout()" type="submit" id="logoutButton">Log Out</button>
-                    </div>
-                </div>
-            </div>   
-
+            </div>
+        </div>  
+        <div id="contactUsPageTitle">
+            <img src="./Images/callCenter.png">
+        </div>
+    </div>
 </body>
 </html>
