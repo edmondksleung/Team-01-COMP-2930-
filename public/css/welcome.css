@@ -17,7 +17,6 @@
     color: rgb(118, 228, 85);
 }
 
-
 #welcomePageLogo {
     text-align: center;
     z-index: 2;
@@ -90,16 +89,14 @@
     text-align: center;
     margin: 30px auto 30px auto;
     cursor: pointer;
-}
-
-.cities a {
     text-decoration: none;
     color: black;
     font-size: 25pt;
     letter-spacing: 10px;
 }
 
-.cities a:hover {
+
+.cities:hover {
     font-size: 25pt;
     letter-spacing: 15px;
     color: rgb(255, 204, 0);
