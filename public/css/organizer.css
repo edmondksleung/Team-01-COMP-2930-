@@ -126,7 +126,7 @@ body {
 /*ORGANIZER UI EVENT TIME BOX*/
 .eventTimeBox {
     display: grid;
-    grid-template-columns: 50% 130px 130px;
+    grid-template-columns: 230px 150px 150px;
     grid-template-rows: 30px 40px;
     align-items: center;
 }
@@ -176,8 +176,8 @@ input[type=date]::-webkit-inner-spin-button {
 /*ORGANIZER UI START TIME BOX*/
 .startTimeBox {
     width: 120px;
-    display: grid;
     height: 40px;
+    display: grid;
     font-size: 10pt;
     grid-template-columns: 70% 30%;
     align-items: center;
@@ -186,8 +186,8 @@ input[type=date]::-webkit-inner-spin-button {
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 7px;
-    text-indent: 10px;
     border: 1px solid grey;
+    text-indent: 10px;
 }
 
 /*ORGANIZER START TIME INPUT*/
