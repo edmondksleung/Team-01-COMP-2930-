@@ -11,50 +11,13 @@ body {
     height: 100%;
 }
 
-/*ORGANIZER UI EVENT CONTAINER*/
-.organizerEventsNavBar {
-    height: 50px;
-    display: grid;
-    grid-template-columns: 20% 60% 20%;
-    align-items: center;
-
-}
-
-/*ORGANIZER UI BACK BUTTON CONTAINER*/
-.organizerBackBox {
-    display: grid;
-    justify-items: start;
-}
-
-/*ORGANIZER UI BACK BUTTON*/
-.organizerBackButton {
-    width: 50px;
-    height: 50px;
-    background: none;
-    border: none;
-}
-
-/*ORGANIZER UI BACK BUTTON IMAGE*/
-.organizerBackPic {
-    width: 20px;
-    height: 20px;
-}
-
-/*ORGANIZER UI BACK BUTTON HOVER*/
-.organizerBackPic:hover {
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-}
-
-/*ORGANIZER UI LOCATION*/
-.organizerLocation {
+.navBox {
+    width: 100%;
+    height: 240px;
+    color: white;
+    background: rgb(33, 49, 92);
     text-align: center;
-    font-size: 20pt;
-    font-weight: bold;
-    font-family: 'Titillium Web', sans-serif;
 }
-
 /*ORGANIZER UI MENU CONTAINER*/
 .organizerMenuBox {
     display: grid;
@@ -113,37 +76,6 @@ body {
     cursor: pointer;
 }
 
-/*ORGANIZER UI TABS CONTAINER*/
-.organizerTabsBox {
-    display: block;
-    height: 50px;
-    border-bottom-style: outset;
-    border-bottom: 2px solid rgb(216, 208, 208);
-}
-
-/*ORGANIZER UI TABS*/
-.organizerTabs {
-    width: 50%;
-    height: 50px;
-    float: left;
-    font-size: 15pt;
-    background: none;
-    border: none;
-    font-weight: bold;
-    color: grey;
-}
-
-/*ORGANIZER UI TABS HOVER*/
-.organizerTabs:hover {
-    border-bottom: 4px solid #3498db;
-    color: black;
-}
-
-
-/*EVENT INFO TOP BOX*/
-.joinedDetailsTopBox {
-    height: auto;
-}
 
 /*CREATE EVENT INFO TOP BOX*/
 .createEventBox {
@@ -153,15 +85,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     border-bottom: 2px solid rgb(216, 208, 208);
-    background: rgb(241, 241, 241);
-}
-
-/*LABELS*/
-.label {
-    font-size: 10pt;
-    font-weight: bold;
-    margin-top: 0;
-    margin-bottom: 0;
+    background: rgb(33, 49, 92);
 }
 
 /*CONTENT CONTAINERS*/
@@ -179,39 +103,6 @@ body {
     border-radius: 5px;
 }
 
-/*ORGANIZER UI INPUTS*/
-input {
-    border: none;
-    height: 28px;
-    width: 97%;
-    font-family: 'Arial', sans-serif;
-    text-align: left;
-}
-
-/*ORGANIZER START DATE INPUT*/
-.startDateInput {
-    text-align: center;
-}
-/*ORGANIZER ENDDATE INPUT*/
-.endDateInput {
-    text-align: center; 
-}
-
-/*ORGANIZER START TIME INPUT*/
-.startTimeInput {
-    text-align: center; 
-}
-
-/*ORGANIZER END TIME INPUT*/
-.endTimeInput {
-    text-align: center; 
-}
-/*ORGANIZER UI DATE INPUT REMOVE UP DOWN ARROWS*/
-input[type=date]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    display: none;
-}
-
 /*ORGANIZER UI ORGANIZER EVENT INFO*/
 .organizerEventInfo {
     display: grid;
@@ -224,14 +115,35 @@ input[type=date]::-webkit-inner-spin-button {
 
 /*ORGANIZER LABEL*/
 .organizerLabel {
-    padding-top: 20px;
+    font-size: 10pt;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 10px;
+    color: white;
 }
 
 /*ORGANIZER UI EVENT TIME BOX*/
 .eventTimeBox {
     display: grid;
-    grid-template-rows: 20px 40px 20px 40px 20px;
+    grid-template-columns: 50% 130px 130px;
+    grid-template-rows: 30px 40px;
     align-items: center;
+}
+
+/*ORGANIZER UI INPUTS*/
+input {
+    border: none;
+    height: 28px;
+    width: 97%;
+    font-family: 'Arial', sans-serif;
+    text-align: left;
+}
+
+/*ORGANIZER UI DATE INPUT REMOVE UP DOWN ARROWS*/
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
 }
 
 /*ORGANIZER UI START DATE/TIME BOX*/
@@ -256,9 +168,16 @@ input[type=date]::-webkit-inner-spin-button {
     text-indent: 0;
 }
 
+/*ORGANIZER START DATE INPUT*/
+.startDateInput {
+    text-align: center;
+}
+
 /*ORGANIZER UI START TIME BOX*/
 .startTimeBox {
+    width: 120px;
     display: grid;
+    height: 40px;
     font-size: 10pt;
     grid-template-columns: 70% 30%;
     align-items: center;
@@ -269,6 +188,11 @@ input[type=date]::-webkit-inner-spin-button {
     border-radius: 7px;
     text-indent: 10px;
     border: 1px solid grey;
+}
+
+/*ORGANIZER START TIME INPUT*/
+.startTimeInput {
+    text-align: center; 
 }
 
 /*ORGANIZER UI START TIME INPUT*/
@@ -282,31 +206,10 @@ input[type="time"]::-webkit-outer-spin-button, input[type="time"]::-webkit-inner
     margin: 0;
     }
 
-/*ORGANIZER UI END DATE/TIME BOX*/
-.endBox {
-    display: grid;
-    grid-template-columns: 220px 140px;
-    grid-template-rows: 40px;
-
-}
-
-/*ORGANIZER UI END DATE BOX*/
-.endDateBox {
-    display: grid;
-    font-size: 10pt;
-    grid-template-columns: 65% 35%;
-    align-items: center;
-    justify-items: center;
-    background: white;
-    margin-left: 10px;
-    margin-right: 10px;
-    border-radius: 7px;
-    border: 1px solid grey;
-    text-indent: 0;
-}
-
 /*ORGANIZER UI END TIME BOX*/
 .endTimeBox {
+    width: 120px;
+    height: 40px;
     display: grid;
     font-size: 10pt;
     grid-template-columns: 70% 30%;
@@ -315,7 +218,7 @@ input[type="time"]::-webkit-outer-spin-button, input[type="time"]::-webkit-inner
     background: white;
     margin-left: 10px;
     margin-right: 10px;
-    border-radius: 5px;
+    border-radius: 7px;
     border: 1px solid grey;
     text-indent: 10px;
 }
@@ -323,6 +226,7 @@ input[type="time"]::-webkit-outer-spin-button, input[type="time"]::-webkit-inner
 /*ORGANIZER UI END TIME INPUT*/
 .endTimeInput {
     width: 90px;
+    text-align: center; 
 }
 
 /*ORGANIZER UI CALENDER IMAGE*/    
@@ -344,23 +248,18 @@ input[type="time"]::-webkit-outer-spin-button, input[type="time"]::-webkit-inner
     margin-right: 11px;
     border: 1px solid grey;
     border-radius: 5px;
-    height: 190px;
+    height: auto;
     display: grid;
     justify-items: center;
-}
-
-/*ORGANIZER UI DETAILS INPUT BOX*/
-.detailsContent {
-    text-indent: 0;
-    padding: 0px;
 }
 
 /*ORGANIZER UI DETAILS INPUT*/
 .details {
     font-family: "Arial", sans-serif;
     margin-top: 10px;
+    margin-bottom: 10px;
     width: 95%;
-    height: 165px;
+    height: 265px;
     overflow: hidden;
     border: none;
     resize: none;
@@ -380,15 +279,16 @@ input[type="time"]::-webkit-outer-spin-button, input[type="time"]::-webkit-inner
     height: 30px;
     border-radius: 5px;
     border: none;
-    background: #3498db;
+    background: white;
     font-weight: bold;
-    color: white;
+    color: black;
     box-shadow: 0 1px 1px rgba(0,0,0,1);
 }
 
 /*ORGANIZER UI CANCEL BUTTON HOVER*/
 .cancelButton:hover {
-    background: #1f4c6b;
+    background: #40a0e1;
+    color: white;
 }
 
 /*ORGANIZER UI CREATE BUTTON*/
@@ -397,13 +297,14 @@ input[type="time"]::-webkit-outer-spin-button, input[type="time"]::-webkit-inner
     height: 30px;
     border-radius: 5px;
     font-weight: bold;
-    background: #3498db;
+    background: white;
     border: none;
-    color: white;
+    color: black;
     box-shadow: 0 1px 1px rgba(0,0,0,1);
 }
 
 /*ORGANIZER UI CREATE BUTTON HOVER*/
 .createButton:hover {
-    background: #1f4c6b;
+    background: #40a0e1;
+    color: white;
 }

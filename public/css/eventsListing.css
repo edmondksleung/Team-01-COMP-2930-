@@ -16,7 +16,7 @@
 .allEventsBox {
     display: grid;
     justify-items: center;
-    background-color: rgb(33, 49, 92);
+    background: rgb(33, 49, 92);
 }
 
 /*INDIVIDUAL EVENTS CONTAINER*/
@@ -188,7 +188,7 @@
 
 }
 
-#date {
+.date {
     font-family: 'Source Sans Pro', sans-serif;
     line-height: 0;
     text-indent: -10px;
@@ -196,7 +196,7 @@
 
 }
 
-#month {
+.month {
     margin: 0;
     height: 20px;
     display: grid;
@@ -204,7 +204,7 @@
     font-size: 15pt;
 }
 
-#day {
+.day {
     display: grid;
     align-items: center;
     margin: 0;
