@@ -180,7 +180,6 @@ form button:hover {
     color: rgb(118, 228, 85);
 }
 
-
 #loginButton.invalid {
     background-color: red;
     color: white;
