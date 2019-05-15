@@ -3,7 +3,7 @@
 
 <head>
     <title>Sign in to eVolunteer</title>
-    <!------------------------------------------Links to Css Pages-------------------------------------------->
+    <!------------------------------------------LINKS TO CSS PAGES-------------------------------------------->
     <link rel="stylesheet" type="text/css" href="css/signIn.css">
     <link rel="stylesheet" type="text/css" href="css/bubbleBackground.css">
     <link rel="stylesheet" type="text/css" href="css/navigation.css">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="./css/eventsTWO.css">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:900" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
-    <!-----------------------------------------------JQuery--------------------------------------------------->
+    <!-----------------------------------------------JQUERY--------------------------------------------------->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
@@ -47,36 +47,28 @@
 </head>
 
 <body> 
-    <!-------------------------------------------SIGN IN PAGE--------------------------------------------->    
+    <!---------------------------------------------SIGN IN PAGE----------------------------------------------->    
     <div class="signInPageWrapper">
         <!-- setup our canvas element -->
         <canvas id="canvas">Canvas is not supported in your browser.</canvas>
         <div class="container">
-
             <div id="logo">
                 <img src="https://media1.giphy.com/media/l1KVcrdl7rJpFnY2s/giphy.gif" alt="logoPic">
             </div>
-
             <h1 id="title">
-                <b>
-                    <span id="eAudio" class="wiggle">e</span>Volunteer</b>
+                <b><span id="eAudio" class="wiggle">e</span>Volunteer</b>
             </h1>
-
-
             <form class="form">
                 <input type="text" placeholder="Username" id="emailField">
                 <input type="password" placeholder="Password" id="passField">
                 <button type="submit" id="loginButton">Login</button>
-
                 <div id="signUpMargin">
                     <a id="signUp">No Account? Sign Up</a>
                     <div id="myModal" class="modal">
                         <!-- Modal content -->
-                        <div id="firebaseui-auth-container">
-                        </div>
+                        <div id="firebaseui-auth-container"></div>
                     </div>
                 </div>
-
             </form>
         </div>
         <ul class="bg-bubbles">
@@ -92,7 +84,7 @@
             <li></li>
         </ul>
     </div>
-    <!-------------------------------------------WElCOME PAGE--------------------------------------------->
+    <!---------------------------------------------WElCOME PAGE----------------------------------------------->
     <div class="welcomePageWrapper">
         <div id="navigation">
             <div class="navBarPic">
