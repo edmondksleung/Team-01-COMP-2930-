@@ -3,6 +3,7 @@ let database = firebase.database();
 let params = (new URL(document.location)).searchParams;
 let cityName = params.get("city");
 
+
 // console.log(cityName);
 let dbref = database.ref(`events/${cityName}`);
 dbref.on('value', gotData, errData);

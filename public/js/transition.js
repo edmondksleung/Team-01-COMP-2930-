@@ -1,7 +1,7 @@
-$(".cities").click(function () {
+$(".cities").on('click', function (e) {
   $(".subPageWrapper").fadeOut(500);
   setTimeout(function () {
-    $('#eventsWrapper').fadeIn(2000);
+    $('#eventsWrapper').fadeIn(500);
   }, 1000);
   $('#eventsWrapper').css('display', 'block');
 });

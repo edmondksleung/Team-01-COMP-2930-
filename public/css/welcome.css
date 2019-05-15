@@ -23,15 +23,12 @@
     cursor: pointer;
 }
 
-.cities a {
-    text-decoration: none;
-    color: white;
-    font-size: 30pt;
-    letter-spacing: 10px;
-}
-
-.cities a:hover {
+.cities:hover {
     font-size: 30pt;
     letter-spacing: 15px;
     color: rgb(255, 204, 0);
+}
+
+a {
+    text-decoration: none;
 }
