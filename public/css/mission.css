@@ -1,0 +1,107 @@
+.missionPageWrapper {
+    display: none;
+}
+#missionHeading {
+text-align: center;
+margin-top: -10;
+font-size: 20pt;
+letter-spacing: 10px;
+color: white;
+}
+
+#missionHeading p {
+    font-size: 15pt;
+    letter-spacing: 1px;
+    margin-top: -25px;
+    margin-bottom: 175px;
+}
+
+#missionSubHeading{
+    text-align: center;
+    font-size: 15pt;
+    letter-spacing: 8px;
+    margin-top: -100px;
+    color: white;
+}
+
+#missionSubHeading p {
+    letter-spacing: 2px;
+}
+.eco {
+    color: rgb(118, 228, 85);
+}
+
+#infoPic1 {
+    margin-top: 40px;
+    margin-left: 170px;
+    height: 200px;
+    width:250px;
+}
+
+#infoPic2 {
+    margin-bottom: -14px;
+    margin-left: 220px;
+    height: 200px;
+    width: 200px;
+}
+
+#infoPic3 {
+    margin-left: 160px;
+    height: 100px;
+    width: 350px;
+}
+
+#infoPicDesc1 {
+    color: white;
+    margin-left: 250px;
+}
+#infoPicDesc2 {
+    color: white;
+    margin-left: 270px;
+}
+#infoPicDesc3 {
+    color: white;
+    margin-left: 280px;
+}
+.infoPicDesc {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+#infomatics {
+  margin: 20px auto;
+  width:600px;
+  height:400px;
+  display:grid;
+  grid-template-columns: 200px 200px;
+  grid-row: auto auto;
+  grid-column-gap: 200px;
+  grid-row-gap: 10px;
+  margin-top: 140px;
+}
+
+.box{
+    background-color: black;
+    color:#fff;
+    font-size: 20px;
+  }
+
+  #infomatic1 {
+      font-size: 65px;
+      color:rgb(255, 72, 0);
+  }
+  #infomatic2 {
+      font-size: 65px;
+     color:rgb(30, 255, 0);
+
+  }
+  #infomatic3 {
+      font-size: 65px;
+    color:rgb(0, 255, 255);
+
+  }
+  #infomatic4 {
+      font-size: 65px;
+      color:rgb(248, 109, 45);
+
+  }

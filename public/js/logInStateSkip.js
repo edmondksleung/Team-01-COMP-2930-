@@ -3,9 +3,9 @@
             firebase.auth().onAuthStateChanged(user => {
                 if (user) {
                     setTimeout(function () {
-                        $('.welcomePageWrapper').fadeIn(500);
+                        $('.welcomePageWrapper, .navigation').fadeIn(500);
                     }, 1000);
-                    $('.welcomePageWrapper').css('display: block');
+                    $('.welcomePageWrapper, .navigation').css('display: block');
                 } else {
                     $("#navigation").show();
                     $(".signInPageWrapper").show();
