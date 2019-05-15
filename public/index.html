@@ -116,6 +116,34 @@
     </div>
     <!---------------------------------------------WElCOME PAGE----------------------------------------------->
     <div class="welcomePageWrapper">
+        <div id="navigation">
+            <div class="navBarPic">
+                <ul>
+                    <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
+                            alt="pic1" class="activePic"></li>
+                    <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
+                            alt="pic1"></li>
+                    <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
+                            alt="pic1"></li>
+                </ul>
+            </div>
+            <div class="navBar">
+                <ul>
+                    <li><a href="index.html" class="activePage">HOME</a></li>
+                    <li><a href="status.html">MISSION</a></li>
+                    <li><a href="info.html">EVENTS</a></li>
+                    <li><a href="info.html">MY EVENTS</a></li>
+                    <li><a href="info.html">MY LISTINGS</a></li>
+                    <li><a href="info.html">CONTACT</a></li>
+                    <li><a>LOG OUT</a></li>
+                </ul>
+            </div>
+            <div id="logoutButton1">
+                <div id="logoutBox">
+                    <button onclick="logout()" type="submit" id="logoutButton">Log Out</button>
+                </div>
+            </div>
+        </div>
         <div id="welcomePageTitle">
             <b><span>e</span>Volunteer</b>
         </div>
@@ -752,7 +780,6 @@
                         $('.welcomePageWrapper').fadeIn(4000);
                     }, 1000);
                     $('.welcomePageWrapper').css('display: block');
-                }
             });
         });
     </script>
