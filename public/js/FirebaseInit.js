@@ -8,3 +8,4 @@ var config = {
   messagingSenderId: "412878968573"
 };
 firebase.initializeApp(config);
+var rootRef = firebase.database().ref();
