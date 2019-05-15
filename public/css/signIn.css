@@ -55,7 +55,7 @@ body :-ms-input-placeholder {
     font-weight: 300;
 }
 
-.wrapper {
+.signInPageWrapper {
     /* background-size: cover;
     -moz-background-size: cover;  /* Firefox 3.6 */
     background-position: center;
@@ -67,13 +67,12 @@ body :-ms-input-placeholder {
     display: none;
 }
 
-.wrapper.form-success .container h1 {
+.signInPageWrapper.form-success .container h1 {
     -webkit-transform: translateY(100px);
     transform: translateY(100px);
 }
 
 .container {
-    max-width: 600px;
     margin: 0 auto;
     padding: 80px 0;
     height: 400px;

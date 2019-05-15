@@ -40,7 +40,7 @@
 }
 
 #missionStatement {
-    height: 30vh;
+    height: 28vh;
     padding: 50px 25px 25px 25px;
     text-align: center;
     color: white;
@@ -53,7 +53,7 @@
 }
 
 #clickDownArea {
-    height: 12vh;
+    height: 16vh;
     padding-top: 5px;
     text-align: center;
     color: white;
@@ -81,6 +81,10 @@
 
 #welcomePageCities {
     background-color: white;
+    display: grid;
+    grid-template-areas: 
+        "left right";
+    grid-template-columns: 50% 50%;
 }
 
 .cities {

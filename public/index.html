@@ -24,7 +24,7 @@
                     }, 1000);
                     $('.welcomePageWrapper').css('display: block');
                 } else {
-                    $(".wrapper").show();
+                    $(".signInPageWrapper").show();
                 }
             });
         });
@@ -46,7 +46,7 @@
 </head>
 
 <body>        
-    <div class="wrapper">
+    <div class="signInPageWrapper">
         <!-- setup our canvas element -->
         <canvas id="canvas">Canvas is not supported in your browser.</canvas>
         <div class="container">
@@ -138,6 +138,7 @@
             <div class="cities" id="city2"><a href="index.html?city=Burnaby">BURNABY</a></div>
             <div class="cities" id="city3"><a href="index.html?city=Chilliwack">CHILLIWACK</a></div>
             <div class="cities" id="city4"><a href="index.html?city=Coquitlam">COQUITLAM</a></div>
+            <div class="cities" id="cityX"><a href="index.html?city=Edmonds">EDMONDS</a></div>
             <div class="cities" id="city5"><a href="index.html?city=Langley">LANGLEY</a></div>
             <div class="cities" id="city6"><a href="index.html?city=MapleRidge">MAPLE RIDGE</a></div>
             <div class="cities" id="city7"><a href="index.html?city=Portmoody">PORT MOODY</a></div>
@@ -313,7 +314,7 @@
             firebase.auth().onAuthStateChanged(user => {
                 if (user) {
                     $('form').fadeOut(50);
-                    $('.wrapper').addClass('form-success');
+                    $('.signInPageWrapper').addClass('form-success');
                     $('.form-success').fadeOut(2000);
                     setTimeout(function () {
                         $('.welcomePageWrapper').fadeIn(4000);
