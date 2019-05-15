@@ -1,94 +1,10 @@
-/* Navigation Bar */
-#navigation {
-    height: 18vh;
-    padding-top: 20px;
-}
-
-.navBar {
-    font-size: 12pt;
-    margin-top: 29px;
-    height: 45px;
-    text-align: center;
-    letter-spacing: 3px;
-}
-
-.navBar > ul > li {
-    display: inline-block;
-}
-
-.navBar ul > li > a {
-    color: white;
-    display: block;
-    text-decoration: none;
-    font-weight: bold;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.navBar ul li ul {
-    display: none;
-    list-style: none;
-    position: absolute;
-    background: #e2e2e2;
-    text-align: left;
-}
-
-.navBar ul li a:hover {
-    background-color:white;
-    border-radius: 10%;
-    color: rgb(33, 49, 92);    
-}
-
-/* Current page nav bar highlight */
-  .navBar ul li a.activePage {
-  background-color:white;
-  border-radius: 10%;
-  color: rgb(33, 49, 92);
-}
-
-/* Navbar picture display */
-.navBarPic {
-    text-align: center;
-}
-
-.navBarPic > ul > li {
-    display: inline-block;
-    text-decoration: none;
-}
-
-.navBarPic ul li img {
-    display: none;
-    list-style: none;
-    position: absolute;
-    height: 60px;
-    margin-top: -26.5px;
-    margin-left: -367px;
-
-}
-
-/** Current page picture show */
-  .navBarPic ul li img.activePic {
-  display: inline-block;
-}
-
-
 .welcomePageWrapper {
     display: none;
     overflow: hidden;
 }
 
-#welcomePageHeader {
-    height: 8vh;
-    display: grid;
-    grid-template-areas: 
-        "left title right";
-    grid-template-columns: 15% 70% 15%;
-}
-
 #welcomePageTitle {
-    grid-area: title;
+    height: 8vh;
     font-size: 30pt;
     text-align: center;
     letter-spacing: 8px;
@@ -100,7 +16,6 @@
 #welcomePageTitle span {
     color: rgb(118, 228, 85);
 }
-
 
 #welcomePageLogo {
     text-align: center;
@@ -116,7 +31,7 @@
 }
 
 #missionStatement {
-    height: 30vh;
+    height: 27vh;
     padding: 50px 25px 25px 25px;
     text-align: center;
     color: white;
@@ -129,7 +44,7 @@
 }
 
 #clickDownArea {
-    height: 12vh;
+    height: 17vh;
     padding-top: 5px;
     text-align: center;
     color: white;
@@ -141,6 +56,10 @@
     height: 50px;
     width: 250px;
     margin: auto;
+}
+
+#breakPoint {
+    height: 8px;
 }
 
 #clickDownButton img {
@@ -157,29 +76,28 @@
 
 #welcomePageCities {
     background-color: white;
+    display: grid;
+    grid-template-areas: 
+        "left right";
+    grid-template-columns: 50% 50%;
 }
+
 .cities {
     width: auto;
     height: auto;
-    font-size: 30pt;
-    letter-spacing: 10px;
     position: relative;
     text-align: center;
     margin: 30px auto 30px auto;
     cursor: pointer;
-}
-
-.cities a {
     text-decoration: none;
     color: black;
-    font-size: 30pt;
+    font-size: 25pt;
     letter-spacing: 10px;
 }
 
-.cities a:hover {
-    font-size: 30pt;
+
+.cities:hover {
+    font-size: 25pt;
     letter-spacing: 15px;
     color: rgb(255, 204, 0);
 }
-
-

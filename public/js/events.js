@@ -53,7 +53,7 @@ $(".menuButton").click(function () {
 //BACK BUTTON FUNCTION-------------------------------------------------------
 $(".backButton").click(function () {
     $("#eventsWrapper").fadeOut(1000);
-    $(".mainPageWrapper").fadeIn(1000);
+    $(".subPageWrapper").fadeIn(1000);
 });
 
 //MORE DETAILS BUTTON----------------------------------------------------------

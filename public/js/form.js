@@ -57,4 +57,16 @@ function saveMessage(subject, email, content, city, timeStamp){
     city: city,
     timeStamp: timeStamp
   });
+
+  // // save message to firebase under current user
+  // let currUser = firebase.auth().currentUser;
+  // let newMessageRef2 = firebase.database().ref('users/' + currUser).push();
+  // newMessageRef2.set({
+  //   subject: subject,
+  //   email: email,
+  //   content: content,
+  //   city: city,
+  //   timeStamp: timeStamp
+  // });
 }
+
