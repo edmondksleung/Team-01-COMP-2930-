@@ -16,7 +16,7 @@
 .allEventsBox {
     display: grid;
     justify-items: center;
-    background-color: rgb(33, 49, 92);
+    background: rgb(33, 49, 92);
 }
 
 /*INDIVIDUAL EVENTS CONTAINER*/
@@ -188,7 +188,7 @@
 
 }
 
-#date {
+.date {
     font-family: 'Source Sans Pro', sans-serif;
     line-height: 0;
     text-indent: -10px;
@@ -196,7 +196,7 @@
 
 }
 
-#month {
+.month {
     margin: 0;
     height: 20px;
     display: grid;
@@ -204,7 +204,7 @@
     font-size: 15pt;
 }
 
-#day {
+.day {
     display: grid;
     align-items: center;
     margin: 0;
@@ -213,7 +213,7 @@
     font-size: 20pt;
 }
 
-#eventMessage {
+.eventMessage {
     font-family: 'Source Sans Pro', sans-serif;
     display: grid;
     align-items: center;
@@ -221,7 +221,7 @@
     font-size: 15pt;
 }
 
-#peopleBox {
+.peopleBox {
     display: grid;
     grid-template-columns: 55% 20%;
     grid-template-rows: 60px;
@@ -229,12 +229,12 @@
     align-items: center;
 }
 
-#peoplePic {
+.peoplePic {
     width: 30px;
     height: 30px;
 }
 
-#peopleCount {
+.peopleCount {
     font-size: 17pt;
     font-weight: bold;
     font-family: 'Source Sans Pro', sans-serif;
