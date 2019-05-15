@@ -40,11 +40,14 @@ $('.cities').click(function () {
 
                 let readMoreButton = document.createElement('button');
                 readMoreButton.setAttribute('class', 'readMoreButton');
+                $(".readMoreButton").text("info");
                 readMoreBox.append(readMoreButton);
+
+                // preview box 
 
                 let previewBox = document.createElement('div');
                 previewBox.setAttribute('class', 'previewBox');
-                events.after(previewBox);
+                eventsBox.append(previewBox);
 
                 let date = document.createElement('div');
                 date.setAttribute('class', 'date');
@@ -59,7 +62,7 @@ $('.cities').click(function () {
                 date.append(day);
 
                 let eventMessage = document.createElement('div');
-                date.setAttribute('class', 'eventMessage');
+                eventMessage.setAttribute('class', 'eventMessage');
                 previewBox.append(eventMessage);
 
                 let peopleBox = document.createElement('div');
@@ -75,9 +78,14 @@ $('.cities').click(function () {
                 peopleCount.setAttribute('id', 'peopleCount');
                 peopleBox.append(peopleCount);
 
+
+
+
                 // Putting value into dom element
                 let k = keys[i];
-                eventMessage.innerHTML = data[k].subject;
+                // eventMessage.innerHTML = data[k].subject;
+                // month.innerHTML = data[k].month;
+                // date.innerHTML = data[k].day;
 
             }
         }
