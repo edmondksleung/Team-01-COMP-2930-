@@ -3,28 +3,28 @@
 
 <head>
     <title>Sign in to eVolunteer</title>
+    <!------------------------------------------Links to Css Pages-------------------------------------------->
     <link rel="stylesheet" type="text/css" href="css/signIn.css">
     <link rel="stylesheet" type="text/css" href="css/bubbleBackground.css">
     <link rel="stylesheet" type="text/css" href="css/welcome.css">
-    <link rel="stylesheet" type="text/css" href="./css/events.css">
+    <link rel="stylesheet" type="text/css" href="./css/eventsTWO.css">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:900" rel="stylesheet">
-    <!--JQuery-->
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <!-----------------------------------------------JQuery--------------------------------------------------->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     <script>
         //skip login page while signed in.
         $(document).ready(function () {
             firebase.auth().onAuthStateChanged(user => {
                 if (user) {
                     setTimeout(function () {
-                        $('.subPageWrapper').fadeIn(500);
+                        $('.welcomePageWrapper').fadeIn(500);
                     }, 1000);
-                    $('.subPageWrapper').css('display: block');
+                    $('.welcomePageWrapper').css('display: block');
                 } else {
-                    $(".wrapper").show();
+                    $(".signInPageWrapper").show();
                 }
             });
         });
@@ -46,10 +46,9 @@
 </head>
 
 <body>        
-
-    <div class="wrapper">
+    <div class="signInPageWrapper">
         <!-- setup our canvas element -->
-<canvas id="canvas">Canvas is not supported in your browser.</canvas>
+        <canvas id="canvas">Canvas is not supported in your browser.</canvas>
         <div class="container">
             
             <div id="logo">
@@ -91,210 +90,93 @@
             <li></li>
         </ul>
     </div>
-    <!-----------------------NAV PAGE----------------------------------->
-    <div class="subPageWrapper">
-    <div id="subPageWrapperTitle">
-            <b>
-            <span>e</span>Volunteer</b>
-    </div>
-        <div id="mainBox">
-            <div id="logo">
+    <!-------------------------------------------NAV PAGE--------------------------------------------->
+    <div class="welcomePageWrapper">
+        <div id="navigation">
+            <div class="navBarPic">
+                <ul>
+                    <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png" alt="pic1" class="activePic"></li>
+                    <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png" alt="pic1"></li>
+                    <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png" alt="pic1"></li>
+                </ul>
+            </div>
+            <div class="navBar">
+                <ul>
+                    <li><a href="index.html" class="activePage">HOME</a></li>
+                    <li><a href="status.html">MISSION</a></li>
+                    <li><a href="info.html">EVENTS</a></li>
+                    <li><a href="info.html">MY EVENTS</a></li>
+                    <li><a href="info.html">MY LISTINGS</a></li>
+                    <li><a href="info.html">ABOUT US</a></li>
+                    <li><a href="info.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="welcomePageHeader">
+            <div id="welcomePageTitle">
+                <b><span>e</span>Volunteer</b>
+            </div>
+        </div>
+        <div id="welcomePageLogo">
+            <div>
                 <img src="https://media1.giphy.com/media/l1KVcrdl7rJpFnY2s/giphy.gif" alt="logoPic">
             </div>
         </div>
-        <div class="cities" name="Vancouver">VANCOUVER</div>
-        <div class="cities" name="Burnaby">BURNABY</div>
-        <div class="cities" name="Coquitlam">COQUITLAM</div>
-        <div class="cities" name="PortMoody">PORT MOODY</div>
-        <div class="cities" name="Richmond">RICHMOND</div>
-        <div class="cities" name="Surrey">SURREY</div>
-      
+        <div id="missionStatement">
+            Welcome to <span>e</span>Volunteer!<br><br>Dedicated towards a healthy, eco-friendly future for all of us.
+        </div>
+        <div id="clickDownArea">
+            <div id="clickDownText">
+                Choose your city below and<br>start volunteering!
+            </div>
+            <div id="clickDownButton">
+                <img src="Images/scrollDown.png" alt="Scroll Down Button" id="clickButton">
+            </div>
+        </div>
+        <div id="welcomePageCities">
+            <div class="cities" name="Abbotsford">ABBOTSFORD</a></div>
+            <div class="cities" name="Burnaby">BURNABY</a></div>
+            <div class="cities" name="Chilliwack">CHILLIWACK</a></div>
+            <div class="cities" name="Coquitlam">COQUITLAM</a></div>
+            <div class="cities" name="Edmonds">EDMONDS</a></div>
+            <div class="cities" name="Langley">LANGLEY</a></div>
+            <div class="cities" name="MapleRidge">MAPLE RIDGE</a></div>
+            <div class="cities" name="PortMoody">PORT MOODY</a></div>
+            <div class="cities" name="Richmond">RICHMOND</a></div>
+            <div class="cities" name="Surrey">SURREY</a></div>
+            <div class="cities" name="Vancouver">VANCOUVER</a></div>
+            <div class="cities" name="WhiteRock">WHITE ROCK</a></div>
+        </div>
         <div id="logoutBox">
                 <button onclick="logout()" type="submit" id="logoutButton">Log Out</button>
-            </div>
+        </div>
     </div>
 
-    <script>
-        
-
-        $('.cities').click(function (){
-            let city = $(this).attr('name');
-            $.ajax({
-                type: 'GET',
-                url: `https://evolunteer-45c5d.firebaseio.com/events/${city}.json`,
-                dataType: 'json',
-                success: function(data){
-                    document.getElementById('location').innerHTML = city.toUpperCase();
-                    console.log(Object.keys(data));
-                    let keys = Object.keys(data);
-
-                    for (let i = 0; i < keys.length; i++){
-                        let k = keys[i];
-                        let event = data[k].subject;
-                        let list = document.createElement('li');
-                        list.append(event);
-                        let eventsList = document.getElementById('test1');
-                        eventsList.append(list);
-                    }
-                }
-            });
-
-            });
-    </script>
-
-    <!--MAIN SUB WRAPPER-->
-    <div class="mainPageWrapper">
-    </div>
-
-
-
-
-    <!--EVENTS PAGE----------PAUL LOOK HEREEEEEEEEEEEEEE--------------------------------------------->
+    <!--EVENTS PAGE-------------------------------------------------------------------------------->
     <!--*******************************************************************************************-->
     <div id="eventsWrapper">
         <!--EVENTS NAV BAR------------------------------------------------------------------------>
         <div id="eventsNavBar">
-            <!--BACK BUTTON-->
-            <div class="backBox">
-                <button class="backButton">
-                    <img alt="back" class="backPic" src="./Images/back.png">
-                </button>
-            </div>
-            <!--LOCATION TEXT-->
-            <div id="location"></div>
-            <!--MENU BUTTON-->
-            <div class="menuBox">
-                <button class="menuButton">
-                    <img alt="menu" class="menuPic" src="./images/menu.png">
-                </button>
-            </div>
-        </div>
-        
-
-        <!--MENU DROPDOWN BOX----------------------------->
-        <div id="dropDownBox">
-            <div id="dropDown">
-                <button class="dropButtons homeButton">Home</button>
-                <button class="dropButtons aboutButton">About Us</button>
-                <button class="dropButtons locationButton">Location</button>
-                <button class="dropButtons logoutButton">Logout</button>
-            </div>
-        </div>
-
-        <!--TABS BAR--------------------------------->
-        <div id="tabsBox">
-            <button class="tabs" id="volunteerTab">Volunteer</button>
-            <button class="tabs" id="appliedTab">Joined</button>
-        </div>
-        <!--EVENTS BOX----------------------------------------------------------------------------->
-        <div class="eventsBox">
-            <!--INDIVIDUAL EVENTS----------------------------------------------------------------->
-            <div class="events">
-                <div id="credits">
-                    <div>3 HOURS CREDIT</div>
-                </div>
-                <!--EVENT PICTURE-->
-                <div>
-                    <div id="eventPicBox">
-                        <!--READ MORE BUTTON-->
-                        <div class="readMoreBox">
-                            <div></div>
-                            <button class="readMoreButton">Info</button>
+                        <div class="navBarPic">
+                            <ul>
+                                <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png" alt="pic1" ></li>
+                                <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png" alt="pic1"></li>
+                                <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png" alt="pic1" class="activePic"></li>
+                            </ul>
                         </div>
-                        <!--EVENT IMAGE-->
-                        <img alt="eventImage" id="eventPic" src="Images/planting.jpeg">
-                    </div>
-                </div>
-            </div>
-            <!--PREVIEW DETAIL BOX-->
-            <div id="previewBox">
-                <!--DATE-->
-                <div id="date">
-                    <p id="month">MAY</p>
-                    <p id="day">06</p>
-                </div>
-                <!--MESSAGE-->
-                <div id="eventMessage">
-                    Join us, and be apart of making our city a greener place!
-                </div>
-                <!--CURRENT PEOPLE JOINED-->
-                <div id="peopleBox">
-                    <img alt="people" id="peoplePic" src="./Images/people.png">
-                    <p id="peopleCount">1</p>
-                </div>
-            </div>
+                        <div class="navBar">
+                            <ul>
+                                <li><a href="index.html" >HOME</a></li>
+                                <li><a href="status.html">MISSION</a></li>
+                                <li><a href="info.html" class="activePage">EVENTS</a></li>
+                                <li><a href="info.html">MY EVENTS</a></li>
+                                <li><a href="info.html">MY LISTINGS</a></li>
+                                <li><a href="info.html">ABOUT US</a></li>
+                                <li><a href="info.html">CONTACT</a></li>
+            
+                            </ul>
+                        </div>
         </div>
-        <ol id="test1"></ol>
-
-
-        <!--EVENT DETAILS BOX----------------------------------------------------------------------->
-        <!--**************************************************************************************-->
-
-        <div id="eventsInfoBox">
-            <!--DETAILS TOP BOX-->
-            <div id="detailsTopBox">
-                <!--DETAILS PICTURE-->
-                <img alt="eventImage" id="eventInfoPic" src="Images/planting.jpeg">
-            </div>
-            <!--EVENT INFO TITLE-->
-            <div id="eventInfoTitle">
-                Planting Our Future
-            </div>
-            <!--SPECIAL DETAILS BOX-->
-            <div id="specialInfoBox">
-                <!--LOCATION INFO-->
-                <div id="locationInfoBox">
-                    <img alt="loc" id="locationPic" src="./Images/location.png">
-                    <div id="locationInfo">Vancouver</div>
-                </div>
-                <!--DATE TIME INFO-->
-                <div id="dateTimeInfoBox">
-                    <img alt="cal" id="calenderPic" src="./Images/calender.png">
-                    <div id="dateTime">
-                        <div id="dateInfo">May 12,2019</div>
-                        <div id="timeInfo">10:00-13:00</div>
-                    </div>
-                </div>
-                <!--ORGANIZER INFO-->
-                <div id="organizerInfoBox">
-                    <img alt="org" id="organizerPic" src="./Images/organizer.png">
-                    <div id="organizerInfo">Green Crusaders</div>
-                </div>
-                <!--EMAIL INFO-->
-                <div id="emailInfoBox">
-                    <img alt="email" id="emailPic" src="./Images/email.png">
-                    <div id="emailInfo">FarmBoy@bcit.ca</div>
-                </div>
-                <!--PEOPLE COUNT INFO-->
-                <div id="peopleCountBox">
-                    <img alt="count" id="peopleCountPic" src="./Images/people.png">
-                    <div class="count">1</div>
-                    People going
-                </div>
-                <!--CREDITS INFO-->
-                <div id="creditsBox">
-                    <img alt="credits" id="creditsPic" src="./Images/star.png">
-                    <div class="credits">3</div>
-                    Hours Credit
-                </div>
-            </div>
-            <!--INFO DESCRIPTION BOX-->
-            <div id="infoDescriptionBox">
-                <div>
-                    Trees give off oxygen that we need to breathe. Trees reduce the amount of storm water runoff, which
-                    reduces erosion and pollution in our waterways and may reduce the effects of flooding. Many species
-                    of wildlife depend on trees for habitat. Trees provide food, protection, and homes for many birds
-                    and mammals.
-                </div>
-            </div>
-            <footer>
-                <!--JOIN EVENT BUTTON-->
-                <div id="joinEventButtonBox">
-                    <button id="joinEventButton">Join Event</button>
-                </div>
-            </footer>
-        </div>
-
 
         <!--JOINED EVENTS BOX---------------------------------------------------------------------------->
         <!--**************************************************************************************-->
@@ -334,10 +216,6 @@
                 </div>
             </div>
         </div>
-
-
-
-
 
 
         <!--JOINED EVENT DETAILS BOX---------------------------------------------------------------------->
@@ -436,12 +314,12 @@
             firebase.auth().onAuthStateChanged(user => {
                 if (user) {
                     $('form').fadeOut(50);
-                    $('.wrapper').addClass('form-success');
+                    $('.signInPageWrapper').addClass('form-success');
                     $('.form-success').fadeOut(2000);
                     setTimeout(function () {
-                        $('.subPageWrapper').fadeIn(4000);
+                        $('.welcomePageWrapper').fadeIn(4000);
                     }, 1000);
-                    $('.subPageWrapper').css('display: block');
+                    $('.welcomePageWrapper').css('display: block');
                 }
             });
         });
@@ -801,10 +679,18 @@
         // once the window loads, ready up the fireworks
         window.onload = loop;
     </script>
+    <script>
+    $("#clickButton").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#city1").offset().top
+    }, 500);
+});
+    </script>
 
     <script src="./js/events.js"></script>
     <script src="./js/transition.js"></script>
     <script src="./js/eventList.js"></script>
+    <script src="./js/eventAjax.js"></script>
 
 </body>
 
