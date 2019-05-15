@@ -96,10 +96,6 @@
     cursor: pointer;
 }
 
-<<<<<<< HEAD
-.cities:hover {
-    font-size: 30pt;
-=======
 .cities a {
     text-decoration: none;
     color: black;
@@ -109,16 +105,10 @@
 
 .cities a:hover {
     font-size: 25pt;
->>>>>>> fb929859e4cf4d3ebdbc10fa535a5ff0e34e72d7
     letter-spacing: 15px;
     color: rgb(255, 204, 0);
 }
 
-<<<<<<< HEAD
-a {
-    text-decoration: none;
-}
-=======
 /* Navigation Bar */
 #navigation {
     height: 18vh;
@@ -194,4 +184,3 @@ a {
   display: inline-block;
 }
 
->>>>>>> fb929859e4cf4d3ebdbc10fa535a5ff0e34e72d7
