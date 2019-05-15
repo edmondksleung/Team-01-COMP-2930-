@@ -213,7 +213,7 @@
     font-size: 20pt;
 }
 
-#eventMessage {
+.eventMessage {
     font-family: 'Source Sans Pro', sans-serif;
     display: grid;
     align-items: center;
@@ -221,7 +221,7 @@
     font-size: 15pt;
 }
 
-#peopleBox {
+.peopleBox {
     display: grid;
     grid-template-columns: 55% 20%;
     grid-template-rows: 60px;
@@ -229,12 +229,12 @@
     align-items: center;
 }
 
-#peoplePic {
+.peoplePic {
     width: 30px;
     height: 30px;
 }
 
-#peopleCount {
+.peopleCount {
     font-size: 17pt;
     font-weight: bold;
     font-family: 'Source Sans Pro', sans-serif;
