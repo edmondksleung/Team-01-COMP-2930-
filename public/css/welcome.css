@@ -3,31 +3,30 @@
 }
 
 /* width */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 10px;
   }
-  
+   */
    
   /* Handle */
-  ::-webkit-scrollbar-thumb {
+  /* ::-webkit-scrollbar-thumb {
     background: rgb(201, 199, 199); 
     border-radius: 10px;
-
   }
-  
+   */
   /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+  /* ::-webkit-scrollbar-thumb:hover {
     background: rgb(119, 115, 115); 
-  }
+  } */
 
 #welcomePageTitle {
-    height: 8vh;
+    height: 11vh;
     font-size: 30pt;
     text-align: center;
     letter-spacing: 8px;
     color: white;
     position: relative;
-    padding-top: 5px;
+    padding-top: 25px;
 }
 
 #welcomePageTitle span {
@@ -118,3 +117,21 @@
     letter-spacing: 15px;
     color: rgb(255, 204, 0);
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(201, 199, 199); 
+    border-radius: 10px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(119, 115, 115); 
+}
+

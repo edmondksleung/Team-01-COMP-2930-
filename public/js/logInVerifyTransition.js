@@ -1,5 +1,5 @@
         //Function event jquery function upon clicking login button
-        $('#loginButton').click(function (event) {
+        $("#loginButton").click(function (event) {
             event.preventDefault();
 
             //If firebase user recognized...
@@ -14,21 +14,21 @@
             //if incorrect email/password, trigger login refused animation
             firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function (error) {
 
-                $('#loginButton').addClass('invalid');
+                $("#loginButton").addClass("invalid");
                 setTimeout(function () {
-                    $('#loginButton').removeClass('invalid');
+                    $("#loginButton").removeClass("invalid");
                 }, 1000);
             });
 
             firebase.auth().onAuthStateChanged(user => {
                 if (user) {
-                    $('form').fadeOut(50);
-                    $('.signInPageWrapper').addClass('form-success');
-                    $('.form-success').fadeOut(2000);
+                    $("form").fadeOut(50);
+                    $(".signInPageWrapper").addClass("form-success");
+                    $(".form-success").fadeOut(1000);
                     setTimeout(function () {
-                        $('.welcomePageWrapper').fadeIn(4000);
-                    }, 1000);
-                    $('.welcomePageWrapper').css('display: block');
+                        $(".welcomePageWrapper, .navigation").fadeIn(4000);
+                    }, 5000);
+                    $(".welcomePageWrapper, .navigation").css("display: block");
                 }
             });
         });

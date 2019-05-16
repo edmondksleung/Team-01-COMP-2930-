@@ -1,4 +1,4 @@
-#navigation {
+.navigation {
     height: 15vh;
     padding-top: 20px;
     display: grid;
@@ -6,7 +6,7 @@
         "left middle right";
     grid-template-columns: 15% 70% 15%;
     background-color: rgb(33, 49, 92);
-    /* display: none; */
+    display: none;
 }
 
 .navBar {
@@ -42,6 +42,7 @@
 }
 
 .navBar ul li a:hover {
+    cursor: pointer;
     background-color:white;
     border-radius: 5px;
     color: rgb(33, 49, 92);    

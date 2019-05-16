@@ -6,27 +6,129 @@
     <link rel="stylesheet" type="text/css" href="css/welcome.css">
     <style>
         body {
-            background-color: white;
             margin: 0px;
             padding: 0px;
             font-family: 'Source Sans Pro', sans-serif;
             font-weight: 300;
             color: white;
+            text-align: center;
+            letter-spacing: 2px;
+            font-size: 12pt;
         }
 
-        #contactUsPageTitle {
+        span {
+            letter-spacing: 3px;
+            font-size: 15pt;
+            font-weight: bold;
+        }
+
+        #contactUsPagePicture {
             height: 35vh;
+            margin-top: 20px;
+            background-image: url("./Images/mountains.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
             text-align: center;
             font-size: 30pt;
             letter-spacing: 5px;
-            line-height: 30vh;
-            vertical-align: middle;
-            background-color: white;
+            padding-top: 75px;
         }
 
-        #contactUsPageTitle img {
-            width: 60%;
+        .companyName {
+            font-size: 15pt;
+            letter-spacing: 3px;
+        }
+
+        .companyName span {
+            color: rgb(118, 228, 85);
+        }
+
+        #opaqueCover {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.288);
+            height: 100px;
+            padding-top: 10px;
+        }
+
+        #contactUsPageContent {
+            display: grid;
+            height: 45vh;
+            grid-template-areas:
+                "empty phone chat email empty2"
+                "emtpy phoneText chatText emailText empty2";
+            grid-template-columns: 15% 23.3% 23.4% 23.3% 15%;
+            grid-template-rows: 150px auto;
+            padding-top: 40px;
+        }
+
+        #phone {
+            grid-area: phone;
+            width: auto;
             margin: 0 auto;
+        }
+
+        #phone img {
+            width: 125px;
+            height: 125px;
+        }
+
+        #phoneText {
+            grid-area: phoneText;
+        }
+
+        #chat {
+            grid-area: chat;
+            width: auto;
+            margin: 0 auto; 
+        }
+
+        #chat img {
+            width: 125px;
+            height: 125px;
+        }
+
+        #chatText {
+            grid-area: chatText;
+        }
+
+        #chatButton {
+            width: 100px;
+            height: 30px;
+            border: 2px solid white;
+            border-radius: 15px;
+            text-align: center;
+            margin: 0 auto;
+            line-height: 25px;
+            vertical-align: middle;
+            font-weight: bold;
+        }
+
+        #chatButton:hover {
+            width: 120px;
+            height: 32px;
+            border: 2px solid rgb(255, 204, 0);
+            color: rgb(255, 204, 0);
+            cursor: pointer;
+            letter-spacing: 3px;
+            font-size: 14pt;
+            line-height: 28px;
+            vertical-align: middle;
+        }
+
+        #email {
+            grid-area: email;
+            width: auto;
+            margin: 0 auto; 
+        }
+
+        #email img {
+            width: 125px;
+            height: 125px;
+        }
+
+        #emailText {
+            grid-area: emailText;
         }
 
     </style>
@@ -58,8 +160,26 @@
                 </div>
             </div>
         </div>  
-        <div id="contactUsPageTitle">
-            <img src="./Images/callCenter.png">
+        <div id="contactUsPagePicture">
+            <div id="opaqueCover">
+                <div class="companyName"><span>e</span>Volunteer</div>We'd love to hear from you!</div>
+            </div>
+        </div>  
+        <div id="contactUsPageContent">
+            <div id="phone">
+                <img src="./Images/iphone.png">
+            </div>
+            <div id="phoneText"><span>PHONE</span><br><br>Toll-free 1 (800) 123 1234<br>Canada 604-333-2312<br></div>
+            <div id="chat">
+                    <img src="./Images/liveChat.png">
+            </div>
+            <div id="chatText"><span>LIVE CHAT</span><br><br>Chat with a real person!<br><br>
+                <div id="chatButton">Click Here</div>
+            </div>
+            <div id="email">
+                <img src="./Images/emailEnvelope.png">
+            </div>
+            <div id="emailText"><span>EMAIL</span><br><br>support@evolunteer.ca</div>
         </div>
     </div>
 </body>
