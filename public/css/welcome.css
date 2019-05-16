@@ -46,7 +46,7 @@
     height: 310px;
 }
 
-#missionStatement {
+#mottoStatement {
     height: 27vh;
     padding: 50px 25px 25px 25px;
     text-align: center;
@@ -55,7 +55,7 @@
     letter-spacing: 2px;
 }
 
-#missionStatement span {
+#mottoStatement span {
     color: rgb(118, 228, 85);
 }
 
