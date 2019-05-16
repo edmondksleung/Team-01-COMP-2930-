@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="css/navigation.css">
     <link rel="stylesheet" type="text/css" href="css/signIn.css">
     <link rel="stylesheet" type="text/css" href="css/welcome.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <style>
         body {
             margin: 0px;
@@ -19,13 +20,13 @@
 
         #welcomeText {
             height: 5vh;
-            margin-top: 60px;
+            margin-top: 40px;
             font-size: 20pt;
             letter-spacing: 5px;
         }
 
         #underline {
-            width: 135px;
+            width: 145px;
             height: 2px;
             background-color: white;
             margin: 0 auto;
@@ -33,9 +34,48 @@
         }
 
         #description {
-            height: 7vh;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            height: 54.5vh;
+            width: 50%;
+            margin: 20px auto 5px auto;
+            line-height: 25px;
+        }
+
+        #description span {
+            color: rgb(118, 228, 85);
+        }
+
+        #aboutUsPageClickDownArea {
+            height: 17vh;
+            text-align: center;
+            color: white;
+            font-size: 13pt;
+            letter-spacing: 2px;
+        }
+
+        #aboutUsPageClickDownText {
+            height: 38px;
+            width: 250px;
+            margin: auto;
+        }
+
+        #aboutUsPageBreakPoint {
+            height: 28px;
+        }
+
+        #aboutUsPageClickDownButton img {
+            width: 30px;
+            height: 30px;
+        }
+
+        #aboutUsPageClickDownButton img:hover {
+            animation: wiggle 1s infinite;
+            cursor: pointer;
+            width: 34px;
+            height: 34px;
+        }
+
+        #aboutUsPageContent {
+            background-color: white;
         }
 
         #groupPhoto {
@@ -89,18 +129,35 @@
                 </div>
             </div>
         </div>
-        <div id="welcomeText">Welcome</div>
+        <div id="welcomeText">Our Story</div>
         <div id="underline"></div>
-        <div id="description">eVolunteer was founded by 5 incredible individuals.<br>They all believed in a better future built on education.</div>
-        <div id="groupPhoto">
-            <img src="./Images/team.jpeg">
+        <div id="description"><span>e</span>Volunteer was founded in April 2019 by 5 incredible individuals under the shared belief in a better future built through education. What good is taking all these environmental measures if the people that populate this Earth are uneducated and blind to change. The youth are the future and will be the ones that will have to deal with the toughest of challenges. Instilling good habits, environmental awareness on our youth and creating a positive culture is the first step in saving our planet. The 5 founders realized this idea and thought, why not integrate eco-friendly volunteering sessions with the current school volunteering requirements. Times have changed and schools need to adapt and <span>e</span>Volunteer is the perfect platform.<br><br>"Promoting a Healthy Culture to strengthen eco-literacy, patterns of human knowledge and creative expression,and develop symbolic thought and social learning." We stand by our mission statement and it's fundemental principles and hope others will soon follow along.
         </div>
-        <div class="bio"></div>
-        <div class="bio"></div>
-        <div class="bio"></div>
-        <div class="bio"></div>
-        <div class="bio"></div>
+        <div id="aboutUsPageClickDownArea">
+            <div id="aboutUsPageBreakPoint"></div>
+            <div id="aboutUsPageClickDownText">Meet the team</div>
+            <div id="aboutUsPageClickDownButton">
+                <img src="Images/scrollDown.png" alt="About Us Page Scroll Down Button" id="aboutUsPageClickButton">
+            </div>
+        </div>
+        <div id="aboutUsPageContent">
+            <div id="groupPhoto">
+                <img src="./Images/team.jpeg">
+            </div>
+            <div class="bio"></div>
+            <div class="bio"></div>
+            <div class="bio"></div>
+            <div class="bio"></div>
+            <div class="bio"></div>
+        </div>
     </div>
+    <script> 
+        $("#aboutUsPageClickButton").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#aboutUsPageBreakPoint").offset().top
+            }, 500);
+        });
+    </script>
 </body>
 
 </html>
