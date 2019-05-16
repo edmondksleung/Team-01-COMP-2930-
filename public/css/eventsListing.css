@@ -171,7 +171,7 @@
 
 .eventPicBox {
     margin-top: -10px;
-    background-image: url("../Images/planting.jpeg");
+    /* background-image: url("../Images/planting.jpeg"); */
     background-size: cover;
     height: 253px;
 }

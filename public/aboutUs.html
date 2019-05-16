@@ -18,6 +18,10 @@
             font-size: 12pt;
         }
 
+        body span {
+            color: rgb(118, 228, 85);
+        }
+
         #welcomeText {
             height: 5vh;
             margin-top: 40px;
@@ -38,10 +42,6 @@
             width: 50%;
             margin: 20px auto 5px auto;
             line-height: 25px;
-        }
-
-        #description span {
-            color: rgb(118, 228, 85);
         }
 
         #aboutUsPageClickDownArea {
@@ -76,12 +76,14 @@
 
         #aboutUsPageContent {
             background-color: white;
+            padding-top: 30px;
         }
 
         #groupPhoto {
-            width: 60%;
-            height: 50vh;
+            width: 70%;
+            height: 60vh;
             margin: 0 auto;
+            margin-bottom: 20px;
         }
 
         #groupPhoto img {
@@ -89,11 +91,35 @@
             height: 100%;
         }
 
-        .bio {
+        #groupPhotoDescription {
+            width: 70%;
+            height: 80px;
+            background-color: #e3dfdb;
+            margin: 0 auto;
+            padding: 10px;
+            color: black;
+        }
+
+        .bio1 {
+            display: grid;
+            grid-template-areas:
+                "picture1 bio1"
+                "picture1 bio1";
             height: 50vh;
             width: 70%;
-            margin: 5px auto 5px auto;
-            background-color: red;
+            margin: 10px auto 10px auto;
+            background-color: #e3dfdb;
+        }
+
+        .bio2 {
+            display: grid;
+            grid-template-areas:
+                "bio2 picture2"
+                "bio2 picture2";
+            height: 50vh;
+            width: 70%;
+            margin: 10px auto 10px auto;
+            background-color: #e3dfdb;
         }
 
     </style>
@@ -144,11 +170,14 @@
             <div id="groupPhoto">
                 <img src="./Images/team.jpeg">
             </div>
-            <div class="bio"></div>
-            <div class="bio"></div>
-            <div class="bio"></div>
-            <div class="bio"></div>
-            <div class="bio"></div>
+            <div id="groupPhotoDescription">
+                The 5 of us are all from Set C of CST Term 1 (January). We all have a good sense of humour and share similar views on life, thus developing a close friendship. We started eVolunteer originally as a side project but it has picked up rapidly and become what it is today. 
+            </div>
+            <div class="bio1"></div>
+            <div class="bio2"></div>
+            <div class="bio2"></div>
+            <div class="bio1"></div>
+            <div class="bio2"></div>
         </div>
     </div>
     <script> 
