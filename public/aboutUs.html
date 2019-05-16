@@ -77,13 +77,14 @@
         #aboutUsPageContent {
             background-color: white;
             padding-top: 30px;
+            color: black;
         }
 
         #groupPhoto {
             width: 70%;
             height: 60vh;
             margin: 0 auto;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         #groupPhoto img {
@@ -97,29 +98,48 @@
             background-color: #e3dfdb;
             margin: 0 auto;
             padding: 10px;
-            color: black;
         }
 
         .bio1 {
             display: grid;
             grid-template-areas:
-                "picture1 bio1"
-                "picture1 bio1";
+                "picture empty bio"
+                "picture empty bio";
+            grid-template-columns: 31% 2% 67%;
             height: 50vh;
             width: 70%;
-            margin: 10px auto 10px auto;
-            background-color: #e3dfdb;
+            margin: 20px auto 0 auto;
+            background-color: white;
         }
 
         .bio2 {
             display: grid;
             grid-template-areas:
-                "bio2 picture2"
-                "bio2 picture2";
+                "bio empty picture"
+                "bio empty picture";
+            grid-template-columns: 67% 2% 31%;
             height: 50vh;
             width: 70%;
-            margin: 10px auto 10px auto;
+            margin: 20px auto 0 auto;
+            background-color: white;
+        }
+
+        .picture {
+            grid-area: picture;
             background-color: #e3dfdb;
+        }
+
+        .bio {
+            grid-area: bio;
+            background-color: #e3dfdb;
+            padding: 60px;
+            text-align: left;
+            font-size: 10pt;
+            line-height: 20px;
+        }
+
+        #backToTop {
+            height: 75px;
         }
 
     </style>
@@ -173,11 +193,27 @@
             <div id="groupPhotoDescription">
                 The 5 of us are all from Set C of CST Term 1 (January). We all have a good sense of humour and share similar views on life, thus developing a close friendship. We started eVolunteer originally as a side project but it has picked up rapidly and become what it is today. 
             </div>
-            <div class="bio1"></div>
-            <div class="bio2"></div>
-            <div class="bio2"></div>
-            <div class="bio1"></div>
-            <div class="bio2"></div>
+            <div class="bio1">
+                <div class="picture"></div>
+                <div class="bio">Edmond Leung<br>Chairman<br><br>Finding volunteering hours in Coquitlam during highschool was difficult. Events were unorganized and signing up was often a lengthly proccess. Many many times I would show up to the volunteering sessions and the staff in charge would not have enough tasks laid out for everyone. As a result, several students would stand around with nothing to do, nothing to learn. I am so happy to be a part of <span>e</span>Volunteer's journey and it's mission to transform the future.</div>
+            </div>
+            <div class="bio2">
+                <div class="picture"></div>
+                <div class="bio"></div>
+            </div>
+            <div class="bio1">
+                <div class="picture"></div>
+                <div class="bio"></div>
+            </div>
+            <div class="bio2">
+                <div class="picture"></div>
+                <div class="bio"></div>
+            </div>
+            <div class="bio1">
+                <div class="picture"></div>
+                <div class="bio"></div>
+            </div>
+            <div id="backToTop"></div>
         </div>
     </div>
     <script> 
