@@ -12,6 +12,8 @@ $('.cities').click(function () {
             console.log(keys);
             // Creating a list of events from firebase
             for (let i = 0; i < keys.length; i++) {
+                // Putting value into dom element
+                let k = keys[i];
 
                 ////////// Creating event box using dom elements /////////
                 let allEventsBox = $('.allEventsBox');
@@ -29,11 +31,18 @@ $('.cities').click(function () {
 
                 let eventPicBox = document.createElement('div');
                 eventPicBox.setAttribute('class', 'eventPicBox');
+                eventPicBox.style.backgroundImage = `url(${data[k].imgurl})`
                 credits.after(eventPicBox);
 
                 let readMoreBox = document.createElement('div');
                 readMoreBox.setAttribute('class', 'readMoreBox');
                 eventPicBox.append(readMoreBox);
+
+                // let eventPic = document.createElement('img');
+                // eventPic.setAttribute('class', 'eventPic');
+                // eventPic.setAttribute('src', data[k].imgurl);
+                // eventPicBox.append(eventPic);
+                // console.log(data[k].imgurl);
 
                 let emptyDiv = document.createElement('div');
                 readMoreBox.append(emptyDiv);
@@ -81,8 +90,7 @@ $('.cities').click(function () {
 
 
 
-                // Putting value into dom element
-                let k = keys[i];
+                
                 $(eventMessage).text(data[k].subject);
                 $(month).text(data[k].month);
                 $(day).text(data[k].day);
