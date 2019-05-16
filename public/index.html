@@ -22,7 +22,7 @@
     
 </head>
 
-<body>
+<body class="a">
     <!---------------------------------------------SIGN IN PAGE----------------------------------------------->
     <div class="signInPageWrapper">
         <!-- setup our canvas element -->
@@ -171,12 +171,12 @@
 
             <div id="missionHeading">
                 <h1><span class="eco">ECO</span>CITY - 2019</h1>
-                <br />
+                <br/>
                 <p>
-                    Promoting a <i>Healthy Culture</i> <br />
-                    to strengthen eco-literacy, patterns of human knowledge and creative
-                    expression,
-                    <br />and develop symbolic thought and social learning.
+                    Promoting a <i>Healthy Culture...</i> <br/><br/>
+                    To strengthen eco-literacy, patterns of human knowledge and creative
+                    expression. <br>
+                    <br/>To develop symbolic thought and social learning.
                 </p>
             </div>
             <div id="missionSubHeading">
@@ -640,7 +640,7 @@
     </div>
     <!----------------------------JQUERY/JAVASCRIPT FILES TO BE LOADED AFTER HTML DOCUMENT LOADS-->
     <script>
-            //determines what page it's on depending on wrapper display, then adds background white color to nav bar active page
+            //determines what page it's on depending on current display, then adds background white color to nav bar active page
             $(".homePageBtn").addClass("activePage");
             $(".homePageBtn").click(function (event) {
                 $(".homePageBtn").addClass("activePage");
@@ -671,7 +671,16 @@
             });
 
         </script>
+<script>
+$(".missionPageBtn").click(function() {
+    $("body").css("background", "black");
+});
 
+$(".homePageBtn").click(function() {
+  $("body").css("background", "rgb(33, 49, 92)");
+});
+
+</script>
     <script>
         //Function event jquery function upon clicking mission button
         $(".missionPageBtn").click(function (event) {
@@ -680,7 +689,6 @@
             setTimeout(function () {
                 $(".missionPageWrapper").fadeIn(300);
                 $(".missionPageWrapper").css("display", "block");
-                // $(".navigation").animate({"background-color: black"}, 300);
             }, 200);
         });
 
@@ -690,10 +698,9 @@
             setTimeout(function () {
                 $(".welcomePageWrapper").fadeIn(300);
                 $(".welcomePageWrapper").css("display", "block");
-                // $(".navigation").fadeIn(500).css("background-color", "rgb(33,49,92)");
+                
             }, 200);
         });
-
     </script>
     
     <script src="./js/logInVerifyTransition.js"></script>
