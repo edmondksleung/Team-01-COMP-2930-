@@ -1,5 +1,5 @@
 // Listen for form submission
-// document.getElementById('post').addEventListener('submit', submitForm);
+document.getElementById('post').addEventListener('submit', submitForm);
 
 // Submits the form
 async function submitForm(e) {
@@ -88,7 +88,7 @@ function handleFileUploadChange(event) {
 
 
 // Uploading Image to the storage
-function handleFileUploadSubmit(subject, email, content, city, timeStamp) {
+async function handleFileUploadSubmit(subject, email, content, city, timeStamp) {
 
 	const uploadTask = storageRef.child(`eventImages/${selectedFile.name}`).put(selectedFile);
 	//create a child directory called images, and place the file inside this directory
