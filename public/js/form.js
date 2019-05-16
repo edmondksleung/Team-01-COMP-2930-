@@ -1,10 +1,9 @@
 // Listen for form submission
-document.getElementById('post').addEventListener('submit', submitForm);
+// document.getElementById('post').addEventListener('submit', submitForm);
 
 // Submits the form
-function submitForm(e) {
+async function submitForm(e) {
 	e.preventDefault();
-
 
 	// get value from the text fields
 	let subject = getInputVal('subject');
@@ -16,11 +15,12 @@ function submitForm(e) {
 	// Converts yyyy-mm-dd into millisecond timestamp
 	// Parses "-"
 	tempDate = date.split("-");
+	
 	// Reorganizes format into mm,dd,yyyy and converts into timestamp
 	let timeStamp = new Date(tempDate[1] + "," + tempDate[2] + "," + tempDate[0]).getTime();
 
 	// Saves message
-	saveMessage(subject, email, content, city, timeStamp);
+	await handleFileUploadSubmit(subject, email, content, city, timeStamp);
 
 	// Shows alert when submitted
 	document.querySelector('.alert').style.display = "block";
@@ -45,9 +45,9 @@ function getInputVal(id) {
 	return document.getElementById(id).value;
 }
 
-
 // save message to firebase
-function saveMessage(subject, email, content, city, timeStamp) {
+function saveMessage(subject, email, content, city, timeStamp, imgurl) {
+
 	newMessageRef = firebase.database().ref('events/' + city).push();
 	newMessageRef.set({
 		subject: subject,
@@ -55,7 +55,7 @@ function saveMessage(subject, email, content, city, timeStamp) {
 		content: content,
 		city: city,
 		timeStamp: timeStamp,
-		imgurl: 'url'
+		imgurl: imgurl
 	});
 
 	// // save message to firebase under current user
@@ -78,7 +78,8 @@ let storageRef = firebase.storage().ref();
 
 
 document.querySelector('#fileButton').addEventListener('change', handleFileUploadChange);
-document.querySelector('#submit').addEventListener('click', handleFileUploadSubmit);
+// document.querySelector('#submit').addEventListener('click', handleFileUploadSubmit);
+document.getElementById('post').addEventListener('submit', submitForm);
 
 let selectedFile;
 function handleFileUploadChange(event) {
@@ -87,7 +88,7 @@ function handleFileUploadChange(event) {
 
 
 // Uploading Image to the storage
-function handleFileUploadSubmit() {
+function handleFileUploadSubmit(subject, email, content, city, timeStamp) {
 
 	const uploadTask = storageRef.child(`eventImages/${selectedFile.name}`).put(selectedFile);
 	//create a child directory called images, and place the file inside this directory
@@ -98,18 +99,20 @@ function handleFileUploadSubmit() {
 		console.log(error);
 	}, () => {
 		// Do something once upload is complete
-		console.log('success');
+		uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
+			saveMessage(subject, email, content, city, timeStamp, downloadURL);
+		})
 	});
 
-	uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
-		console.log('File available at', downloadURL);
-		let city = getInputVal('city');
-		let updates = {};
-		let postData = {
-			imgurl: downloadURL
-		};
-		updates[`${newMessageRef}`] = postData;
-		firebase.database().ref().update(updates);
+	// uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
+	// 	console.log('File available at', downloadURL);
+	// 	// let updates = {};
+	// 	// let postData = {
+	// 	// 	imgurl: downloadURL
+	// 	// };
+	// 	// updates['/events/'] = postData;
+	// 	// firebase.database().ref().update(updates);
+	// 	return downloadURL;
 
-	});
+	// });
 };
