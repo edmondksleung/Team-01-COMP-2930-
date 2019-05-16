@@ -661,35 +661,48 @@
                         Create Your Event
                     </div>
                     <div>
-                        <div class="label organizerLabel">Organization</div>
+                        <label class="label organizerLabel">Organization</label>
                         <div class="contentBox">
                             <input class="organizationInput" type="text" required="required">
                         </div>
                     </div>
                     <!--ORGANIZER UI EVENT NAME BOX-->
                     <div>
-                        <div class="organizerLabel">Event Name</div>
+                        <label class="organizerLabel">Event Name</label>
                         <div class="contentBox">
                             <input class="eventInput" type="text" required="required">
                         </div>
                     </div>
                     <!--ORGANIZER UI LOCATION BOX-->
                     <div>
-                        <div class="organizerLabel" class="">City</div>
+                        <label class="organizerLabel" class="">City</label>
                         <div class="contentBox">
-                            <input class="locationInput" type="text" required="required">
+                            <select name="city" id="city" required>
+                                <option value="" disabled selected> -- select an option -- </option>
+                                <option>Abbotsford</option>
+                                <option>Burnaby</option>
+                                <option>Chilliwack</option>
+                                <option>Coquitlam</option>
+                                <option>Edmonds</option>
+                                <option>Maple Ridge</option>
+                                <option>Port Moody</option>
+                                <option>Richmond</option>
+                                <option>Surrey</option>
+                                <option>Vancouver</option>
+                                <option>White Rock</option>
+                            </select>
                         </div>
                     </div>
                     <!--ORGANIZER UI ADDRESS BOX-->
                     <div>
-                        <div class="organizerLabel" class="">Address</div>
+                        <label class="organizerLabel" class="">Address</label>
                         <div class="contentBox">
                             <input class="locationInput" type="text" required="required">
                         </div>
                     </div>
                     <!--ORGANIZER UI EMAIL BOX-->
                     <div>
-                        <div class="organizerLabel">Email</div>
+                        <label class="organizerLabel">Email</label>
                         <div class="contentBox" class="locationDetails">
                             <input class="emailInput" type="email" required="required">
                         </div>
