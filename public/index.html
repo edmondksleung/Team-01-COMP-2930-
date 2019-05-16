@@ -10,6 +10,8 @@
     <link rel="stylesheet" type="text/css" href="css/welcome.css" />
     <link rel="stylesheet" type="text/css" href="css/eventsListing.css" />
     <link rel="stylesheet" type="text/css" href="css/mission.css" />
+    <link rel="stylesheet" type="text/css" href="css/organizer.css"/>
+
 
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:900" rel="stylesheet" />
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
@@ -638,7 +640,117 @@
             </div>
         </footer>
     </div>
+
+
+    <!--ORGANIZER UI EVENTS WRAPPER PAGE-------------------------------->
+    <!------------------------------------------------------------------>
+    <div class="organizerEventsWrapper">
+
+        <!--ORGANIZER UI CREATE EVENT----------------------------------------------------------->
+        <!-------------------------------------------------------------------------------------->
+        <div class="mainBox">
+            <!--VIDEO BOX-->
+            <div class="vidBox">
+                <iframe class="vid" src="https://www.youtube.com/embed/56MhjXTcSCg?autoplay=1">
+                </iframe>
+            </div>
+            <!--CREATE FORM BOX-->
+            <div class="createEventFormBox">
+                <div class="organizerEventInfo">
+                    <!--ORGANIZER UI ORGANIZATION BOX-->
+                    <div class="createTitle">
+                        Create Your Event
+                    </div>
+                    <div>
+                        <div class="label organizerLabel">Organization</div>
+                        <div class="contentBox">
+                            <input class="organizationInput" type="text" required="required">
+                        </div>
+                    </div>
+                    <!--ORGANIZER UI EVENT NAME BOX-->
+                    <div>
+                        <div class="organizerLabel">Event Name</div>
+                        <div class="contentBox">
+                            <input class="eventInput" type="text" required="required">
+                        </div>
+                    </div>
+                    <!--ORGANIZER UI LOCATION BOX-->
+                    <div>
+                        <div class="organizerLabel" class="">City</div>
+                        <div class="contentBox">
+                            <input class="locationInput" type="text" required="required">
+                        </div>
+                    </div>
+                    <!--ORGANIZER UI ADDRESS BOX-->
+                    <div>
+                        <div class="organizerLabel" class="">Address</div>
+                        <div class="contentBox">
+                            <input class="locationInput" type="text" required="required">
+                        </div>
+                    </div>
+                    <!--ORGANIZER UI EMAIL BOX-->
+                    <div>
+                        <div class="organizerLabel">Email</div>
+                        <div class="contentBox" class="locationDetails">
+                            <input class="emailInput" type="email" required="required">
+                        </div>
+                    </div>
+                </div>
+                <!--ORGANIZER UI EVENT TIME BOX------------------------------------------->
+                <div class="eventTimeBox">
+                    <!--ORGANIZER UI START DATE LABEL-->
+                    <p class="organizerLabel">Date</p>
+                    <!--ORGANIZER UI START TIME LABEL-->
+                    <p class="organizerLabel">Start</p>
+                    <!--ORGANIZER UI END TIME LABEL-->
+                    <p class="organizerLabel">End</p>
+                    <!--ORGANIZER START DATE BOX-->
+                    <div class="startBox">
+                        <div class="startDateBox">
+                            <div class="startDate">
+                                <input class="startDateInput" type="date" required="required">
+                            </div>
+                            <img alt="calender" class="calender" src="./Images/calender.png">
+                        </div>
+                    </div>
+                    <!--ORGANIZER UI START TIME-->
+                    <div class="startTimeBox">
+                        <div class="startTime">
+                            <input class="startTimeInput" type="time" value="09:00" required="required">
+                        </div>
+                        <img alt="clock" class="clock" src="./Images/clock.png">
+                    </div>
+                    <!--ORGANIZER UI END TIME-->
+                    <div class="endTimeBox">
+                        <div class="endTime">
+                            <input class="endTimeInput" type="time" value="17:00" required="required">
+                        </div>
+                        <img alt="clock" class="clock" src="./Images/clock.png">
+                    </div>
+                </div>
+                <!--ORGANIZER UI DETAILS-->
+                <p class="organizerLabel">Description</p>
+                <div class="detailsBox">
+                    <textarea class="details"></textarea>
+                </div>
+
+                <!--BOTTOM BUTTONS CONTAINER-->
+                <div class="bottomBox">
+                    <div class="filesBox">
+                        <input type="file" name="file" class="files">
+                    </div>
+                    <div>
+                    </div>
+                    <div class="createButtonsBox">
+                        <button class="cancelButton">Cancel</button>
+                        <button class="createButton">Create</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+
     <!----------------------------JQUERY/JAVASCRIPT FILES TO BE LOADED AFTER HTML DOCUMENT LOADS-->
     <script>
         //Function event jquery function upon clicking mission button
@@ -660,6 +772,18 @@
             $(".welcomePageWrapper").css("display: block");
         });
 
+        //SHOW MY LISTINGS PAGE/////////////////////////////////////////////////////
+        $(".myListingsPageBtn").click(function (event) {
+            event.preventDefault();
+            $(".missionPageWrapper").fadeOut(100);
+            $(".welcomePageWrapper").fadeOut(100);
+            setTimeout(function () {
+                $(".organizerEventsWrapper").fadeIn(300);
+            }, 200);
+            $(".organizerEventsWrapper").css("display", "grid");
+
+
+        });
     </script>
     <script>
         //determines what page it's on depending on wrapper display, then adds background white color to nav bar active page
@@ -679,6 +803,8 @@
     <script src="./js/scrollDown.js"></script>
     <script src="./js/userInit.js"></script>
     <script src="./js/joinEvent.js"></script>
+    <script src="./js/organizer.js"></script>
+
 </body>
 
 </html>
