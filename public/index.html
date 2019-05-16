@@ -10,6 +10,8 @@
     <link rel="stylesheet" type="text/css" href="css/welcome.css" />
     <link rel="stylesheet" type="text/css" href="css/eventsListing.css" />
     <link rel="stylesheet" type="text/css" href="css/mission.css" />
+    <link rel="stylesheet" type="text/css" href="css/organizer.css" />
+
 
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:900" rel="stylesheet" />
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
@@ -19,6 +21,7 @@
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
     <script src="./js/FirebaseInit.js"></script>
     <script src="./js/logInStateSkip.js"></script>
+
 </head>
 
 <body>
@@ -141,8 +144,8 @@
     </div>
     <!------------------------------------------MISSION PAGE-------------------------------------->
     <div class="missionPageWrapper">
-        <div class="navigation">
-            <!-- <div class="navBarPic">
+        <!-- <div class="navigation"> -->
+        <!-- <div class="navBarPic">
                       <ul>
                         <li>
                           <img
@@ -168,53 +171,52 @@
                       </ul>
                     </div> -->
 
-            <div id="missionHeading">
-                <h1><span class="eco">ECO</span>CITY - 2019</h1>
-                <br />
-                <p>
-                    Promoting a <i>Healthy Culture</i> <br />
-                    to strengthen eco-literacy, patterns of human knowledge and creative
-                    expression,
-                    <br />and develop symbolic thought and social learning.
-                </p>
-            </div>
-            <div id="missionSubHeading">
-                <h1><span class="eco">e</span>Volunteer <br /></h1>
-                <p>has currently...</p>
-            </div>
-            <div id="threePictures">
-                <img id="infoPic1" src="http://clipart-library.com/images/kTKognBTj.png" alt="Picture1" />
-                <img id="infoPic2" src="/public/Images/fishPicture.png" alt="Picture2" />
-                <img id="infoPic3" src="https://pngimage.net/wp-content/uploads/2018/05/community-cartoon-png-3.png"
-                    alt="Picture3" />
-            </div>
+        <div id="missionHeading">
+            <h1><span class="eco">ECO</span>CITY - 2019</h1>
+            <br />
+            <p>
+                Promoting a <i>Healthy Culture</i> <br />
+                to strengthen eco-literacy, patterns of human knowledge and creative
+                expression,
+                <br />and develop symbolic thought and social learning.
+            </p>
+        </div>
+        <div id="missionSubHeading">
+            <h1><span class="eco">e</span>Volunteer <br /></h1>
+            <p>has currently...</p>
+        </div>
+        <div id="threePictures">
+            <img id="infoPic1" src="http://clipart-library.com/images/kTKognBTj.png" alt="Picture1" />
+            <img id="infoPic2" src="/public/Images/fishPicture.png" alt="Picture2" />
+            <img id="infoPic3" src="https://pngimage.net/wp-content/uploads/2018/05/community-cartoon-png-3.png"
+                alt="Picture3" />
+        </div>
 
-            <div class="infoPicDesc" id="infoPicDesc1">
-                <span id="infoPicNumber1"></span>cleaner forests
-            </div>
-            <div class="infoPicDesc" id="infoPicDesc2">
-                <span id="infoPicNumber2"></span>fishes saved from cleaner waters
-            </div>
-            <div class="infoPicDesc" id="infoPicDesc3">
-                <span id="infoPicNumber3"></span>organizations signed up
-            </div>
+        <div class="infoPicDesc" id="infoPicDesc1">
+            <span id="infoPicNumber1"></span>cleaner forests
+        </div>
+        <div class="infoPicDesc" id="infoPicDesc2">
+            <span id="infoPicNumber2"></span>fishes saved from cleaner waters
+        </div>
+        <div class="infoPicDesc" id="infoPicDesc3">
+            <span id="infoPicNumber3"></span>organizations signed up
+        </div>
 
-            <div id="infomatics">
-                <div class="box">
-                    <span id="infomatic1">1.3K</span><br />
-                    monthly visitors
-                </div>
-                <div class="box">
-                    <span id="infomatic2">1.1K</span> <br />volunteers connected
-                </div>
-                <div class="box">
-                    <span id="infomatic3">3.2K</span> <br />
-                    positive responses
-                </div>
-                <div class="box">
-                    <span id="infomatic4">10.2K</span> <br />
-                    volunteers needed
-                </div>
+        <div id="infomatics">
+            <div class="box">
+                <span id="infomatic1">1.3K</span><br />
+                monthly visitors
+            </div>
+            <div class="box">
+                <span id="infomatic2">1.1K</span> <br />volunteers connected
+            </div>
+            <div class="box">
+                <span id="infomatic3">3.2K</span> <br />
+                positive responses
+            </div>
+            <div class="box">
+                <span id="infomatic4">10.2K</span> <br />
+                volunteers needed
             </div>
         </div>
     </div>
@@ -544,7 +546,7 @@
                         <button class="joinedReadMoreButton">Info</button>
                     </div>
                     <!--EVENT IMAGE-->
-                    <img alt="eventImage" id="eventPic" src="Images/planting.jpeg">
+                    <img alt="eventImage" id="eventPic">
                 </div>
             </div>
         </div>
@@ -566,7 +568,7 @@
             </div>
         </div>
         <!--EVENT IMAGE-->
-        <img alt="eventImage" id="eventPic" src="Images/planting.jpeg" />
+        <!-- <img alt="eventImage" id="eventPic" src="Images/planting.jpeg" /> -->
     </div>
 
 
@@ -637,35 +639,186 @@
             </div>
         </footer>
     </div>
+
+
+    <!--ORGANIZER UI EVENTS WRAPPER PAGE-------------------------------->
+    <!------------------------------------------------------------------>
+    <div class="organizerEventsWrapper">
+
+        <!--ORGANIZER UI CREATE EVENT----------------------------------------------------------->
+        <!-------------------------------------------------------------------------------------->
+        <div class="mainBox">
+            <!--VIDEO BOX-->
+            <div class="vidBox">
+                <iframe class="vid" src="https://www.youtube.com/embed/56MhjXTcSCg?autoplay=1">
+                </iframe>
+            </div>
+            <!--CREATE FORM BOX-->
+            <div class="createEventFormBox">
+                <div class="organizerEventInfo">
+                    <!--ORGANIZER UI ORGANIZATION BOX-->
+                    <div class="createTitle">
+                        Create Your Event
+                    </div>
+                    <div>
+                        <div class="label organizerLabel">Organization</div>
+                        <div class="contentBox">
+                            <input class="organizationInput" type="text" required="required">
+                        </div>
+                    </div>
+                    <!--ORGANIZER UI EVENT NAME BOX-->
+                    <div>
+                        <div class="organizerLabel">Event Name</div>
+                        <div class="contentBox">
+                            <input class="eventInput" type="text" required="required">
+                        </div>
+                    </div>
+                    <!--ORGANIZER UI LOCATION BOX-->
+                    <div>
+                        <div class="organizerLabel" class="">City</div>
+                        <div class="contentBox">
+                            <input class="locationInput" type="text" required="required">
+                        </div>
+                    </div>
+                    <!--ORGANIZER UI ADDRESS BOX-->
+                    <div>
+                        <div class="organizerLabel" class="">Address</div>
+                        <div class="contentBox">
+                            <input class="locationInput" type="text" required="required">
+                        </div>
+                    </div>
+                    <!--ORGANIZER UI EMAIL BOX-->
+                    <div>
+                        <div class="organizerLabel">Email</div>
+                        <div class="contentBox" class="locationDetails">
+                            <input class="emailInput" type="email" required="required">
+                        </div>
+                    </div>
+                </div>
+                <!--ORGANIZER UI EVENT TIME BOX------------------------------------------->
+                <div class="eventTimeBox">
+                    <!--ORGANIZER UI START DATE LABEL-->
+                    <p class="organizerLabel">Date</p>
+                    <!--ORGANIZER UI START TIME LABEL-->
+                    <p class="organizerLabel">Start</p>
+                    <!--ORGANIZER UI END TIME LABEL-->
+                    <p class="organizerLabel">End</p>
+                    <!--ORGANIZER START DATE BOX-->
+                    <div class="startBox">
+                        <div class="startDateBox">
+                            <div class="startDate">
+                                <input class="startDateInput" type="date" required="required">
+                            </div>
+                            <img alt="calender" class="calender" src="./Images/calender.png">
+                        </div>
+                    </div>
+                    <!--ORGANIZER UI START TIME-->
+                    <div class="startTimeBox">
+                        <div class="startTime">
+                            <input class="startTimeInput" type="time" value="09:00" required="required">
+                        </div>
+                        <img alt="clock" class="clock" src="./Images/clock.png">
+                    </div>
+                    <!--ORGANIZER UI END TIME-->
+                    <div class="endTimeBox">
+                        <div class="endTime">
+                            <input class="endTimeInput" type="time" value="17:00" required="required">
+                        </div>
+                        <img alt="clock" class="clock" src="./Images/clock.png">
+                    </div>
+                </div>
+                <!--ORGANIZER UI DETAILS-->
+                <p class="organizerLabel">Description</p>
+                <div class="detailsBox">
+                    <textarea class="details"></textarea>
+                </div>
+
+                <!--BOTTOM BUTTONS CONTAINER-->
+                <div class="bottomBox">
+                    <div class="filesBox">
+                        <input type="file" name="file" class="files">
+                    </div>
+                    <div>
+                    </div>
+                    <div class="createButtonsBox">
+                        <button class="cancelButton">Cancel</button>
+                        <button class="createButton">Create</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+
     <!----------------------------JQUERY/JAVASCRIPT FILES TO BE LOADED AFTER HTML DOCUMENT LOADS-->
+    <script>
+        //determines what page it's on depending on wrapper display, then adds background white color to nav bar active page
+        $(".homePageBtn").addClass("activePage");
+        $(".homePageBtn").click(function (event) {
+            $(".homePageBtn").addClass("activePage");
+            $(".missionPageBtn").removeClass("activePage");
+            $(".myEventsPageBtn").removeClass("activePage");
+            $(".myListingsPageBtn").removeClass("activePage");
+            $(".aboutUsPageBtn").removeClass("activePage");
+            $(".contactPageBtn").removeClass("activePage");
+
+        });
+        $(".missionPageBtn").click(function (event) {
+            $(".missionPageBtn").addClass("activePage");
+            $(".homePageBtn").removeClass("activePage");
+            $(".myEventsPageBtn").removeClass("activePage");
+            $(".myListingsPageBtn").removeClass("activePage");
+            $(".aboutUsPageBtn").removeClass("activePage");
+            $(".contactPageBtn").removeClass("activePage");
+
+        });
+
+        $(".myEventsPageBtn").click(function (event) {
+            $(".myEventsPageBtn").addClass("activePage");
+            $(".missionPageBtn").removeClass("activePage");
+            $(".homePageBtn").removeClass("activePage");
+            $(".myListingsPageBtn").removeClass("activePage");
+            $(".aboutUsPageBtn").removeClass("activePage");
+            $(".contactPageBtn").removeClass("activePage");
+        });
+    </script>
+
     <script>
         //Function event jquery function upon clicking mission button
         $(".missionPageBtn").click(function (event) {
             event.preventDefault();
+            $(".organizerEventsWrapper").hide();
             $(".welcomePageWrapper").fadeOut(100);
             setTimeout(function () {
                 $(".missionPageWrapper").fadeIn(300);
+                $(".missionPageWrapper").css("display", "block");
+                // $(".navigation").animate({"background-color: black"}, 300);
             }, 200);
-            $(".missionPageWrapper").css("display: block");
         });
 
         $(".homePageBtn").click(function (event) {
             event.preventDefault();
+            $(".organizerEventsWrapper").hide();
             $(".missionPageWrapper").fadeOut(100);
             setTimeout(function () {
                 $(".welcomePageWrapper").fadeIn(300);
+                $(".welcomePageWrapper").css("display", "block");
+                // $(".navigation").fadeIn(500).css("background-color", "rgb(33,49,92)");
             }, 200);
-            $(".welcomePageWrapper").css("display: block");
         });
 
+        //SHOW MY LISTINGS PAGE/////////////////////////////////////////////////////
+        $(".myListingsPageBtn").click(function (event) {
+            event.preventDefault();
+            $(".missionPageWrapper").fadeOut(100);
+            $(".welcomePageWrapper").fadeOut(100);
+            setTimeout(function () {
+                $(".organizerEventsWrapper").fadeIn(300);
+            }, 200);
+            $(".organizerEventsWrapper").css("display", "grid");
+        });
     </script>
-    <script>
-        //determines what page it's on depending on wrapper display, then adds background white color to nav bar active page
 
-        // var homeBtn = $(".homePageButton");
-        // $(".welcomePageWrapper").css("display", "block") ? homeBtn.addClass("activePage") : homeBtn.removeClass("activePage");
-    </script>
     <script src="./js/logInVerifyTransition.js"></script>
     <script src="./js/signOut.js"></script>
     <script src="./js/firebaseSignUpAPI.js"></script>
@@ -678,6 +831,8 @@
     <script src="./js/scrollDown.js"></script>
     <script src="./js/userInit.js"></script>
     <script src="./js/joinEvent.js"></script>
+    <script src="./js/organizer.js"></script>
+
 </body>
 
 </html>
