@@ -221,6 +221,7 @@
     font-size: 15pt;
 }
 
+/*PEOPLE COUNTER CONTAINER*/
 .peopleBox {
     display: grid;
     grid-template-columns: 55% 20%;
@@ -229,11 +230,13 @@
     align-items: center;
 }
 
+/*PEOPLE COUNTER IMAGE*/
 .peoplePic {
     width: 30px;
     height: 30px;
 }
 
+/*PEOPLE COUNTER*/
 .peopleCount {
     font-size: 17pt;
     font-weight: bold;
@@ -668,12 +671,6 @@ input[type="time"]::-webkit-inner-spin-button {
     resize: none;
 }
 
-#backJoinBox {
-    margin-top: 10px;
-    margin-right: 11px;
-    margin-left: 11px;
-    float: right;
-}
 
 #cancelButton {
     width: 80px;

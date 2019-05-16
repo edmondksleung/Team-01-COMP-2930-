@@ -83,11 +83,14 @@ $('.cities').click(function () {
 
                 // Putting value into dom element
                 let k = keys[i];
-                // eventMessage.innerHTML = data[k].subject;
-                // month.innerHTML = data[k].month;
-                // date.innerHTML = data[k].day;
+                $(eventMessage).text(data[k].subject);
+                $(month).text(data[k].month);
+                $(day).text(data[k].day);
+                $(peopleCount).text(data[k].userCount);                
 
             }
+            
+            // Increases count on join click
         }
     });
 

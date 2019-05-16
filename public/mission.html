@@ -1,264 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title> Our Mission </title>
-
-<style>
-    @font-face {
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: 300;
-    src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdr.ttf) format('truetype');
-}
-
-/* Navigation Bar */
-#navigation {
-    height: 2.5vh;
-    padding-top: 20px;
-}
-
-.navBar {
-    margin-top: 29px;
-    height: 45px;
-    text-align: center;
-    letter-spacing: 3px;
-}
-
-.navBar > ul > li {
-    display: inline-block;
-}
-
-.navBar ul > li > a {
-    color: white;
-    display: block;
-    text-decoration: none;
-    font-weight: bold;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.navBar ul li ul {
-    display: none;
-    list-style: none;
-    position: absolute;
-    background: #e2e2e2;
-    text-align: left;
-}
-
-.navBar ul li a:hover {
-    background-color:white;
-    border-radius: 10%;
-    color: black;    
-}
-
-/* Current page nav bar highlight */
-  .navBar ul li a.activePage {
-  background-color:white;
-  border-radius: 10%;
-  color: black;
-}
-
-/* Navbar picture display */
-.navBarPic {
-    text-align: center;
-}
-
-.navBarPic > ul > li {
-    display: inline-block;
-    text-decoration: none;
-}
-
-.navBarPic ul li img {
-    display: none;
-    list-style: none;
-    position: absolute;
-    height: 60px;
-    margin-top: -43.5px;
-    margin-left: -275px;
-
-}
-
-/** Current page picture show */
-  .navBarPic ul li img.activePic {
-  display: inline-block;
-}
-
-
-body {
-    background-color: black;
-
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 300;
-}
-
-::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
-}
-
-body ::-webkit-input-placeholder {
-    /* WebKit browsers */
-    font-family: 'Source Sans Pro', sans-serif;
-    color: white;
-    font-weight: 300;
-}
-
-#missionHeading {
-text-align: center;
-margin-top: -10;
-font-size: 20pt;
-letter-spacing: 10px;
-color: white;
-}
-
-#missionHeading p {
-    font-size: 15pt;
-    letter-spacing: 1px;
-    margin-top: -65px;
-    margin-bottom: 175px;
-}
-
-#missionSubHeading{
-    text-align: center;
-    font-size: 15pt;
-    letter-spacing: 8px;
-    margin-top: -100px;
-    color: white;
-}
-
-#missionSubHeading p {
-    letter-spacing: 2px;
-}
-.eco {
-    color: rgb(118, 228, 85);
-}
-
-#infoPic1 {
-    margin-top: 40px;
-    margin-left: 170px;
-    height: 200px;
-    width:250px;
-}
-
-#infoPic2 {
-    margin-bottom: -14px;
-    margin-left: 220px;
-    height: 200px;
-    width: 200px;
-}
-
-#infoPic3 {
-    margin-left: 160px;
-    height: 100px;
-    width: 350px;
-}
-
-#infoPicDesc1 {
-    color: white;
-    margin-left: 250px;
-}
-#infoPicDesc2 {
-    color: white;
-    margin-left: 270px;
-}
-#infoPicDesc3 {
-    color: white;
-    margin-left: 280px;
-}
-.infoPicDesc {
-    margin-top: 20px;
-    display: inline-block;
-}
-
-#infomatics {
-  margin: 20px auto;
-  width:600px;
-  height:400px;
-  display:grid;
-  grid-template-columns: 200px 200px;
-  grid-row: auto auto;
-  grid-column-gap: 200px;
-  grid-row-gap: 10px;
-  margin-top: 140px;
-}
-
-.box{
-    background-color: black;
-    color:#fff;
-    font-size: 20px;
-  }
-
-  #infomatic1 {
-      font-size: 65px;
-      color:rgb(255, 72, 0);
-  }
-  #infomatic2 {
-      font-size: 65px;
-     color:rgb(30, 255, 0);
-
-  }
-  #infomatic3 {
-      font-size: 65px;
-    color:rgb(0, 255, 255);
-
-  }
-  #infomatic4 {
-      font-size: 65px;
-      color:rgb(248, 109, 45);
-
-  }
-
-
-</style>
-
+    <title> Our Mission </title>
 
 </head>
-<body>
-<div id="missionPageWrapper">
-        <div id="navigation">
-                <div class="navBarPic">
-                    <ul>
-                        <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png" alt="pic1" ></li>
-                        <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png" alt="pic1" class="activePic"></li>
-                        <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png" alt="pic1"></li>
-                    </ul>
-                </div>
-        </div>
-        <div class="navBar">
-                <ul>
-                    <li><a href="index.html" >HOME</a></li>
-                    <li><a href="status.html" class="activePage">MISSION</a></li>
-                    <li><a href="info.html">EVENTS</a></li>
-                    <li><a href="info.html">MY EVENTS</a></li>
-                    <li><a href="info.html">MY LISTINGS</a></li>
-                    <li><a href="info.html">ABOUT US</a></li>
-                    <li><a href="info.html">CONTACT</a></li>
 
+<body>
+    <div id="missionPageWrapper">
+        <div id="navigation">
+            <div class="navBarPic">
+                <ul>
+                    <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
+                            alt="pic1"></li>
+                    <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
+                            alt="pic1" class="activePic"></li>
+                    <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
+                            alt="pic1"></li>
                 </ul>
             </div>
-            <div id="missionHeading">
-                <h1><span class="eco">ECO</span>CITY - 2019</h1><br>
-                <p>Promoting a <i>Healthy Culture</i> <br>
-                to strengthen eco-literacy, patterns of human knowledge and creative expression, 
+        </div>
+        <div class="navBar">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="status.html" class="activePage">MISSION</a></li>
+                <li><a href="info.html">EVENTS</a></li>
+                <li><a href="info.html">MY EVENTS</a></li>
+                <li><a href="info.html">MY LISTINGS</a></li>
+                <li><a href="info.html">ABOUT US</a></li>
+                <li><a href="info.html">CONTACT</a></li>
+
+            </ul>
+        </div>
+        <div id="missionHeading">
+            <h1><span class="eco">ECO</span>CITY - 2019</h1><br>
+            <p>Promoting a <i>Healthy Culture</i> <br>
+                to strengthen eco-literacy, patterns of human knowledge and creative expression,
                 <br>and develop symbolic thought and social learning.</p>
- 
+
         </div>
         <div id="missionSubHeading">
             <h1><span class="eco">e</span>Volunteer <br></h1>
-                <p>has currently...</p>
+            <p>has currently...</p>
         </div>
         <div id="threePictures">
-            <img id = "infoPic1" src="http://clipart-library.com/images/kTKognBTj.png" alt="Picture1"/>
-            <img id = "infoPic2" src="/public/Images/fishPicture.png" alt="Picture2"/>
-            <img id = "infoPic3" src="https://pngimage.net/wp-content/uploads/2018/05/community-cartoon-png-3.png" alt="Picture3"/>
+            <img id="infoPic1" src="http://clipart-library.com/images/kTKognBTj.png" alt="Picture1" />
+            <img id="infoPic2" src="/public/Images/fishPicture.png" alt="Picture2" />
+            <img id="infoPic3" src="https://pngimage.net/wp-content/uploads/2018/05/community-cartoon-png-3.png"
+                alt="Picture3" />
         </div>
 
         <div class="infoPicDesc" id="infoPicDesc1"> <span id="infoPicNumber1"></span>cleaner forests</div>
-        <div class="infoPicDesc" id="infoPicDesc2"> <span id="infoPicNumber2"></span>fishes saved from cleaner waters</div> 
+        <div class="infoPicDesc" id="infoPicDesc2"> <span id="infoPicNumber2"></span>fishes saved from cleaner waters
+        </div>
         <div class="infoPicDesc" id="infoPicDesc3"> <span id="infoPicNumber3"></span>organizations signed up</div>
 
 
@@ -268,7 +62,7 @@ color: white;
             <div class="box"><span id="infomatic3">3.2K</span> <br> positive responses </div>
             <div class="box"><span id="infomatic4">10.2K</span> <br> volunteers needed</div>
         </div>
-        </div>
+    </div>
 
 </body>
 

@@ -77,15 +77,14 @@ body {
 }
 
 
-/*CREATE EVENT INFO TOP BOX*/
-.createEventBox {
-    width: 100%;
-    height: 700px;
-    text-indent: 20px;
+/*CREATE EVENT FORM INFO TOP BOX*/
+.createEventFormBox {
+    width: 550px;
+    height: 750px;
     font-family: 'Arial', sans-serif;
     margin: 0;
     border-bottom: 2px solid rgb(216, 208, 208);
-    background: rgb(33, 49, 92);
+    background: white;
 }
 
 /*CONTENT CONTAINERS*/
@@ -95,7 +94,7 @@ body {
     justify-items: center;
     text-indent: 8px;
     background: white;
-    border: 1px solid grey;
+    border: 2px solid rgb(174, 172, 172);
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 11px;
@@ -106,7 +105,7 @@ body {
 /*ORGANIZER UI ORGANIZER EVENT INFO*/
 .organizerEventInfo {
     display: grid;
-    grid-template-rows: 70px 70px 70px 70px 10px;
+    grid-template-rows: 70px 70px 70px 70px 70px 10px;
     grid-template-areas: "organization",
         "event",
         "location";
@@ -120,7 +119,8 @@ body {
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 10px;
-    color: white;
+    text-indent: 20px;
+    color: black;
 }
 
 /*ORGANIZER UI EVENT TIME BOX*/
@@ -129,6 +129,7 @@ body {
     grid-template-columns: 230px 150px 150px;
     grid-template-rows: 30px 40px;
     align-items: center;
+
 }
 
 /*ORGANIZER UI INPUTS*/
@@ -164,7 +165,7 @@ input[type=date]::-webkit-inner-spin-button {
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 7px;
-    border: 1px solid grey;
+    border: 2px solid rgb(174, 172, 172);
     text-indent: 0;
 }
 
@@ -186,7 +187,7 @@ input[type=date]::-webkit-inner-spin-button {
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 7px;
-    border: 1px solid grey;
+    border: 2px solid rgb(174, 172, 172);
     text-indent: 10px;
 }
 
@@ -219,7 +220,7 @@ input[type="time"]::-webkit-outer-spin-button, input[type="time"]::-webkit-inner
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 7px;
-    border: 1px solid grey;
+    border: 2px solid rgb(174, 172, 172);
     text-indent: 10px;
 }
 
@@ -246,7 +247,7 @@ input[type="time"]::-webkit-outer-spin-button, input[type="time"]::-webkit-inner
     background: white;
     margin-left: 11px;
     margin-right: 11px;
-    border: 1px solid grey;
+    border: 2px solid rgb(174, 172, 172);
     border-radius: 5px;
     height: auto;
     display: grid;
@@ -265,46 +266,70 @@ input[type="time"]::-webkit-outer-spin-button, input[type="time"]::-webkit-inner
     resize: none;
 }
 
-/*ORGANIZER UI CANCEL/JOIN BUTTON*/
-.backJoinBox {
+/*BOTTOM BUTTONS CONTAINER*/
+.bottomBox {
+    display: grid;
+    grid-template-areas: "file empty buttons";
+    grid-template-columns: 250px 50px 200px;
+    align-content: center;
     margin-top: 10px;
     margin-right: 11px;
     margin-left: 11px;
-    float: right;
 }
 
+/*FILE UPLOAD CONTAINER*/
+.filesBox {
+    display: grid;
+    align-items: center;
+}
+/*FILE UPLOAD*/
+.files {
+    height: 20px;
+    width: 200px;
+    border-radius: 5px;
+    background: white;
+    border: 1px solid grey;
+}
+
+/*CANCEL CREATE BUTTON CONTAINER*/
+.createButtonsBox {
+    display: grid;
+    grid-template-areas: "cancel create";
+    grid-template-columns: 110px 110px;
+    justify-items: right;
+}
 /*ORGANIZER UI CANCEL BUTTON*/
 .cancelButton {
-    width: 80px;
+    width: 100px;
     height: 30px;
     border-radius: 5px;
     border: none;
-    background: white;
+    background: #40a0e1;
     font-weight: bold;
-    color: black;
+    color: white;
     box-shadow: 0 1px 1px rgba(0,0,0,1);
 }
 
 /*ORGANIZER UI CANCEL BUTTON HOVER*/
 .cancelButton:hover {
-    background: #40a0e1;
-    color: white;
+    background: #0592f0;
+    box-shadow: 0 2px 5px rgba(0,0,0,1);
 }
 
 /*ORGANIZER UI CREATE BUTTON*/
 .createButton {
-    width: 80px;
+    width: 100px;
     height: 30px;
     border-radius: 5px;
     font-weight: bold;
-    background: white;
+    background: #40a0e1;
     border: none;
-    color: black;
+    color: white;
     box-shadow: 0 1px 1px rgba(0,0,0,1);
 }
 
 /*ORGANIZER UI CREATE BUTTON HOVER*/
 .createButton:hover {
-    background: #40a0e1;
-    color: white;
+    background: #0592f0;
+    box-shadow: 0 2px 5px rgba(0,0,0,1);
 }

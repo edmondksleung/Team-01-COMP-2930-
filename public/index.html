@@ -4,12 +4,14 @@
 <head>
     <title>Sign in to eVolunteer</title>
     <!------------------------------------------LINKS TO CSS PAGES-------------------------------------------->
-    <link rel="stylesheet" type="text/css" href="css/signIn.css">
-    <link rel="stylesheet" type="text/css" href="css/bubbleBackground.css">
-    <link rel="stylesheet" type="text/css" href="css/navigation.css">
-    <link rel="stylesheet" type="text/css" href="css/welcome.css">
-    <link rel="stylesheet" type="text/css" href="./css/eventsListing.css">
-    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/signIn.css" />
+    <link rel="stylesheet" type="text/css" href="css/bubbleBackground.css" />
+    <link rel="stylesheet" type="text/css" href="css/navigation.css" />
+    <link rel="stylesheet" type="text/css" href="css/welcome.css" />
+    <link rel="stylesheet" type="text/css" href="css/eventsListing.css" />
+    <link rel="stylesheet" type="text/css" href="css/mission.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:900" rel="stylesheet" />
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     <!-----------------------------------------------JQUERY--------------------------------------------------->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -17,24 +19,23 @@
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
     <script src="./js/FirebaseInit.js"></script>
     <script src="./js/logInStateSkip.js"></script>
-    
 </head>
 
-<body> 
-    <!---------------------------------------------SIGN IN PAGE----------------------------------------------->    
+<body>
+    <!---------------------------------------------SIGN IN PAGE----------------------------------------------->
     <div class="signInPageWrapper">
         <!-- setup our canvas element -->
         <canvas id="canvas">Canvas is not supported in your browser.</canvas>
         <div class="container">
             <div id="logo">
-                <img src="https://media1.giphy.com/media/l1KVcrdl7rJpFnY2s/giphy.gif" alt="logoPic">
+                <img src="https://media1.giphy.com/media/l1KVcrdl7rJpFnY2s/giphy.gif" alt="logoPic" />
             </div>
             <h1 id="title">
                 <b><span id="eAudio" class="wiggle">e</span>Volunteer</b>
             </h1>
             <form class="form">
-                <input type="text" placeholder="Username" id="emailField">
-                <input type="password" placeholder="Password" id="passField">
+                <input type="text" placeholder="Username" id="emailField" />
+                <input type="password" placeholder="Password" id="passField" />
                 <button type="submit" id="loginButton">Login</button>
                 <div id="signUpMargin">
                     <a id="signUp">No Account? Sign Up</a>
@@ -59,54 +60,74 @@
         </ul>
     </div>
     <!---------------------------------------------NAVIGATION------------------------------------------------->
+    <div class="navigation">
+        <div class="navBar">
+            <ul>
+                <li><a class="homePageBtn">HOME</a></li>
+                <li><a class="missionPageBtn">MISSION</a></li>
+                <li><a class="eventsPageBtn">EVENTS</a></li>
+                <li><a class="myEventsPageBtn">MY EVENTS</a></li>
+                <li><a class="myListingsPageBtn">MY LISTINGS</a></li>
+                <li><a class="aboutUsPageBtn">ABOUT US</a></li>
+                <li><a class="contactPageBtn">CONTACT</a></li>
+                <li><a onclick="logout()">LOG OUT</a></li>
+            </ul>
+        </div>
+    </div>
     <!---------------------------------------------WElCOME PAGE----------------------------------------------->
     <div class="welcomePageWrapper">
-        <div id="navigation">
-            <div class="navBarPic">
-                <ul>
-                    <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
-                            alt="pic1" class="activePic"></li>
-                    <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
-                            alt="pic1"></li>
-                    <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
-                            alt="pic1"></li>
-                </ul>
-            </div>
-            <div class="navBar">
-                <ul>
-                    <li><a href="index.html" class="activePage">HOME</a></li>
-                    <li><a href="status.html">MISSION</a></li>
-                    <li><a href="info.html">EVENTS</a></li>
-                    <li><a href="info.html">MY EVENTS</a></li>
-                    <li><a href="info.html">MY LISTINGS</a></li>
-                    <li><a href="info.html">CONTACT</a></li>
-                    <li><a>LOG OUT</a></li>
-                </ul>
-            </div>
-            <div id="logoutButton1">
-                <div id="logoutBox">
-                    <button onclick="logout()" type="submit" id="logoutButton">Log Out</button>
-                </div>
-            </div>
-        </div>
+        <!-- <div class="navigation"> -->
+        <!-- <div class="navBarPic">
+          <ul>
+            <li>
+              <img
+                src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
+                alt="pic1"
+                class="activePic"
+              />
+            </li>
+
+            <li>
+              <img
+                src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
+                alt="pic1"
+              />
+            </li>
+
+            <li>
+              <img
+                src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
+                alt="pic1"
+              />
+            </li>
+          </ul>
+        </div> -->
+
+        <!-- </div> -->
         <div id="welcomePageTitle">
             <b><span>e</span>Volunteer</b>
         </div>
         <div id="welcomePageLogo">
             <div>
-                <img src="https://media1.giphy.com/media/l1KVcrdl7rJpFnY2s/giphy.gif" alt="logoPic">
+                <img src="https://media1.giphy.com/media/l1KVcrdl7rJpFnY2s/giphy.gif" alt="logoPic" />
             </div>
         </div>
+<<<<<<< HEAD
         <div id="mottoStatement">
             Welcome to <span>e</span>Volunteer!<br><br>Dedicated towards a healthy, eco-friendly future for all of us.
+=======
+        <div id="missionStatement">
+            Welcome to <span>e</span>Volunteer!<br /><br />Dedicated towards a
+            healthy, eco-friendly future for all of us.
+>>>>>>> 6677732f2560352a4cbe9ac4f711dd85f59ecfae
         </div>
         <div id="clickDownArea">
             <div id="clickDownText">
-                Choose your city below and<br>start volunteering!
+                Choose your city below and<br />start volunteering!
             </div>
             <div id="breakPoint"></div>
             <div id="clickDownButton">
-                <img src="Images/scrollDown.png" alt="Scroll Down Button" id="clickButton">
+                <img src="Images/scrollDown.png" alt="Scroll Down Button" id="clickButton" />
             </div>
         </div>
         <div id="welcomePageCities">
@@ -124,40 +145,118 @@
             <div class="cities" name="White Rock">WHITE ROCK</div>
         </div>
     </div>
+    <!------------------------------------------MISSION PAGE-------------------------------------->
+    <div class="missionPageWrapper">
+        <div class="navigation">
+            <!-- <div class="navBarPic">
+                      <ul>
+                        <li>
+                          <img
+                            src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
+                            alt="pic1"
+                            class="activePic"
+                          />
+                        </li>
+            
+                        <li>
+                          <img
+                            src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
+                            alt="pic1"
+                          />
+                        </li>
+            
+                        <li>
+                          <img
+                            src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
+                            alt="pic1"
+                          />
+                        </li>
+                      </ul>
+                    </div> -->
 
+            <div id="missionHeading">
+                <h1><span class="eco">ECO</span>CITY - 2019</h1>
+                <br />
+                <p>
+                    Promoting a <i>Healthy Culture</i> <br />
+                    to strengthen eco-literacy, patterns of human knowledge and creative
+                    expression,
+                    <br />and develop symbolic thought and social learning.
+                </p>
+            </div>
+            <div id="missionSubHeading">
+                <h1><span class="eco">e</span>Volunteer <br /></h1>
+                <p>has currently...</p>
+            </div>
+            <div id="threePictures">
+                <img id="infoPic1" src="http://clipart-library.com/images/kTKognBTj.png" alt="Picture1" />
+                <img id="infoPic2" src="/public/Images/fishPicture.png" alt="Picture2" />
+                <img id="infoPic3" src="https://pngimage.net/wp-content/uploads/2018/05/community-cartoon-png-3.png"
+                    alt="Picture3" />
+            </div>
+
+            <div class="infoPicDesc" id="infoPicDesc1">
+                <span id="infoPicNumber1"></span>cleaner forests
+            </div>
+            <div class="infoPicDesc" id="infoPicDesc2">
+                <span id="infoPicNumber2"></span>fishes saved from cleaner waters
+            </div>
+            <div class="infoPicDesc" id="infoPicDesc3">
+                <span id="infoPicNumber3"></span>organizations signed up
+            </div>
+
+            <div id="infomatics">
+                <div class="box">
+                    <span id="infomatic1">1.3K</span><br />
+                    monthly visitors
+                </div>
+                <div class="box">
+                    <span id="infomatic2">1.1K</span> <br />volunteers connected
+                </div>
+                <div class="box">
+                    <span id="infomatic3">3.2K</span> <br />
+                    positive responses
+                </div>
+                <div class="box">
+                    <span id="infomatic4">10.2K</span> <br />
+                    volunteers needed
+                </div>
+            </div>
+        </div>
+    </div>
     <!--EVENTS PAGE CONTAINER-------------------------------------------------------------------------------->
     <!--*******************************************************************************************-->
     <div id="eventsWrapper">
         <!--EVENTS NAV BAR------------------------------------------------------------------------>
-        <div id="eventsNavBar">
-            <div class="navBarPic">
-                <ul>
-                    <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
-                            alt="pic1"></li>
-                    <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
-                            alt="pic1"></li>
-                    <li><img src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
-                            alt="pic1" class="activePic"></li>
-                </ul>
-            </div>
-            <div class="navBar">
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="status.html">MISSION</a></li>
-                    <li><a href="info.html" class="activePage">EVENTS</a></li>
-                    <li><a href="info.html">MY EVENTS</a></li>
-                    <li><a href="info.html">MY LISTINGS</a></li>
-                    <li><a href="info.html">ABOUT US</a></li>
-                    <li><a href="info.html">CONTACT</a></li>
+        <!-- <div class="navBarPic">
+          <ul>
+            <li>
+              <img
+                src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
+                alt="pic1"
+              />
+            </li>
 
-                </ul>
-            </div>
+            <li>
+              <img
+                src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
+                alt="pic1"
+              />
+            </li>
 
-
+            <li>
+              <img
+                src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
+                alt="pic1"
+                class="activePic"
+              />
+            </li>
+          </ul>
+        </div> -->
         <!--MENU ICON BUTTON-->
         <div class="menuBox">
             <button class="menuButton">
-                <img alt="menu" class="menuPic" src="./Images/menu.png">
+                <img alt="menu" class="menuPic" src="./Images/menu.png" />
             </button>
         </div>
 
@@ -214,19 +313,40 @@
                 </div>
             </div>
 
+        </div>
 
-        <!--EVENT DETAILS BOX----------------------------------------------------------------------->
-        <!--**************************************************************************************-->
 
-        <div id="eventsInfoBox">
-            <!--DETAILS TOP BOX-->
-            <div id="detailsTopBox">
-                <!--DETAILS PICTURE-->
-                <img alt="eventImage" id="eventInfoPic" src="Images/planting.jpeg">
+    </div>
+
+
+
+    <!--EVENT DETAILS BOX----------------------------------------------------------------------->
+    <!--**************************************************************************************-->
+
+    <div id="eventsInfoBox">
+        <!--DETAILS TOP BOX-->
+        <div id="detailsTopBox">
+            <!--DETAILS PICTURE-->
+            <img alt="eventImage" id="eventInfoPic" src="Images/planting.jpeg" />
+        </div>
+        <!--EVENT INFO TITLE-->
+        <div id="eventInfoTitle">
+            Planting Our Future
+        </div>
+        <!--SPECIAL DETAILS BOX-->
+        <div id="specialInfoBox">
+            <!--LOCATION INFO-->
+            <div id="locationInfoBox">
+                <img alt="loc" id="locationPic" src="./Images/location.png" />
+                <div id="locationInfo">Vancouver</div>
             </div>
-            <!--EVENT INFO TITLE-->
-            <div id="eventInfoTitle">
-                Planting Our Future
+            <!--DATE TIME INFO-->
+            <div id="dateTimeInfoBox">
+                <img alt="cal" id="calenderPic" src="./Images/calender.png" />
+                <div id="dateTime">
+                    <div id="dateInfo">May 12,2019</div>
+                    <div id="timeInfo">10:00-13:00</div>
+                </div>
             </div>
             <!--SPECIAL DETAILS BOX-->
             <div id="specialInfoBox">
@@ -255,7 +375,7 @@
                 </div>
                 <!--PEOPLE COUNT INFO-->
                 <div id="peopleCountBox">
-                    <img alt="count" id="peopleCountPic" src="./Images/people.png">
+                    <img alt="count" class="peopleCountPic" src="./Images/people.png">
                     <div class="count">1</div>
                     People going
                 </div>
@@ -266,23 +386,40 @@
                     Hours Credit
                 </div>
             </div>
-            <!--INFO DESCRIPTION BOX-->
-            <div id="infoDescriptionBox">
-                <div>
-                    Trees give off oxygen that we need to breathe. Trees reduce the amount of storm water runoff, which
-                    reduces erosion and pollution in our waterways and may reduce the effects of flooding. Many species
-                    of wildlife depend on trees for habitat. Trees provide food, protection, and homes for many birds
-                    and mammals.
-                </div>
+            <!--EMAIL INFO-->
+            <div id="emailInfoBox">
+                <img alt="email" id="emailPic" src="./Images/email.png" />
+                <div id="emailInfo">FarmBoy@bcit.ca</div>
             </div>
-            <footer>
-                <!--JOIN EVENT BUTTON-->
-                <div id="joinEventButtonBox">
-                    <button id="joinEventButton">Join Event</button>
-                </div>
-            </footer>
+            <!--PEOPLE COUNT INFO-->
+            <div id="peopleCountBox">
+                <img alt="count" class="peopleCountPic" src="./Images/people.png" />
+                <div class="count">1</div>
+                People going
+            </div>
+            <!--CREDITS INFO-->
+            <div id="creditsBox">
+                <img alt="credits" id="creditsPic" src="./Images/star.png" />
+                <div class="credits">3</div>
+                Hours Credit
+            </div>
         </div>
-
+        <!--INFO DESCRIPTION BOX-->
+        <div id="infoDescriptionBox">
+            <div>
+                Trees give off oxygen that we need to breathe. Trees reduce the
+                amount of storm water runoff, which reduces erosion and pollution
+                in our waterways and may reduce the effects of flooding. Many
+                species of wildlife depend on trees for habitat. Trees provide
+                food, protection, and homes for many birds and mammals.
+            </div>
+        </div>
+        <footer>
+            <!--JOIN EVENT BUTTON-->
+            <div id="joinEventButtonBox">
+                <button id="joinEventButton">Join Event</button>
+            </div>
+        </footer>
 
         <!--JOINED EVENTS BOX---------------------------------------------------------------------------->
         <!--**************************************************************************************-->
@@ -291,219 +428,250 @@
                 <div class="credits">
                     <div>3 HOURS CREDIT</div>
                 </div>
-                <!--EVENT PICTURE-->
-                <div>
-                    <div class="eventPicBox">
-                        <!--READ MORE BUTTON-->
-                        <div class="joinedReadMoreBox">
-                            <div></div>
-                            <button class="joinedReadMoreButton">Info</button>
-                        </div>
+                <!--PREVIEW DETAIL BOX-->
+                <div class="previewBox">
+                    <!--DATE-->
+                    <div class="date">
+                        <p class="month">MAY</p>
+                        <p class="day">06</p>
                     </div>
-                </div>
-            </div>
-            <!--PREVIEW DETAIL BOX-->
-            <div class="previewBox">
-                <!--DATE-->
-                <div class="date">
-                    <p class="month">MAY</p>
-                    <p class="day">06</p>
-                </div>
-                <!--MESSAGE-->
-                <div class="eventMessage">
-                    Join us, and be apart of making our city a greener place!
-                </div>
-                <!--CURRENT PEOPLE JOINED-->
-                <div class="peopleBox">
-                    <img alt="people" class="peoplePic" src="./Images/people.png">
-                    <p class="peopleCount">1</p>
+                    <!--MESSAGE-->
+                    <div class="eventMessage">
+                        Join us, and be apart of making our city a greener place!
+                    </div>
+                    <!--CURRENT PEOPLE JOINED-->
+                    <div class="peopleBox">
+                        <img alt="people" class="peoplePic" src="./Images/people.png">
+                        <p class="peopleCount">1</p>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <!--JOINED EVENT DETAILS BOX---------------------------------------------------------------------->
-        <!--********************************************************************************************-->
-        <div class="joinedEventsInfoBox">
-            <!--DETAILS TOP BOX-->
-            <div id="joinedDetailsTopBox">
-                <!--DETAILS PICTURE-->
-                <img alt="eventImage" id="eventInfoPic" src="Images/planting.jpeg">
+        <!--PREVIEW DETAIL BOX-->
+        <div class="previewBox">
+            <!--DATE-->
+            <div id="date">
+                <p id="month">MAY</p>
+                <p id="day">06</p>
             </div>
-            <!--EVENT INFO TITLE-->
-            <div id="eventInfoTitle">
-                Planting Our Future
+            <!--MESSAGE-->
+            <div id="eventMessage">
+                Join us, and be apart of making our city a greener place!
             </div>
-            <!--SPECIAL DETAILS BOX-->
-            <div id="specialInfoBox">
-                <!--LOCATION INFO-->
-                <div id="locationInfoBox">
-                    <img alt="loc" id="locationPic" src="./Images/location.png">
-                    <div id="locationInfo">Vancouver</div>
-                </div>
-                <!--DATE TIME INFO-->
-                <div id="dateTimeInfoBox">
-                    <img alt="cal" id="calenderPic" src="./Images/calender.png">
-                    <div id="dateTime">
-                        <div id="dateInfo">May 12,2019</div>
-                        <div id="timeInfo">10:00-13:00</div>
-                    </div>
-                </div>
-                <!--ORGANIZER INFO-->
-                <div id="organizerInfoBox">
-                    <img alt="org" id="organizerPic" src="./Images/organizer.png">
-                    <div id="organizerInfo">Green Crusaders</div>
-                </div>
-                <!--EMAIL INFO-->
-                <div id="emailInfoBox">
-                    <img alt="email" id="emailPic" src="./Images/email.png">
-                    <div id="emailInfo">FarmBoy@bcit.ca</div>
-                </div>
-                <!--PEOPLE COUNT INFO-->
-                <div id="peopleCountBox">
-                    <img alt="count" id="peopleCountPic" src="./Images/people.png">
-                    <div class="count">1</div>
-                    People going
-                </div>
-                <!--CREDITS INFO-->
-                <div id="creditsBox">
-                    <img alt="credits" id="creditsPic" src="./Images/star.png">
-                    <div class="credits">3</div>
-                    Hours Credit
-                </div>
+            <!--CURRENT PEOPLE JOINED-->
+            <div id="peopleBox">
+                <img alt="people" class="peoplePic" src="./Images/people.png" />
+                <p id="peopleCount">1</p>
             </div>
-            <!--INFO DESCRIPTION BOX-->
-            <div id="infoDescriptionBox">
-                <div>
-                    Trees give off oxygen that we need to breathe. Trees reduce the amount of storm water runoff,
-                    which
-                    reduces erosion and pollution in our waterways and may reduce the effects of flooding. Many
-                    species
-                    of wildlife depend on trees for habitat. Trees provide food, protection, and homes for many
-                    birds
-                    and mammals.
-                </div>
-            </div>
-            <footer>
-                <!--JOIN EVENT BUTTON-->
-                <div id="joinEventButtonBox">
-                    <button id="joinEventButton">Unjoin Event</button>
-                </div>
-            </footer>
         </div>
     </div>
-        </div>
 
-        <!--JOINED EVENTS BOX---------------------------------------------------------------------------->
-        <!--**************************************************************************************-->
-        <div class="joinedEventsBox">
-            <div class="joinedEvents">
-                <div id="credits">
-                    <div>3 HOURS CREDIT</div>
+    <!--JOINED EVENT DETAILS BOX---------------------------------------------------------------------->
+    <!--********************************************************************************************-->
+    <div class="joinedEventsInfoBox">
+        <!--DETAILS TOP BOX-->
+        <div id="joinedDetailsTopBox">
+            <!--DETAILS PICTURE-->
+            <img alt="eventImage" id="eventInfoPic" src="Images/planting.jpeg" />
+        </div>
+        <!--EVENT INFO TITLE-->
+        <div id="eventInfoTitle">
+            Planting Our Future
+        </div>
+        <!--SPECIAL DETAILS BOX-->
+        <div id="specialInfoBox">
+            <!--LOCATION INFO-->
+            <div id="locationInfoBox">
+                <img alt="loc" id="locationPic" src="./Images/location.png" />
+                <div id="locationInfo">Vancouver</div>
+            </div>
+            <!--DATE TIME INFO-->
+            <div id="dateTimeInfoBox">
+                <img alt="cal" id="calenderPic" src="./Images/calender.png" />
+                <div id="dateTime">
+                    <div id="dateInfo">May 12,2019</div>
+                    <div id="timeInfo">10:00-13:00</div>
                 </div>
-                <!--EVENT PICTURE-->
-                <div>
-                    <div id="eventPicBox">
-                        <!--READ MORE BUTTON-->
-                        <div class="joinedReadMoreBox">
-                            <div></div>
-                            <button class="joinedReadMoreButton">Info</button>
-                        </div>
-                        <!--EVENT IMAGE-->
-                        <img alt="eventImage" id="eventPic" src="Images/planting.jpeg">
+            </div>
+            <!--ORGANIZER INFO-->
+            <div id="organizerInfoBox">
+                <img alt="org" id="organizerPic" src="./Images/organizer.png" />
+                <div id="organizerInfo">Green Crusaders</div>
+            </div>
+            <!--EMAIL INFO-->
+            <div id="emailInfoBox">
+                <img alt="email" id="emailPic" src="./Images/email.png" />
+                <div id="emailInfo">FarmBoy@bcit.ca</div>
+            </div>
+            <!--PEOPLE COUNT INFO-->
+            <div id="peopleCountBox">
+                <img alt="count" class="peoplePic" src="./Images/people.png" />
+                <div class="count">1</div>
+                People going
+            </div>
+            <!--CREDITS INFO-->
+            <div id="creditsBox">
+                <img alt="credits" id="creditsPic" src="./Images/star.png" />
+                <div class="credits">3</div>
+                Hours Credit
+            </div>
+        </div>
+        <!--INFO DESCRIPTION BOX-->
+        <div id="infoDescriptionBox">
+            <div>
+                Trees give off oxygen that we need to breathe. Trees reduce the
+                amount of storm water runoff, which reduces erosion and pollution
+                in our waterways and may reduce the effects of flooding. Many
+                species of wildlife depend on trees for habitat. Trees provide
+                food, protection, and homes for many birds and mammals.
+            </div>
+        </div>
+        <footer>
+            <!--JOIN EVENT BUTTON-->
+            <div id="joinEventButtonBox">
+                <button id="joinEventButton">Unjoin Event</button>
+            </div>
+        </footer>
+    </div>
+
+    <!--JOINED EVENTS BOX---------------------------------------------------------------------------->
+    <!--**************************************************************************************-->
+    <div class="joinedEventsBox">
+        <div class="joinedEvents">
+            <div id="credits">
+                <div>3 HOURS CREDIT</div>
+            </div>
+            <!--EVENT PICTURE-->
+            <div>
+                <div id="eventPicBox">
+                    <!--READ MORE BUTTON-->
+                    <div class="joinedReadMoreBox">
+                        <div></div>
+                        <button class="joinedReadMoreButton">Info</button>
                     </div>
-                </div>
-            </div>
-            <!--PREVIEW DETAIL BOX-->
-            <div class="previewBox">
-                <!--DATE-->
-                <div class="date">
-                    <p class="month">MAY</p>
-                    <p class="day">06</p>
-                </div>
-                <!--MESSAGE-->
-                <div class="eventMessage">
-                    Join us, and be apart of making our city a greener place!
-                </div>
-                <!--CURRENT PEOPLE JOINED-->
-                <div class="peopleBox">
-                    <img alt="people" class="peoplePic" src="./Images/people.png">
-                    <p class="peopleCount">1</p>
+                    <!--EVENT IMAGE-->
+                    <img alt="eventImage" id="eventPic" src="Images/planting.jpeg">
                 </div>
             </div>
         </div>
-
-
-        <!--JOINED EVENT DETAILS BOX---------------------------------------------------------------------->
-        <!--********************************************************************************************-->
-        <div class="joinedEventsInfoBox">
-            <!--DETAILS TOP BOX-->
-            <div id="joinedDetailsTopBox">
-                <!--DETAILS PICTURE-->
-                <img alt="eventImage" id="eventInfoPic" src="Images/planting.jpeg">
+        <!--PREVIEW DETAIL BOX-->
+        <div class="previewBox">
+            <!--DATE-->
+            <div class="date">
+                <p class="month">MAY</p>
+                <p class="day">06</p>
             </div>
-            <!--EVENT INFO TITLE-->
-            <div id="eventInfoTitle">
-                Planting Our Future
+            <!--MESSAGE-->
+            <div class="eventMessage">
+                Join us, and be apart of making our city a greener place!
             </div>
-            <!--SPECIAL DETAILS BOX-->
-            <div id="specialInfoBox">
-                <!--LOCATION INFO-->
-                <div id="locationInfoBox">
-                    <img alt="loc" id="locationPic" src="./Images/location.png">
-                    <div id="locationInfo">Vancouver</div>
-                </div>
-                <!--DATE TIME INFO-->
-                <div id="dateTimeInfoBox">
-                    <img alt="cal" id="calenderPic" src="./Images/calender.png">
-                    <div id="dateTime">
-                        <div id="dateInfo">May 12,2019</div>
-                        <div id="timeInfo">10:00-13:00</div>
-                    </div>
-                </div>
-                <!--ORGANIZER INFO-->
-                <div id="organizerInfoBox">
-                    <img alt="org" id="organizerPic" src="./Images/organizer.png">
-                    <div id="organizerInfo">Green Crusaders</div>
-                </div>
-                <!--EMAIL INFO-->
-                <div id="emailInfoBox">
-                    <img alt="email" id="emailPic" src="./Images/email.png">
-                    <div id="emailInfo">FarmBoy@bcit.ca</div>
-                </div>
-                <!--PEOPLE COUNT INFO-->
-                <div id="peopleCountBox">
-                    <img alt="count" id="peopleCountPic" src="./Images/people.png">
-                    <div class="count">1</div>
-                    People going
-                </div>
-                <!--CREDITS INFO-->
-                <div id="creditsBox">
-                    <img alt="credits" id="creditsPic" src="./Images/star.png">
-                    <div class="credits">3</div>
-                    Hours Credit
-                </div>
+            <!--CURRENT PEOPLE JOINED-->
+            <div class="peopleBox">
+                <img alt="people" class="peoplePic" src="./Images/people.png">
+                <p class="peopleCount">1</p>
             </div>
-            <!--INFO DESCRIPTION BOX-->
-            <div id="infoDescriptionBox">
-                <div>
-                    Trees give off oxygen that we need to breathe. Trees reduce the amount of storm water runoff,
-                    which
-                    reduces erosion and pollution in our waterways and may reduce the effects of flooding. Many
-                    species
-                    of wildlife depend on trees for habitat. Trees provide food, protection, and homes for many
-                    birds
-                    and mammals.
-                </div>
-            </div>
-            <footer>
-                <!--JOIN EVENT BUTTON-->
-                <div id="joinEventButtonBox">
-                    <button id="joinEventButton">Unjoin Event</button>
-                </div>
-            </footer>
         </div>
+        <!--EVENT IMAGE-->
+        <img alt="eventImage" id="eventPic" src="Images/planting.jpeg" />
+    </div>
 
-<!----------------------------JQUERY/JAVASCRIPT FILES TO BE LOADED AFTER HTML DOCUMENT LOADS-->
+
+    <!--JOINED EVENT DETAILS BOX---------------------------------------------------------------------->
+    <!--********************************************************************************************-->
+    <div class="joinedEventsInfoBox">
+        <!--DETAILS TOP BOX-->
+        <div id="joinedDetailsTopBox">
+            <!--DETAILS PICTURE-->
+            <img alt="eventImage" id="eventInfoPic" src="Images/planting.jpeg" />
+        </div>
+        <!--EVENT INFO TITLE-->
+        <div id="eventInfoTitle">
+            Planting Our Future
+        </div>
+        <!--SPECIAL DETAILS BOX-->
+        <div id="specialInfoBox">
+            <!--LOCATION INFO-->
+            <div id="locationInfoBox">
+                <img alt="loc" id="locationPic" src="./Images/location.png" />
+                <div id="locationInfo">Vancouver</div>
+            </div>
+            <!--DATE TIME INFO-->
+            <div id="dateTimeInfoBox">
+                <img alt="cal" id="calenderPic" src="./Images/calender.png" />
+                <div id="dateTime">
+                    <div id="dateInfo">May 12,2019</div>
+                    <div id="timeInfo">10:00-13:00</div>
+                </div>
+            </div>
+            <!--ORGANIZER INFO-->
+            <div id="organizerInfoBox">
+                <img alt="org" id="organizerPic" src="./Images/organizer.png" />
+                <div id="organizerInfo">Green Crusaders</div>
+            </div>
+            <!--EMAIL INFO-->
+            <div id="emailInfoBox">
+                <img alt="email" id="emailPic" src="./Images/email.png" />
+                <div id="emailInfo">FarmBoy@bcit.ca</div>
+            </div>
+            <!--PEOPLE COUNT INFO-->
+            <div id="peopleCountBox">
+                <img alt="count" class="peopleCountPic" src="./Images/people.png" />
+                <div class="count">1</div>
+                People going
+            </div>
+            <!--CREDITS INFO-->
+            <div id="creditsBox">
+                <img alt="credits" id="creditsPic" src="./Images/star.png" />
+                <div class="credits">3</div>
+                Hours Credit
+            </div>
+        </div>
+        <!--INFO DESCRIPTION BOX-->
+        <div id="infoDescriptionBox">
+            <div>
+                Trees give off oxygen that we need to breathe. Trees reduce the amount
+                of storm water runoff, which reduces erosion and pollution in our
+                waterways and may reduce the effects of flooding. Many species of
+                wildlife depend on trees for habitat. Trees provide food, protection,
+                and homes for many birds and mammals.
+            </div>
+        </div>
+        <footer>
+            <!--JOIN EVENT BUTTON-->
+            <div id="joinEventButtonBox">
+                <button id="joinEventButton">Unjoin Event</button>
+            </div>
+        </footer>
+    </div>
+    </div>
+    <!----------------------------JQUERY/JAVASCRIPT FILES TO BE LOADED AFTER HTML DOCUMENT LOADS-->
+    <script>
+        //Function event jquery function upon clicking mission button
+        $(".missionPageBtn").click(function (event) {
+            event.preventDefault();
+            $(".welcomePageWrapper").fadeOut(100);
+            setTimeout(function () {
+                $(".missionPageWrapper").fadeIn(300);
+            }, 200);
+            $(".missionPageWrapper").css("display: block");
+        });
+
+        $(".homePageBtn").click(function (event) {
+            event.preventDefault();
+            $(".missionPageWrapper").fadeOut(100);
+            setTimeout(function () {
+                $(".welcomePageWrapper").fadeIn(300);
+            }, 200);
+            $(".welcomePageWrapper").css("display: block");
+        });
+
+    </script>
+    <script>
+        //determines what page it's on depending on wrapper display, then adds background white color to nav bar active page
+
+        // var homeBtn = $(".homePageButton");
+        // $(".welcomePageWrapper").css("display", "block") ? homeBtn.addClass("activePage") : homeBtn.removeClass("activePage");
+    </script>
     <script src="./js/logInVerifyTransition.js"></script>
     <script src="./js/signOut.js"></script>
     <script src="./js/firebaseSignUpAPI.js"></script>
@@ -514,7 +682,8 @@
     <script src="./js/fireworks.js"></script>
     <script src="./js/audioPlay.js"></script>
     <script src="./js/scrollDown.js"></script>
-
+    <script src="./js/userInit.js"></script>
+    <script src="./js/joinEvent.js"></script>
 </body>
 
 </html>
