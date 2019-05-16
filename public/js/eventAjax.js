@@ -1,7 +1,7 @@
 // AJAX to import data from firebase
-$('.cities').click(function () {
+$('.cities').click(function (x) {
     // Grabbing clicked name attribute
-    let city = $(this).attr('name');
+    var city = $(this).attr('name');
     console.log(city);
     $.ajax({
         type: 'GET',
@@ -87,10 +87,15 @@ $('.cities').click(function () {
                 peopleCount.setAttribute('class', 'peopleCount');
                 peopleBox.append(peopleCount);
 
+<<<<<<< HEAD
+                // Putting value into dom element
+                let k = keys[i];
+=======
 
 
 
                 
+>>>>>>> f44fe02ae148ed7dda9bd9f1a2705f2fdb524b33
                 $(eventMessage).text(data[k].subject);
                 $(month).text(data[k].month);
                 $(day).text(data[k].day);
