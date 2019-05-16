@@ -222,7 +222,7 @@
     </div>
     <!--EVENTS PAGE CONTAINER-------------------------------------------------------------------------------->
     <!--*******************************************************************************************-->
-    <div id="eventsWrapper">
+    <div class="eventsWrapper">
         <!--EVENTS NAV BAR------------------------------------------------------------------------>
         <!-- <div class="navBarPic">
           <ul>
@@ -257,8 +257,8 @@
         </div>
 
         <!--MENU DROPDOWN BOX----------------------------->
-        <div id="dropDownBox">
-            <div id="dropDown">
+        <div class="dropDownBox">
+            <div class="dropDown">
                 <button class="dropButtons">Home</button>
                 <button class="dropButtons">About Us</button>
                 <button class="dropButtons">Location</button>
@@ -310,8 +310,6 @@
             </div>
 
         </div>
-
-
     </div>
 
 
@@ -319,41 +317,139 @@
     <!--EVENT DETAILS BOX----------------------------------------------------------------------->
     <!--**************************************************************************************-->
 
-    <div id="eventsInfoBox">
+    <div class="eventsInfoBox">
         <!--DETAILS TOP BOX-->
-        <div id="detailsTopBox">
+        <div class="detailsTopBox">
             <!--DETAILS PICTURE-->
-            <img alt="eventImage" id="eventInfoPic" src="Images/planting.jpeg" />
+            <img alt="eventImage" class="eventInfoPic" src="Images/planting.jpeg" />
         </div>
         <!--EVENT INFO TITLE-->
-        <div id="eventInfoTitle">
+        <div class="eventInfoTitle">
             Planting Our Future
         </div>
+
         <!--SPECIAL DETAILS BOX-->
-        <div id="specialInfoBox">
+        <div class="specialInfoBox">
             <!--LOCATION INFO-->
-            <div id="locationInfoBox">
-                <img alt="loc" id="locationPic" src="./Images/location.png" />
-                <div id="locationInfo">Vancouver</div>
+            <div class="locationInfoBox">
+                <img alt="loc" class="locationPic" src="./Images/location.png">
+                <div class="locationInfo">Vancouver</div>
             </div>
             <!--DATE TIME INFO-->
-            <div id="dateTimeInfoBox">
-                <img alt="cal" id="calenderPic" src="./Images/calender.png" />
-                <div id="dateTime">
-                    <div id="dateInfo">May 12,2019</div>
-                    <div id="timeInfo">10:00-13:00</div>
+            <div class="dateTimeInfoBox">
+                <img alt="cal" class="calenderPic" src="./Images/calender.png">
+                <div class="dateTime">
+                    <div class="dateInfo">May 12,2019</div>
+                    <div class="timeInfo">10:00-13:00</div>
                 </div>
+            </div>
+            <!--ORGANIZER INFO-->
+            <div class="organizerInfoBox">
+                <img alt="org" class="organizerPic" src="./Images/organizer.png">
+                <div class="organizerInfo">Green Crusaders</div>
+            </div>
+            <!--EMAIL INFO-->
+            <div class="emailInfoBox">
+                <img alt="email" class="emailPic" src="./Images/email.png" />
+                <div class="emailInfo">FarmBoy@bcit.ca</div>
+            </div>
+            <!--PEOPLE COUNT INFO-->
+            <div class="peopleCountBox">
+                <img alt="count" class="peoplePic" src="./Images/people.png" />
+                <div class="count">1</div>
+                People going
+            </div>
+            <!--CREDITS INFO-->
+            <div class="creditsBox">
+                <img alt="credits" class="creditsPic" src="./Images/star.png" />
+                <div class="detailCredits">3</div>
+                <div>Hours Credit</div>
+            </div>
+        </div>
+            <!--INFO DESCRIPTION BOX-->
+            <div class="infoDescriptionBox">
+                <div>
+                    Trees give off oxygen that we need to breathe. Trees reduce the
+                    amount of storm water runoff, which reduces erosion and pollution
+                    in our waterways and may reduce the effects of flooding. Many
+                    species of wildlife depend on trees for habitat. Trees provide
+                    food, protection, and homes for many birds and mammals.
+                </div>
+            </div>
+            <footer>
+                <!--JOIN EVENT BUTTON-->
+                <div class="joinEventButtonBox">
+                    <button class="joinEventButton">Join Event</button>
+                </div>
+            </footer>
+
+            <!--JOINED EVENTS BOX---------------------------------------------------------------------------->
+            <!--**************************************************************************************-->
+            <div class="joinedEventsBox">
+                <div class="joinedEvents">
+                    <div class="credits">
+                        <div>3 HOURS CREDIT</div>
+                    </div>
+                    <!--PREVIEW DETAIL BOX-->
+                    <div class="previewBox">
+                        <!--DATE-->
+                        <div class="date">
+                            <p class="month">MAY</p>
+                            <p class="day">06</p>
+                        </div>
+                        <!--MESSAGE-->
+                        <div class="eventMessage">
+                            Join us, and be apart of making our city a greener place!
+                        </div>
+                        <!--CURRENT PEOPLE JOINED-->
+                        <div class="peopleBox">
+                            <img alt="people" class="peoplePic" src="./Images/people.png">
+                            <p class="peopleCount">1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--PREVIEW DETAIL BOX-->
+            <div class="previewBox">
+                <!--DATE-->
+                <div id="date">
+                    <p id="month">MAY</p>
+                    <p id="day">06</p>
+                </div>
+                <!--MESSAGE-->
+                <div id="eventMessage">
+                    Join us, and be apart of making our city a greener place!
+                </div>
+                <!--CURRENT PEOPLE JOINED-->
+                <div id="peopleBox">
+                    <img alt="people" class="peoplePic" src="./Images/people.png" />
+                    <p class="peopleCount">1</p>
+                </div>
+            </div>
+        </div>
+
+        <!--JOINED EVENT DETAILS BOX---------------------------------------------------------------------->
+        <!--********************************************************************************************-->
+        <div class="joinedEventsInfoBox">
+            <!--DETAILS TOP BOX-->
+            <div id="joinedDetailsTopBox">
+                <!--DETAILS PICTURE-->
+                <img alt="eventImage" id="eventInfoPic" src="Images/planting.jpeg" />
+            </div>
+            <!--EVENT INFO TITLE-->
+            <div id="eventInfoTitle">
+                Planting Our Future
             </div>
             <!--SPECIAL DETAILS BOX-->
             <div id="specialInfoBox">
                 <!--LOCATION INFO-->
                 <div id="locationInfoBox">
-                    <img alt="loc" id="locationPic" src="./Images/location.png">
+                    <img alt="loc" id="locationPic" src="./Images/location.png" />
                     <div id="locationInfo">Vancouver</div>
                 </div>
                 <!--DATE TIME INFO-->
                 <div id="dateTimeInfoBox">
-                    <img alt="cal" id="calenderPic" src="./Images/calender.png">
+                    <img alt="cal" id="calenderPic" src="./Images/calender.png" />
                     <div id="dateTime">
                         <div id="dateInfo">May 12,2019</div>
                         <div id="timeInfo">10:00-13:00</div>
@@ -361,477 +457,354 @@
                 </div>
                 <!--ORGANIZER INFO-->
                 <div id="organizerInfoBox">
-                    <img alt="org" id="organizerPic" src="./Images/organizer.png">
+                    <img alt="org" id="organizerPic" src="./Images/organizer.png" />
                     <div id="organizerInfo">Green Crusaders</div>
                 </div>
                 <!--EMAIL INFO-->
                 <div id="emailInfoBox">
-                    <img alt="email" id="emailPic" src="./Images/email.png">
+                    <img alt="email" id="emailPic" src="./Images/email.png" />
                     <div id="emailInfo">FarmBoy@bcit.ca</div>
                 </div>
                 <!--PEOPLE COUNT INFO-->
                 <div id="peopleCountBox">
-                    <img alt="count" class="peopleCountPic" src="./Images/people.png">
+                    <img alt="count" class="peoplePic" src="./Images/people.png" />
                     <div class="count">1</div>
                     People going
                 </div>
                 <!--CREDITS INFO-->
                 <div id="creditsBox">
-                    <img alt="credits" id="creditsPic" src="./Images/star.png">
-                    <div class="eventsCredits">3</div>
-                    Hours Credit
+                    <img alt="credits" id="creditsPic" src="./Images/star.png" />
+                    <div class="credits">3</div>
+                    <div>Hours Credit</div>
                 </div>
             </div>
-            <!--EMAIL INFO-->
-            <div id="emailInfoBox">
-                <img alt="email" id="emailPic" src="./Images/email.png" />
-                <div id="emailInfo">FarmBoy@bcit.ca</div>
+            <!--INFO DESCRIPTION BOX-->
+            <div id="infoDescriptionBox">
+                <div>
+                    Trees give off oxygen that we need to breathe. Trees reduce the
+                    amount of storm water runoff, which reduces erosion and pollution
+                    in our waterways and may reduce the effects of flooding. Many
+                    species of wildlife depend on trees for habitat. Trees provide
+                    food, protection, and homes for many birds and mammals.
+                </div>
             </div>
-            <!--PEOPLE COUNT INFO-->
-            <div id="peopleCountBox">
-                <img alt="count" class="peopleCountPic" src="./Images/people.png" />
-                <div class="count">1</div>
-                People going
-            </div>
-            <!--CREDITS INFO-->
-            <div id="creditsBox">
-                <img alt="credits" id="creditsPic" src="./Images/star.png" />
-                <div class="credits">3</div>
-                Hours Credit
-            </div>
+            <footer>
+                <!--JOIN EVENT BUTTON-->
+                <div id="joinEventButtonBox">
+                    <button id="joinEventButton">Unjoin Event</button>
+                </div>
+            </footer>
         </div>
-        <!--INFO DESCRIPTION BOX-->
-        <div id="infoDescriptionBox">
-            <div>
-                Trees give off oxygen that we need to breathe. Trees reduce the
-                amount of storm water runoff, which reduces erosion and pollution
-                in our waterways and may reduce the effects of flooding. Many
-                species of wildlife depend on trees for habitat. Trees provide
-                food, protection, and homes for many birds and mammals.
-            </div>
-        </div>
-        <footer>
-            <!--JOIN EVENT BUTTON-->
-            <div id="joinEventButtonBox">
-                <button id="joinEventButton">Join Event</button>
-            </div>
-        </footer>
 
         <!--JOINED EVENTS BOX---------------------------------------------------------------------------->
         <!--**************************************************************************************-->
         <div class="joinedEventsBox">
             <div class="joinedEvents">
-                <div class="credits">
+                <div id="credits">
                     <div>3 HOURS CREDIT</div>
                 </div>
-                <!--PREVIEW DETAIL BOX-->
-                <div class="previewBox">
-                    <!--DATE-->
-                    <div class="date">
-                        <p class="month">MAY</p>
-                        <p class="day">06</p>
-                    </div>
-                    <!--MESSAGE-->
-                    <div class="eventMessage">
-                        Join us, and be apart of making our city a greener place!
-                    </div>
-                    <!--CURRENT PEOPLE JOINED-->
-                    <div class="peopleBox">
-                        <img alt="people" class="peoplePic" src="./Images/people.png">
-                        <p class="peopleCount">1</p>
+                <!--EVENT PICTURE-->
+                <div>
+                    <div id="eventPicBox">
+                        <!--READ MORE BUTTON-->
+                        <div class="joinedReadMoreBox">
+                            <div></div>
+                            <button class="joinedReadMoreButton">Info</button>
+                        </div>
+                        <!--EVENT IMAGE-->
+                        <img alt="eventImage" id="eventPic" src="Images/planting.jpeg">
                     </div>
                 </div>
             </div>
-        </div>
-        <!--PREVIEW DETAIL BOX-->
-        <div class="previewBox">
-            <!--DATE-->
-            <div id="date">
-                <p id="month">MAY</p>
-                <p id="day">06</p>
-            </div>
-            <!--MESSAGE-->
-            <div id="eventMessage">
-                Join us, and be apart of making our city a greener place!
-            </div>
-            <!--CURRENT PEOPLE JOINED-->
-            <div id="peopleBox">
-                <img alt="people" class="peoplePic" src="./Images/people.png" />
-                <p id="peopleCount">1</p>
-            </div>
-        </div>
-    </div>
-
-    <!--JOINED EVENT DETAILS BOX---------------------------------------------------------------------->
-    <!--********************************************************************************************-->
-    <div class="joinedEventsInfoBox">
-        <!--DETAILS TOP BOX-->
-        <div id="joinedDetailsTopBox">
-            <!--DETAILS PICTURE-->
-            <img alt="eventImage" id="eventInfoPic" src="Images/planting.jpeg" />
-        </div>
-        <!--EVENT INFO TITLE-->
-        <div id="eventInfoTitle">
-            Planting Our Future
-        </div>
-        <!--SPECIAL DETAILS BOX-->
-        <div id="specialInfoBox">
-            <!--LOCATION INFO-->
-            <div id="locationInfoBox">
-                <img alt="loc" id="locationPic" src="./Images/location.png" />
-                <div id="locationInfo">Vancouver</div>
-            </div>
-            <!--DATE TIME INFO-->
-            <div id="dateTimeInfoBox">
-                <img alt="cal" id="calenderPic" src="./Images/calender.png" />
-                <div id="dateTime">
-                    <div id="dateInfo">May 12,2019</div>
-                    <div id="timeInfo">10:00-13:00</div>
+            <!--PREVIEW DETAIL BOX-->
+            <div class="previewBox">
+                <!--DATE-->
+                <div class="date">
+                    <p class="month">MAY</p>
+                    <p class="day">06</p>
+                </div>
+                <!--MESSAGE-->
+                <div class="eventMessage">
+                    Join us, and be apart of making our city a greener place!
+                </div>
+                <!--CURRENT PEOPLE JOINED-->
+                <div class="peopleBox">
+                    <img alt="people" class="peoplePic" src="./Images/people.png">
+                    <p class="peopleCount">1</p>
                 </div>
             </div>
-            <!--ORGANIZER INFO-->
-            <div id="organizerInfoBox">
-                <img alt="org" id="organizerPic" src="./Images/organizer.png" />
-                <div id="organizerInfo">Green Crusaders</div>
-            </div>
-            <!--EMAIL INFO-->
-            <div id="emailInfoBox">
-                <img alt="email" id="emailPic" src="./Images/email.png" />
-                <div id="emailInfo">FarmBoy@bcit.ca</div>
-            </div>
-            <!--PEOPLE COUNT INFO-->
-            <div id="peopleCountBox">
-                <img alt="count" class="peoplePic" src="./Images/people.png" />
-                <div class="count">1</div>
-                People going
-            </div>
-            <!--CREDITS INFO-->
-            <div id="creditsBox">
-                <img alt="credits" id="creditsPic" src="./Images/star.png" />
-                <div class="credits">3</div>
-                Hours Credit
-            </div>
+            <!--EVENT IMAGE-->
+            <img alt="eventImage" id="eventPic" src="Images/planting.jpeg" />
         </div>
-        <!--INFO DESCRIPTION BOX-->
-        <div id="infoDescriptionBox">
-            <div>
-                Trees give off oxygen that we need to breathe. Trees reduce the
-                amount of storm water runoff, which reduces erosion and pollution
-                in our waterways and may reduce the effects of flooding. Many
-                species of wildlife depend on trees for habitat. Trees provide
-                food, protection, and homes for many birds and mammals.
-            </div>
-        </div>
-        <footer>
-            <!--JOIN EVENT BUTTON-->
-            <div id="joinEventButtonBox">
-                <button id="joinEventButton">Unjoin Event</button>
-            </div>
-        </footer>
-    </div>
 
-    <!--JOINED EVENTS BOX---------------------------------------------------------------------------->
-    <!--**************************************************************************************-->
-    <div class="joinedEventsBox">
-        <div class="joinedEvents">
-            <div id="credits">
-                <div>3 HOURS CREDIT</div>
+
+        <!--JOINED EVENT DETAILS BOX---------------------------------------------------------------------->
+        <!--********************************************************************************************-->
+        <div class="joinedEventsInfoBox">
+            <!--DETAILS TOP BOX-->
+            <div id="joinedDetailsTopBox">
+                <!--DETAILS PICTURE-->
+                <img alt="eventImage" id="eventInfoPic" src="Images/planting.jpeg" />
             </div>
-            <!--EVENT PICTURE-->
-            <div>
-                <div id="eventPicBox">
-                    <!--READ MORE BUTTON-->
-                    <div class="joinedReadMoreBox">
-                        <div></div>
-                        <button class="joinedReadMoreButton">Info</button>
-                    </div>
-                    <!--EVENT IMAGE-->
-                    <img alt="eventImage" id="eventPic" src="Images/planting.jpeg">
+            <!--EVENT INFO TITLE-->
+            <div id="eventInfoTitle">
+                Planting Our Future
+            </div>
+            <!--SPECIAL DETAILS BOX-->
+            <div id="specialInfoBox">
+                <!--LOCATION INFO-->
+                <div id="locationInfoBox">
+                    <img alt="loc" id="locationPic" src="./Images/location.png" />
+                    <div id="locationInfo">Vancouver</div>
                 </div>
-            </div>
-        </div>
-        <!--PREVIEW DETAIL BOX-->
-        <div class="previewBox">
-            <!--DATE-->
-            <div class="date">
-                <p class="month">MAY</p>
-                <p class="day">06</p>
-            </div>
-            <!--MESSAGE-->
-            <div class="eventMessage">
-                Join us, and be apart of making our city a greener place!
-            </div>
-            <!--CURRENT PEOPLE JOINED-->
-            <div class="peopleBox">
-                <img alt="people" class="peoplePic" src="./Images/people.png">
-                <p class="peopleCount">1</p>
-            </div>
-        </div>
-        <!--EVENT IMAGE-->
-        <img alt="eventImage" id="eventPic" src="Images/planting.jpeg" />
-    </div>
-
-
-    <!--JOINED EVENT DETAILS BOX---------------------------------------------------------------------->
-    <!--********************************************************************************************-->
-    <div class="joinedEventsInfoBox">
-        <!--DETAILS TOP BOX-->
-        <div id="joinedDetailsTopBox">
-            <!--DETAILS PICTURE-->
-            <img alt="eventImage" id="eventInfoPic" src="Images/planting.jpeg" />
-        </div>
-        <!--EVENT INFO TITLE-->
-        <div id="eventInfoTitle">
-            Planting Our Future
-        </div>
-        <!--SPECIAL DETAILS BOX-->
-        <div id="specialInfoBox">
-            <!--LOCATION INFO-->
-            <div id="locationInfoBox">
-                <img alt="loc" id="locationPic" src="./Images/location.png" />
-                <div id="locationInfo">Vancouver</div>
-            </div>
-            <!--DATE TIME INFO-->
-            <div id="dateTimeInfoBox">
-                <img alt="cal" id="calenderPic" src="./Images/calender.png" />
-                <div id="dateTime">
-                    <div id="dateInfo">May 12,2019</div>
-                    <div id="timeInfo">10:00-13:00</div>
-                </div>
-            </div>
-            <!--ORGANIZER INFO-->
-            <div id="organizerInfoBox">
-                <img alt="org" id="organizerPic" src="./Images/organizer.png" />
-                <div id="organizerInfo">Green Crusaders</div>
-            </div>
-            <!--EMAIL INFO-->
-            <div id="emailInfoBox">
-                <img alt="email" id="emailPic" src="./Images/email.png" />
-                <div id="emailInfo">FarmBoy@bcit.ca</div>
-            </div>
-            <!--PEOPLE COUNT INFO-->
-            <div id="peopleCountBox">
-                <img alt="count" class="peopleCountPic" src="./Images/people.png" />
-                <div class="count">1</div>
-                People going
-            </div>
-            <!--CREDITS INFO-->
-            <div id="creditsBox">
-                <img alt="credits" id="creditsPic" src="./Images/star.png" />
-                <div class="credits">3</div>
-                Hours Credit
-            </div>
-        </div>
-        <!--INFO DESCRIPTION BOX-->
-        <div id="infoDescriptionBox">
-            <div>
-                Trees give off oxygen that we need to breathe. Trees reduce the amount
-                of storm water runoff, which reduces erosion and pollution in our
-                waterways and may reduce the effects of flooding. Many species of
-                wildlife depend on trees for habitat. Trees provide food, protection,
-                and homes for many birds and mammals.
-            </div>
-        </div>
-        <footer>
-            <!--JOIN EVENT BUTTON-->
-            <div id="joinEventButtonBox">
-                <button id="joinEventButton">Unjoin Event</button>
-            </div>
-        </footer>
-    </div>
-
-
-    <!--ORGANIZER UI EVENTS WRAPPER PAGE-------------------------------->
-    <!------------------------------------------------------------------>
-    <div class="organizerEventsWrapper">
-
-        <!--ORGANIZER UI CREATE EVENT----------------------------------------------------------->
-        <!-------------------------------------------------------------------------------------->
-        <div class="mainBox">
-            <!--VIDEO BOX-->
-            <div class="vidBox">
-                <iframe class="vid" src="https://www.youtube.com/embed/56MhjXTcSCg?autoplay=1">
-                </iframe>
-            </div>
-            <!--CREATE FORM BOX-->
-            <div class="createEventFormBox">
-                <div class="organizerEventInfo">
-                    <!--ORGANIZER UI ORGANIZATION BOX-->
-                    <div class="createTitle">
-                        Create Your Event
-                    </div>
-                    <div>
-                        <div class="label organizerLabel">Organization</div>
-                        <div class="contentBox">
-                            <input class="organizationInput" type="text" required="required">
-                        </div>
-                    </div>
-                    <!--ORGANIZER UI EVENT NAME BOX-->
-                    <div>
-                        <div class="organizerLabel">Event Name</div>
-                        <div class="contentBox">
-                            <input class="eventInput" type="text" required="required">
-                        </div>
-                    </div>
-                    <!--ORGANIZER UI LOCATION BOX-->
-                    <div>
-                        <div class="organizerLabel" class="">City</div>
-                        <div class="contentBox">
-                            <input class="locationInput" type="text" required="required">
-                        </div>
-                    </div>
-                    <!--ORGANIZER UI ADDRESS BOX-->
-                    <div>
-                        <div class="organizerLabel" class="">Address</div>
-                        <div class="contentBox">
-                            <input class="locationInput" type="text" required="required">
-                        </div>
-                    </div>
-                    <!--ORGANIZER UI EMAIL BOX-->
-                    <div>
-                        <div class="organizerLabel">Email</div>
-                        <div class="contentBox" class="locationDetails">
-                            <input class="emailInput" type="email" required="required">
-                        </div>
+                <!--DATE TIME INFO-->
+                <div id="dateTimeInfoBox">
+                    <img alt="cal" id="calenderPic" src="./Images/calender.png" />
+                    <div id="dateTime">
+                        <div id="dateInfo">May 12,2019</div>
+                        <div id="timeInfo">10:00-13:00</div>
                     </div>
                 </div>
-                <!--ORGANIZER UI EVENT TIME BOX------------------------------------------->
-                <div class="eventTimeBox">
-                    <!--ORGANIZER UI START DATE LABEL-->
-                    <p class="organizerLabel">Date</p>
-                    <!--ORGANIZER UI START TIME LABEL-->
-                    <p class="organizerLabel">Start</p>
-                    <!--ORGANIZER UI END TIME LABEL-->
-                    <p class="organizerLabel">End</p>
-                    <!--ORGANIZER START DATE BOX-->
-                    <div class="startBox">
-                        <div class="startDateBox">
-                            <div class="startDate">
-                                <input class="startDateInput" type="date" required="required">
+                <!--ORGANIZER INFO-->
+                <div id="organizerInfoBox">
+                    <img alt="org" id="organizerPic" src="./Images/organizer.png" />
+                    <div id="organizerInfo">Green Crusaders</div>
+                </div>
+                <!--EMAIL INFO-->
+                <div id="emailInfoBox">
+                    <img alt="email" id="emailPic" src="./Images/email.png" />
+                    <div id="emailInfo">FarmBoy@bcit.ca</div>
+                </div>
+                <!--PEOPLE COUNT INFO-->
+                <div id="peopleCountBox">
+                    <img alt="count" class="peoplePic" src="./Images/people.png" />
+                    <div class="count">1</div>
+                    People going
+                </div>
+                <!--CREDITS INFO-->
+                <div id="creditsBox">
+                    <img alt="credits" id="creditsPic" src="./Images/star.png" />
+                    <div class="credits">3</div>
+                    Hours Credit
+                </div>
+            </div>
+            <!--INFO DESCRIPTION BOX-->
+            <div id="infoDescriptionBox">
+                <div>
+                    Trees give off oxygen that we need to breathe. Trees reduce the amount
+                    of storm water runoff, which reduces erosion and pollution in our
+                    waterways and may reduce the effects of flooding. Many species of
+                    wildlife depend on trees for habitat. Trees provide food, protection,
+                    and homes for many birds and mammals.
+                </div>
+            </div>
+            <footer>
+                <!--JOIN EVENT BUTTON-->
+                <div id="joinEventButtonBox">
+                    <button id="joinEventButton">Unjoin Event</button>
+                </div>
+            </footer>
+        </div>
+
+
+        <!--ORGANIZER UI EVENTS WRAPPER PAGE-------------------------------->
+        <!------------------------------------------------------------------>
+        <div class="organizerEventsWrapper">
+
+            <!--ORGANIZER UI CREATE EVENT----------------------------------------------------------->
+            <!-------------------------------------------------------------------------------------->
+            <div class="mainBox">
+                <!--VIDEO BOX-->
+                <div class="vidBox">
+                    <iframe class="vid" src="https://www.youtube.com/embed/56MhjXTcSCg?autoplay=1">
+                    </iframe>
+                </div>
+                <!--CREATE FORM BOX-->
+                <div class="createEventFormBox">
+                    <div class="organizerEventInfo">
+                        <!--ORGANIZER UI ORGANIZATION BOX-->
+                        <div class="createTitle">
+                            Create Your Event
+                        </div>
+                        <div>
+                            <div class="label organizerLabel">Organization</div>
+                            <div class="contentBox">
+                                <input class="organizationInput" type="text" required="required">
                             </div>
-                            <img alt="calender" class="calender" src="./Images/calender.png">
+                        </div>
+                        <!--ORGANIZER UI EVENT NAME BOX-->
+                        <div>
+                            <div class="organizerLabel">Event Name</div>
+                            <div class="contentBox">
+                                <input class="eventInput" type="text" required="required">
+                            </div>
+                        </div>
+                        <!--ORGANIZER UI LOCATION BOX-->
+                        <div>
+                            <div class="organizerLabel" class="">City</div>
+                            <div class="contentBox">
+                                <input class="locationInput" type="text" required="required">
+                            </div>
+                        </div>
+                        <!--ORGANIZER UI ADDRESS BOX-->
+                        <div>
+                            <div class="organizerLabel" class="">Address</div>
+                            <div class="contentBox">
+                                <input class="locationInput" type="text" required="required">
+                            </div>
+                        </div>
+                        <!--ORGANIZER UI EMAIL BOX-->
+                        <div>
+                            <div class="organizerLabel">Email</div>
+                            <div class="contentBox" class="locationDetails">
+                                <input class="emailInput" type="email" required="required">
+                            </div>
                         </div>
                     </div>
-                    <!--ORGANIZER UI START TIME-->
-                    <div class="startTimeBox">
-                        <div class="startTime">
-                            <input class="startTimeInput" type="time" value="09:00" required="required">
+                    <!--ORGANIZER UI EVENT TIME BOX------------------------------------------->
+                    <div class="eventTimeBox">
+                        <!--ORGANIZER UI START DATE LABEL-->
+                        <p class="organizerLabel">Date</p>
+                        <!--ORGANIZER UI START TIME LABEL-->
+                        <p class="organizerLabel">Start</p>
+                        <!--ORGANIZER UI END TIME LABEL-->
+                        <p class="organizerLabel">End</p>
+                        <!--ORGANIZER START DATE BOX-->
+                        <div class="startBox">
+                            <div class="startDateBox">
+                                <div class="startDate">
+                                    <input class="startDateInput" type="date" required="required">
+                                </div>
+                                <img alt="calender" class="calender" src="./Images/calender.png">
+                            </div>
                         </div>
-                        <img alt="clock" class="clock" src="./Images/clock.png">
-                    </div>
-                    <!--ORGANIZER UI END TIME-->
-                    <div class="endTimeBox">
-                        <div class="endTime">
-                            <input class="endTimeInput" type="time" value="17:00" required="required">
+                        <!--ORGANIZER UI START TIME-->
+                        <div class="startTimeBox">
+                            <div class="startTime">
+                                <input class="startTimeInput" type="time" value="09:00" required="required">
+                            </div>
+                            <img alt="clock" class="clock" src="./Images/clock.png">
                         </div>
-                        <img alt="clock" class="clock" src="./Images/clock.png">
+                        <!--ORGANIZER UI END TIME-->
+                        <div class="endTimeBox">
+                            <div class="endTime">
+                                <input class="endTimeInput" type="time" value="17:00" required="required">
+                            </div>
+                            <img alt="clock" class="clock" src="./Images/clock.png">
+                        </div>
                     </div>
-                </div>
-                <!--ORGANIZER UI DETAILS-->
-                <p class="organizerLabel">Description</p>
-                <div class="detailsBox">
-                    <textarea class="details"></textarea>
-                </div>
+                    <!--ORGANIZER UI DETAILS-->
+                    <p class="organizerLabel">Description</p>
+                    <div class="detailsBox">
+                        <textarea class="details"></textarea>
+                    </div>
 
-                <!--BOTTOM BUTTONS CONTAINER-->
-                <div class="bottomBox">
-                    <div class="filesBox">
-                        <input type="file" name="file" class="files">
-                    </div>
-                    <div>
-                    </div>
-                    <div class="createButtonsBox">
-                        <button class="cancelButton">Cancel</button>
-                        <button class="createButton">Create</button>
+                    <!--BOTTOM BUTTONS CONTAINER-->
+                    <div class="bottomBox">
+                        <div class="filesBox">
+                            <input type="file" name="file" class="files">
+                        </div>
+                        <div>
+                        </div>
+                        <div class="createButtonsBox">
+                            <button class="cancelButton">Cancel</button>
+                            <button class="createButton">Create</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
-    <!----------------------------JQUERY/JAVASCRIPT FILES TO BE LOADED AFTER HTML DOCUMENT LOADS-->
-    <script>
-        //determines what page it's on depending on wrapper display, then adds background white color to nav bar active page
-        $(".homePageBtn").addClass("activePage");
-        $(".homePageBtn").click(function (event) {
+        <!----------------------------JQUERY/JAVASCRIPT FILES TO BE LOADED AFTER HTML DOCUMENT LOADS-->
+        <script>
+            //determines what page it's on depending on wrapper display, then adds background white color to nav bar active page
             $(".homePageBtn").addClass("activePage");
-            $(".missionPageBtn").removeClass("activePage");
-            $(".myEventsPageBtn").removeClass("activePage");
-            $(".myListingsPageBtn").removeClass("activePage");
-            $(".aboutUsPageBtn").removeClass("activePage");
-            $(".contactPageBtn").removeClass("activePage");
+            $(".homePageBtn").click(function (event) {
+                $(".homePageBtn").addClass("activePage");
+                $(".missionPageBtn").removeClass("activePage");
+                $(".myEventsPageBtn").removeClass("activePage");
+                $(".myListingsPageBtn").removeClass("activePage");
+                $(".aboutUsPageBtn").removeClass("activePage");
+                $(".contactPageBtn").removeClass("activePage");
 
-        });
-        $(".missionPageBtn").click(function (event) {
-            $(".missionPageBtn").addClass("activePage");
-            $(".homePageBtn").removeClass("activePage");
-            $(".myEventsPageBtn").removeClass("activePage");
-            $(".myListingsPageBtn").removeClass("activePage");
-            $(".aboutUsPageBtn").removeClass("activePage");
-            $(".contactPageBtn").removeClass("activePage");
+            });
+            $(".missionPageBtn").click(function (event) {
+                $(".missionPageBtn").addClass("activePage");
+                $(".homePageBtn").removeClass("activePage");
+                $(".myEventsPageBtn").removeClass("activePage");
+                $(".myListingsPageBtn").removeClass("activePage");
+                $(".aboutUsPageBtn").removeClass("activePage");
+                $(".contactPageBtn").removeClass("activePage");
 
-        });
+            });
 
-        $(".myEventsPageBtn").click(function (event) {
-            $(".myEventsPageBtn").addClass("activePage");
-            $(".missionPageBtn").removeClass("activePage");
-            $(".homePageBtn").removeClass("activePage");
-            $(".myListingsPageBtn").removeClass("activePage");
-            $(".aboutUsPageBtn").removeClass("activePage");
-            $(".contactPageBtn").removeClass("activePage");
-        });
-    </script>
+            $(".myEventsPageBtn").click(function (event) {
+                $(".myEventsPageBtn").addClass("activePage");
+                $(".missionPageBtn").removeClass("activePage");
+                $(".homePageBtn").removeClass("activePage");
+                $(".myListingsPageBtn").removeClass("activePage");
+                $(".aboutUsPageBtn").removeClass("activePage");
+                $(".contactPageBtn").removeClass("activePage");
+            });
+        </script>
 
-    <script>
-        //Function event jquery function upon clicking mission button
-        $(".missionPageBtn").click(function (event) {
-            event.preventDefault();
-            $(".organizerEventsWrapper").hide();
-            $(".welcomePageWrapper").fadeOut(100);
-            setTimeout(function () {
-                $(".missionPageWrapper").fadeIn(300);
-                $(".missionPageWrapper").css("display", "block");
-                // $(".navigation").animate({"background-color: black"}, 300);
-            }, 200);
-        });
+        <script>
+            //Function event jquery function upon clicking mission button
+            $(".missionPageBtn").click(function (event) {
+                event.preventDefault();
+                $(".organizerEventsWrapper").hide();
+                $(".eventsWrapper").hide();
+                $(".eventsInfoBox").hide();
+                $(".welcomePageWrapper").fadeOut(100);
+                setTimeout(function () {
+                    $(".missionPageWrapper").fadeIn(300);
+                    $(".missionPageWrapper").css("display", "block");
+                    // $(".navigation").animate({"background-color: black"}, 300);
+                }, 200);
+            });
 
-        $(".homePageBtn").click(function (event) {
-            event.preventDefault();
-            $(".organizerEventsWrapper").hide();
-            $(".missionPageWrapper").fadeOut(100);
-            setTimeout(function () {
-                $(".welcomePageWrapper").fadeIn(300);
-                $(".welcomePageWrapper").css("display", "block");
-                // $(".navigation").fadeIn(500).css("background-color", "rgb(33,49,92)");
-            }, 200);
-        });
+            $(".homePageBtn").click(function (event) {
+                event.preventDefault();
+                $(".organizerEventsWrapper").hide();
+                $(".eventsInfoBox").hide();
+                $(".eventsWrapper").hide();
+                $(".even").hide();
+                $(".missionPageWrapper").fadeOut(100);
+                setTimeout(function () {
+                    $(".welcomePageWrapper").fadeIn(300);
+                    $(".welcomePageWrapper").css("display", "block");
+                    // $(".navigation").fadeIn(500).css("background-color", "rgb(33,49,92)");
+                }, 200);
+            });
 
-        //SHOW MY LISTINGS PAGE/////////////////////////////////////////////////////
-        $(".myListingsPageBtn").click(function (event) {
-            event.preventDefault();
-            $(".missionPageWrapper").fadeOut(100);
-            $(".welcomePageWrapper").fadeOut(100);
-            setTimeout(function () {
-                $(".organizerEventsWrapper").fadeIn(300);
-            }, 200);
-            $(".organizerEventsWrapper").css("display", "grid");
-        });
-    </script>
+            //SHOW MY LISTINGS PAGE/////////////////////////////////////////////////////
+            $(".myListingsPageBtn").click(function (event) {
+                event.preventDefault();
+                $(".eventsWrapper").hide();
+                $(".eventsInfoBox").hide();
+                $(".missionPageWrapper").fadeOut(100);
+                $(".welcomePageWrapper").fadeOut(100);
+                setTimeout(function () {
+                    $(".organizerEventsWrapper").fadeIn(300);
+                }, 200);
+                $(".organizerEventsWrapper").css("display", "grid");
+            });
+        </script>
 
-    <script src="./js/logInVerifyTransition.js"></script>
-    <script src="./js/signOut.js"></script>
-    <script src="./js/firebaseSignUpAPI.js"></script>
-    <script src="./js/modal.js"></script>
-    <script src="./js/events.js"></script>
-    <script src="./js/transition.js"></script>
-    <script src="./js/eventAjax.js"></script>
-    <script src="./js/fireworks.js"></script>
-    <script src="./js/audioPlay.js"></script>
-    <script src="./js/scrollDown.js"></script>
-    <script src="./js/userInit.js"></script>
-    <script src="./js/joinEvent.js"></script>
-    <script src="./js/organizer.js"></script>
+        <script src="./js/logInVerifyTransition.js"></script>
+        <script src="./js/signOut.js"></script>
+        <script src="./js/firebaseSignUpAPI.js"></script>
+        <script src="./js/modal.js"></script>
+        <script src="./js/events.js"></script>
+        <script src="./js/transition.js"></script>
+        <script src="./js/eventAjax.js"></script>
+        <script src="./js/fireworks.js"></script>
+        <script src="./js/audioPlay.js"></script>
+        <script src="./js/scrollDown.js"></script>
+        <script src="./js/userInit.js"></script>
+        <script src="./js/joinEvent.js"></script>
+        <script src="./js/organizer.js"></script>
 
 </body>
 
