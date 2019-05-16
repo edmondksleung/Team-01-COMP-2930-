@@ -13,11 +13,16 @@
 }
 
 body {
-    background-color: rgb(33, 49, 92);
+    -ms-transition: background 0.3s ease 0s;
+  -moz-transition: background 0.3s ease 0s;
+  -o-transition: background 0.3s ease 0s;
+  -webkit-transition: background 0.3s ease 0s;
+  transition: background 0.3s ease 0s;  
     margin: 0px;
     padding: 0px;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
+    background-color: rgb(33,49,92);
 }
 
 

@@ -24,7 +24,7 @@
 
 </head>
 
-<body>
+<body class="a">
     <!---------------------------------------------SIGN IN PAGE----------------------------------------------->
     <div class="signInPageWrapper">
         <!-- setup our canvas element -->
@@ -171,36 +171,26 @@
                       </ul>
                     </div> -->
 
-        <div id="missionHeading">
-            <h1><span class="eco">ECO</span>CITY - 2019</h1>
-            <br />
-            <p>
-                Promoting a <i>Healthy Culture</i> <br />
-                to strengthen eco-literacy, patterns of human knowledge and creative
-                expression,
-                <br />and develop symbolic thought and social learning.
-            </p>
-        </div>
-        <div id="missionSubHeading">
-            <h1><span class="eco">e</span>Volunteer <br /></h1>
-            <p>has currently...</p>
-        </div>
-        <div id="threePictures">
-            <img id="infoPic1" src="http://clipart-library.com/images/kTKognBTj.png" alt="Picture1" />
-            <img id="infoPic2" src="/public/Images/fishPicture.png" alt="Picture2" />
-            <img id="infoPic3" src="https://pngimage.net/wp-content/uploads/2018/05/community-cartoon-png-3.png"
-                alt="Picture3" />
-        </div>
-
-        <div class="infoPicDesc" id="infoPicDesc1">
-            <span id="infoPicNumber1"></span>cleaner forests
-        </div>
-        <div class="infoPicDesc" id="infoPicDesc2">
-            <span id="infoPicNumber2"></span>fishes saved from cleaner waters
-        </div>
-        <div class="infoPicDesc" id="infoPicDesc3">
-            <span id="infoPicNumber3"></span>organizations signed up
-        </div>
+            <div id="missionHeading">
+                <h1><span class="eco">ECO</span>CITY - 2019</h1>
+                <br/>
+                <p>
+                    Promoting a <i>Healthy Culture...</i> <br/><br/>
+                    To strengthen eco-literacy, patterns of human knowledge and creative
+                    expression. <br>
+                    <br/>To develop symbolic thought and social learning.
+                </p>
+            </div>
+            <div id="missionSubHeading">
+                <h1><span class="eco">e</span>Volunteer <br /></h1>
+                <p>has currently...</p>
+            </div>
+            <div id="threePictures">
+                <img id="infoPic1" src="http://clipart-library.com/images/kTKognBTj.png" alt="Picture1" />
+                <img id="infoPic2" src="/public/Images/fishPicture.png" alt="Picture2" />
+                <img id="infoPic3" src="https://pngimage.net/wp-content/uploads/2018/05/community-cartoon-png-3.png"
+                    alt="Picture3" />
+            </div>
 
         <div id="infomatics">
             <div class="box">
@@ -309,9 +299,6 @@
             </div>
 
         </div>
-    </div>
-
-
 
     <!--EVENT DETAILS BOX----------------------------------------------------------------------->
     <!--**************************************************************************************-->
@@ -608,7 +595,7 @@
 
         <!--ORGANIZER UI EVENTS WRAPPER PAGE-------------------------------->
         <!------------------------------------------------------------------>
-        <div class="organizerEventsWrapper">
+        <div class="organizerEventsWrapper"></div>
 
             <!--ORGANIZER UI CREATE EVENT----------------------------------------------------------->
             <!-------------------------------------------------------------------------------------->
@@ -790,21 +777,50 @@
                 $(".organizerEventsWrapper").css("display", "grid");
             });
         </script>
+<script>
+$(".missionPageBtn").click(function() {
+    $("body").css("background", "black");
+});
 
-        <script src="./js/logInVerifyTransition.js"></script>
-        <script src="./js/signOut.js"></script>
-        <script src="./js/firebaseSignUpAPI.js"></script>
-        <script src="./js/modal.js"></script>
-        <script src="./js/events.js"></script>
-        <script src="./js/transition.js"></script>
-        <script src="./js/eventAjax.js"></script>
-        <script src="./js/fireworks.js"></script>
-        <script src="./js/audioPlay.js"></script>
-        <script src="./js/scrollDown.js"></script>
-        <script src="./js/userInit.js"></script>
-        <script src="./js/joinEvent.js"></script>
-        <script src="./js/organizer.js"></script>
+$(".homePageBtn").click(function() {
+  $("body").css("background", "rgb(33, 49, 92)");
+});
 
+</script>
+    <script>
+        //Function event jquery function upon clicking mission button
+        $(".missionPageBtn").click(function (event) {
+            event.preventDefault();
+            $(".welcomePageWrapper").fadeOut(100);
+            setTimeout(function () {
+                $(".missionPageWrapper").fadeIn(300);
+                $(".missionPageWrapper").css("display", "block");
+            }, 200);
+        });
+
+        $(".homePageBtn").click(function (event) {
+            event.preventDefault();
+            $(".missionPageWrapper").fadeOut(100);
+            setTimeout(function () {
+                $(".welcomePageWrapper").fadeIn(300);
+                $(".welcomePageWrapper").css("display", "block");
+                
+            }, 200);
+        });
+    </script>
+    
+    <script src="./js/logInVerifyTransition.js"></script>
+    <script src="./js/signOut.js"></script>
+    <script src="./js/firebaseSignUpAPI.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/events.js"></script>
+    <script src="./js/transition.js"></script>
+    <script src="./js/eventAjax.js"></script>
+    <script src="./js/fireworks.js"></script>
+    <script src="./js/audioPlay.js"></script>
+    <script src="./js/scrollDown.js"></script>
+    <script src="./js/userInit.js"></script>
+    <script src="./js/joinEvent.js"></script>
 </body>
 
 </html>
