@@ -77,11 +77,10 @@ body {
 }
 
 
-/*CREATE EVENT INFO TOP BOX*/
-.createEventBox {
-    width: 100%;
+/*CREATE EVENT FORM INFO TOP BOX*/
+.createEventFormBox {
+    width: 550px;
     height: 750px;
-    text-indent: 20px;
     font-family: 'Arial', sans-serif;
     margin: 0;
     border-bottom: 2px solid rgb(216, 208, 208);
@@ -120,6 +119,7 @@ body {
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 10px;
+    text-indent: 20px;
     color: black;
 }
 
@@ -270,7 +270,7 @@ input[type="time"]::-webkit-outer-spin-button, input[type="time"]::-webkit-inner
 .bottomBox {
     display: grid;
     grid-template-areas: "file empty buttons";
-    grid-template-columns: 40% 20% 40%;
+    grid-template-columns: 250px 50px 200px;
     align-content: center;
     margin-top: 10px;
     margin-right: 11px;
