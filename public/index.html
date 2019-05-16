@@ -19,6 +19,7 @@
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
     <script src="./js/FirebaseInit.js"></script>
     <script src="./js/logInStateSkip.js"></script>
+    
 </head>
 
 <body>
@@ -142,7 +143,7 @@
     </div>
     <!------------------------------------------MISSION PAGE-------------------------------------->
     <div class="missionPageWrapper">
-        <div class="navigation">
+        <!-- <div class="navigation"> -->
             <!-- <div class="navBarPic">
                       <ul>
                         <li>
@@ -218,7 +219,6 @@
                 </div>
             </div>
         </div>
-    </div>
     <!--EVENTS PAGE CONTAINER-------------------------------------------------------------------------------->
     <!--*******************************************************************************************-->
     <div id="eventsWrapper">
@@ -652,14 +652,48 @@
     </div>
     <!----------------------------JQUERY/JAVASCRIPT FILES TO BE LOADED AFTER HTML DOCUMENT LOADS-->
     <script>
+            //determines what page it's on depending on wrapper display, then adds background white color to nav bar active page
+            $(".homePageBtn").addClass("activePage");
+            $(".homePageBtn").click(function (event) {
+                $(".homePageBtn").addClass("activePage");
+                $(".missionPageBtn").removeClass("activePage");
+                $(".myEventsPageBtn").removeClass("activePage");
+                $(".myListingsPageBtn").removeClass("activePage");
+                $(".aboutUsPageBtn").removeClass("activePage");
+                $(".contactPageBtn").removeClass("activePage");
+                
+            });
+            $(".missionPageBtn").click(function (event) {
+                $(".missionPageBtn").addClass("activePage");
+                $(".homePageBtn").removeClass("activePage");
+                $(".myEventsPageBtn").removeClass("activePage");
+                $(".myListingsPageBtn").removeClass("activePage");
+                $(".aboutUsPageBtn").removeClass("activePage");
+                $(".contactPageBtn").removeClass("activePage");
+                
+        });
+
+        $(".myEventsPageBtn").click(function (event) {
+            $(".myEventsPageBtn").addClass("activePage");
+                $(".missionPageBtn").removeClass("activePage");
+                $(".homePageBtn").removeClass("activePage");
+                $(".myListingsPageBtn").removeClass("activePage");
+                $(".aboutUsPageBtn").removeClass("activePage");
+                $(".contactPageBtn").removeClass("activePage");
+            });
+
+        </script>
+
+    <script>
         //Function event jquery function upon clicking mission button
         $(".missionPageBtn").click(function (event) {
             event.preventDefault();
             $(".welcomePageWrapper").fadeOut(100);
             setTimeout(function () {
                 $(".missionPageWrapper").fadeIn(300);
+                $(".missionPageWrapper").css("display", "block");
+                // $(".navigation").animate({"background-color: black"}, 300);
             }, 200);
-            $(".missionPageWrapper").css("display: block");
         });
 
         $(".homePageBtn").click(function (event) {
@@ -667,17 +701,13 @@
             $(".missionPageWrapper").fadeOut(100);
             setTimeout(function () {
                 $(".welcomePageWrapper").fadeIn(300);
+                $(".welcomePageWrapper").css("display", "block");
+                // $(".navigation").fadeIn(500).css("background-color", "rgb(33,49,92)");
             }, 200);
-            $(".welcomePageWrapper").css("display: block");
         });
 
     </script>
-    <script>
-        //determines what page it's on depending on wrapper display, then adds background white color to nav bar active page
-
-        // var homeBtn = $(".homePageButton");
-        // $(".welcomePageWrapper").css("display", "block") ? homeBtn.addClass("activePage") : homeBtn.removeClass("activePage");
-    </script>
+    
     <script src="./js/logInVerifyTransition.js"></script>
     <script src="./js/signOut.js"></script>
     <script src="./js/firebaseSignUpAPI.js"></script>

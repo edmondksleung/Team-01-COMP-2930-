@@ -1,6 +1,5 @@
 .navigation {
-    height: 15vh;
-    padding-top: 20px;
+    height: 7vh;
     display: grid;
     grid-template-areas:
         "left middle right";
@@ -12,7 +11,7 @@
 .navBar {
     grid-area: middle;
     font-size: 12pt;
-    margin-top: 50px;
+    padding-top: 25px;
     height: 45px;
     text-align: center;
     letter-spacing: 3px;
