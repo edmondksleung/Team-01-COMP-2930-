@@ -20,10 +20,6 @@ body {
     font-weight: 300;
 }
 
-::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
-}
 
 body ::-webkit-input-placeholder {
     /* WebKit browsers */

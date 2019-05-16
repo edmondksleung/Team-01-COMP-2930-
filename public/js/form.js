@@ -40,7 +40,7 @@ function submitForm(e) {
 }
 
 
-// function to grab value from input
+// function to grab value from input  
 function getInputVal(id) {
 	return document.getElementById(id).value;
 }
