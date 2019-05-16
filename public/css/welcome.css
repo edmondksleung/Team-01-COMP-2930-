@@ -120,18 +120,9 @@
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    background: transparent;
+    width: 0;
   }
   
    
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: rgb(201, 199, 199); 
-    border-radius: 10px;
-}
-  
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: rgb(119, 115, 115); 
-}
 
