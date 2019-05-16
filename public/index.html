@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/eventsListing.css" />
     <link rel="stylesheet" type="text/css" href="css/mission.css" />
     <link rel="stylesheet" type="text/css" href="css/organizer.css" />
-
+    <link rel="stylesheet" type="text/css" href="css/contactUs.css" />
 
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:900" rel="stylesheet" />
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
@@ -79,32 +79,6 @@
     </div>
     <!---------------------------------------------WElCOME PAGE----------------------------------------------->
     <div class="welcomePageWrapper">
-        <!-- <div class="navigation"> -->
-        <!-- <div class="navBarPic">
-          <ul>
-            <li>
-              <img
-                src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
-                alt="pic1"
-                class="activePic"
-              />
-            </li>
-
-            <li>
-              <img
-                src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
-                alt="pic1"
-              />
-            </li>
-
-            <li>
-              <img
-                src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
-                alt="pic1"
-              />
-            </li>
-          </ul>
-        </div> -->
 
         <!-- </div> -->
         <div id="welcomePageTitle">
@@ -144,33 +118,6 @@
     </div>
     <!------------------------------------------MISSION PAGE-------------------------------------->
     <div class="missionPageWrapper">
-        <!-- <div class="navigation"> -->
-        <!-- <div class="navBarPic">
-                      <ul>
-                        <li>
-                          <img
-                            src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
-                            alt="pic1"
-                            class="activePic"
-                          />
-                        </li>
-            
-                        <li>
-                          <img
-                            src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
-                            alt="pic1"
-                          />
-                        </li>
-            
-                        <li>
-                          <img
-                            src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
-                            alt="pic1"
-                          />
-                        </li>
-                      </ul>
-                    </div> -->
-
         <div id="missionHeading">
             <h1><span class="eco">ECO</span>CITY - 2019</h1>
             <br />
@@ -574,6 +521,30 @@
         </div>
     </div>
 
+    <!--------------------------------------------------CONTACT US PAGE---------------------------------->
+    <div class="contactUsWrapper">
+            <div id="contactUsPagePicture">
+                <div id="opaqueCover">
+                    <div class="companyName"><span>e</span>Volunteer <br> We'd love to hear from you!</div>
+                </div>
+        </div>
+            <div id="contactUsPageContent">
+                <div id="phone">
+                    <img src="./Images/iphone.png" alt="iphone1">
+                </div>
+                <div id="phoneText"><span class="contactSpan">PHONE</span><br><br>Toll-free 1 (800) 123 1234<br>Canada 604-333-2312<br></div>
+                <div id="chat">
+                        <img src="./Images/liveChat.png" alt="image1">
+                </div>
+                <div id="chatText"><span class="contactSpan">LIVE CHAT</span><br><br>Chat with a real person!<br><br>
+                    <div id="chatButton">Click Here</div>
+                </div>
+                <div id="email">
+                    <img src="./Images/emailEnvelope.png" alt="emailenv1">
+                </div>
+                <div id="emailText"><span class="contactSpan">EMAIL</span><br><br>support@evolunteer.ca</div>
+            </div>
+        </div>
 
     <!----------------------------JQUERY/JAVASCRIPT FILES TO BE LOADED AFTER HTML DOCUMENT LOADS-->
     <script>
@@ -606,30 +577,39 @@
             $(".aboutUsPageBtn").removeClass("activePage");
             $(".contactPageBtn").removeClass("activePage");
         });
+
+        $(".contactPageBtn").click(function (event) {
+            $(".myEventsPageBtn").removeClass("activePage");
+            $(".missionPageBtn").removeClass("activePage");
+            $(".homePageBtn").removeClass("activePage");
+            $(".myListingsPageBtn").removeClass("activePage");
+            $(".aboutUsPageBtn").removeClass("activePage");
+            $(".contactPageBtn").addClass("activePage");
+        });
+
+        $(".myListingsPageBtn").click(function (event) {
+            $(".myEventsPageBtn").removeClass("activePage");
+            $(".missionPageBtn").removeClass("activePage");
+            $(".homePageBtn").removeClass("activePage");
+            $(".myListingsPageBtn").addClass("activePage");
+            $(".aboutUsPageBtn").removeClass("activePage");
+            $(".contactPageBtn").removeClass("activePage");
+        });
     </script>
 
     <script>
         //Function event jquery function upon clicking mission button
-        $(".missionPageBtn").click(function (event) {
-            event.preventDefault();
-            $(".organizerEventsWrapper").hide();
-            $(".eventsWrapper").hide();
-            $(".eventsInfoBox").hide();
-            $(".welcomePageWrapper").fadeOut(100);
-            setTimeout(function () {
-                $(".missionPageWrapper").fadeIn(300);
-                $(".missionPageWrapper").css("display", "block");
-                // $(".navigation").animate({"background-color: black"}, 300);
-            }, 200);
-        });
-
         $(".homePageBtn").click(function (event) {
             event.preventDefault();
-            $(".organizerEventsWrapper").hide();
-            $(".eventsInfoBox").hide();
-            $(".eventsWrapper").hide();
-            $(".even").hide();
+            // $(".organizerEventsWrapper").hide();
+            // $(".eventsWrapper").hide();
             $(".missionPageWrapper").fadeOut(100);
+            $(".organizerEventsWrapper").fadeOut(100);
+            $(".eventsInfoBox").fadeOut(100);
+            $(".contactUsWrapper").fadeOut(100);
+            $(".eventsWrapper").fadeOut(100);
+
+
             setTimeout(function () {
                 $(".welcomePageWrapper").fadeIn(300);
                 $(".welcomePageWrapper").css("display", "block");
@@ -637,18 +617,70 @@
             }, 200);
         });
 
-        //SHOW MY LISTINGS PAGE/////////////////////////////////////////////////////
+        $(".missionPageBtn").click(function (event) {
+            event.preventDefault();
+            // $(".organizerEventsWrapper").hide();
+            // $(".eventsInfoBox").hide();
+            $(".welcomePageWrapper").fadeOut(100);
+            $(".organizerEventsWrapper").fadeOut(100);
+            $(".eventsInfoBox").fadeOut(100);
+            $(".contactUsWrapper").fadeOut(100);
+            $(".eventsWrapper").fadeOut(100);
+
+            setTimeout(function () {
+                $(".missionPageWrapper").fadeIn(300);
+                $(".missionPageWrapper").css("display", "block");
+                // $(".navigation").animate({"background-color: black"}, 300);
+            }, 200);
+        });
+
+
+        $(".contactPageBtn").click(function (event) {
+            event.preventDefault();
+            // $(".organizerEventsWrapper").hide();
+            // $(".eventsWrapper").hide();
+            $(".welcomePageWrapper").fadeOut(100);
+            $(".missionPageWrapper").fadeOut(100);
+            $(".organizerEventsWrapper").fadeOut(100);
+            $(".eventsInfoBox").fadeOut(100);
+            $(".eventsWrapper").fadeOut(100);
+
+            setTimeout(function () {
+                $(".contactUsWrapper").fadeIn(300);
+                $(".contactUsWrapper").css("display", "block");
+                // $(".navigation").fadeIn(500).css("background-color", "rgb(33,49,92)");
+            }, 200);
+        });
+
         $(".myListingsPageBtn").click(function (event) {
             event.preventDefault();
-            $(".eventsWrapper").hide();
-            $(".eventsInfoBox").hide();
+            // $(".organizerEventsWrapper").hide();
+            // $(".eventsWrapper").hide();
             $(".missionPageWrapper").fadeOut(100);
             $(".welcomePageWrapper").fadeOut(100);
+            $(".eventsInfoBox").fadeOut(100);
+            $(".contactUsWrapper").fadeOut(100);
+            $(".eventsWrapper").fadeOut(100);
+
             setTimeout(function () {
                 $(".organizerEventsWrapper").fadeIn(300);
+                $(".organizerEventsWrapper").css("display", "grid");
+                // $(".navigation").fadeIn(500).css("background-color", "rgb(33,49,92)");
             }, 200);
-            $(".organizerEventsWrapper").css("display", "grid");
         });
+
+        // //SHOW MY LISTINGS PAGE/////////////////////////////////////////////////////
+        // $(".myListingsPageBtn").click(function (event) {
+        //     event.preventDefault();
+        //     $(".eventsWrapper").hide();
+        //     $(".eventsInfoBox").hide();
+        //     $(".missionPageWrapper").fadeOut(100);
+        //     $(".welcomePageWrapper").fadeOut(100);
+        //     setTimeout(function () {
+        //         $(".organizerEventsWrapper").fadeIn(300);
+        //     }, 200);
+        //     $(".organizerEventsWrapper").css("display", "grid");
+        // });
     </script>
     <script>
         $(".missionPageBtn").click(function () {
@@ -658,6 +690,11 @@
         $(".homePageBtn").click(function () {
             $("body").css("background", "rgb(33, 49, 92)");
         });
+
+        $(".contactPageBtn").click(function () {
+            $("body").css("background", "orange");
+        });
+
     </script>
     <script>
         //Function event jquery function upon clicking mission button
