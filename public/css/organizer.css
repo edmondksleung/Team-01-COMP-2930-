@@ -1,12 +1,27 @@
-body {
-    margin: 0;
-    min-width: 450px;
-    overflow-x: hidden;
+@media only screen and (max-width: 1200px) {
+
+    /*VIDEO BOX MOBILE*/
+    .vidBox {
+        display: none;
+        width: 0px;
+    }
+
+    /*MAIN CONTAINER FOR FORM AND VIDEO*/
+    .mainBox {
+        display: block;
+    }
+
+    /*CREATE EVENT FORM CONTAINER*/
+    .createEventFormBox {
+        width: 550px;
+    }
 }
 
 /*ORGANIZER UI EVENT CONTAINER*/
-.organizerEventWrapper {
+.organizerEventsWrapper {
     display: none;
+    justify-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
 }
@@ -18,6 +33,7 @@ body {
     background: rgb(33, 49, 92);
     text-align: center;
 }
+
 /*ORGANIZER UI MENU CONTAINER*/
 .organizerMenuBox {
     display: grid;
@@ -48,10 +64,10 @@ body {
 /*ORGANIZER UI DROPDOWN BOX*/
 .organizerDropDownBox {
     display: none;
-    
- }
 
- /*ORGANIZER UI DROPDOWN*/
+}
+
+/*ORGANIZER UI DROPDOWN*/
 .organizerDropDown {
     width: 100%;
     z-index: 2;
@@ -76,21 +92,50 @@ body {
     cursor: pointer;
 }
 
+/*MAIN CONTAINER FOR FORM AND VIDEO*/
+.mainBox {
+    width: 1750px;
+    justify-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1200px 550px;
+}
+
+/*VIDEO CONTAINER*/
+.vidBox {
+    width: 100%;
+    background: grey;
+}
+
+/*VIDEO*/
+.vid {
+    width: 100%;
+    height: 100%;
+}
 
 /*CREATE EVENT FORM INFO TOP BOX*/
 .createEventFormBox {
     width: 550px;
-    height: 750px;
+    height: 820px;
+    padding-top: 20px;
     font-family: 'Arial', sans-serif;
     margin: 0;
     border-bottom: 2px solid rgb(216, 208, 208);
     background: white;
 }
 
+/*CREATE FORM TITLE*/
+.createTitle {
+    text-indent: 15px;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
 /*CONTENT CONTAINERS*/
 .contentBox {
-    height: 30px;
+    height: 40px;
     display: grid;
+    align-items: center;
     justify-items: center;
     text-indent: 8px;
     background: white;
@@ -105,7 +150,7 @@ body {
 /*ORGANIZER UI ORGANIZER EVENT INFO*/
 .organizerEventInfo {
     display: grid;
-    grid-template-rows: 70px 70px 70px 70px 70px 10px;
+    grid-template-rows: 40px 70px 70px 70px 70px 70px 10px;
     grid-template-areas: "organization",
         "event",
         "location";
@@ -193,7 +238,7 @@ input[type=date]::-webkit-inner-spin-button {
 
 /*ORGANIZER START TIME INPUT*/
 .startTimeInput {
-    text-align: center; 
+    text-align: center;
 }
 
 /*ORGANIZER UI START TIME INPUT*/
@@ -202,10 +247,11 @@ input[type=date]::-webkit-inner-spin-button {
 }
 
 /*ORGANIZER UI INPUT TIME REMOVE UP DOWN ARROWS*/
-input[type="time"]::-webkit-outer-spin-button, input[type="time"]::-webkit-inner-spin-button {
+input[type="time"]::-webkit-outer-spin-button,
+input[type="time"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
-    }
+}
 
 /*ORGANIZER UI END TIME BOX*/
 .endTimeBox {
@@ -227,10 +273,10 @@ input[type="time"]::-webkit-outer-spin-button, input[type="time"]::-webkit-inner
 /*ORGANIZER UI END TIME INPUT*/
 .endTimeInput {
     width: 90px;
-    text-align: center; 
+    text-align: center;
 }
 
-/*ORGANIZER UI CALENDER IMAGE*/    
+/*ORGANIZER UI CALENDER IMAGE*/
 .calender {
     width: 20px;
     height: 20px;
@@ -260,7 +306,7 @@ input[type="time"]::-webkit-outer-spin-button, input[type="time"]::-webkit-inner
     margin-top: 10px;
     margin-bottom: 10px;
     width: 95%;
-    height: 265px;
+    height: 220px;
     overflow: hidden;
     border: none;
     resize: none;
@@ -270,7 +316,7 @@ input[type="time"]::-webkit-outer-spin-button, input[type="time"]::-webkit-inner
 .bottomBox {
     display: grid;
     grid-template-areas: "file empty buttons";
-    grid-template-columns: 250px 50px 200px;
+    grid-template-columns: 250px 56px 194px;
     align-content: center;
     margin-top: 10px;
     margin-right: 11px;
@@ -282,6 +328,7 @@ input[type="time"]::-webkit-outer-spin-button, input[type="time"]::-webkit-inner
     display: grid;
     align-items: center;
 }
+
 /*FILE UPLOAD*/
 .files {
     height: 20px;
@@ -298,6 +345,7 @@ input[type="time"]::-webkit-outer-spin-button, input[type="time"]::-webkit-inner
     grid-template-columns: 110px 110px;
     justify-items: right;
 }
+
 /*ORGANIZER UI CANCEL BUTTON*/
 .cancelButton {
     width: 100px;
@@ -307,13 +355,13 @@ input[type="time"]::-webkit-outer-spin-button, input[type="time"]::-webkit-inner
     background: #40a0e1;
     font-weight: bold;
     color: white;
-    box-shadow: 0 1px 1px rgba(0,0,0,1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 1);
 }
 
 /*ORGANIZER UI CANCEL BUTTON HOVER*/
 .cancelButton:hover {
     background: #0592f0;
-    box-shadow: 0 2px 5px rgba(0,0,0,1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
 }
 
 /*ORGANIZER UI CREATE BUTTON*/
@@ -325,11 +373,11 @@ input[type="time"]::-webkit-outer-spin-button, input[type="time"]::-webkit-inner
     background: #40a0e1;
     border: none;
     color: white;
-    box-shadow: 0 1px 1px rgba(0,0,0,1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 1);
 }
 
 /*ORGANIZER UI CREATE BUTTON HOVER*/
 .createButton:hover {
     background: #0592f0;
-    box-shadow: 0 2px 5px rgba(0,0,0,1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
 }

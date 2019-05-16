@@ -6,7 +6,7 @@
 }
 
 /*EVENTS PAGE CONTAINER*/
-#eventsWrapper {
+.eventsWrapper {
     display: none;
     width: 100%;
     height: 100%;
@@ -61,13 +61,13 @@
 }
 
 /*DROP DOWN MENU CONTAINER*/
-#dropDownBox {
+.dropDownBox {
     display: none;
 
 }
 
 /*DROP DOWN MENU*/
-#dropDown {
+.dropDown {
     width: 97.3%;
     z-index: 2;
     position: absolute;
@@ -88,11 +88,11 @@
 
 /*DROP DOWN BUTTONS HOVER*/
 .dropButtons:hover {
-    background: #3498db;
+    background: .3498db;
     cursor: pointer;
 }
 
-#tabsBox {
+.tabsBox {
     display: none;
 }
 
@@ -118,17 +118,17 @@
 
 }
 
-#event {
+.event {
     width: 100%;
     height: auto;
     font-size: 13pt;
 }
 
 .credits {
+    width: 500px;
     height: 50px;
     display: grid;
     grid-template-columns: 50% 50%;
-    background: white;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     align-items: center;
@@ -137,7 +137,7 @@
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: bold;
     font-size: 18pt;
-    border-bottom: 2px solid rgb(216, 208, 208);
+    background: white;
 }
 
 .readMoreBox {
@@ -165,13 +165,13 @@
 
 .readMoreButton:hover {
     cursor: pointer;
-    background: #55db34;
+    background: .55db34;
     color: white;
 }
 
 .eventPicBox {
     margin-top: -10px;
-    background-image: url("../Images/planting.jpeg");
+    /* background-image: url("../Images/planting.jpeg"); */
     background-size: cover;
     height: 253px;
 }
@@ -238,26 +238,25 @@
 
 /*PEOPLE COUNTER*/
 .peopleCount {
-    font-size: 17pt;
     font-weight: bold;
     font-family: 'Source Sans Pro', sans-serif;
-    color: #3498db;
+    color: .3498db;
 }
 
 /*EVENT INFO PAGE*/
-#eventsInfoBox {
+.eventsInfoBox {
     display: none;
     width: 100%;
     height: auto;
 }
 
 /*EVENT INFO TOP BOX*/
-#detailsTopBox {
+.detailsTopBox {
     height: auto;
 }
 
 /*EVENT INFO PICTURE*/
-#eventInfoPic {
+.eventInfoPic {
     width: 100%;
     height: 320px;
     border-top: 2px solid rgb(216, 208, 208);
@@ -265,13 +264,13 @@
 }
 
 /*JOIN EVENT BOX*/
-#joinEventButtonBox {
+.joinEventButtonBox {
     width: 100%;
     height: 100px;
 }
 
 /*JOIN EVENT BUTTON*/
-#joinEventButton {
+.joinEventButton {
     width: 100%;
     height: 70px;
     border: none;
@@ -287,14 +286,14 @@
 }
 
 /*JOIN EVENT BUTTON HOVER EFFECT*/
-#joinEventButton:hover {
-    background: #0b6dad;
+.joinEventButton:hover {
+    background: .0b6dad;
     color: white;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 2);
 }
 
 /*EVENT INFO TITLE*/
-#eventInfoTitle {
+.eventInfoTitle {
     font-size: 17pt;
     height: 50px;
     text-indent: 30px;
@@ -303,7 +302,7 @@
 }
 
 /*EVENT SPECIAL INFO BOX*/
-#specialInfoBox {
+.specialInfoBox {
     margin-left: 30px;
     margin-right: 30px;
     width: 90%;
@@ -312,7 +311,7 @@
 }
 
 /*INFO LOCATION BOX*/
-#locationInfoBox {
+.locationInfoBox {
     display: grid;
     grid-template-columns: 50px 500px;
     grid-template-rows: 30px;
@@ -324,14 +323,14 @@
 }
 
 /*INFO LOCATION PICTURE*/
-#locationPic {
+.locationPic {
     margin-left: 10px;
     width: 20px;
     height: 20px;
 }
 
 /*DATE TIME BOX*/
-#dateTimeInfoBox {
+.dateTimeInfoBox {
     display: grid;
     grid-template-columns: 50px 400px;
     grid-template-rows: 30px;
@@ -344,14 +343,14 @@
 
 
 /*INFO CALENDER PICTURE*/
-#calenderPic {
+.calenderPic {
     margin-left: 10px;
     width: 20px;
     height: 20px;
 }
 
 /*DATE AND TIME*/
-#dateTime {
+.dateTime {
     display: grid;
     grid-template-columns: 110px 110px;
 
@@ -359,7 +358,7 @@
 
 
 /*INFO ORGANIZER BOX*/
-#organizerInfoBox {
+.organizerInfoBox {
     display: grid;
     grid-template-columns: 50px 500px;
     grid-template-rows: 30px;
@@ -371,14 +370,14 @@
 }
 
 /*INFO ORGANIZER PICTURE*/
-#organizerPic {
+.organizerPic {
     margin-left: 10px;
     width: 20px;
     height: 20px;
 }
 
 /*INFO EMAIL BOX*/
-#emailInfoBox {
+.emailInfoBox {
     display: grid;
     grid-template-columns: 50px 500px;
     grid-template-rows: 30px;
@@ -390,14 +389,14 @@
 }
 
 /*INFO EMAIL PICTURE*/
-#emailPic {
+.emailPic {
     margin-left: 10px;
     width: 20px;
     height: 13px;
 }
 
 /*PEOPLE COUNT INFO BOX*/
-#peopleCountBox {
+.peopleCountBox {
     display: grid;
     grid-template-columns: 50px 15px 500px;
     grid-template-rows: 30px;
@@ -409,33 +408,32 @@
 }
 
 /*PEOPLE COUNT PICTURE*/
-#peopleCountPic {
+.peoplePic {
     margin-left: 10px;
     width: 20px;
     height: 20px;
 }
 
 /*CREDITS INFO BOX*/
-#creditsBox {
+.creditsBox {
     display: grid;
     grid-template-columns: 50px 15px 500px;
     grid-template-rows: 30px;
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 13pt;
     color: rgb(102, 101, 101);
     align-items: center;
     justify-items: start;
 }
 
 /*CREDITS PICTURE*/
-#creditsPic {
+.creditsPic {
     margin-left: 10px;
     width: 20px;
     height: 20px;
 }
 
 /*INFO DESCRIPTION BOX*/
-#infoDescriptionBox {
+.infoDescriptionBox {
     margin: 30px;
     font-family: 'Source Sans Pro', sans-serif;
     text-emphasis: justify;
@@ -490,11 +488,11 @@
 }
 
 /*EVENT INFO TOP BOX*/
-#joinedDetailsTopBox {
+.joinedDetailsTopBox {
     height: auto;
 }
 
-#createEventBox {
+.createEventBox {
     width: 100%;
     height: 700px;
     text-indent: 20px;
@@ -540,7 +538,7 @@ input[type=date]::-webkit-inner-spin-button {
     display: none;
 }
 
-#eventInfo {
+.eventInfo {
     display: grid;
     grid-template-rows: 70px 70px 70px 70px 10px;
     grid-template-areas: "organization",
@@ -549,19 +547,19 @@ input[type=date]::-webkit-inner-spin-button {
     align-items: center;
 }
 
-#eventTimeBox {
+.eventTimeBox {
     display: grid;
     grid-template-rows: 20px 40px 20px 40px 20px;
     align-items: center;
 }
 
-#startBox {
+.startBox {
     display: grid;
     grid-template-columns: 220px 140px;
     grid-template-rows: 40px;
 }
 
-#startDateBox {
+.startDateBox {
     display: grid;
     font-size: 10pt;
     grid-template-columns: 65% 35%;
@@ -575,7 +573,7 @@ input[type=date]::-webkit-inner-spin-button {
     text-indent: 0;
 }
 
-#startTimeBox {
+.startTimeBox {
     display: grid;
     font-size: 10pt;
     grid-template-columns: 70% 30%;
@@ -589,7 +587,7 @@ input[type=date]::-webkit-inner-spin-button {
     border: 1px solid grey;
 }
 
-#startTimeInput {
+.startTimeInput {
     width: 90px;
 }
 
@@ -599,14 +597,14 @@ input[type="time"]::-webkit-inner-spin-button {
     margin: 0;
 }
 
-#endBox {
+.endBox {
     display: grid;
     grid-template-columns: 220px 140px;
     grid-template-rows: 40px;
 
 }
 
-#endDateBox {
+.endDateBox {
     display: grid;
     font-size: 10pt;
     grid-template-columns: 65% 35%;
@@ -620,7 +618,7 @@ input[type="time"]::-webkit-inner-spin-button {
     text-indent: 0;
 }
 
-#endTimeBox {
+.endTimeBox {
     display: grid;
     font-size: 10pt;
     grid-template-columns: 70% 30%;
@@ -634,7 +632,7 @@ input[type="time"]::-webkit-inner-spin-button {
     text-indent: 10px;
 }
 
-#endTimeInput {
+.endTimeInput {
     width: 90px;
 }
 
@@ -649,7 +647,7 @@ input[type="time"]::-webkit-inner-spin-button {
     height: 20px;
 }
 
-#detailsBox {
+.detailsBox {
     background: white;
     margin-left: 11px;
     margin-right: 11px;
@@ -658,12 +656,12 @@ input[type="time"]::-webkit-inner-spin-button {
     height: 190px;
 }
 
-#detailsContent {
+.detailsContent {
     text-indent: 0;
     padding: 10px;
 }
 
-#details {
+.details {
     width: 100%;
     height: 165px;
     overflow: hidden;
@@ -672,30 +670,30 @@ input[type="time"]::-webkit-inner-spin-button {
 }
 
 
-#cancelButton {
+.cancelButton {
     width: 80px;
     height: 30px;
     border-radius: 5px;
-    background: #3498db;
+    background: .3498db;
     font-weight: bold;
     color: white;
 }
 
-#cancelButton:hover {
-    background: #1f4c6b;
+.cancelButton:hover {
+    background: .1f4c6b;
 }
 
-#createButton {
+.createButton {
     width: 80px;
     height: 30px;
     border-radius: 5px;
     font-weight: bold;
-    background: #3498db;
+    background: .3498db;
     color: white;
 }
 
-#createButton:hover {
-    background: #1f4c6b;
+.createButton:hover {
+    background: .1f4c6b;
 }
 
 
@@ -729,7 +727,7 @@ input[type="time"]::-webkit-inner-spin-button {
 
 
     /*TABS CONTAINER*/
-    #tabsBox {
+    .tabsBox {
         display: grid;
         grid-template-columns: 200px 200px 200px 200px 200px 200px;
         align-content: center;

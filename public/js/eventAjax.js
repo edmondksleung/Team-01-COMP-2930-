@@ -1,7 +1,7 @@
 // AJAX to import data from firebase
-$('.cities').click(function () {
+$('.cities').click(function (x) {
     // Grabbing clicked name attribute
-    let city = $(this).attr('name');
+    var city = $(this).attr('name');
     console.log(city);
     $.ajax({
         type: 'GET',
@@ -12,6 +12,8 @@ $('.cities').click(function () {
             console.log(keys);
             // Creating a list of events from firebase
             for (let i = 0; i < keys.length; i++) {
+                // Putting value into dom element
+                let k = keys[i];
 
                 ////////// Creating event box using dom elements /////////
                 let allEventsBox = $('.allEventsBox');
@@ -29,11 +31,18 @@ $('.cities').click(function () {
 
                 let eventPicBox = document.createElement('div');
                 eventPicBox.setAttribute('class', 'eventPicBox');
+                eventPicBox.style.backgroundImage = `url(${data[k].imgurl})`
                 credits.after(eventPicBox);
 
                 let readMoreBox = document.createElement('div');
                 readMoreBox.setAttribute('class', 'readMoreBox');
                 eventPicBox.append(readMoreBox);
+
+                // let eventPic = document.createElement('img');
+                // eventPic.setAttribute('class', 'eventPic');
+                // eventPic.setAttribute('src', data[k].imgurl);
+                // eventPicBox.append(eventPic);
+                // console.log(data[k].imgurl);
 
                 let emptyDiv = document.createElement('div');
                 readMoreBox.append(emptyDiv);
@@ -78,11 +87,15 @@ $('.cities').click(function () {
                 peopleCount.setAttribute('class', 'peopleCount');
                 peopleBox.append(peopleCount);
 
-
-
-
+<<<<<<< HEAD
                 // Putting value into dom element
                 let k = keys[i];
+=======
+
+
+
+                
+>>>>>>> f44fe02ae148ed7dda9bd9f1a2705f2fdb524b33
                 $(eventMessage).text(data[k].subject);
                 $(month).text(data[k].month);
                 $(day).text(data[k].day);
