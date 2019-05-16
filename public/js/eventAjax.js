@@ -88,7 +88,6 @@ $('.cities').click(function (x) {
                 peopleBox.append(peopleCount);
 
                 // Putting value into dom element
-                let k = keys[i];
                 $(eventMessage).text(data[k].subject);
                 $(month).text(data[k].month);
                 $(day).text(data[k].day);
