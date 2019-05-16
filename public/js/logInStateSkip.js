@@ -7,7 +7,7 @@
                     }, 1000);
                     $('.welcomePageWrapper, .navigation').css('display: block');
                 } else {
-                    $("#navigation").show();
+                    $(".welcomePageWrapper").hide();
                     $(".signInPageWrapper").show();
                 }
             });

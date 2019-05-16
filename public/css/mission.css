@@ -1,12 +1,15 @@
 .missionPageWrapper {
     display: none;
+    background: black;
 }
+
 #missionHeading {
 text-align: center;
-margin-top: -10;
+padding-top: 22px;
 font-size: 20pt;
 letter-spacing: 10px;
 color: white;
+
 }
 
 #missionHeading p {
