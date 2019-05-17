@@ -11,9 +11,8 @@ span.contactSpan {
 
 #contactUsPagePicture {
     height: 35vh;
-    margin-top: 20px;
-    background-image: url("../Images/mountains.jpg");
-    background-size: cover;
+    margin-top: 90px;
+    background-image: url("https://cdn-images-1.medium.com/max/1600/1*rcR5fPxpf3Vj2GkLBjHJ6Q.gif");
     background-repeat: no-repeat;
     background-position: center;
     text-align: center;
@@ -103,7 +102,7 @@ span.contactSpan {
     vertical-align: middle;
 }
 
-#email {
+.contactUsWrapper #email {
     grid-area: email;
     width: auto;
     margin: 0 auto;
