@@ -95,14 +95,15 @@
 /*MAIN CONTAINER FOR FORM AND VIDEO*/
 .mainBox {
     width: 1750px;
-    justify-items: center;
-    justify-content: center;
     display: grid;
-    grid-template-columns: 1200px 550px;
+    grid-template-areas:
+        "left right";
+    grid-template-columns: 1000px 550px;
 }
 
 /*VIDEO CONTAINER*/
 .vidBox {
+    grid-area: left;
     width: 100%;
     background: grey;
 }
@@ -115,6 +116,7 @@
 
 /*CREATE EVENT FORM INFO TOP BOX*/
 .createEventFormBox {
+    grid-area: right;
     width: 550px;
     height: 820px;
     padding-top: 20px;
@@ -149,8 +151,8 @@
 
 /*ORGANIZER UI ORGANIZER EVENT INFO*/
 .organizerEventInfo {
-    display: grid;
-    grid-template-rows: 50px 20px 40px 20px 40px 20px 40px 20px 40px 20px 40px;
+    /* display: grid; */
+    grid-template-rows: 33% 34% 33%;
     grid-template-areas: "organization",
         "event",
         "location";
@@ -158,7 +160,7 @@
 }
 
 /*ORGANIZER LABEL*/
-.organizerLabel {
+.boxLabel {
     font-size: 10pt;
     font-weight: bold;
     margin-top: 0;
@@ -166,6 +168,7 @@
     padding-top: 10px;
     text-indent: 20px;
     color: black;
+    display: grid;
 }
 
 /*ORGANIZER UI EVENT TIME BOX*/
@@ -384,4 +387,6 @@ input[type="time"]::-webkit-inner-spin-button {
 
 .inputBox {
     border: 1px solid black;
+    
+    display: grid;
 }
