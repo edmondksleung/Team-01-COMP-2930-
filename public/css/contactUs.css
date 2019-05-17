@@ -1,5 +1,7 @@
 .contactUsWrapper {
     display: none;
+    color: white;   
+    text-align: center;
 }
 span.contactSpan {
     letter-spacing: 3px;
