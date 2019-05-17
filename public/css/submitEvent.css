@@ -1,0 +1,120 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 12pt;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 10pt;
+}
+
+#tempNav {
+    height: 15vh;
+    background-color: red;
+}
+
+.submitEventPageWrapper {
+    display: grid;
+    grid-template-areas:
+        "left right";
+    grid-template-columns: 40% 60%;
+    height: 85vh;
+}
+
+#videoPicture {
+    grid-area: left;
+    background-color: blue;
+}
+
+input:focus {
+    outline: none;
+}
+
+select:focus {
+    outline: none;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+#submitForm {
+    grid-area: right;
+    padding: 20px;
+}
+
+.textbox {
+    border: none;
+    border-bottom: 1px solid black;
+    width: 450px;
+    height: 25px;
+    margin-bottom: 15px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 11pt;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+#addressCity {
+    display: grid;
+    grid-template-areas:
+        "addressGrid cityGrid";
+    grid-template-columns: 66% 33%;
+    grid-template-rows: 50px;
+}
+
+#addressGrid {
+    grid-area: addressGrid;
+}
+
+#cityGrid {
+    grid-area: cityGrid;
+}
+
+#city {
+    height: 25px;
+    width: 145px;
+    border: 1px solid rgb(100, 100, 100);
+    margin-top: 4px;
+}
+
+#date {
+    height: 25px;
+    background-color: rgb(241, 241, 241);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-top: 4px;
+}
+
+#description {
+    width: 650px;
+    height: 150px;
+    margin-top: 4px;
+    padding: 10px;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 11pt;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+#photo {
+    margin-top: 4px;
+}
+
+#submit {
+    width: 50px;
+    margin-top: 25px;
+}
+
+#submit:hover {
+    cursor: pointer;
+}
+
+
+
+
+
+
