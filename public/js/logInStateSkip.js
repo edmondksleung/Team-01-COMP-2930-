@@ -8,7 +8,7 @@
                     $('.welcomePageWrapper, .navigation').css('display: block');
                 } else {
                     $(".eventsWrapper").hide();
-                    $(".organizerEventsWrapper").hide();
+                    $(".submitEventPageWrapper").hide();
                     $(".eventsInfoBox").hide();
                     $(".welcomePageWrapper").hide();
                     
