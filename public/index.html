@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/welcome.css" />
     <link rel="stylesheet" type="text/css" href="css/eventsListing.css" />
     <link rel="stylesheet" type="text/css" href="css/mission.css" />
-    <link rel="stylesheet" type="text/css" href="css/organizer.css" />
+    <link rel="stylesheet" type="text/css" href="css/submitEvent.css" />
     <link rel="stylesheet" type="text/css" href="css/contactUs.css" />
 
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:900" rel="stylesheet" />
@@ -393,28 +393,29 @@
 
         <!--ORGANIZER UI CREATE EVENT----------------------------------------------------------->
         <!-------------------------------------------------------------------------------------->
-        <div class="mainBox">
+        <div class="submitEventPageWrapper">
             <!--VIDEO BOX-->
-            <div class="vidBox">
+            <div id="videoPicture">
                 <iframe class="vid" src="https://www.youtube.com/embed/56MhjXTcSCg?autoplay=1">
                 </iframe>
             </div>
             <!--CREATE FORM BOX-->
-            <div class="createEventFormBox">
-                <div class="organizerEventInfo">
-                    <!--ORGANIZER UI ORGANIZATION BOX-->
-                    <div class="createTitle">
-                        Create Your Event
+            <form id="submitForm">
+                Event Name<br>
+                <input type="text" class="textbox" id="eventName" required><br>
+                Organization<br>
+                <input type="text" class="textbox" id="organization" required><br>
+                Email<br>
+                <input type="email" class="textbox" id="email" required><br>
+               <div id="addressCity">
+                    <div id="addressGrid">
+                        Address<br>
+                        <input type="text" class="textbox" id="address" required>
                     </div>
-                        <label class="boxLabel">Organization</label>
-                        <input class="inputBox" id="orgName" type="text" required="required">
-
-                        <label class="boxLabel">Event Name</label>
-                        <input class="inputBox" id="eventName" type="text" required="required">
-
-                        <label class="boxLabel" class="">City</label>
+                    <div id="cityGrid">
+                        City/District<br>
                         <select name="city" id="city" required>
-                            <option value="" disabled selected> -- select a city -- </option>
+                            <option value="" disabled selected> -- Select An Option -- </option>
                             <option>Abbotsford</option>
                             <option>Burnaby</option>
                             <option>Chilliwack</option>
@@ -427,63 +428,16 @@
                             <option>Vancouver</option>
                             <option>White Rock</option>
                         </select>
-                    
-                        <label class="boxLabel" class="">Address</label>
-                        <input class="inputBox" id="address" type="text" required="required">
-                        
-                        <label class="boxLabel">Email</label>
-                        <input class="inputBox" id="email" type="email" required="required">
-                        
-                        
-                <!--ORGANIZER UI EVENT TIME BOX------------------------------------------->
-                <div class="eventTimeBox">
-                    <!--ORGANIZER UI START DATE LABEL-->
-                    <label class="boxLabel">Date</label>
-                    <!--ORGANIZER UI START TIME LABEL-->
-                    <label class="boxLabel">Start</label>
-                    <!--ORGANIZER UI END TIME LABEL-->
-                    <label class="boxLabel">End</label>
-                    <!--ORGANIZER START DATE BOX-->
-                    <div class="startBox">
-                        <div class="startDateBox">
-                            <div class="startDate">
-                                <input class="startDateInput" type="date" required="required">
-                            </div>
-                            <img alt="calender" class="calender" src="./Images/calender.png">
-                        </div>
                     </div>
-                    <!--ORGANIZER UI START TIME-->
-                    <div class="startTimeBox">
-                        <div class="startTime">
-                            <input class="startTimeInput" type="time" value="09:00" required="required">
-                        </div>
-                        <img alt="clock" class="clock" src="./Images/clock.png">
-                    </div>
-                    <!--ORGANIZER UI END TIME-->
-                    <div class="endTimeBox">
-                        <div class="endTime">
-                            <input class="endTimeInput" type="time" value="17:00" required="required">
-                        </div>
-                        <img alt="clock" class="clock" src="./Images/clock.png">
-                    </div>
-                </div>
-                <!--ORGANIZER UI DETAILS-->
-                <label class="boxLabel">Description</label>
-                <textarea class="inputBox" id="description"></textarea>
-
-                <!--BOTTOM BUTTONS CONTAINER-->
-                <div class="bottomBox">
-                    <div class="filesBox">
-                        <input type="file" value="upload" id="fileButton" accept='image/*'/>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="createButtonsBox">
-                        <button class="cancelButton">Cancel</button>
-                        <input type="submit" value="Post" id="submit" />
-                    </div>
-                </div>
-            </div>
+               </div>
+               <br>Date<br>
+               <input type="date" id="date" required><br>
+               <br>Description<br>
+               <textarea id="description"></textarea><br>
+               <br>Upload Photo<br>
+               <input type="file" value="upload" id="photo" accept='image/*'><br>
+               <input type="submit" value="Post" id="submit">
+            </form>
         </div>
     </div>
 
@@ -696,6 +650,7 @@
     <script src="./js/scrollDown.js"></script>
     <script src="./js/userInit.js"></script>
     <script src="./js/joinEvent.js"></script>
+    <script src="./js/form.js"></script>
 </body>
 
 </html>
