@@ -10,11 +10,12 @@ $('.cities').click(function () {
         success: function (data) {
             let keys = Object.keys(data);
             console.log(keys);
+
             // Creating a list of events from firebase
             for (let i = 0; i < keys.length; i++) {
                 // Putting value into dom element
                 let k = keys[i];
-
+                console.log(k);
                 ////////// Creating event box using dom elements /////////
                 let allEventsBox = $('.allEventsBox');
                 let eventsBox = document.createElement('div');
@@ -49,8 +50,14 @@ $('.cities').click(function () {
 
                 let readMoreButton = document.createElement('button');
                 readMoreButton.setAttribute('class', 'readMoreButton');
-                $(".readMoreButton").text("info");
                 readMoreBox.append(readMoreButton);
+                $(".readMoreButton").text("info");
+
+                /**** stringify's the object key ****/
+                
+                var objStr = JSON.stringify(k);
+                console.log(objStr);
+                readMoreButton.setAttribute("id", objStr);
 
                 // preview box 
 
@@ -87,11 +94,17 @@ $('.cities').click(function () {
                 peopleCount.setAttribute('class', 'peopleCount');
                 peopleBox.append(peopleCount);
 
+                // add key to info box
+                // $(".readMoreButton").attr("class", data[k]);
+
+                
                 // Putting value into dom element
                 $(eventMessage).text(data[k].subject);
                 $(month).text(data[k].month);
                 $(day).text(data[k].day);
-                $(peopleCount).text(data[k].userCount);                
+                $(peopleCount).text(data[k].userCount);
+                $(credits).text(data[k].credit);
+
 
             }
             

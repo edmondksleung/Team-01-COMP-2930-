@@ -1,51 +1,64 @@
-//MENU DROP DOWN----------------------------------------------------
-$(".menuButton").click(function () {
-    $(".dropDownBox").toggle();
-});
+let city = $(this).attr('name');
+console.log(city);
+$.ajax({
+    type: 'GET',
+    url: `https://evolunteer-45c5d.firebaseio.com/events/${city}.json`,
+    dataType: 'json',
+    success: function (data) {
+        let keys = Object.keys(data);
+        console.log(keys);
 
-//MORE DETAILS BUTTON----------------------------------------------------------
-$(".readMoreButton").click(function () {
-    $(".eventsBox").hide();
-    $(".joinedEventsBox").hide();
-    $(".eventsLocation").hide();
-    $(".eventsInfoBox").show();
-});
+        //MENU DROP DOWN----------------------------------------------------
+        $(".menuButton").click(function () {
+            $(".dropDownBox").toggle();
+        });
 
-//CLOSE DETAILS WINDOW BUTTON---------------------------------------
-$(".closeDetailsButton").click(function () {
-    $(".eventsInfoBox").hide();
-    $(".eventsBox").show();
-    $(".joinedEventsBox").show();
-    $(".eventsLocation").show();
-});
+        //MORE DETAILS BUTTON----------------------------------------------------------
+        $(".readMoreButton").click(function () {
+            $(".eventsBox").hide();
+            $(".joinedEventsBox").hide();
+            $(".eventsLocation").hide();
+            $(".eventsInfoBox").show();
+        });
 
-//HOME BUTTON-------------------------------------------------------------------
-$(".homeButton").click(function() {
-    $(".eventsWrapper").hide();
-    $(".subPageWrapper").fadeIn(1000);
-    $(document.body).css("background", "rgb(33, 49, 92)");
+        //CLOSE DETAILS WINDOW BUTTON---------------------------------------
+        $(".closeDetailsButton").click(function () {
+            $(".eventsInfoBox").hide();
+            $(".eventsBox").show();
+            $(".joinedEventsBox").show();
+            $(".eventsLocation").show();
+        });
+
+        //HOME BUTTON-------------------------------------------------------------------
+        $(".homeButton").click(function() {
+            $(".eventsWrapper").hide();
+            $(".subPageWrapper").fadeIn(1000);
+            $(document.body).css("background", "rgb(33, 49, 92)");
 
 
-});
+        });
 
-//ABOUT US BUTTON-------------------------------------------------------------------
-$(".aboutButton").click(function() {
-    $(".eventsWrapper").fadeOut(1000);
-    $(".aboutUsWrapper").fadeIn(1000);
-    $(document.body).css("background", "rgb(33, 49, 92)");
-});
+        //ABOUT US BUTTON-------------------------------------------------------------------
+        $(".aboutButton").click(function() {
+            $(".eventsWrapper").fadeOut(1000);
+            $(".aboutUsWrapper").fadeIn(1000);
+            $(document.body).css("background", "rgb(33, 49, 92)");
+        });
 
-//LOCATION BUTTON-------------------------------------------------------------------
-$(".locationButton").click(function() {
-    $(".eventsWrapper").fadeOut(1000);
-    $(".mainPageWrapper").fadeIn(1000);
-    $(document.body).css("background", "rgb(33, 49, 92)");
-});
+        //LOCATION BUTTON-------------------------------------------------------------------
+        $(".locationButton").click(function() {
+            $(".eventsWrapper").fadeOut(1000);
+            $(".mainPageWrapper").fadeIn(1000);
+            $(document.body).css("background", "rgb(33, 49, 92)");
+        });
 
-//LOGOUT BUTTON-------------------------------------------------------------
-$(".logoutButton").click(function () {
-    firebase.auth().signOut();
-    alert('Logged Out');
-    window.location = 'signIn.html';
-    console.log("test");
+        //LOGOUT BUTTON-------------------------------------------------------------
+        $(".logoutButton").click(function () {
+            firebase.auth().signOut();
+            alert('Logged Out');
+            window.location = 'signIn.html';
+            console.log("test");
+        });
+    }
+
 });
