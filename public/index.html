@@ -160,32 +160,6 @@
     <!--EVENTS PAGE CONTAINER-------------------------------------------------------------------------------->
     <!-------------------------------------------------------------------------------------------------------->
     <div class="eventsWrapper">
-        <!--EVENTS NAV BAR------------------------------------------------------------------------>
-        <!-- <div class="navBarPic">
-          <ul>
-            <li>
-              <img
-                src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
-                alt="pic1"
-              />
-            </li>
-
-            <li>
-              <img
-                src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
-                alt="pic1"
-              />
-            </li>
-
-            <li>
-              <img
-                src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
-                alt="pic1"
-                class="activePic"
-              />
-            </li>
-          </ul>
-        </div> -->
         <!--MENU ICON BUTTON-->
         <div class="menuBox">
             <button class="menuButton">
@@ -508,8 +482,18 @@
             $(".myListingsPageBtn").removeClass("activePage");
             $(".aboutUsPageBtn").removeClass("activePage");
             $(".contactPageBtn").removeClass("activePage");
-
         });
+
+        $(".cities").click(function (event) {
+            $(".homePageBtn").removeClass("activePage");
+            $(".missionPageBtn").removeClass("activePage");
+            $(".eventsPageBtn").addClass("activePage");
+            $(".myEventsPageBtn").removeClass("activePage");
+            $(".myListingsPageBtn").removeClass("activePage");
+            $(".aboutUsPageBtn").removeClass("activePage");
+            $(".contactPageBtn").removeClass("activePage");
+        })
+
         $(".missionPageBtn").click(function (event) {
             $(".missionPageBtn").addClass("activePage");
             $(".homePageBtn").removeClass("activePage");
