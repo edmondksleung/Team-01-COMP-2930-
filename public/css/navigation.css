@@ -1,6 +1,6 @@
 .navigation {
     height: 7vh;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     display: grid;
     grid-template-areas:
         "left middle right";

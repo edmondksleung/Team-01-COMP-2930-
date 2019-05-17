@@ -16,7 +16,7 @@
 .allEventsBox {
     display: grid;
     justify-items: center;
-    background: rgb(33, 49, 92);
+    background-color: #2f9e3a;
 }
 
 /*INDIVIDUAL EVENTS CONTAINER*/
@@ -33,7 +33,7 @@
     height: 80px;
     display: grid;
     justify-items: end;
-    background-color: rgb(33, 49, 92);
+    background-color: #2f9e3a;
 
 }
 
@@ -83,7 +83,7 @@
     border: none;
     font-weight: bold;
     color: white;
-    background: rgb(33, 49, 92);
+    background: 2f9e3a;
 }
 
 /*DROP DOWN BUTTONS HOVER*/
@@ -261,6 +261,7 @@
 
 /*CLOSE DETAILS BOX*/
 .closeDetailsBox {
+    cursor: pointer;
     transform: translate(517px, 5px);
 }
 
@@ -324,6 +325,7 @@
 
 /*EVENT INFO TITLE*/
 .eventInfoTitle {
+    background-color: white;
     font-size: 17pt;
     height: 50px;
     text-indent: 30px;
@@ -333,9 +335,10 @@
 
 /*EVENT SPECIAL INFO BOX*/
 .specialInfoBox {
-    margin-left: 30px;
-    margin-right: 30px;
-    width: 90%;
+    background-color: white;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: 20px;
     box-shadow: 0 2px 8px rgba(179, 175, 179, 2);
     border-radius: 5px;
 }
@@ -464,7 +467,9 @@
 
 /*INFO DESCRIPTION BOX*/
 .infoDescriptionBox {
-    margin: 30px;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 2px;
     font-family: 'Source Sans Pro', sans-serif;
     text-emphasis: justify;
     color: rgb(102, 101, 101);
@@ -763,7 +768,7 @@ input[type="time"]::-webkit-inner-spin-button {
         align-content: center;
         height: 100px;
         border-bottom-style: outset;
-        background-color: rgb(33, 49, 92);
+        background-color: #2f9e3a;
         border-bottom: 2px solid rgb(216, 208, 208);
 
     }
