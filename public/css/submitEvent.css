@@ -1,6 +1,6 @@
 .submitEventPageWrapper {
     display: none;
-        grid-template-areas:
+    grid-template-areas:
         "left right";
     grid-template-columns: 40% 60%;
     background-color: white;

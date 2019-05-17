@@ -1,22 +1,20 @@
 .missionPageWrapper {
     display: none;
-    background: rgb(25, 76, 85);
+    background-color: rgb(25, 76, 85);
 }
 
 #missionHeading {
-text-align: center;
-padding-top: 22px;
-font-size: 20pt;
-letter-spacing: 10px;
-color: white;
-
+    text-align: center;
+    padding-top: 22px;
+    font-size: 20pt;
+    letter-spacing: 10px;
+    color: white;
+    margin-bottom: 200px;
 }
 
 #missionHeading p {
     font-size: 12pt;
     letter-spacing: 1px;
-    margin-top: -20px;
-    margin-bottom: 255px;
 }
 
 #missionSubHeading{
@@ -28,34 +26,71 @@ color: white;
 }
 
 #missionSubHeading p {
-    letter-spacing: 2px;
+    font-size: 12pt;
+    letter-spacing: 1px;
 }
+
 .eco {
     color: rgb(118, 228, 85);
 }
 
-#infoPic1 {
-    margin-top: 40px;
-    margin-left: 170px;
-    height: 200px;
-    width:200px;
-    border: 1px solid red;
+#threePictures {
+    display: grid;
+    height: 30vh;
+    grid-template-areas:
+        "empty leftPicture middlePicture rightPicture empty2"
+        "empty leftText middleText rightText empty2";
+    grid-template-columns: 5% 30% 30% 30% 5%;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 12pt;
+    letter-spacing: 1px;
+    color: white;
 }
 
-#infoPic2 {
-    margin-bottom: -14px;
-    margin-left: 220px;
+#leftPicture {
+    grid-area: leftPicture;
+    width: auto;
+    margin: 0 auto;
+}
+
+#leftPicture img {
     height: 200px;
     width: 200px;
-    border: 1px solid red;
 }
 
-#infoPic3 {
-    margin-left: 160px;
+#leftText {
+    grid-area: leftText;
+}
+
+#middlePicture {
+    grid-area: middlePicture;
+    width: auto;
+    margin: 0 auto;
+}
+
+#middlePicture img {
+    height: 200px;
+    width: 200px;
+}
+
+#middleText {
+    grid-area: middleText;
+}
+
+#rightPicture {
+    grid-area: rightPicture;
+    width: auto;
+    margin: auto auto 20px auto;
+}
+
+#rightPicture img {
     height: 100px;
-    width: 350px;
-    vertical-align: middle;
-    border: 1px solid red;
+    width: 300px;
+}
+
+#rightText {
+    grid-area: rightText;
 }
 
 #infoPicDesc1 {
