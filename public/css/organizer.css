@@ -150,7 +150,7 @@
 /*ORGANIZER UI ORGANIZER EVENT INFO*/
 .organizerEventInfo {
     display: grid;
-    grid-template-rows: 40px 70px 70px 70px 70px 70px 10px;
+    grid-template-rows: 50px 20px 40px 20px 40px 20px 40px 20px 40px 20px 40px;
     grid-template-areas: "organization",
         "event",
         "location";
@@ -380,4 +380,8 @@ input[type="time"]::-webkit-inner-spin-button {
 .createButton:hover {
     background: #0592f0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+}
+
+.inputBox {
+    border: 1px solid black;
 }
