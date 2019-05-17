@@ -125,7 +125,7 @@
 }
 
 .credits {
-    width: 500px;
+    width: 100%;
     height: 50px;
     display: grid;
     grid-template-columns: 50% 50%;
@@ -246,8 +246,12 @@
 /*EVENT INFO PAGE*/
 .eventsInfoBox {
     display: none;
-    width: 100%;
+    width: 550px;
     height: auto;
+    border: 2px solid grey;
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 /*EVENT INFO TOP BOX*/
@@ -255,18 +259,45 @@
     height: auto;
 }
 
+/*CLOSE DETAILS BOX*/
+.closeDetailsBox {
+    transform: translate(517px, 5px);
+}
+
+/*CLOSE DETAILS BUTTON*/
+.closeDetailsButton {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+}
+
+/*CLOSE DETAILS BUTTON HOVER*/
+.closeDetailsButton:hover {
+    filter: invert(100%);
+    background: grey;
+    border-radius: 5px;
+}
+
+/*EVENT INFO PICTURE CONTAINER*/
+.eventInfoPicBox {
+    width: 100%;
+    height: 320px;
+    background-image: url(./Images/planting.jpeg);
+    background-size: cover;
+    border-top: 2px solid rgb(216, 208, 208);
+    border-bottom: 2px solid rgb(216, 208, 208);
+}
+
 /*EVENT INFO PICTURE*/
 .eventInfoPic {
     width: 100%;
-    height: 320px;
-    border-top: 2px solid rgb(216, 208, 208);
-    border-bottom: 2px solid rgb(216, 208, 208);
+    height: 360px;
 }
 
 /*JOIN EVENT BOX*/
 .joinEventButtonBox {
     width: 100%;
-    height: 100px;
+    height: 70px;
 }
 
 /*JOIN EVENT BUTTON*/
@@ -279,7 +310,6 @@
     color: white;
     font-size: 15pt;
     font-weight: bold;
-    position: fixed;
     bottom: 0;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 2);
 

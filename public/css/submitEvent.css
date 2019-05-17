@@ -1,4 +1,10 @@
 .submitEventPageWrapper {
+    display: grid;
+    grid-template-areas:
+        "left right";
+    grid-template-columns: 40% 60%;
+    background-color: white;
+    height: 87vh;
     margin: 0px;
     padding: 0px;
     font-size: 12pt;
@@ -8,22 +14,10 @@
     font-size: 10pt;
 }
 
-#tempNav {
-    height: 15vh;
-    background-color: red;
-}
-
-.submitEventPageWrapper {
-    display: grid;
-    grid-template-areas:
-        "left right";
-    grid-template-columns: 40% 60%;
-    height: 85vh;
-}
-
 #videoPicture {
     grid-area: left;
-    background-color: blue;
+    background-image: url("../Images/plantingTrees.jpeg");
+    background-size: cover;
 }
 
 input:focus {
@@ -53,6 +47,7 @@ textarea:focus {
     font-size: 11pt;
     font-weight: 300;
     letter-spacing: 1px;
+    text-align: left;
 }
 
 #addressCity {
@@ -71,6 +66,11 @@ textarea:focus {
     grid-area: cityGrid;
 }
 
+.submitEventPageWrapper #email {
+    width: 450px;
+    margin-bottom: 15px;
+}
+
 #city {
     height: 25px;
     width: 145px;
@@ -85,6 +85,7 @@ textarea:focus {
     border-radius: 5px;
     padding-left: 10px;
     margin-top: 4px;
+    width: 100px;
 }
 
 #description {
