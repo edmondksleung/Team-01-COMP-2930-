@@ -14,7 +14,6 @@ var city = $(".cities").attr("name");
 console.log(city);
 $("#joinEventButton").click(function(){
 
-
     const str = "users";
     console.log(str);
     console.log(city);

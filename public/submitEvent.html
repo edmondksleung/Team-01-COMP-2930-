@@ -11,8 +11,11 @@
 <body>
     <div id="tempNav"></div>
     <div class="submitEventPageWrapper">
-        <div id="videoPicture"></div>
-        <div id="submitForm">
+        <!--VIDEO BOX-->
+        <div id="videoPicture">
+        </div>
+        <!--CREATE FORM BOX-->
+        <form id="submitForm">
             Event Name<br>
             <input type="text" class="textbox" id="eventName" required><br>
             Organization<br>
@@ -41,16 +44,17 @@
                         <option>White Rock</option>
                     </select>
                 </div>
-            </div>
-            <br>Date<br>
-            <input type="date" id="date" required><br>
-            <br>Description<br>
-            <textarea id="description"></textarea><br>
-            <br>Upload Photo<br>
-            <input type="file" value="upload" id="photo" accept='image/*'><br>
-            <input type="submit" value="Post" id="submit">
+           </div>
+           <br>Date<br>
+           <input type="date" id="date" required><br>
+           <br>Description<br>
+           <textarea id="description"></textarea><br>
+           <br>Upload Photo<br>
+           <input type="file" value="upload" id="photo" accept='image/*'><br>
+           <input type="submit" value="Post" id="submit">
         </div>
-    </div>
+    </form>
+</div>
 </body>
 
 </html>
