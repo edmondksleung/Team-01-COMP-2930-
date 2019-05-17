@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/welcome.css" />
     <link rel="stylesheet" type="text/css" href="css/eventsListing.css" />
     <link rel="stylesheet" type="text/css" href="css/mission.css" />
-    <link rel="stylesheet" type="text/css" href="css/submitEvent.css" />
+    <link rel="stylesheet" type="text/css" href="css/organizer.css" />
     <link rel="stylesheet" type="text/css" href="css/contactUs.css" />
 
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:900" rel="stylesheet" />
@@ -393,9 +393,9 @@
 
         <!--ORGANIZER UI CREATE EVENT----------------------------------------------------------->
         <!-------------------------------------------------------------------------------------->
-        <div class="submitEventPageWrapper">
+        <div class="mainBox">
             <!--VIDEO BOX-->
-            <div id="videoPicture">
+            <div class="vidBox">
                 <iframe class="vid" src="https://www.youtube.com/embed/56MhjXTcSCg?autoplay=1">
                 </iframe>
             </div>
@@ -412,10 +412,15 @@
                         Address<br>
                         <input type="text" class="textbox" id="address" required>
                     </div>
-                    <div id="cityGrid">
-                        City/District<br>
+                        <label class="boxLabel">Organization</label>
+                        <input class="inputBox" id="orgName" type="text" required="required">
+
+                        <label class="boxLabel">Event Name</label>
+                        <input class="inputBox" id="eventName" type="text" required="required">
+
+                        <label class="boxLabel" class="">City</label>
                         <select name="city" id="city" required>
-                            <option value="" disabled selected> -- Select An Option -- </option>
+                            <option value="" disabled selected> -- select a city -- </option>
                             <option>Abbotsford</option>
                             <option>Burnaby</option>
                             <option>Chilliwack</option>
@@ -428,6 +433,30 @@
                             <option>Vancouver</option>
                             <option>White Rock</option>
                         </select>
+                    
+                        <label class="boxLabel" class="">Address</label>
+                        <input class="inputBox" id="address" type="text" required="required">
+                        
+                        <label class="boxLabel">Email</label>
+                        <input class="inputBox" id="email" type="email" required="required">
+                        
+                        
+                <!--ORGANIZER UI EVENT TIME BOX------------------------------------------->
+                <div class="eventTimeBox">
+                    <!--ORGANIZER UI START DATE LABEL-->
+                    <label class="boxLabel">Date</label>
+                    <!--ORGANIZER UI START TIME LABEL-->
+                    <label class="boxLabel">Start</label>
+                    <!--ORGANIZER UI END TIME LABEL-->
+                    <label class="boxLabel">End</label>
+                    <!--ORGANIZER START DATE BOX-->
+                    <div class="startBox">
+                        <div class="startDateBox">
+                            <div class="startDate">
+                                <input class="startDateInput" type="date" required="required">
+                            </div>
+                            <img alt="calender" class="calender" src="./Images/calender.png">
+                        </div>
                     </div>
                </div>
                <br>Date<br>
@@ -440,7 +469,7 @@
             </div>
         </form>
     </div>
-
+</div>
     <!--------------------------------------------------CONTACT US PAGE---------------------------------->
     <div class="contactUsWrapper">
             <div id="contactUsPagePicture">
@@ -575,20 +604,40 @@
             }, 200);
         });
 
-
-        $(".contactPageBtn").click(function (event) {
+        $(".eventsPageBtn").click(function (event) {
             event.preventDefault();
-            $(".welcomePageWrapper").fadeOut(100);
             $(".missionPageWrapper").fadeOut(100);
-            $(".organizerEventsWrapper").fadeOut(100);
             $(".eventsInfoBox").fadeOut(100);
+            $(".organizerEventsWrapper").fadeOut(100);
+            $(".contactUsWrapper").fadeOut(100);
             $(".eventsWrapper").fadeOut(100);
 
             setTimeout(function () {
-                $(".contactUsWrapper").fadeIn(300);
-                $(".contactUsWrapper").css("display", "block");
+                $(".welcomePageWrapper").fadeIn(300);
+                $(".welcomePageWrapper").css("display", "block");
+                $('html, body').animate({
+                scrollTop: $("#breakPoint").offset().top
+            }, 500);
+
             }, 200);
+
+            
         });
+
+        // $(".myListingsPageBtn").click(function (event) {
+        //     event.preventDefault();
+        //     $(".missionPageWrapper").fadeOut(100);
+        //     $(".welcomePageWrapper").fadeOut(100);
+        //     $(".eventsInfoBox").fadeOut(100);
+        //     $(".contactUsWrapper").fadeOut(100);
+        //     $(".eventsWrapper").fadeOut(100);
+
+        //     setTimeout(function () {
+        //         $(".organizerEventsWrapper").fadeIn(300);
+        //         $(".organizerEventsWrapper").css("display", "block");
+        //     }, 200);
+        // });
+
 
         $(".myListingsPageBtn").click(function (event) {
             event.preventDefault();
@@ -604,14 +653,35 @@
             }, 200);
         });
 
+
+        $(".contactPageBtn").click(function (event) {
+            event.preventDefault();
+            $(".welcomePageWrapper").fadeOut(100);
+            $(".missionPageWrapper").fadeOut(100);
+            $(".organizerEventsWrapper").fadeOut(100);
+            $(".eventsInfoBox").fadeOut(100);
+            $(".eventsWrapper").fadeOut(100);
+
+            setTimeout(function () {
+                $(".contactUsWrapper").fadeIn(300);
+                $(".contactUsWrapper").css("display", "block");
+            }, 200);
+        });
+
+        
+
     </script>
     <script>
         //Makes the background page color fade alongside transitions
+        $(".homePageBtn").click(function () {
+            $("body").css("background", "rgb(33, 49, 92)");
+        });
+
         $(".missionPageBtn").click(function () {
             $("body").css("background", "black");
         });
 
-        $(".homePageBtn").click(function () {
+        $(".eventsPageBtn").click(function () {
             $("body").css("background", "rgb(33, 49, 92)");
         });
 
@@ -619,27 +689,6 @@
             $("body").css("background", "orange");
         });
 
-    </script>
-    <script>
-        //Function event jquery function upon clicking mission button
-        $(".missionPageBtn").click(function (event) {
-            event.preventDefault();
-            $(".welcomePageWrapper").fadeOut(100);
-            setTimeout(function () {
-                $(".missionPageWrapper").fadeIn(300);
-                $(".missionPageWrapper").css("display", "block");
-            }, 200);
-        });
-
-        $(".homePageBtn").click(function (event) {
-            event.preventDefault();
-            $(".missionPageWrapper").fadeOut(100);
-            setTimeout(function () {
-                $(".welcomePageWrapper").fadeIn(300);
-                $(".welcomePageWrapper").css("display", "block");
-
-            }, 200);
-        });
     </script>
 
     <script src="./js/logInVerifyTransition.js"></script>
@@ -654,7 +703,6 @@
     <script src="./js/scrollDown.js"></script>
     <script src="./js/userInit.js"></script>
     <script src="./js/joinEvent.js"></script>
-    <script src="./js/form.js"></script>
 </body>
 
 </html>
