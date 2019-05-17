@@ -384,7 +384,6 @@
             </footer>
         </div>
     </div>
-
     <!--ORGANIZER UI EVENTS WRAPPER PAGE-------------------------------->
     <!------------------------------------------------------------------>
     <div class="organizerEventsWrapper">
@@ -394,8 +393,6 @@
         <div class="submitEventPageWrapper">
             <!--VIDEO BOX-->
             <div id="videoPicture">
-                <iframe class="vid" src="https://www.youtube.com/embed/56MhjXTcSCg?autoplay=1">
-                </iframe>
             </div>
             <!--CREATE FORM BOX-->
             <form id="submitForm">
@@ -476,6 +473,17 @@
             $(".aboutUsPageBtn").removeClass("activePage");
             $(".contactPageBtn").removeClass("activePage");
         });
+
+        $(".cities").click(function (event) {
+            $(".homePageBtn").removeClass("activePage");
+            $(".missionPageBtn").removeClass("activePage");
+            $(".eventsPageBtn").addClass("activePage");
+            $(".myEventsPageBtn").removeClass("activePage");
+            $(".myListingsPageBtn").removeClass("activePage");
+            $(".aboutUsPageBtn").removeClass("activePage");
+            $(".contactPageBtn").removeClass("activePage");
+        })
+
         $(".missionPageBtn").click(function (event) {
             $(".missionPageBtn").addClass("activePage");
             $(".homePageBtn").removeClass("activePage");
