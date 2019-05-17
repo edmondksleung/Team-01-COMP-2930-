@@ -514,11 +514,13 @@
 
     <!----------------------------JQUERY/JAVASCRIPT FILES TO BE LOADED AFTER HTML DOCUMENT LOADS-->
     <script>
+        /*-------------------------- NAV BAR ACTIVE PAGE STATUS HIGHLIGHT  ----------------------*/
         //determines what page it's on depending on wrapper display, then adds background white color to nav bar active page
         $(".homePageBtn").addClass("activePage");
         $(".homePageBtn").click(function (event) {
             $(".homePageBtn").addClass("activePage");
             $(".missionPageBtn").removeClass("activePage");
+            $(".eventsPageBtn").removeClass("activePage");
             $(".myEventsPageBtn").removeClass("activePage");
             $(".myListingsPageBtn").removeClass("activePage");
             $(".aboutUsPageBtn").removeClass("activePage");
@@ -528,47 +530,70 @@
         $(".missionPageBtn").click(function (event) {
             $(".missionPageBtn").addClass("activePage");
             $(".homePageBtn").removeClass("activePage");
+            $(".eventsPageBtn").removeClass("activePage");
             $(".myEventsPageBtn").removeClass("activePage");
             $(".myListingsPageBtn").removeClass("activePage");
             $(".aboutUsPageBtn").removeClass("activePage");
             $(".contactPageBtn").removeClass("activePage");
+        });
 
+        $(".eventsPageBtn").click(function (event) {
+            $(".missionPageBtn").removeClass("activePage");
+            $(".homePageBtn").removeClass("activePage");
+            $(".eventsPageBtn").addClass("activePage");
+            $(".myEventsPageBtn").removeClass("activePage");
+            $(".myListingsPageBtn").removeClass("activePage");
+            $(".aboutUsPageBtn").removeClass("activePage");
+            $(".contactPageBtn").removeClass("activePage");
         });
 
         $(".myEventsPageBtn").click(function (event) {
-            $(".myEventsPageBtn").addClass("activePage");
-            $(".missionPageBtn").removeClass("activePage");
             $(".homePageBtn").removeClass("activePage");
+            $(".missionPageBtn").removeClass("activePage");
+            $(".eventsPageBtn").removeClass("activePage");
+            $(".myEventsPageBtn").addClass("activePage");
             $(".myListingsPageBtn").removeClass("activePage");
             $(".aboutUsPageBtn").removeClass("activePage");
             $(".contactPageBtn").removeClass("activePage");
         });
+        $(".myListingsPageBtn").click(function (event) {
+            $(".homePageBtn").removeClass("activePage");
+            $(".missionPageBtn").removeClass("activePage");
+            $(".eventsPageBtn").removeClass("activePage");
+            $(".myEventsPageBtn").removeClass("activePage");
+            $(".myListingsPageBtn").addClass("activePage");
+            $(".aboutUsPageBtn").removeClass("activePage");
+            $(".contactPageBtn").removeClass("activePage");
+        });
+
+        $(".aboutUsPageBtn").click(function (event) {            
+            $(".homePageBtn").removeClass("activePage");
+            $(".missionPageBtn").removeClass("activePage");
+            $(".eventsPageBtn").removeClass("activePage");
+            $(".myEventsPageBtn").removeClass("activePage");
+            $(".myListingsPageBtn").removeClass("activePage");
+            $(".aboutUsPageBtn").addClass("activePage");
+            $(".contactPageBtn").removeClass("activePage");
+        });
+
 
         $(".contactPageBtn").click(function (event) {
-            $(".myEventsPageBtn").removeClass("activePage");
-            $(".missionPageBtn").removeClass("activePage");
             $(".homePageBtn").removeClass("activePage");
+            $(".missionPageBtn").removeClass("activePage");
+            $(".eventsPageBtn").removeClass("activePage");
+            $(".myEventsPageBtn").removeClass("activePage");
             $(".myListingsPageBtn").removeClass("activePage");
             $(".aboutUsPageBtn").removeClass("activePage");
             $(".contactPageBtn").addClass("activePage");
         });
 
-        $(".myListingsPageBtn").click(function (event) {
-            $(".myEventsPageBtn").removeClass("activePage");
-            $(".missionPageBtn").removeClass("activePage");
-            $(".homePageBtn").removeClass("activePage");
-            $(".myListingsPageBtn").addClass("activePage");
-            $(".aboutUsPageBtn").removeClass("activePage");
-            $(".contactPageBtn").removeClass("activePage");
-        });
+       
     </script>
 
     <script>
         //Function event jquery function upon clicking mission button
         $(".homePageBtn").click(function (event) {
             event.preventDefault();
-            // $(".organizerEventsWrapper").hide();
-            // $(".eventsWrapper").hide();
             $(".missionPageWrapper").fadeOut(100);
             $(".organizerEventsWrapper").fadeOut(100);
             $(".eventsInfoBox").fadeOut(100);
@@ -579,14 +604,11 @@
             setTimeout(function () {
                 $(".welcomePageWrapper").fadeIn(300);
                 $(".welcomePageWrapper").css("display", "block");
-                // $(".navigation").fadeIn(500).css("background-color", "rgb(33,49,92)");
             }, 200);
         });
 
         $(".missionPageBtn").click(function (event) {
             event.preventDefault();
-            // $(".organizerEventsWrapper").hide();
-            // $(".eventsInfoBox").hide();
             $(".welcomePageWrapper").fadeOut(100);
             $(".organizerEventsWrapper").fadeOut(100);
             $(".eventsInfoBox").fadeOut(100);
@@ -596,15 +618,12 @@
             setTimeout(function () {
                 $(".missionPageWrapper").fadeIn(300);
                 $(".missionPageWrapper").css("display", "block");
-                // $(".navigation").animate({"background-color: black"}, 300);
             }, 200);
         });
 
 
         $(".contactPageBtn").click(function (event) {
             event.preventDefault();
-            // $(".organizerEventsWrapper").hide();
-            // $(".eventsWrapper").hide();
             $(".welcomePageWrapper").fadeOut(100);
             $(".missionPageWrapper").fadeOut(100);
             $(".organizerEventsWrapper").fadeOut(100);
@@ -614,14 +633,11 @@
             setTimeout(function () {
                 $(".contactUsWrapper").fadeIn(300);
                 $(".contactUsWrapper").css("display", "block");
-                // $(".navigation").fadeIn(500).css("background-color", "rgb(33,49,92)");
             }, 200);
         });
 
         $(".myListingsPageBtn").click(function (event) {
             event.preventDefault();
-            // $(".organizerEventsWrapper").hide();
-            // $(".eventsWrapper").hide();
             $(".missionPageWrapper").fadeOut(100);
             $(".welcomePageWrapper").fadeOut(100);
             $(".eventsInfoBox").fadeOut(100);
@@ -631,24 +647,12 @@
             setTimeout(function () {
                 $(".organizerEventsWrapper").fadeIn(300);
                 $(".organizerEventsWrapper").css("display", "grid");
-                // $(".navigation").fadeIn(500).css("background-color", "rgb(33,49,92)");
             }, 200);
         });
 
-        // //SHOW MY LISTINGS PAGE/////////////////////////////////////////////////////
-        // $(".myListingsPageBtn").click(function (event) {
-        //     event.preventDefault();
-        //     $(".eventsWrapper").hide();
-        //     $(".eventsInfoBox").hide();
-        //     $(".missionPageWrapper").fadeOut(100);
-        //     $(".welcomePageWrapper").fadeOut(100);
-        //     setTimeout(function () {
-        //         $(".organizerEventsWrapper").fadeIn(300);
-        //     }, 200);
-        //     $(".organizerEventsWrapper").css("display", "grid");
-        // });
     </script>
     <script>
+        //Makes the background page color fade alongside transitions
         $(".missionPageBtn").click(function () {
             $("body").css("background", "black");
         });
