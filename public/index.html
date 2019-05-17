@@ -400,11 +400,17 @@
                 </iframe>
             </div>
             <!--CREATE FORM BOX-->
-            <div class="createEventFormBox">
-                <div class="organizerEventInfo">
-                    <!--ORGANIZER UI ORGANIZATION BOX-->
-                    <div class="createTitle">
-                        Create Your Event
+            <form id="submitForm">
+                Event Name<br>
+                <input type="text" class="textbox" id="eventName" required><br>
+                Organization<br>
+                <input type="text" class="textbox" id="organization" required><br>
+                Email<br>
+                <input type="email" class="textbox" id="email" required><br>
+                <div id="addressCity">
+                    <div id="addressGrid">
+                        Address<br>
+                        <input type="text" class="textbox" id="address" required>
                     </div>
                         <label class="boxLabel">Organization</label>
                         <input class="inputBox" id="orgName" type="text" required="required">
@@ -452,39 +458,16 @@
                             <img alt="calender" class="calender" src="./Images/calender.png">
                         </div>
                     </div>
-                    <!--ORGANIZER UI START TIME-->
-                    <div class="startTimeBox">
-                        <div class="startTime">
-                            <input class="startTimeInput" type="time" value="09:00" required="required">
-                        </div>
-                        <img alt="clock" class="clock" src="./Images/clock.png">
-                    </div>
-                    <!--ORGANIZER UI END TIME-->
-                    <div class="endTimeBox">
-                        <div class="endTime">
-                            <input class="endTimeInput" type="time" value="17:00" required="required">
-                        </div>
-                        <img alt="clock" class="clock" src="./Images/clock.png">
-                    </div>
-                </div>
-                <!--ORGANIZER UI DETAILS-->
-                <label class="boxLabel">Description</label>
-                <textarea class="inputBox" id="description"></textarea>
-
-                <!--BOTTOM BUTTONS CONTAINER-->
-                <div class="bottomBox">
-                    <div class="filesBox">
-                        <input type="file" value="upload" id="fileButton" accept='image/*'/>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="createButtonsBox">
-                        <button class="cancelButton">Cancel</button>
-                        <input type="submit" value="Post" id="submit" />
-                    </div>
-                </div>
+               </div>
+               <br>Date<br>
+               <input type="date" id="date" required><br>
+               <br>Description<br>
+               <textarea id="description"></textarea><br>
+               <br>Upload Photo<br>
+               <input type="file" value="upload" id="photo" accept='image/*'><br>
+               <input type="submit" value="Post" id="submit">
             </div>
-        </div>
+        </form>
     </div>
 
     <!--------------------------------------------------CONTACT US PAGE---------------------------------->
@@ -635,7 +618,7 @@
                 $('html, body').animate({
                 scrollTop: $("#breakPoint").offset().top
             }, 500);
-            
+
             }, 200);
 
             
