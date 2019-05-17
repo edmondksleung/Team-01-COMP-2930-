@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/welcome.css" />
     <link rel="stylesheet" type="text/css" href="css/eventsListing.css" />
     <link rel="stylesheet" type="text/css" href="css/mission.css" />
-    <link rel="stylesheet" type="text/css" href="css/organizer.css" />
+    <link rel="stylesheet" type="text/css" href="css/submitEvent.css" />
     <link rel="stylesheet" type="text/css" href="css/contactUs.css" />
 
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:900" rel="stylesheet" />
@@ -158,7 +158,7 @@
         </div>
     </div>
     <!--EVENTS PAGE CONTAINER-------------------------------------------------------------------------------->
-    <!-------------------------------------------------------------------------------------------------------->
+    <!--*******************************************************************************************-->
     <div class="eventsWrapper">
         <!--EVENTS NAV BAR------------------------------------------------------------------------>
         <!-- <div class="navBarPic">
@@ -169,14 +169,12 @@
                 alt="pic1"
               />
             </li>
-
             <li>
               <img
                 src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
                 alt="pic1"
               />
             </li>
-
             <li>
               <img
                 src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
@@ -214,7 +212,7 @@
                 <!--INDIVIDUAL EVENTS----------------------------------------------------------------->
                 <div class="events">
                     <div class="credits">
-                        <div>3 <span>HOURS CREDIT</span></div>
+                        <div>3 HOURS CREDIT</div>
                     </div>
                     <!--EVENT PICTURE-->
                     <div>
@@ -248,15 +246,10 @@
         </div>
 
         <!--EVENT DETAILS BOX----------------------------------------------------------------------->
-        <!----------------------------------------------------------------------------------------->
+        <!--**************************************************************************************-->
         <div class="eventsInfoBox">
             <!--DETAILS TOP BOX-->
             <div class="detailsTopBox">
-                <!--CLOSE DETAILS BUTTON BOX-->
-                <div class="closeDetailsBox">
-                    <!--CLOSE DETAILS BUTTON-->
-                        <img alt="close" class="closeDetailsButton" src="Images/close.png">
-                </div>
                 <!--DETAILS PICTURE-->
                 <img alt="eventImage" class="eventInfoPic" src="Images/planting.jpeg" />
             </div>
@@ -313,10 +306,12 @@
                     food, protection, and homes for many birds and mammals.
                 </div>
             </div>
-            <!--JOIN EVENT BUTTON-->
-            <div class="joinEventButtonBox">
-                <button class="joinEventButton">Join Event</button>
-            </div>
+            <footer>
+                <!--JOIN EVENT BUTTON-->
+                <div class="joinEventButtonBox">
+                    <button class="joinEventButton">Join Event</button>
+                </div>
+            </footer>
         </div>
 
 
@@ -325,7 +320,7 @@
         <!--********************************************************************************************-->
         <div class="joinedEventsInfoBox">
             <!--DETAILS TOP BOX-->
-            <div class="joinedDetailsTopBox">
+            <div id="joinedDetailsTopBox">
                 <!--DETAILS PICTURE-->
                 <img alt="eventImage" id="eventInfoPic" src="Images/planting.jpeg" />
             </div>
@@ -381,25 +376,24 @@
                     food, protection, and homes for many birds and mammals.
                 </div>
             </div>
-            <!--JOIN EVENT BUTTON-->
-            <div id="joinEventButtonBox">
-                <button id="joinEventButton">Unjoin Event</button>
-            </div>
+            <footer>
+                <!--JOIN EVENT BUTTON-->
+                <div id="joinEventButtonBox">
+                    <button id="joinEventButton">Unjoin Event</button>
+                </div>
+            </footer>
         </div>
     </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> 1af3c5f32c3c8251469c5406c18d2c5cfcb29bd2
     <!--ORGANIZER UI EVENTS WRAPPER PAGE-------------------------------->
     <!------------------------------------------------------------------>
     <div class="organizerEventsWrapper">
 
         <!--ORGANIZER UI CREATE EVENT----------------------------------------------------------->
         <!-------------------------------------------------------------------------------------->
-        <div class="mainBox">
+        <div class="submitEventPageWrapper">
             <!--VIDEO BOX-->
-            <div class="vidBox">
+            <div id="videoPicture">
                 <iframe class="vid" src="https://www.youtube.com/embed/56MhjXTcSCg?autoplay=1">
                 </iframe>
             </div>
@@ -416,15 +410,10 @@
                         Address<br>
                         <input type="text" class="textbox" id="address" required>
                     </div>
-                        <label class="boxLabel">Organization</label>
-                        <input class="inputBox" id="orgName" type="text" required="required">
-
-                        <label class="boxLabel">Event Name</label>
-                        <input class="inputBox" id="eventName" type="text" required="required">
-
-                        <label class="boxLabel" class="">City</label>
+                    <div id="cityGrid">
+                        City/District<br>
                         <select name="city" id="city" required>
-                            <option value="" disabled selected> -- select a city -- </option>
+                            <option value="" disabled selected> -- Select An Option -- </option>
                             <option>Abbotsford</option>
                             <option>Burnaby</option>
                             <option>Chilliwack</option>
@@ -437,30 +426,6 @@
                             <option>Vancouver</option>
                             <option>White Rock</option>
                         </select>
-                    
-                        <label class="boxLabel" class="">Address</label>
-                        <input class="inputBox" id="address" type="text" required="required">
-                        
-                        <label class="boxLabel">Email</label>
-                        <input class="inputBox" id="email" type="email" required="required">
-                        
-                        
-                <!--ORGANIZER UI EVENT TIME BOX------------------------------------------->
-                <div class="eventTimeBox">
-                    <!--ORGANIZER UI START DATE LABEL-->
-                    <label class="boxLabel">Date</label>
-                    <!--ORGANIZER UI START TIME LABEL-->
-                    <label class="boxLabel">Start</label>
-                    <!--ORGANIZER UI END TIME LABEL-->
-                    <label class="boxLabel">End</label>
-                    <!--ORGANIZER START DATE BOX-->
-                    <div class="startBox">
-                        <div class="startDateBox">
-                            <div class="startDate">
-                                <input class="startDateInput" type="date" required="required">
-                            </div>
-                            <img alt="calender" class="calender" src="./Images/calender.png">
-                        </div>
                     </div>
                </div>
                <br>Date<br>
@@ -473,12 +438,12 @@
             </div>
         </form>
     </div>
-</div>
+
     <!--------------------------------------------------CONTACT US PAGE---------------------------------->
     <div class="contactUsWrapper">
             <div id="contactUsPagePicture">
                 <div id="opaqueCover">
-                    <div class="companyName">Contact Us Today! <br> We'd love to h<span>e</span>ar from you!</div>
+                    <div class="companyName"><span>e</span>Volunteer <br> We'd love to hear from you!</div>
                 </div>
         </div>
             <div id="contactUsPageContent">
@@ -501,203 +466,154 @@
 
     <!----------------------------JQUERY/JAVASCRIPT FILES TO BE LOADED AFTER HTML DOCUMENT LOADS-->
     <script>
-        /*-------------------------- NAV BAR ACTIVE PAGE STATUS HIGHLIGHT  ----------------------*/
         //determines what page it's on depending on wrapper display, then adds background white color to nav bar active page
         $(".homePageBtn").addClass("activePage");
         $(".homePageBtn").click(function (event) {
             $(".homePageBtn").addClass("activePage");
             $(".missionPageBtn").removeClass("activePage");
-            $(".eventsPageBtn").removeClass("activePage");
             $(".myEventsPageBtn").removeClass("activePage");
             $(".myListingsPageBtn").removeClass("activePage");
             $(".aboutUsPageBtn").removeClass("activePage");
             $(".contactPageBtn").removeClass("activePage");
-
         });
         $(".missionPageBtn").click(function (event) {
             $(".missionPageBtn").addClass("activePage");
             $(".homePageBtn").removeClass("activePage");
-            $(".eventsPageBtn").removeClass("activePage");
             $(".myEventsPageBtn").removeClass("activePage");
             $(".myListingsPageBtn").removeClass("activePage");
             $(".aboutUsPageBtn").removeClass("activePage");
             $(".contactPageBtn").removeClass("activePage");
         });
-
-        $(".eventsPageBtn").click(function (event) {
-            $(".missionPageBtn").removeClass("activePage");
-            $(".homePageBtn").removeClass("activePage");
-            $(".eventsPageBtn").addClass("activePage");
-            $(".myEventsPageBtn").removeClass("activePage");
-            $(".myListingsPageBtn").removeClass("activePage");
-            $(".aboutUsPageBtn").removeClass("activePage");
-            $(".contactPageBtn").removeClass("activePage");
-        });
-
         $(".myEventsPageBtn").click(function (event) {
-            $(".homePageBtn").removeClass("activePage");
-            $(".missionPageBtn").removeClass("activePage");
-            $(".eventsPageBtn").removeClass("activePage");
             $(".myEventsPageBtn").addClass("activePage");
+            $(".missionPageBtn").removeClass("activePage");
+            $(".homePageBtn").removeClass("activePage");
             $(".myListingsPageBtn").removeClass("activePage");
             $(".aboutUsPageBtn").removeClass("activePage");
             $(".contactPageBtn").removeClass("activePage");
         });
-        $(".myListingsPageBtn").click(function (event) {
-            $(".homePageBtn").removeClass("activePage");
-            $(".missionPageBtn").removeClass("activePage");
-            $(".eventsPageBtn").removeClass("activePage");
-            $(".myEventsPageBtn").removeClass("activePage");
-            $(".myListingsPageBtn").addClass("activePage");
-            $(".aboutUsPageBtn").removeClass("activePage");
-            $(".contactPageBtn").removeClass("activePage");
-        });
-
-        $(".aboutUsPageBtn").click(function (event) {            
-            $(".homePageBtn").removeClass("activePage");
-            $(".missionPageBtn").removeClass("activePage");
-            $(".eventsPageBtn").removeClass("activePage");
-            $(".myEventsPageBtn").removeClass("activePage");
-            $(".myListingsPageBtn").removeClass("activePage");
-            $(".aboutUsPageBtn").addClass("activePage");
-            $(".contactPageBtn").removeClass("activePage");
-        });
-
-
         $(".contactPageBtn").click(function (event) {
-            $(".homePageBtn").removeClass("activePage");
-            $(".missionPageBtn").removeClass("activePage");
-            $(".eventsPageBtn").removeClass("activePage");
             $(".myEventsPageBtn").removeClass("activePage");
+            $(".missionPageBtn").removeClass("activePage");
+            $(".homePageBtn").removeClass("activePage");
             $(".myListingsPageBtn").removeClass("activePage");
             $(".aboutUsPageBtn").removeClass("activePage");
             $(".contactPageBtn").addClass("activePage");
         });
-
-       
+        $(".myListingsPageBtn").click(function (event) {
+            $(".myEventsPageBtn").removeClass("activePage");
+            $(".missionPageBtn").removeClass("activePage");
+            $(".homePageBtn").removeClass("activePage");
+            $(".myListingsPageBtn").addClass("activePage");
+            $(".aboutUsPageBtn").removeClass("activePage");
+            $(".contactPageBtn").removeClass("activePage");
+        });
     </script>
 
     <script>
         //Function event jquery function upon clicking mission button
         $(".homePageBtn").click(function (event) {
             event.preventDefault();
+            // $(".organizerEventsWrapper").hide();
+            // $(".eventsWrapper").hide();
             $(".missionPageWrapper").fadeOut(100);
             $(".organizerEventsWrapper").fadeOut(100);
             $(".eventsInfoBox").fadeOut(100);
             $(".contactUsWrapper").fadeOut(100);
             $(".eventsWrapper").fadeOut(100);
-
-
             setTimeout(function () {
                 $(".welcomePageWrapper").fadeIn(300);
                 $(".welcomePageWrapper").css("display", "block");
+                // $(".navigation").fadeIn(500).css("background-color", "rgb(33,49,92)");
             }, 200);
         });
-
         $(".missionPageBtn").click(function (event) {
             event.preventDefault();
+            // $(".organizerEventsWrapper").hide();
+            // $(".eventsInfoBox").hide();
             $(".welcomePageWrapper").fadeOut(100);
             $(".organizerEventsWrapper").fadeOut(100);
             $(".eventsInfoBox").fadeOut(100);
             $(".contactUsWrapper").fadeOut(100);
             $(".eventsWrapper").fadeOut(100);
-
+            setTimeout(function () {
+                $(".missionPageWrapper").fadeIn(300);
+                $(".missionPageWrapper").css("display", "block");
+                // $(".navigation").animate({"background-color: black"}, 300);
+            }, 200);
+        });
+        $(".contactPageBtn").click(function (event) {
+            event.preventDefault();
+            // $(".organizerEventsWrapper").hide();
+            // $(".eventsWrapper").hide();
+            $(".welcomePageWrapper").fadeOut(100);
+            $(".missionPageWrapper").fadeOut(100);
+            $(".organizerEventsWrapper").fadeOut(100);
+            $(".eventsInfoBox").fadeOut(100);
+            $(".eventsWrapper").fadeOut(100);
+            setTimeout(function () {
+                $(".contactUsWrapper").fadeIn(300);
+                $(".contactUsWrapper").css("display", "block");
+                // $(".navigation").fadeIn(500).css("background-color", "rgb(33,49,92)");
+            }, 200);
+        });
+        $(".myListingsPageBtn").click(function (event) {
+            event.preventDefault();
+            // $(".organizerEventsWrapper").hide();
+            // $(".eventsWrapper").hide();
+            $(".missionPageWrapper").fadeOut(100);
+            $(".welcomePageWrapper").fadeOut(100);
+            $(".eventsInfoBox").fadeOut(100);
+            $(".contactUsWrapper").fadeOut(100);
+            $(".eventsWrapper").fadeOut(100);
+            setTimeout(function () {
+                $(".organizerEventsWrapper").fadeIn(300);
+                $(".organizerEventsWrapper").css("display", "grid");
+                // $(".navigation").fadeIn(500).css("background-color", "rgb(33,49,92)");
+            }, 200);
+        });
+        // //SHOW MY LISTINGS PAGE/////////////////////////////////////////////////////
+        // $(".myListingsPageBtn").click(function (event) {
+        //     event.preventDefault();
+        //     $(".eventsWrapper").hide();
+        //     $(".eventsInfoBox").hide();
+        //     $(".missionPageWrapper").fadeOut(100);
+        //     $(".welcomePageWrapper").fadeOut(100);
+        //     setTimeout(function () {
+        //         $(".organizerEventsWrapper").fadeIn(300);
+        //     }, 200);
+        //     $(".organizerEventsWrapper").css("display", "grid");
+        // });
+    </script>
+    <script>
+        $(".missionPageBtn").click(function () {
+            $("body").css("background", "black");
+        });
+        $(".homePageBtn").click(function () {
+            $("body").css("background", "rgb(33, 49, 92)");
+        });
+        $(".contactPageBtn").click(function () {
+            $("body").css("background", "orange");
+        });
+    </script>
+    <script>
+        //Function event jquery function upon clicking mission button
+        $(".missionPageBtn").click(function (event) {
+            event.preventDefault();
+            $(".welcomePageWrapper").fadeOut(100);
             setTimeout(function () {
                 $(".missionPageWrapper").fadeIn(300);
                 $(".missionPageWrapper").css("display", "block");
             }, 200);
         });
-
-        $(".eventsPageBtn").click(function (event) {
+        $(".homePageBtn").click(function (event) {
             event.preventDefault();
             $(".missionPageWrapper").fadeOut(100);
-            $(".eventsInfoBox").fadeOut(100);
-            $(".organizerEventsWrapper").fadeOut(100);
-            $(".contactUsWrapper").fadeOut(100);
-            $(".eventsWrapper").fadeOut(100);
-
             setTimeout(function () {
                 $(".welcomePageWrapper").fadeIn(300);
                 $(".welcomePageWrapper").css("display", "block");
-                $('html, body').animate({
-                scrollTop: $("#breakPoint").offset().top
-            }, 500);
-
-            }, 200);
-
-            
-        });
-
-        // $(".myListingsPageBtn").click(function (event) {
-        //     event.preventDefault();
-        //     $(".missionPageWrapper").fadeOut(100);
-        //     $(".welcomePageWrapper").fadeOut(100);
-        //     $(".eventsInfoBox").fadeOut(100);
-        //     $(".contactUsWrapper").fadeOut(100);
-        //     $(".eventsWrapper").fadeOut(100);
-
-        //     setTimeout(function () {
-        //         $(".organizerEventsWrapper").fadeIn(300);
-        //         $(".organizerEventsWrapper").css("display", "block");
-        //     }, 200);
-        // });
-
-
-        $(".myListingsPageBtn").click(function (event) {
-            event.preventDefault();
-            $(".missionPageWrapper").fadeOut(100);
-            $(".welcomePageWrapper").fadeOut(100);
-            $(".eventsInfoBox").fadeOut(100);
-            $(".contactUsWrapper").fadeOut(100);
-            $(".eventsWrapper").fadeOut(100);
-
-            setTimeout(function () {
-                $(".organizerEventsWrapper").fadeIn(300);
-                $(".organizerEventsWrapper").css("display", "grid");
             }, 200);
         });
-
-
-        $(".contactPageBtn").click(function (event) {
-            event.preventDefault();
-            $(".welcomePageWrapper").fadeOut(100);
-            $(".missionPageWrapper").fadeOut(100);
-            $(".organizerEventsWrapper").fadeOut(100);
-            $(".eventsInfoBox").fadeOut(100);
-            $(".eventsWrapper").fadeOut(100);
-
-            setTimeout(function () {
-                $(".contactUsWrapper").fadeIn(300);
-                $(".contactUsWrapper").css("display", "block");
-            }, 200);
-        });
-
-        
-
-    </script>
-    <script>
-        //Makes the background page color fade alongside transitions
-        $(".homePageBtn").click(function () {
-            $("body").css("background", "rgb(33, 49, 92)");
-        });
-
-        $(".missionPageBtn").click(function () {
-            $("body").css("background", "rgb(25, 76, 85)");
-        });
-
-        $(".eventsPageBtn").click(function () {
-            $("body").css("background", "rgb(33, 49, 92)");
-        });
-
-        $(".myListingsPageBtn").click(function () {
-            $("body").css("background", "#260E63");
-        });
-
-        $(".contactPageBtn").click(function () {
-            $("body").css("background", "#B68D1B");
-        });
-
-
     </script>
 
     <script src="./js/logInVerifyTransition.js"></script>
@@ -712,6 +628,7 @@
     <script src="./js/scrollDown.js"></script>
     <script src="./js/userInit.js"></script>
     <script src="./js/joinEvent.js"></script>
+    <script src="./js/form.js"></script>
 </body>
 
 </html>
