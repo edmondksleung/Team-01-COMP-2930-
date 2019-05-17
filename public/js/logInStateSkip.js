@@ -7,7 +7,11 @@
                     }, 1000);
                     $('.welcomePageWrapper, .navigation').css('display: block');
                 } else {
+                    $(".eventsWrapper").hide();
+                    $(".organizerEventsWrapper").hide();
+                    $(".eventsInfoBox").hide();
                     $(".welcomePageWrapper").hide();
+                    
                     $(".signInPageWrapper").show();
                 }
             });

@@ -11,7 +11,7 @@ $(".readMoreButton").click(function () {
     $(".eventsInfoBox").show();
 });
 
-//CANCEL DETAILS WINDOW BUTTON---------------------------------------
+//CLOSE DETAILS WINDOW BUTTON---------------------------------------
 $(".closeDetailsButton").click(function () {
     $(".eventsInfoBox").hide();
     $(".eventsBox").show();

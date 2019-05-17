@@ -1,7 +1,7 @@
 // AJAX to import data from firebase
-$('.cities').click(function (x) {
+$('.cities').click(function () {
     // Grabbing clicked name attribute
-    var city = $(this).attr('name');
+    let city = $(this).attr('name');
     console.log(city);
     $.ajax({
         type: 'GET',

@@ -261,21 +261,21 @@
 
 /*CLOSE DETAILS BOX*/
 .closeDetailsBox {
-    transform: translate(517px, 5px);    
+    transform: translate(517px, 5px);
 }
 
 /*CLOSE DETAILS BUTTON*/
 .closeDetailsButton {
     width: 25px;
     height: 25px;
-    position: absolute;    
+    position: absolute;
 }
 
 /*CLOSE DETAILS BUTTON HOVER*/
 .closeDetailsButton:hover {
     filter: invert(100%);
     background: grey;
-    border-radius: 5px; 
+    border-radius: 5px;
 }
 
 /*EVENT INFO PICTURE CONTAINER*/

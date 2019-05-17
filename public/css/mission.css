@@ -39,6 +39,7 @@ color: white;
     margin-left: 170px;
     height: 200px;
     width:250px;
+    border: 1px solid red;
 }
 
 #infoPic2 {
@@ -46,12 +47,15 @@ color: white;
     margin-left: 220px;
     height: 200px;
     width: 200px;
+    border: 1px solid red;
 }
 
 #infoPic3 {
     margin-left: 160px;
     height: 100px;
     width: 350px;
+    vertical-align: middle;
+    border: 1px solid red;
 }
 
 #infoPicDesc1 {

@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/eventsListing.css" />
     <link rel="stylesheet" type="text/css" href="css/mission.css" />
     <link rel="stylesheet" type="text/css" href="css/organizer.css" />
-
+    <link rel="stylesheet" type="text/css" href="css/contactUs.css" />
 
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:900" rel="stylesheet" />
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
@@ -70,7 +70,7 @@
                 <li><a class="missionPageBtn">MISSION</a></li>
                 <li><a class="eventsPageBtn">EVENTS</a></li>
                 <li><a class="myEventsPageBtn">MY EVENTS</a></li>
-                <li><a class="myListingsPageBtn">MY LISTINGS</a></li>
+                <li><a class="myListingsPageBtn">SUBMIT EVENT</a></li>
                 <li><a class="aboutUsPageBtn">ABOUT US</a></li>
                 <li><a class="contactPageBtn">CONTACT</a></li>
                 <li><a onclick="logout()">LOG OUT</a></li>
@@ -79,32 +79,6 @@
     </div>
     <!---------------------------------------------WElCOME PAGE----------------------------------------------->
     <div class="welcomePageWrapper">
-        <!-- <div class="navigation"> -->
-        <!-- <div class="navBarPic">
-          <ul>
-            <li>
-              <img
-                src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
-                alt="pic1"
-                class="activePic"
-              />
-            </li>
-
-            <li>
-              <img
-                src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
-                alt="pic1"
-              />
-            </li>
-
-            <li>
-              <img
-                src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
-                alt="pic1"
-              />
-            </li>
-          </ul>
-        </div> -->
 
         <!-- </div> -->
         <div id="welcomePageTitle">
@@ -144,33 +118,6 @@
     </div>
     <!------------------------------------------MISSION PAGE-------------------------------------->
     <div class="missionPageWrapper">
-        <!-- <div class="navigation"> -->
-        <!-- <div class="navBarPic">
-                      <ul>
-                        <li>
-                          <img
-                            src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
-                            alt="pic1"
-                            class="activePic"
-                          />
-                        </li>
-            
-                        <li>
-                          <img
-                            src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
-                            alt="pic1"
-                          />
-                        </li>
-            
-                        <li>
-                          <img
-                            src="http://pngriver.com/wp-content/uploads/2018/04/Download-Save-Tree-Download-PNG.png"
-                            alt="pic1"
-                          />
-                        </li>
-                      </ul>
-                    </div> -->
-
         <div id="missionHeading">
             <h1><span class="eco">ECO</span>CITY - 2019</h1>
             <br />
@@ -440,6 +387,10 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1af3c5f32c3c8251469c5406c18d2c5cfcb29bd2
     <!--ORGANIZER UI EVENTS WRAPPER PAGE-------------------------------->
     <!------------------------------------------------------------------>
     <div class="organizerEventsWrapper">
@@ -453,82 +404,55 @@
                 </iframe>
             </div>
             <!--CREATE FORM BOX-->
-            <div class="createEventFormBox">
-                <div class="organizerEventInfo">
-                    <!--ORGANIZER UI ORGANIZATION BOX-->
-                    <div class="createTitle">
-                        Create Your Event
+            <form id="submitForm">
+                Event Name<br>
+                <input type="text" class="textbox" id="eventName" required><br>
+                Organization<br>
+                <input type="text" class="textbox" id="organization" required><br>
+                Email<br>
+                <input type="email" class="textbox" id="email" required><br>
+                <div id="addressCity">
+                    <div id="addressGrid">
+                        Address<br>
+                        <input type="text" class="textbox" id="address" required>
                     </div>
-                    <div>
-                        <label class="label organizerLabel">Organization</label>
-                        <div class="contentBox">
-                            <input class="organizationInput" type="text" required="required">
-                        </div>
-                    </div>
-                    <!--ORGANIZER UI EVENT NAME BOX-->
-                    <div>
-                        <label class="organizerLabel">Event Name</label>
-                        <div class="contentBox">
-                            <input class="eventInput" type="text" required="required">
-                        </div>
-                    </div>
-                    <!--ORGANIZER UI LOCATION BOX-->
-                    <div>
-                        <label class="organizerLabel" class="">City</label>
-                        <div class="contentBox">
-                            <select name="city" id="city" required>
-                                <option value="" disabled selected> -- select an option -- </option>
-                                <option>Abbotsford</option>
-                                <option>Burnaby</option>
-                                <option>Chilliwack</option>
-                                <option>Coquitlam</option>
-                                <option>Edmonds</option>
-                                <option>Maple Ridge</option>
-                                <option>Port Moody</option>
-                                <option>Richmond</option>
-                                <option>Surrey</option>
-                                <option>Vancouver</option>
-                                <option>White Rock</option>
-                            </select>
-                        </div>
-                    </div>
-                    <!--ORGANIZER UI ADDRESS BOX-->
-                    <div>
-                        <label class="organizerLabel" class="">Address</label>
-                        <div class="contentBox">
-                            <input class="locationInput" type="text" required="required">
-                        </div>
-                    </div>
-                    <!--ORGANIZER UI EMAIL BOX-->
-                    <div>
-                        <label class="organizerLabel">Email</label>
-                        <div class="contentBox" class="locationDetails">
-                            <input class="emailInput" type="email" required="required">
-                        </div>
-                    </div>
-                    <!--ORGANIZER UI ADDRESS BOX-->
-                    <div>
-                        <div class="organizerLabel">Address</div>
-                        <div class="contentBox">
-                            <input class="locationInput" type="text" required="required">
-                        </div>
-                    </div>
-                    <!--ORGANIZER UI EMAIL BOX-->
-                    <div>
-                        <div class="organizerLabel">Email</div>
-                        <div class="contentBox locationDetails">
-                            <input class="emailInput" type="email" required="required">
-                        </div>
-                    </div>
-                </div>
+                        <label class="boxLabel">Organization</label>
+                        <input class="inputBox" id="orgName" type="text" required="required">
+
+                        <label class="boxLabel">Event Name</label>
+                        <input class="inputBox" id="eventName" type="text" required="required">
+
+                        <label class="boxLabel" class="">City</label>
+                        <select name="city" id="city" required>
+                            <option value="" disabled selected> -- select a city -- </option>
+                            <option>Abbotsford</option>
+                            <option>Burnaby</option>
+                            <option>Chilliwack</option>
+                            <option>Coquitlam</option>
+                            <option>Edmonds</option>
+                            <option>Maple Ridge</option>
+                            <option>Port Moody</option>
+                            <option>Richmond</option>
+                            <option>Surrey</option>
+                            <option>Vancouver</option>
+                            <option>White Rock</option>
+                        </select>
+                    
+                        <label class="boxLabel" class="">Address</label>
+                        <input class="inputBox" id="address" type="text" required="required">
+                        
+                        <label class="boxLabel">Email</label>
+                        <input class="inputBox" id="email" type="email" required="required">
+                        
+                        
                 <!--ORGANIZER UI EVENT TIME BOX------------------------------------------->
                 <div class="eventTimeBox">
                     <!--ORGANIZER UI START DATE LABEL-->
-                    <p class="organizerLabel">Date</p>
+                    <label class="boxLabel">Date</label>
                     <!--ORGANIZER UI START TIME LABEL-->
-                    <p class="organizerLabel">Start</p>
+                    <label class="boxLabel">Start</label>
                     <!--ORGANIZER UI END TIME LABEL-->
-                    <p class="organizerLabel">End</p>
+                    <label class="boxLabel">End</label>
                     <!--ORGANIZER START DATE BOX-->
                     <div class="startBox">
                         <div class="startDateBox">
@@ -538,51 +462,52 @@
                             <img alt="calender" class="calender" src="./Images/calender.png">
                         </div>
                     </div>
-                    <!--ORGANIZER UI START TIME-->
-                    <div class="startTimeBox">
-                        <div class="startTime">
-                            <input class="startTimeInput" type="time" value="09:00" required="required">
-                        </div>
-                        <img alt="clock" class="clock" src="./Images/clock.png">
-                    </div>
-                    <!--ORGANIZER UI END TIME-->
-                    <div class="endTimeBox">
-                        <div class="endTime">
-                            <input class="endTimeInput" type="time" value="17:00" required="required">
-                        </div>
-                        <img alt="clock" class="clock" src="./Images/clock.png">
-                    </div>
+               </div>
+               <br>Date<br>
+               <input type="date" id="date" required><br>
+               <br>Description<br>
+               <textarea id="description"></textarea><br>
+               <br>Upload Photo<br>
+               <input type="file" value="upload" id="photo" accept='image/*'><br>
+               <input type="submit" value="Post" id="submit">
+            </div>
+        </form>
+    </div>
+</div>
+    <!--------------------------------------------------CONTACT US PAGE---------------------------------->
+    <div class="contactUsWrapper">
+            <div id="contactUsPagePicture">
+                <div id="opaqueCover">
+                    <div class="companyName"><span>e</span>Volunteer <br> We'd love to hear from you!</div>
                 </div>
-                <!--ORGANIZER UI DETAILS-->
-                <p class="organizerLabel">Description</p>
-                <div class="detailsBox">
-                    <textarea class="details"></textarea>
+        </div>
+            <div id="contactUsPageContent">
+                <div id="phone">
+                    <img src="./Images/iphone.png" alt="iphone1">
                 </div>
-
-                <!--BOTTOM BUTTONS CONTAINER-->
-                <div class="bottomBox">
-                    <div class="filesBox">
-                        <input type="file" name="file" class="files">
-                    </div>
-                    <div>
-                    </div>
-                    <div class="createButtonsBox">
-                        <button class="cancelButton">Cancel</button>
-                        <button class="createButton">Create</button>
-                    </div>
+                <div id="phoneText"><span class="contactSpan">PHONE</span><br><br>Toll-free 1 (800) 123 1234<br>Canada 604-333-2312<br></div>
+                <div id="chat">
+                        <img src="./Images/liveChat.png" alt="image1">
                 </div>
+                <div id="chatText"><span class="contactSpan">LIVE CHAT</span><br><br>Chat with a real person!<br><br>
+                    <div id="chatButton">Click Here</div>
+                </div>
+                <div id="email">
+                    <img src="./Images/emailEnvelope.png" alt="emailenv1">
+                </div>
+                <div id="emailText"><span class="contactSpan">EMAIL</span><br><br>support@evolunteer.ca</div>
             </div>
         </div>
-    </div>
-
 
     <!----------------------------JQUERY/JAVASCRIPT FILES TO BE LOADED AFTER HTML DOCUMENT LOADS-->
     <script>
+        /*-------------------------- NAV BAR ACTIVE PAGE STATUS HIGHLIGHT  ----------------------*/
         //determines what page it's on depending on wrapper display, then adds background white color to nav bar active page
         $(".homePageBtn").addClass("activePage");
         $(".homePageBtn").click(function (event) {
             $(".homePageBtn").addClass("activePage");
             $(".missionPageBtn").removeClass("activePage");
+            $(".eventsPageBtn").removeClass("activePage");
             $(".myEventsPageBtn").removeClass("activePage");
             $(".myListingsPageBtn").removeClass("activePage");
             $(".aboutUsPageBtn").removeClass("activePage");
@@ -592,94 +517,182 @@
         $(".missionPageBtn").click(function (event) {
             $(".missionPageBtn").addClass("activePage");
             $(".homePageBtn").removeClass("activePage");
+            $(".eventsPageBtn").removeClass("activePage");
             $(".myEventsPageBtn").removeClass("activePage");
             $(".myListingsPageBtn").removeClass("activePage");
             $(".aboutUsPageBtn").removeClass("activePage");
             $(".contactPageBtn").removeClass("activePage");
-
         });
 
-        $(".myEventsPageBtn").click(function (event) {
-            $(".myEventsPageBtn").addClass("activePage");
+        $(".eventsPageBtn").click(function (event) {
             $(".missionPageBtn").removeClass("activePage");
             $(".homePageBtn").removeClass("activePage");
+            $(".eventsPageBtn").addClass("activePage");
+            $(".myEventsPageBtn").removeClass("activePage");
             $(".myListingsPageBtn").removeClass("activePage");
             $(".aboutUsPageBtn").removeClass("activePage");
             $(".contactPageBtn").removeClass("activePage");
         });
+
+        $(".myEventsPageBtn").click(function (event) {
+            $(".homePageBtn").removeClass("activePage");
+            $(".missionPageBtn").removeClass("activePage");
+            $(".eventsPageBtn").removeClass("activePage");
+            $(".myEventsPageBtn").addClass("activePage");
+            $(".myListingsPageBtn").removeClass("activePage");
+            $(".aboutUsPageBtn").removeClass("activePage");
+            $(".contactPageBtn").removeClass("activePage");
+        });
+        $(".myListingsPageBtn").click(function (event) {
+            $(".homePageBtn").removeClass("activePage");
+            $(".missionPageBtn").removeClass("activePage");
+            $(".eventsPageBtn").removeClass("activePage");
+            $(".myEventsPageBtn").removeClass("activePage");
+            $(".myListingsPageBtn").addClass("activePage");
+            $(".aboutUsPageBtn").removeClass("activePage");
+            $(".contactPageBtn").removeClass("activePage");
+        });
+
+        $(".aboutUsPageBtn").click(function (event) {            
+            $(".homePageBtn").removeClass("activePage");
+            $(".missionPageBtn").removeClass("activePage");
+            $(".eventsPageBtn").removeClass("activePage");
+            $(".myEventsPageBtn").removeClass("activePage");
+            $(".myListingsPageBtn").removeClass("activePage");
+            $(".aboutUsPageBtn").addClass("activePage");
+            $(".contactPageBtn").removeClass("activePage");
+        });
+
+
+        $(".contactPageBtn").click(function (event) {
+            $(".homePageBtn").removeClass("activePage");
+            $(".missionPageBtn").removeClass("activePage");
+            $(".eventsPageBtn").removeClass("activePage");
+            $(".myEventsPageBtn").removeClass("activePage");
+            $(".myListingsPageBtn").removeClass("activePage");
+            $(".aboutUsPageBtn").removeClass("activePage");
+            $(".contactPageBtn").addClass("activePage");
+        });
+
+       
     </script>
 
     <script>
         //Function event jquery function upon clicking mission button
-        $(".missionPageBtn").click(function (event) {
-            event.preventDefault();
-            $(".organizerEventsWrapper").hide();
-            $(".eventsWrapper").hide();
-            $(".eventsInfoBox").hide();
-            $(".welcomePageWrapper").fadeOut(100);
-            setTimeout(function () {
-                $(".missionPageWrapper").fadeIn(300);
-                $(".missionPageWrapper").css("display", "block");
-                // $(".navigation").animate({"background-color: black"}, 300);
-            }, 200);
-        });
-
         $(".homePageBtn").click(function (event) {
             event.preventDefault();
-            $(".organizerEventsWrapper").hide();
-            $(".eventsInfoBox").hide();
-            $(".eventsWrapper").hide();
-            $(".even").hide();
             $(".missionPageWrapper").fadeOut(100);
+            $(".organizerEventsWrapper").fadeOut(100);
+            $(".eventsInfoBox").fadeOut(100);
+            $(".contactUsWrapper").fadeOut(100);
+            $(".eventsWrapper").fadeOut(100);
+
+
             setTimeout(function () {
                 $(".welcomePageWrapper").fadeIn(300);
                 $(".welcomePageWrapper").css("display", "block");
-                // $(".navigation").fadeIn(500).css("background-color", "rgb(33,49,92)");
             }, 200);
         });
 
-        //SHOW MY LISTINGS PAGE/////////////////////////////////////////////////////
+        $(".missionPageBtn").click(function (event) {
+            event.preventDefault();
+            $(".welcomePageWrapper").fadeOut(100);
+            $(".organizerEventsWrapper").fadeOut(100);
+            $(".eventsInfoBox").fadeOut(100);
+            $(".contactUsWrapper").fadeOut(100);
+            $(".eventsWrapper").fadeOut(100);
+
+            setTimeout(function () {
+                $(".missionPageWrapper").fadeIn(300);
+                $(".missionPageWrapper").css("display", "block");
+            }, 200);
+        });
+
+        $(".eventsPageBtn").click(function (event) {
+            event.preventDefault();
+            $(".missionPageWrapper").fadeOut(100);
+            $(".eventsInfoBox").fadeOut(100);
+            $(".organizerEventsWrapper").fadeOut(100);
+            $(".contactUsWrapper").fadeOut(100);
+            $(".eventsWrapper").fadeOut(100);
+
+            setTimeout(function () {
+                $(".welcomePageWrapper").fadeIn(300);
+                $(".welcomePageWrapper").css("display", "block");
+                $('html, body').animate({
+                scrollTop: $("#breakPoint").offset().top
+            }, 500);
+
+            }, 200);
+
+            
+        });
+
+        // $(".myListingsPageBtn").click(function (event) {
+        //     event.preventDefault();
+        //     $(".missionPageWrapper").fadeOut(100);
+        //     $(".welcomePageWrapper").fadeOut(100);
+        //     $(".eventsInfoBox").fadeOut(100);
+        //     $(".contactUsWrapper").fadeOut(100);
+        //     $(".eventsWrapper").fadeOut(100);
+
+        //     setTimeout(function () {
+        //         $(".organizerEventsWrapper").fadeIn(300);
+        //         $(".organizerEventsWrapper").css("display", "block");
+        //     }, 200);
+        // });
+
+
         $(".myListingsPageBtn").click(function (event) {
             event.preventDefault();
-            $(".eventsWrapper").hide();
-            $(".eventsInfoBox").hide();
             $(".missionPageWrapper").fadeOut(100);
             $(".welcomePageWrapper").fadeOut(100);
+            $(".eventsInfoBox").fadeOut(100);
+            $(".contactUsWrapper").fadeOut(100);
+            $(".eventsWrapper").fadeOut(100);
+
             setTimeout(function () {
                 $(".organizerEventsWrapper").fadeIn(300);
+                $(".organizerEventsWrapper").css("display", "grid");
             }, 200);
-            $(".organizerEventsWrapper").css("display", "grid");
         });
+
+
+        $(".contactPageBtn").click(function (event) {
+            event.preventDefault();
+            $(".welcomePageWrapper").fadeOut(100);
+            $(".missionPageWrapper").fadeOut(100);
+            $(".organizerEventsWrapper").fadeOut(100);
+            $(".eventsInfoBox").fadeOut(100);
+            $(".eventsWrapper").fadeOut(100);
+
+            setTimeout(function () {
+                $(".contactUsWrapper").fadeIn(300);
+                $(".contactUsWrapper").css("display", "block");
+            }, 200);
+        });
+
+        
+
     </script>
     <script>
+        //Makes the background page color fade alongside transitions
+        $(".homePageBtn").click(function () {
+            $("body").css("background", "rgb(33, 49, 92)");
+        });
+
         $(".missionPageBtn").click(function () {
             $("body").css("background", "black");
         });
 
-        $(".homePageBtn").click(function () {
+        $(".eventsPageBtn").click(function () {
             $("body").css("background", "rgb(33, 49, 92)");
         });
-    </script>
-    <script>
-        //Function event jquery function upon clicking mission button
-        $(".missionPageBtn").click(function (event) {
-            event.preventDefault();
-            $(".welcomePageWrapper").fadeOut(100);
-            setTimeout(function () {
-                $(".missionPageWrapper").fadeIn(300);
-                $(".missionPageWrapper").css("display", "block");
-            }, 200);
+
+        $(".contactPageBtn").click(function () {
+            $("body").css("background", "orange");
         });
 
-        $(".homePageBtn").click(function (event) {
-            event.preventDefault();
-            $(".missionPageWrapper").fadeOut(100);
-            setTimeout(function () {
-                $(".welcomePageWrapper").fadeIn(300);
-                $(".welcomePageWrapper").css("display", "block");
-
-            }, 200);
-        });
     </script>
 
     <script src="./js/logInVerifyTransition.js"></script>
