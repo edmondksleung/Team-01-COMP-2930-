@@ -17,10 +17,11 @@ async function submitForm(e) {
 	// Converts yyyy-mm-dd into millisecond timestamp
 	// Parses "-"
 	tempDate = date.split("-");
+	//date = tempDate[1] +"-" + tempDate[2] +"-"+ tempDate[0];
 	
 	// Reorganizes format into mm,dd,yyyy and converts into timestamp
 	let timeStamp = new Date(tempDate[1] + "," + tempDate[2] + "," + tempDate[0]).getTime();
-
+	
 	// Saves message
 	await handleFileUploadSubmit(eventName, organization, email, address, content, city, date, timeStamp);
 
@@ -33,7 +34,7 @@ async function submitForm(e) {
 	}, 2000);
 
 	// Resets the form
-	document.getElementById('post').reset();
+	document.getElementById('submitForm').reset();
 
 	// Directs to the previous page
 	// setTimeout(function () {
