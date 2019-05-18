@@ -1,0 +1,138 @@
+.aboutUsPageWrapper {
+    display: none;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 12pt;
+}
+
+.aboutUsPageWrapper span {
+    color: rgb(118, 228, 85);
+}
+
+.aboutUsPageWrapper #welcomeText {
+    height: 5vh;
+    margin-top: 80px;
+    font-size: 20pt;
+    letter-spacing: 5px;
+}
+
+.aboutUsPageWrapper #underline {
+    width: 145px;
+    height: 2px;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+#aboutUsPageDescription {
+    height: 54.5vh;
+    width: 50%;
+    margin: 20px auto 25px auto;
+    line-height: 25px;
+}
+
+#aboutUsPageClickDownArea {
+    height: 17vh;
+    text-align: center;
+    color: white;
+    font-size: 13pt;
+    letter-spacing: 2px;
+}
+
+#aboutUsPageClickDownText {
+    height: 38px;
+    width: 250px;
+    margin: auto;
+}
+
+#aboutUsPageBreakPoint {
+    height: 28px;
+}
+
+#aboutUsPageClickDownButton img {
+    width: 30px;
+    height: 30px;
+}
+
+#aboutUsPageClickDownButton img:hover {
+    animation: wiggle 1s infinite;
+    cursor: pointer;
+    width: 34px;
+    height: 34px;
+}
+
+#aboutUsPageContent {
+    background-color: white;
+    padding-top: 30px;
+    color: black;
+}
+
+#groupPhoto {
+    width: 70%;
+    height: 60vh;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+#groupPhoto img {
+    width: 100%;
+    height: 100%;
+}
+
+#groupPhotoDescription {
+    width: 70%;
+    height: 80px;
+    background-color: #e3dfdb;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.bioLayout1 {
+    display: grid;
+    grid-template-areas:
+        "picture empty bio";
+    grid-template-columns: 31% 2% 67%;
+    height: 50vh;
+    width: 70%;
+    margin: 20px auto 0 auto;
+    background-color: white;
+}
+
+.bioLayout2 {
+    display: grid;
+    grid-template-areas:
+        "bio empty picture";
+    grid-template-columns: 67% 2% 31%;
+    height: 50vh;
+    width: 70%;
+    margin: 20px auto 0 auto;
+    background-color: white;
+}
+
+.picture {
+    grid-area: picture;
+    background-color: #e3dfdb;
+}
+
+.picture img {
+    width: 100%;
+    height: 100%;
+}
+
+.bio {
+    grid-area: bio;
+    background-color: #e3dfdb;
+    padding: 50px;
+    text-align: left;
+    font-size: 12pt;
+    line-height: 22px;
+}
+
+#backToTop {
+    height: 75px;
+}
