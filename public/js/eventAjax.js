@@ -1,134 +1,310 @@
-// AJAX to import data from firebase
-$('.cities').click(function () {
-    // Grabbing clicked name attribute
-    let city = $(this).attr('name');
-    console.log(city);
-    $.ajax({
-        type: 'GET',
-        url: `https://evolunteer-45c5d.firebaseio.com/events/${city}.json`,
-        dataType: 'json',
-        success: function (data) {
-            let keys = Object.keys(data);
-            console.log(keys);
+// AJAX to import data from firebase (list of events)
+$(document).ready(function () {
+    $(document).on("click", ".cities", function(){
+        // Grabbing clicked name attribute
+        let city = $(this).attr('name');
+        console.log(city);
 
-            // Creating a list of events from firebase
-            for (let i = 0; i < keys.length; i++) {
-                // Putting value into dom element
-                let k = keys[i];
-                console.log(k);
-                ////////// Creating event box using dom elements /////////
-                let allEventsBox = $('.allEventsBox');
-                let eventsBox = document.createElement('div');
-                eventsBox.setAttribute('class', 'eventsBox');
-                allEventsBox.append(eventsBox);
+        $.ajax({
+            type: 'GET',
+            url: `https://evolunteer-45c5d.firebaseio.com/events/${city}.json`,
+            dataType: 'json',
+            success: function (data) {
+                let keys = Object.keys(data);
+                console.log(keys);
+                // let idkey = $(".readMoreButton").attr("id");
+                // console.log(idkey);
+                // Creating a list of events from firebase
+                for (let i = 0; i < keys.length; i++) {
+                    // Putting value into dom element
+                    let k = keys[i];
+                    console.log(k);
+                    ////////// Creating event box using dom elements /////////
+                    let allEventsBox = $('.allEventsBox');
+                    let eventsBox = document.createElement('div');
+                    eventsBox.setAttribute('class', 'eventsBox');
+                    allEventsBox.append(eventsBox);
 
-                let events = document.createElement('div');
-                events.setAttribute('class', 'events');
-                eventsBox.append(events);
+                    let events = document.createElement('div');
+                    events.setAttribute('class', 'events');
+                    eventsBox.append(events);
 
-                let credits = document.createElement('div');
-                credits.setAttribute('class', 'credits');
-                events.append(credits);
+                    let credits = document.createElement('div');
+                    credits.setAttribute('class', 'credits');
+                    events.append(credits);
 
-                let eventPicBox = document.createElement('div');
-                eventPicBox.setAttribute('class', 'eventPicBox');
-                eventPicBox.style.backgroundImage = `url(${data[k].imgurl})`
-                credits.after(eventPicBox);
+                    let eventPicBox = document.createElement('div');
+                    eventPicBox.setAttribute('class', 'eventPicBox');
+                    eventPicBox.style.backgroundImage = `url(${data[k].imgurl})`
+                    credits.after(eventPicBox);
 
-                let readMoreBox = document.createElement('div');
-                readMoreBox.setAttribute('class', 'readMoreBox');
-                eventPicBox.append(readMoreBox);
+                    let readMoreBox = document.createElement('div');
+                    readMoreBox.setAttribute('class', 'readMoreBox');
+                    eventPicBox.append(readMoreBox);
 
-                // let eventPic = document.createElement('img');
-                // eventPic.setAttribute('class', 'eventPic');
-                // eventPic.setAttribute('src', data[k].imgurl);
-                // eventPicBox.append(eventPic);
-                // console.log(data[k].imgurl);
+                    // let eventPic = document.createElement('img');
+                    // eventPic.setAttribute('class', 'eventPic');
+                    // eventPic.setAttribute('src', data[k].imgurl);
+                    // eventPicBox.append(eventPic);
+                    // console.log(data[k].imgurl);
 
-                let emptyDiv = document.createElement('div');
-                readMoreBox.append(emptyDiv);
+                    let emptyDiv = document.createElement('div');
+                    readMoreBox.append(emptyDiv);
 
-                let readMoreButton = document.createElement('button');
-                readMoreButton.setAttribute('class', 'readMoreButton');
-                readMoreBox.append(readMoreButton);
-                $(".readMoreButton").text("info");
+                    let readMoreButton = document.createElement('button');
+                    readMoreButton.setAttribute('class', 'readMoreButton');
+                    readMoreBox.append(readMoreButton);
+                    $(".readMoreButton").text("info");
 
-                /**** stringify's the object key ****/
-                
-                var objStr = JSON.stringify(k);
-                console.log(objStr);
-                readMoreButton.setAttribute("id", objStr);
+                    /* create DETAILED event from firebase */
 
-                // preview box 
+                    let eventsInfoBox = $(".eventsInfoBox");
+                    let detailsTopBox = document.createElement("div");
+                    $(detailsTopBox).attr("class", "detailsTopBox");
+                    eventsInfoBox.append(detailsTopBox);
 
-                let previewBox = document.createElement('div');
-                previewBox.setAttribute('class', 'previewBox');
-                eventsBox.append(previewBox);
+                    let closeDetailsBox = document.createElement("div");
+                    $(closeDetailsBox).attr("class", "closeDetailsBox");
+                    $(detailsTopBox).append(closeDetailsBox);
 
-                let date = document.createElement('div');
-                date.setAttribute('class', 'date');
-                previewBox.append(date);
+                    let closeDetailsButton = document.createElement("img");
+                    $(closeDetailsButton).attr("class", "closeDetailsButton");
+                    $(closeDetailsButton).attr("src", "Images/close.png");
+                    $(closeDetailsButton).attr("alt", "close");
+                    $(closeDetailsBox).append(closeDetailsButton);
 
-                let month = document.createElement('p');
-                month.setAttribute('class', 'month');
-                date.append(month);
+                    let eventInfoPic = document.createElement("img");
+                    $(eventInfoPic).attr("class", "eventInfoPic");
+                    $(eventInfoPic).attr("src", "Images/planting.jpeg");
+                    $(eventInfoPic).attr("alt", "eventImage");
+                    $(detailsTopBox).append(eventInfoPic);
 
-                let day = document.createElement('p');
-                day.setAttribute('class', 'day');
-                date.append(day);
+                    let eventInfoTitle = document.createElement("div");
+                    $(eventInfoTitle).attr("class", "eventInfoTitle");
+                    $(eventsInfoBox).append(eventInfoTitle);
 
-                let eventMessage = document.createElement('div');
-                eventMessage.setAttribute('class', 'eventMessage');
-                previewBox.append(eventMessage);
+                    let specialInfoBox = document.createElement("div");
+                    $(specialInfoBox).attr("class", "specialInfoBox");
+                    $(eventsInfoBox).append(specialInfoBox);
 
-                let peopleBox = document.createElement('div');
-                peopleBox.setAttribute('class', 'peopleBox');
-                previewBox.append(peopleBox);
+                    let locationInfoBox = document.createElement("div");
+                    $(locationInfoBox).attr("class", "locationInfoBox");
+                    $(specialInfoBox).append(locationInfoBox);
 
-                let peoplePic = document.createElement('img');
-                peoplePic.setAttribute('src', './Images/people.png');
-                peoplePic.setAttribute('class', 'peoplePic');
-                peopleBox.append(peoplePic);
+                    /* location */
 
-                let peopleCount = document.createElement('p');
-                peopleCount.setAttribute('class', 'peopleCount');
-                peopleBox.append(peopleCount);
+                    let locationPic = document.createElement("img");
+                    $(locationPic).attr("class", "locationPic");
+                    $(locationPic).attr("src", "./Images/location.png");
+                    $(locationPic).attr("alt", "loc");
+                    $(locationInfoBox).append(locationPic);
 
-                // add key to info box
-                // $(".readMoreButton").attr("class", data[k]);
+                    let locationInfo = document.createElement("div");
+                    $(locationInfo).attr("class", "locationInfo");
+                    $(locationInfoBox).append(locationInfo);
+                    
+                    /* date */
+                    
+                    let dateTimeInfoBox = document.createElement("div");
+                    $(dateTimeInfoBox).attr("class", "dateTimeInfoBox");
+                    $(specialInfoBox).append(dateTimeInfoBox);
+
+                    /* you spelt calendar wrong and wasted 2 hours of my life shane */
+
+                    let calenderPic = document.createElement("img");
+                    $(calenderPic).attr("class", "calenderPic");
+                    $(calenderPic).attr("src", "./Images/calender.png");
+                    $(calenderPic).attr("alt", "cal");
+                    $(dateTimeInfoBox).append(calenderPic);
+
+                    let dateTime = document.createElement("div");
+                    $(dateTime).attr("class", "dateTime");
+                    $(dateTimeInfoBox).append(dateTime);
+
+                    let dateInfo = document.createElement("div");
+                    $(dateInfo).attr("class", "dateInfo");
+                    $(dateTime).append(dateInfo);
+                    
+                    let timeInfo = document.createElement("div");
+                    $(timeInfo).attr("class", "timeInfo");
+                    $(dateTime).append(timeInfo);
+
+                    /* organizer info box */
+                    
+                    let organizerInfoBox = document.createElement("div");
+                    $(organizerInfoBox).attr("class", "organizerInfoBox");
+                    $(specialInfoBox).append(organizerInfoBox);
+
+                    let organizerPic = document.createElement("img");
+                    $(organizerPic).attr("class", "organizerPic");
+                    $(organizerPic).attr("src", "./Images/organizer.png");
+                    $(organizerPic).attr("alt", "org");
+                    $(organizerInfoBox).append(organizerPic);
+
+                    let organizerInfo = document.createElement("div");
+                    $(organizerInfo).attr("class", "organizerInfo");
+                    $(organizerInfoBox).append(organizerInfo);
+
+                    /* email */
+
+                    let emailInfoBox = document.createElement("div");
+                    $(emailInfoBox).attr("class", "emailInfoBox");
+                    $(specialInfoBox).append(emailInfoBox);
+
+                    let emailPic = document.createElement("img");
+                    $(emailPic).attr("class", "emailPic");
+                    $(emailPic).attr("src", "./Images/email.png");
+                    $(emailPic).attr("alt", "email");
+                    $(emailInfoBox).append(emailPic);
+
+                    let emailInfo = document.createElement("div");
+                    $(emailInfo).attr("class", "emailInfo");
+                    $(emailInfoBox).append(emailInfo);
+
+                    /* people count */
+
+                    // let peopleCountBox = document.createElement("div");
+                    // $(peopleCountBox).attr("class", "peopleCountBox");
+                    // $(specialInfoBox).append(peopleCountBox);
+
+                    // let peoplePic = document.createElement("div");
+                    // $(peoplePic).attr("class", "peoplePic");
+                    // $(peoplePic).attr("src", "./Images/people.png");
+                    // $(peoplePic).attr("alt", "count");
+                    // $(peopleCountBox).append(peoplePic);
+
+                    // let count = document.createElement("div");
+                    // $(count).attr("class", "count");
+                    // $(peopleCountBox).append(count);
+
+                    /* credits box */
+
+                    let creditsBox = document.createElement("div");
+                    $(creditsBox).attr("class", "creditsBox");
+                    $(specialInfoBox).append(creditsBox);
+
+                    let creditsPic = document.createElement("img");
+                    $(creditsPic).attr("class", "creditsPic");
+                    $(creditsPic).attr("src", "./Images/star.png");
+                    $(creditsPic).attr("alt", "credits");
+                    $(creditsBox).append(creditsPic);
 
 
-                // Fetching month and day from date format YYYY-MM-DD
+                    let detailCredits = document.createElement("div");
+                    $(detailCredits).attr("class", "detailCredits");
+                    $(creditsBox).append(detailCredits);
 
-                //let dateObj = new Date(data[k].date + " ");
-                let tempDate = data[k].date.split("-");
-                
-                let dateStr = tempDate[1] +"-" + tempDate[2] +"-"+ tempDate[0];
-                
-                let dateObj = new Date(dateStr);
+                    let detailHours = document.createElement("div");
+                    $(detailHours).text("Hours Credit");
+                    $(creditsBox).append(detailHours);
 
-                // let utcDate = new Date(data[k].date);
-                // let dateTest = new Date (utcDate.toUTCString());
-                // console.log(dateTest)
-                // let canadaDate = new Date(data[k].date).toLocaleString("en-us", {timeZone: "America/Los_Angeles"});
-                // let dateObj = new Date(canadaDate);
-                // dateObj.getTimezoneOffset();
-                let monthString = dateObj.toLocaleString("en-us", {month: "short"});
-                let dayInt = dateObj.toLocaleString("en-us", {day: "2-digit"});
+                    /* description */ 
+
+                    let infoDescriptionBox = document.createElement("div");
+                    $(infoDescriptionBox).attr("class", "infoDescriptionBox");
+                    $(eventsInfoBox).append(infoDescriptionBox);
+
+                    let desc = document.createElement("div");
+                    $(desc).text("description success");
+                    $(infoDescriptionBox).append(desc);
+
+                    /* footer */
+                    /* join button */
+
+                    let footer = document.createElement("footer");
+                    $(eventsInfoBox).append(footer);
+
+                    /* join button */
+
+                    let joinEventButtonBox = document.createElement("div");
+                    $(joinEventButtonBox).attr("class", "joinEventButtonBox");
+                    $(footer).append(joinEventButtonBox);
+
+                    let joinEventButton = document.createElement("button");
+                    $(joinEventButton).attr("class", "joinEventButton");
+                    $(joinEventButton).text("Join Event");
+                    $(joinEventButtonBox).append(joinEventButton);
 
 
-                // Putting value into dom element
-                $(eventMessage).text(data[k].subject);
-                $(month).text(monthString);
-                $(day).text(dayInt);
-                $(peopleCount).text(data[k].userCount);
-                $(credits).text(data[k].credit);
 
+
+
+                    /**** stringify's the object key and adds to id ****/
+
+                    var objStr = JSON.stringify(k);
+                    $(readMoreButton).attr("id", objStr);
+
+                    // preview box 
+
+                    let previewBox = document.createElement('div');
+                    previewBox.setAttribute('class', 'previewBox');
+                    eventsBox.append(previewBox);
+
+                    let date = document.createElement('div');
+                    date.setAttribute('class', 'date');
+                    previewBox.append(date);
+
+                    let month = document.createElement('p');
+                    month.setAttribute('class', 'month');
+                    date.append(month);
+
+                    let day = document.createElement('p');
+                    day.setAttribute('class', 'day');
+                    date.append(day);
+
+                    let eventMessage = document.createElement('div');
+                    eventMessage.setAttribute('class', 'eventMessage');
+                    previewBox.append(eventMessage);
+
+                    let peopleBox = document.createElement('div');
+                    peopleBox.setAttribute('class', 'peopleBox');
+                    previewBox.append(peopleBox);
+
+                    let peoplePic = document.createElement('img');
+                    peoplePic.setAttribute('src', './Images/people.png');
+                    peoplePic.setAttribute('class', 'peoplePic');
+                    peopleBox.append(peoplePic);
+
+                    let peopleCount = document.createElement('p');
+                    peopleCount.setAttribute('class', 'peopleCount');
+                    peopleBox.append(peopleCount);
+
+
+
+
+                    // Fetching month and day from date format YYYY-MM-DD
+
+                    //let dateObj = new Date(data[k].date + " ");
+                    /*
+                    let tempDate = data[k].date.split("-");
+                    
+                    let dateStr = tempDate[1] +"-" + tempDate[2] +"-"+ tempDate[0];
+                    
+                    let dateObj = new Date(dateStr);
+
+                    // let utcDate = new Date(data[k].date);
+                    // let dateTest = new Date (utcDate.toUTCString());
+                    // console.log(dateTest)
+                    // let canadaDate = new Date(data[k].date).toLocaleString("en-us", {timeZone: "America/Los_Angeles"});
+                    // let dateObj = new Date(canadaDate);
+                    // dateObj.getTimezoneOffset();
+                    let monthString = dateObj.toLocaleString("en-us", {month: "short"});
+                    let dayInt = dateObj.toLocaleString("en-us", {day: "2-digit"});
+
+                    */
+                    // Putting value into dom element
+                    $(eventMessage).text(data[k].subject);
+                    //$(month).text(monthString);
+                    //$(day).text(dayInt);
+                    $(peopleCount).text(data[k].userCount);
+                    $(credits).text(data[k].credit);
+
+
+
+                }
 
             }
-            
-            // Increases count on join click
-        }
-    });
+        });
 
+    });
 });
