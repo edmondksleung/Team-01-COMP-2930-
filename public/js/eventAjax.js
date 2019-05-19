@@ -31,7 +31,12 @@ $(document).ready(function () {
 
                     let credits = document.createElement('div');
                     credits.setAttribute('class', 'credits');
+                    credits.innerHTML = ' Hour Credit';
                     events.append(credits);
+
+                    let creditNum = document.createElement('span');
+                    creditNum.setAttribute('class', 'creditNum');
+                    credits.prepend(creditNum);
 
                     let eventPicBox = document.createElement('div');
                     eventPicBox.setAttribute('class', 'eventPicBox');
@@ -273,29 +278,17 @@ $(document).ready(function () {
 
 
                     // Fetching month and day from date format YYYY-MM-DD
-
-                    //let dateObj = new Date(data[k].date + " ");
-                    /*
+                    
                     let tempDate = data[k].date.split("-");
-                    
                     let dateStr = tempDate[1] +"-" + tempDate[2] +"-"+ tempDate[0];
-                    
                     let dateObj = new Date(dateStr);
-
-                    // let utcDate = new Date(data[k].date);
-                    // let dateTest = new Date (utcDate.toUTCString());
-                    // console.log(dateTest)
-                    // let canadaDate = new Date(data[k].date).toLocaleString("en-us", {timeZone: "America/Los_Angeles"});
-                    // let dateObj = new Date(canadaDate);
-                    // dateObj.getTimezoneOffset();
                     let monthString = dateObj.toLocaleString("en-us", {month: "short"});
                     let dayInt = dateObj.toLocaleString("en-us", {day: "2-digit"});
 
-                    */
                     // Putting value into dom element
                     $(eventMessage).text(data[k].subject);
-                    //$(month).text(monthString);
-                    //$(day).text(dayInt);
+                    $(month).text(monthString);
+                    $(day).text(dayInt);
                     $(peopleCount).text(data[k].userCount);
                     $(credits).text(data[k].credit);
 
