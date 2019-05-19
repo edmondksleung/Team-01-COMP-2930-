@@ -3,6 +3,8 @@ $(document).ready(function () {
     $(document).on("click", ".cities", function(){
         // Grabbing clicked name attribute
         let city = $(this).attr('name');
+        let locationName = $('.eventsLocation');
+        $(locationName).text(city);
         console.log(city);
 
         $.ajax({
@@ -275,7 +277,7 @@ $(document).ready(function () {
                     peopleBox.append(peopleCount);
 
 
-                    let locationName = $('.eventsLocation');
+                    
 
 
                     // Fetching month and day from date format YYYY-MM-DD
@@ -298,7 +300,6 @@ $(document).ready(function () {
                     $(day).text(dayInt);
                     $(peopleCount).text(data[k].userCount);
                     $(creditNum).text(timeCred);
-                    $(locationName).text(city);
                     
 
 
