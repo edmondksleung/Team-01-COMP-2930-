@@ -13,6 +13,8 @@ async function submitForm(e) {
 	let city = getInputVal('city');
 	let date = getInputVal('date');
 	let content = getInputVal('description');
+	let startTime = getInputVal('startTime');
+	let endTime = getInputVal('endTime');
 
 	// Converts yyyy-mm-dd into millisecond timestamp
 	// Parses "-"
@@ -23,15 +25,15 @@ async function submitForm(e) {
 	let timeStamp = new Date(tempDate[1] + "," + tempDate[2] + "," + tempDate[0]).getTime();
 	
 	// Saves message
-	await handleFileUploadSubmit(eventName, organization, email, address, content, city, date, timeStamp);
+	await handleFileUploadSubmit(eventName, organization, email, address, content, city, date, timeStamp, startTime, endTime);
 
 	// Shows alert when submitted
-	document.querySelector('.alert').style.display = "block";
+	// document.querySelector('.alert').style.display = "block";
 
 	// Hide Alert after certain time
-	setTimeout(function () {
-		document.querySelector('.alert').style.display = "none";
-	}, 2000);
+	// setTimeout(function () {
+	// 	document.querySelector('.alert').style.display = "none";
+	// }, 2000);
 
 	// Resets the form
 	document.getElementById('submitForm').reset();
@@ -49,7 +51,7 @@ function getInputVal(id) {
 }
 
 // save message to firebase
-function saveMessage(eventName, organization, email, address, content, city, date, timeStamp, imgurl) {
+function saveMessage(eventName, organization, email, address, content, city, date, timeStamp, imgurl, startTime, endTime) {
 
 	newMessageRef = firebase.database().ref('events/' + city).push();
 	newMessageRef.set({
@@ -61,7 +63,9 @@ function saveMessage(eventName, organization, email, address, content, city, dat
 		city: city,
 		date: date,
 		timeStamp: timeStamp,
-		imgurl: imgurl
+		imgurl: imgurl,
+		startTime: startTime,
+		endTime: endTime
 	});
 
 	// // save message to firebase under current user
@@ -94,7 +98,7 @@ function handleFileUploadChange(event) {
 
 
 // Uploading Image to the storage
-async function handleFileUploadSubmit(eventName, organization, email, address, content, city, date, timeStamp) {
+async function handleFileUploadSubmit(eventName, organization, email, address, content, city, date, timeStamp, startTime, endTime) {
 
 	const uploadTask = storageRef.child(`eventImages/${selectedFile.name}`).put(selectedFile);
 	//create a child directory called images, and place the file inside this directory
@@ -106,7 +110,7 @@ async function handleFileUploadSubmit(eventName, organization, email, address, c
 	}, () => {
 		// Do something once upload is complete
 		uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
-			saveMessage(eventName, organization, email, address, content, city, date, timeStamp, downloadURL);
+			saveMessage(eventName, organization, email, address, content, city, date, timeStamp, downloadURL, startTime, endTime);
 		})
 	});
 

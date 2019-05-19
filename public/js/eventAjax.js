@@ -275,6 +275,7 @@ $(document).ready(function () {
                     peopleBox.append(peopleCount);
 
 
+                    let locationName = $('.eventsLocation');
 
 
                     // Fetching month and day from date format YYYY-MM-DD
@@ -285,14 +286,31 @@ $(document).ready(function () {
                     let monthString = dateObj.toLocaleString("en-us", {month: "short"});
                     let dayInt = dateObj.toLocaleString("en-us", {day: "2-digit"});
 
+                    // Time credit calculation from start time to end time
+                    let startTime = toHours(data[k].startTime);
+                    let endTime = toHours(data[k].endTime);
+                    let timeCred = new Number(endTime - startTime).toFixed(1);
+
+
                     // Putting value into dom element
                     $(eventMessage).text(data[k].subject);
                     $(month).text(monthString);
                     $(day).text(dayInt);
                     $(peopleCount).text(data[k].userCount);
-                    $(credits).text(data[k].credit);
+                    $(creditNum).text(timeCred);
+                    $(locationName).text(city);
+                    
 
 
+                    function toHours(timeStr1){
+                        let hr = timeStr1.substr(0, timeStr1.indexOf(":"));
+                        let min = timeStr1.substr(timeStr1.indexOf(":") + 1, timeStr1.length);
+                        hr = parseInt(hr);
+                        min = parseInt(min);
+                        let time = hr + (min / 60);
+
+                        return time;
+                    }
 
                 }
 
@@ -301,3 +319,4 @@ $(document).ready(function () {
 
     });
 });
+
