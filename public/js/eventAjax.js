@@ -31,7 +31,12 @@ $(document).ready(function () {
 
                     let credits = document.createElement('div');
                     credits.setAttribute('class', 'credits');
+                    credits.innerHTML = ' Hour Credit';
                     events.append(credits);
+
+                    let creditNum = document.createElement('span');
+                    creditNum.setAttribute('class', 'creditNum');
+                    credits.prepend(creditNum);
 
                     let eventPicBox = document.createElement('div');
                     eventPicBox.setAttribute('class', 'eventPicBox');
@@ -270,36 +275,42 @@ $(document).ready(function () {
                     peopleBox.append(peopleCount);
 
 
+                    let locationName = $('.eventsLocation');
 
 
                     // Fetching month and day from date format YYYY-MM-DD
-
-                    //let dateObj = new Date(data[k].date + " ");
-                    /*
+                    
                     let tempDate = data[k].date.split("-");
-                    
                     let dateStr = tempDate[1] +"-" + tempDate[2] +"-"+ tempDate[0];
-                    
                     let dateObj = new Date(dateStr);
-
-                    // let utcDate = new Date(data[k].date);
-                    // let dateTest = new Date (utcDate.toUTCString());
-                    // console.log(dateTest)
-                    // let canadaDate = new Date(data[k].date).toLocaleString("en-us", {timeZone: "America/Los_Angeles"});
-                    // let dateObj = new Date(canadaDate);
-                    // dateObj.getTimezoneOffset();
                     let monthString = dateObj.toLocaleString("en-us", {month: "short"});
                     let dayInt = dateObj.toLocaleString("en-us", {day: "2-digit"});
 
-                    */
+                    // Time credit calculation from start time to end time
+                    let startTime = toHours(data[k].startTime);
+                    let endTime = toHours(data[k].endTime);
+                    let timeCred = new Number(endTime - startTime).toFixed(1);
+
+
                     // Putting value into dom element
                     $(eventMessage).text(data[k].subject);
-                    //$(month).text(monthString);
-                    //$(day).text(dayInt);
+                    $(month).text(monthString);
+                    $(day).text(dayInt);
                     $(peopleCount).text(data[k].userCount);
-                    $(credits).text(data[k].credit);
+                    $(creditNum).text(timeCred);
+                    $(locationName).text(city);
+                    
 
 
+                    function toHours(timeStr1){
+                        let hr = timeStr1.substr(0, timeStr1.indexOf(":"));
+                        let min = timeStr1.substr(timeStr1.indexOf(":") + 1, timeStr1.length);
+                        hr = parseInt(hr);
+                        min = parseInt(min);
+                        let time = hr + (min / 60);
+
+                        return time;
+                    }
 
                 }
 
@@ -308,3 +319,4 @@ $(document).ready(function () {
 
     });
 });
+
