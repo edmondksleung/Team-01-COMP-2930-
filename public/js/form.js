@@ -32,12 +32,12 @@ async function submitForm(e) {
 	await handleFileUploadSubmit(eventName, organization, email, address, content, city, date, timeStamp, startTime, endTime);
 
 	// Shows alert when submitted
-	// document.querySelector('.alert').style.display = "block";
+	document.querySelector('.alert').style.display = "block";
 
 	// Hide Alert after certain time
-	// setTimeout(function () {
-	// 	document.querySelector('.alert').style.display = "none";
-	// }, 2000);
+	setTimeout(function () {
+	document.querySelector('.alert').style.display = "none";
+	}, 2000);
 
 	// Resets the form
 	document.getElementById('submitForm').reset();

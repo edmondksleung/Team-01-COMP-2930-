@@ -1,8 +1,10 @@
 .submitEventPageWrapper {
     display: none;
     grid-template-areas:
+        "alert alert"
         "left right";
     grid-template-columns: 40% 60%;
+    grid-template-rows: 5% 95%;
     background-color: white;
     height: 84vh;
     padding: 0px;
@@ -35,7 +37,8 @@ textarea:focus {
 
 #submitForm {
     grid-area: right;
-    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
 }
 
 .textbox {
@@ -49,6 +52,11 @@ textarea:focus {
     font-weight: 300;
     letter-spacing: 1px;
     text-align: left;
+}
+
+.textbox:hover {
+    border-bottom: 1px solid #260E63;
+    width: 315px;
 }
 
 #addressCity {
@@ -148,6 +156,10 @@ textarea:focus {
     letter-spacing: 1px;
 }
 
+#description:hover {
+    border: 1px solid #260E63;
+}
+
 #photo {
     margin-top: 10px;
 }
@@ -166,5 +178,16 @@ textarea:focus {
     cursor: pointer;
     background-color: #260E63;
     color: white;
+}
+
+.alert {
+    grid-area: alert;
+    background-color: #79c879;
+    color: white;
+    padding: 10px;
+    font-size: 13pt;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    display: none;
 }
 
