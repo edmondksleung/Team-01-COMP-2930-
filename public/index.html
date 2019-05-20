@@ -64,27 +64,29 @@
         </ul>
     </div>
     <!---------------------------------------------NAVIGATION------------------------------------------------->
-    <!--MENU ICON BUTTON-->
-    <div class="menuBox">
-        <button class="menuButton">
-            <img alt="menu" class="menuPic" src="./Images/menu.png" />
-        </button>
-    </div>
-
-    <!--MENU DROPDOWN BOX----------------------------->
-    <div class="dropDownBox">
-        <div class="dropDown">
-            <button class="dropButtons homePageBtn">HOME</button>
-            <button class="dropButtons missionPageBtn">MISSION</button>
-            <button class="dropButtons eventsPageBtn">EVENTS</button>
-            <button class="dropButtons myListingsPageBtn">SUBMIT EVENT</button>
-            <button class="dropButtons aboutUsPageBtn">ABOUT US</button>
-            <button class="dropButtons contactPageBtn">CONTACT</button>
-            <button class="dropButtons" onclick="logout()">LOGOUT</button>
-        </div>
-    </div>
 
     <div class="navigation">
+
+        <!--MENU ICON BUTTON-->
+        <div class="menuBox">
+            <button class="menuButton">
+                <img alt="menu" class="menuPic" src="./Images/menu.png" />
+            </button>
+        </div>
+
+        <!--MENU DROPDOWN BOX----------------------------->
+        <div class="dropDownBox">
+            <div class="dropDown">
+                <button class="dropButtons homePageBtn">HOME</button>
+                <button class="dropButtons missionPageBtn">MISSION</button>
+                <button class="dropButtons eventsPageBtn">EVENTS</button>
+                <button class="dropButtons myListingsPageBtn">SUBMIT EVENT</button>
+                <button class="dropButtons aboutUsPageBtn">ABOUT US</button>
+                <button class="dropButtons contactPageBtn">CONTACT</button>
+                <button class="dropButtons" onclick="logout()">LOGOUT</button>
+            </div>
+        </div>
+
         <div class="navBar">
             <ul>
                 <li><a class="homePageBtn">HOME</a></li>
@@ -98,8 +100,8 @@
         </div>
     </div>
 
-    
-    
+
+
     <!---------------------------------------------WElCOME PAGE----------------------------------------------->
     <div class="welcomePageWrapper">
 
@@ -239,8 +241,8 @@
         <!--EVENT DETAILS BOX----------------------------------------------------------------------->
         <!--**************************************************************************************-->
 
-        
-<!-- 
+
+        <!-- 
         <div class="eventsInfoBox">
             <div class="detailsTopBox">
                 <div class="closeDetailsBox">
@@ -375,7 +377,8 @@
         <!--VIDEO BOX-->
         <div class="alert">Event Posted</div>
         <div id="videoPicture">
-            <img src="https://i.pinimg.com/originals/e8/88/d4/e888d4feff8fd5ff63a965471a94b874.gif" alt="Planting Tree Image">
+            <img src="https://i.pinimg.com/originals/e8/88/d4/e888d4feff8fd5ff63a965471a94b874.gif"
+                alt="Planting Tree Image">
         </div>
         <!--CREATE FORM BOX-->
         <form id="submitForm">
@@ -665,7 +668,7 @@
             }, 200);
 
         });
-        
+
         $(".myListingsPageBtn").click(function (event) {
             event.preventDefault();
             $(".welcomePageWrapper").fadeOut(100);
@@ -703,7 +706,7 @@
             $(".eventsWrapper").fadeOut(100);
             $(".submitEventPageWrapper").fadeOut(100);
             $(".aboutUsPageWrapper").fadeOut(100);
-            
+
             setTimeout(function () {
                 $(".contactUsWrapper").fadeIn(300);
                 $(".contactUsWrapper").css("display", "block");
