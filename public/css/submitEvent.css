@@ -137,7 +137,7 @@ textarea:focus {
     border-radius: 5px;
     padding-left: 10px;
     margin-top: 4px;
-    width: 90px;
+    width: 100px;
 }
 .submitTime:hover {
     cursor: pointer;
@@ -182,12 +182,12 @@ textarea:focus {
 
 .alert {
     grid-area: alert;
-    background-color: #79c879;
+    background-color: rgba(38, 14, 99, 0.342);
     color: white;
-    padding: 10px;
+    padding: 5px;
     font-size: 13pt;
-    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     display: none;
+    letter-spacing: 2px;
 }
 
