@@ -1,6 +1,7 @@
 //MENU DROP DOWN----------------------------------------------------
 $(".menuButton").click(function () {
     $(".dropDownBox").toggle();
+    $(".dropDown").toggle();
 });
 
 
