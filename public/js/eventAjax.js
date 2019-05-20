@@ -7,20 +7,25 @@ $(document).ready(function () {
         $(locationName).text(city);
         console.log(city);
 
-        $.ajax({
+        // resetting DOM element in the page
+        $('.allEventsBox').empty();
+
+
+        currentRequest = $.ajax({
             type: 'GET',
             url: `https://evolunteer-45c5d.firebaseio.com/events/${city}.json`,
             dataType: 'json',
             success: function (data) {
+                
                 let keys = Object.keys(data);
-                console.log(keys);
+                console.log("whats this " + keys);
                 // let idkey = $(".readMoreButton").attr("id");
                 // console.log(idkey);
                 // Creating a list of events from firebase
                 for (let i = 0; i < keys.length; i++) {
                     // Putting value into dom element
                     let k = keys[i];
-                    console.log(k);
+                    
                     ////////// Creating event box using dom elements /////////
                     let allEventsBox = $('.allEventsBox');
                     let eventsBox = document.createElement('div');
@@ -301,7 +306,6 @@ $(document).ready(function () {
                     $(peopleCount).text(data[k].userCount);
                     $(creditNum).text(timeCred);
                     
-
 
                     function toHours(timeStr1){
                         let hr = timeStr1.substr(0, timeStr1.indexOf(":"));
