@@ -64,6 +64,26 @@
         </ul>
     </div>
     <!---------------------------------------------NAVIGATION------------------------------------------------->
+    <!--MENU ICON BUTTON-->
+    <div class="menuBox">
+        <button class="menuButton">
+            <img alt="menu" class="menuPic" src="./Images/menu.png" />
+        </button>
+    </div>
+
+    <!--MENU DROPDOWN BOX----------------------------->
+    <div class="dropDownBox">
+        <div class="dropDown">
+            <button class="dropButtons homePageBtn">HOME</button>
+            <button class="dropButtons missionPageBtn">MISSION</button>
+            <button class="dropButtons eventsPageBtn">EVENTS</button>
+            <button class="dropButtons myListingsPageBtn">SUBMIT EVENT</button>
+            <button class="dropButtons aboutUsPageBtn">ABOUT US</button>
+            <button class="dropButtons contactPageBtn">CONTACT</button>
+            <button class="dropButtons" onclick="logout()">LOGOUT</button>
+        </div>
+    </div>
+
     <div class="navigation">
         <div class="navBar">
             <ul>
@@ -78,6 +98,9 @@
             </ul>
         </div>
     </div>
+
+    
+    
     <!---------------------------------------------WElCOME PAGE----------------------------------------------->
     <div class="welcomePageWrapper">
 
@@ -169,23 +192,6 @@
     <!--EVENTS PAGE CONTAINER-------------------------------------------------------------------------------->
     <!--*******************************************************************************************-->
     <div class="eventsWrapper">
-
-        <!--MENU ICON BUTTON-->
-        <div class="menuBox">
-            <button class="menuButton">
-                <img alt="menu" class="menuPic" src="./Images/menu.png" />
-            </button>
-        </div>
-
-        <!--MENU DROPDOWN BOX----------------------------->
-        <div class="dropDownBox">
-            <div class="dropDown">
-                <button class="dropButtons">Home</button>
-                <button class="dropButtons">About Us</button>
-                <button class="dropButtons">Location</button>
-                <button class="dropButtons">Logout</button>
-            </div>
-        </div>
         <!--LOCATION LABEL CONTAINER-->
         <div class="eventsLocation">
             VANCOUVER
@@ -499,7 +505,7 @@
                     <div class="picture">
                         <img src="./Images/Portraits/Paul.jpeg">
                     </div>
-                    <div class="bio">COO<br>Back-End Specialist<br><br>I have been working at the City of Coquitlam
+                    <div class="bio">Paul Kim<br>COO<br><br>I have been working at the City of Coquitlam
                         as a student advisor for about 2 years now and when I first heard about the idea of
                         <span>e</span>Volunteer I was instantly sold. Connecting students that are required to volunteer
                         and eco-friendly organizations that are in need of volunteers is win-win. Rather than sending
@@ -718,21 +724,27 @@
         //Makes the background page color fade alongside transitions
         $(".homePageBtn").click(function () {
             $("body").css("background", "rgb(33, 49, 92)");
+            $(".dropButtons").css("background", "rgb(33, 49, 92)");
         });
         $(".missionPageBtn").click(function () {
             $("body").css("background", "rgb(25, 76, 85)");
+            $(".dropButtons").css("background", "rgb(25, 76, 85)");
         });
         $(".eventsPageBtn").click(function () {
             $("body").css("background", "rgb(33, 49, 92)");
+            $(".dropButtons").css("background", "rgb(33, 49, 92)");
         });
         $(".myListingsPageBtn").click(function () {
             $("body").css("background", "#260E63");
+            $(".dropButtons").css("background", "#260E63");
         });
         $(".aboutUsPageBtn").click(function () {
             $("body").css("background", "#5C2045");
+            $(".dropButtons").css("background", "#5C2045");
         })
         $(".contactPageBtn").click(function () {
             $("body").css("background", "#B68D1B");
+            $(".dropButtons").css("background", "#B68D1B");
         });
     </script>
     <script src="./js/eventAjaxDetail.js"></script>
