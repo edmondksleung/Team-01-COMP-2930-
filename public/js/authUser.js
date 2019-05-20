@@ -7,7 +7,7 @@ firebase.auth().onAuthStateChanged((user) => {
     dbref.on('value', function (snap) {
       console.log(snap.val());
       if (!snap.val()) {
-        // document.getElementById('globeLogo').style.display = "none";
+        $('.myListingsPageBtn').style.display = "none";
       }
     });
   }
