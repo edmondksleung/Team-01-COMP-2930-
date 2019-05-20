@@ -7,10 +7,13 @@
                     }, 1000);
                     $('.welcomePageWrapper, .navigation').css('display: block');
                 } else {
-                    $(".eventsWrapper").hide();
-                    $(".submitEventPageWrapper").hide();
-                    $(".eventsInfoBox").hide();
                     $(".welcomePageWrapper").hide();
+                    $(".missionPageWrapper").hide();
+                    $(".eventsWrapper").hide();
+                    $(".eventsInfoBox").hide();
+                    $(".submitEventPageWrapper").hide();
+                    $(".contactUsWrapper").hide();
+                    $(".aboutUsPageWrapper").hide();
                     
                     $(".signInPageWrapper").show();
                 }
