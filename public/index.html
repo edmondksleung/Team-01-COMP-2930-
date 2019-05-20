@@ -70,10 +70,10 @@
                 <li><a class="homePageBtn">HOME</a></li>
                 <li><a class="missionPageBtn">MISSION</a></li>
                 <li><a class="eventsPageBtn">EVENTS</a></li>
-                <li><a class="myEventsPageBtn">MY EVENTS</a></li>
-                <li><a class="myListingsPageBtn">SUBMIT EVENT</a></li>
                 <li><a class="aboutUsPageBtn">ABOUT US</a></li>
                 <li><a class="contactPageBtn">CONTACT</a></li>
+
+                <li><a class="myListingsPageBtn">SUBMIT EVENT</a></li>
                 <li><a onclick="logout()">LOG OUT</a></li>
             </ul>
         </div>
@@ -567,7 +567,6 @@
             $(".homePageBtn").addClass("activePage");
             $(".missionPageBtn").removeClass("activePage");
             $(".eventsPageBtn").removeClass("activePage");
-            $(".myEventsPageBtn").removeClass("activePage");
             $(".myListingsPageBtn").removeClass("activePage");
             $(".aboutUsPageBtn").removeClass("activePage");
             $(".contactPageBtn").removeClass("activePage");
@@ -576,7 +575,6 @@
             $(".homePageBtn").removeClass("activePage");
             $(".missionPageBtn").removeClass("activePage");
             $(".eventsPageBtn").addClass("activePage");
-            $(".myEventsPageBtn").removeClass("activePage");
             $(".myListingsPageBtn").removeClass("activePage");
             $(".aboutUsPageBtn").removeClass("activePage");
             $(".contactPageBtn").removeClass("activePage");
@@ -589,7 +587,6 @@
             $(".missionPageBtn").addClass("activePage");
             $(".homePageBtn").removeClass("activePage");
             $(".eventsPageBtn").removeClass("activePage");
-            $(".myEventsPageBtn").removeClass("activePage");
             $(".myListingsPageBtn").removeClass("activePage");
             $(".aboutUsPageBtn").removeClass("activePage");
             $(".contactPageBtn").removeClass("activePage");
@@ -598,16 +595,6 @@
             $(".missionPageBtn").removeClass("activePage");
             $(".homePageBtn").removeClass("activePage");
             $(".eventsPageBtn").addClass("activePage");
-            $(".myEventsPageBtn").removeClass("activePage");
-            $(".myListingsPageBtn").removeClass("activePage");
-            $(".aboutUsPageBtn").removeClass("activePage");
-            $(".contactPageBtn").removeClass("activePage");
-        });
-        $(".myEventsPageBtn").click(function (event) {
-            $(".homePageBtn").removeClass("activePage");
-            $(".missionPageBtn").removeClass("activePage");
-            $(".eventsPageBtn").removeClass("activePage");
-            $(".myEventsPageBtn").addClass("activePage");
             $(".myListingsPageBtn").removeClass("activePage");
             $(".aboutUsPageBtn").removeClass("activePage");
             $(".contactPageBtn").removeClass("activePage");
@@ -616,7 +603,6 @@
             $(".homePageBtn").removeClass("activePage");
             $(".missionPageBtn").removeClass("activePage");
             $(".eventsPageBtn").removeClass("activePage");
-            $(".myEventsPageBtn").removeClass("activePage");
             $(".myListingsPageBtn").addClass("activePage");
             $(".aboutUsPageBtn").removeClass("activePage");
             $(".contactPageBtn").removeClass("activePage");
@@ -625,7 +611,6 @@
             $(".homePageBtn").removeClass("activePage");
             $(".missionPageBtn").removeClass("activePage");
             $(".eventsPageBtn").removeClass("activePage");
-            $(".myEventsPageBtn").removeClass("activePage");
             $(".myListingsPageBtn").removeClass("activePage");
             $(".aboutUsPageBtn").addClass("activePage");
             $(".contactPageBtn").removeClass("activePage");
@@ -634,7 +619,6 @@
             $(".homePageBtn").removeClass("activePage");
             $(".missionPageBtn").removeClass("activePage");
             $(".eventsPageBtn").removeClass("activePage");
-            $(".myEventsPageBtn").removeClass("activePage");
             $(".myListingsPageBtn").removeClass("activePage");
             $(".aboutUsPageBtn").removeClass("activePage");
             $(".contactPageBtn").addClass("activePage");
@@ -685,18 +669,7 @@
             }, 200);
 
         });
-        // $(".myListingsPageBtn").click(function (event) {
-        //     event.preventDefault();
-        //     $(".missionPageWrapper").fadeOut(100);
-        //     $(".welcomePageWrapper").fadeOut(100);
-        //     $(".eventsInfoBox").fadeOut(100);
-        //     $(".contactUsWrapper").fadeOut(100);
-        //     $(".eventsWrapper").fadeOut(100);
-        //     setTimeout(function () {
-        //         $(".submitEventPageWrapper").fadeIn(300);
-        //         $(".submitEventPageWrapper").css("display", "block");
-        //     }, 200);
-        // });
+        
         $(".myListingsPageBtn").click(function (event) {
             event.preventDefault();
             $(".welcomePageWrapper").fadeOut(100);
