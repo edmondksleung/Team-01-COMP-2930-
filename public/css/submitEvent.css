@@ -69,6 +69,7 @@ textarea:focus {
 
 #cityGrid {
     grid-area: cityGrid;
+    padding-left: 30px;
 }
 
 .submitEventPageWrapper #email {
@@ -135,7 +136,7 @@ textarea:focus {
 }
 
 #description {
-    width: 543px;
+    width: 575px;
     height: 125px;
     margin-top: 4px;
     padding: 10px;
