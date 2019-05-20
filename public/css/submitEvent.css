@@ -15,9 +15,10 @@
 
 #videoPicture {
     grid-area: left;
-    background-image: url("https://i.pinimg.com/originals/e8/88/d4/e888d4feff8fd5ff63a965471a94b874.gif");
-    background-repeat: no-repeat;
-    padding-left: -30px;
+}
+
+#videoPicture img {
+    margin-left: -80px;
 }
 
 input:focus {
@@ -82,11 +83,16 @@ textarea:focus {
     margin-top: 4px;
 }
 
+#city:hover {
+    cursor: pointer;
+}
+
 #dateTime {
     display: grid;
     grid-template-areas:
         "date startTime endTime empty";
     grid-template-columns: 21% 15% 15% 49%;
+    margin-top: 10px;
 }
 
 #dateDiv {
@@ -103,6 +109,10 @@ textarea:focus {
     width: 120px;
 }
 
+#date:hover {
+    cursor: pointer;
+}
+
 #startTimeDiv {
     grid-area: startTime;
 }
@@ -112,7 +122,6 @@ textarea:focus {
 }
 
 .submitTime {
-    text-align: left;
     height: 25px;
     background-color: rgb(241, 241, 241);
     border: 1px solid rgb(100, 100, 100);
@@ -121,10 +130,13 @@ textarea:focus {
     margin-top: 4px;
     width: 90px;
 }
+.submitTime:hover {
+    cursor: pointer;
+}
 
 #description {
     width: 543px;
-    height: 150px;
+    height: 125px;
     margin-top: 4px;
     padding: 10px;
     border: 1px solid rgb(100, 100, 100);
@@ -136,7 +148,7 @@ textarea:focus {
 }
 
 #photo {
-    margin-top: 4px;
+    margin-top: 10px;
 }
 
 #submit {
@@ -154,8 +166,4 @@ textarea:focus {
     background-color: #260E63;
     color: white;
 }
-
-
-
-
 
