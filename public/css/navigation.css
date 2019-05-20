@@ -93,10 +93,6 @@
         display: none;
     }
 
-    .navigation {
-        display: none;
-    }
-
     /*MENU ICON CONTAINER*/
     .menuBox {
         display: grid;

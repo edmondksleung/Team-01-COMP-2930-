@@ -14,7 +14,6 @@
                     $(".submitEventPageWrapper").hide();
                     $(".contactUsWrapper").hide();
                     $(".aboutUsPageWrapper").hide();
-                    
                     $(".signInPageWrapper").show();
                 }
             });
