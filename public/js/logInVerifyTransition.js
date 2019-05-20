@@ -27,7 +27,7 @@
                     $(".form-success").fadeOut(1000);
                     setTimeout(function () {
                         $(".welcomePageWrapper, .navigation").fadeIn(4000);
-                    }, 5000);
+                    }, 1000);
                     $(".welcomePageWrapper, .navigation").css("display: block");
                 }
             });
