@@ -1,6 +1,7 @@
 //MENU DROP DOWN----------------------------------------------------
 $(".menuButton").click(function () {
     $(".dropDownBox").toggle();
+    $(".dropDown").toggle();
 });
 
 
@@ -9,7 +10,6 @@ $(".homeButton").click(function () {
     $(".eventsWrapper").hide();
     $(".subPageWrapper").fadeIn(1000);
     $(document.body).css("background", "rgb(33, 49, 92)");
-
 
 });
 

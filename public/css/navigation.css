@@ -17,11 +17,11 @@
     letter-spacing: 3px;
 }
 
-.navBar > ul > li {
+.navBar>ul>li {
     display: inline-block;
 }
 
-.navBar ul > li > a {
+.navBar ul>li>a {
     color: white;
     display: block;
     text-decoration: none;
@@ -42,16 +42,16 @@
 
 .navBar ul li a:hover {
     cursor: pointer;
-    background-color:white;
+    background-color: white;
     border-radius: 5px;
-    color: rgb(33, 49, 92);    
+    color: rgb(33, 49, 92);
 }
 
 /* Current page nav bar highlight */
-  .navBar ul li a.activePage {
-  background-color:white;
-  border-radius: 5px;
-  color: rgb(33, 49, 92);
+.navBar ul li a.activePage {
+    background-color: white;
+    border-radius: 5px;
+    color: rgb(33, 49, 92);
 }
 
 /* Navbar picture display */
@@ -60,7 +60,7 @@
     text-align: center;
 }
 
-.navBarPic > ul > li {
+.navBarPic>ul>li {
     display: inline-block;
     text-decoration: none;
 }
@@ -75,11 +75,33 @@
 }
 
 /** Current page picture show */
-  .navBarPic ul li img.activePic {
-  display: inline-block;
+.navBarPic ul li img.activePic {
+    display: inline-block;
 }
 
 #logoutButton1 {
     grid-area: right;
 }
 
+/*MENU ICON CONTAINER*/
+.menuBox {
+    display: none;
+}
+
+@media only screen and (max-width: 700px) {
+    .navBar {
+        display: none;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    /*MENU ICON CONTAINER*/
+    .menuBox {
+        display: grid;
+        justify-items: end;
+        height: 80px;
+    }
+
+}
