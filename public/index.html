@@ -64,20 +64,43 @@
         </ul>
     </div>
     <!---------------------------------------------NAVIGATION------------------------------------------------->
+    <!--MENU ICON BUTTON-->
+    <div class="menuBox">
+        <button class="menuButton">
+            <img alt="menu" class="menuPic" src="./Images/menu.png" />
+        </button>
+    </div>
+
+    <!--MENU DROPDOWN BOX----------------------------->
+    <div class="dropDownBox">
+        <div class="dropDown">
+            <button class="dropButtons homePageBtn">HOME</button>
+            <button class="dropButtons missionPageBtn">MISSION</button>
+            <button class="dropButtons eventsPageBtn">EVENTS</button>
+            <button class="dropButtons myListingsPageBtn">SUBMIT EVENT</button>
+            <button class="dropButtons aboutUsPageBtn">ABOUT US</button>
+            <button class="dropButtons contactPageBtn">CONTACT</button>
+            <button class="dropButtons" onclick="logout()">LOGOUT</button>
+        </div>
+    </div>
+
     <div class="navigation">
         <div class="navBar">
             <ul>
                 <li><a class="homePageBtn">HOME</a></li>
                 <li><a class="missionPageBtn">MISSION</a></li>
                 <li><a class="eventsPageBtn">EVENTS</a></li>
-                <li><a class="myEventsPageBtn">MY EVENTS</a></li>
-                <li><a class="myListingsPageBtn">SUBMIT EVENT</a></li>
                 <li><a class="aboutUsPageBtn">ABOUT US</a></li>
                 <li><a class="contactPageBtn">CONTACT</a></li>
+
+                <li><a class="myListingsPageBtn">SUBMIT EVENT</a></li>
                 <li><a onclick="logout()">LOG OUT</a></li>
             </ul>
         </div>
     </div>
+
+    
+    
     <!---------------------------------------------WElCOME PAGE----------------------------------------------->
     <div class="welcomePageWrapper">
 
@@ -169,23 +192,6 @@
     <!--EVENTS PAGE CONTAINER-------------------------------------------------------------------------------->
     <!--*******************************************************************************************-->
     <div class="eventsWrapper">
-
-        <!--MENU ICON BUTTON-->
-        <div class="menuBox">
-            <button class="menuButton">
-                <img alt="menu" class="menuPic" src="./Images/menu.png" />
-            </button>
-        </div>
-
-        <!--MENU DROPDOWN BOX----------------------------->
-        <div class="dropDownBox">
-            <div class="dropDown">
-                <button class="dropButtons">Home</button>
-                <button class="dropButtons">About Us</button>
-                <button class="dropButtons">Location</button>
-                <button class="dropButtons">Logout</button>
-            </div>
-        </div>
         <!--LOCATION LABEL CONTAINER-->
         <div class="eventsLocation">
             VANCOUVER
@@ -380,15 +386,16 @@
     <div class="submitEventPageWrapper">
         <!--VIDEO BOX-->
         <div id="videoPicture">
+            <img src="https://i.pinimg.com/originals/e8/88/d4/e888d4feff8fd5ff63a965471a94b874.gif" alt="Planting Tree Image">
         </div>
         <!--CREATE FORM BOX-->
         <form id="submitForm">
-            Event Name<br>
-            <input type="text" class="textbox" id="eventName" required><br>
+            <br>Event Name<br>
+            <input type="text" class="textbox" id="eventName" required>
             Organization<br>
-            <input type="text" class="textbox" id="organization" required><br>
+            <input type="text" class="textbox" id="organization" required>
             Email<br>
-            <input type="email" class="textbox" id="email" required><br>
+            <input type="email" class="textbox" id="email" required>
             <div id="addressCity">
                 <div id="addressGrid">
                     Address<br>
@@ -412,15 +419,23 @@
                     </select>
                 </div>
             </div>
-            <br>Date<br>
-            <input type="date" id="date" required>
-            <br>Start Time<br>
-            <input type="time" class='submitTime' id="startTime" step='60' required>
-            <br>End Time<br>
-            <input type='time' class='submitTime' id='endTime' required>
+            <div id="dateTime">
+                <div id="dateDiv">
+                    Date<br>
+                    <input type="date" id="date" required>
+                </div>
+                <div id="startTimeDiv">
+                    Start Time<br>
+                    <input type="time" class='submitTime' id="startTime" step='60' required>
+                </div>
+                <div id="endTimeDiv">
+                    End Time<br>
+                    <input type='time' class='submitTime' id='endTime' required>
+                </div>
+            </div>
             <br>Description<br>
             <textarea id="description"></textarea><br>
-            <br>Upload Photo<br>
+            Upload Photo<br>
             <input type="file" value="upload" id="photo" accept='image/*'><br>
             <input type="submit" value="Post" id="submit">
         </form>
@@ -490,7 +505,7 @@
                     <div class="picture">
                         <img src="./Images/Portraits/Paul.jpeg">
                     </div>
-                    <div class="bio">COO<br>Back-End Specialist<br><br>I have been working at the City of Coquitlam
+                    <div class="bio">Paul Kim<br>COO<br><br>I have been working at the City of Coquitlam
                         as a student advisor for about 2 years now and when I first heard about the idea of
                         <span>e</span>Volunteer I was instantly sold. Connecting students that are required to volunteer
                         and eco-friendly organizations that are in need of volunteers is win-win. Rather than sending
@@ -548,7 +563,6 @@
             </div>
             <div id="backToTop"></div>
         </div>
-    </div>
 
     <!----------------------------JQUERY/JAVASCRIPT FILES TO BE LOADED AFTER HTML DOCUMENT LOADS-->
     <script>
@@ -559,7 +573,6 @@
             $(".homePageBtn").addClass("activePage");
             $(".missionPageBtn").removeClass("activePage");
             $(".eventsPageBtn").removeClass("activePage");
-            $(".myEventsPageBtn").removeClass("activePage");
             $(".myListingsPageBtn").removeClass("activePage");
             $(".aboutUsPageBtn").removeClass("activePage");
             $(".contactPageBtn").removeClass("activePage");
@@ -568,7 +581,6 @@
             $(".homePageBtn").removeClass("activePage");
             $(".missionPageBtn").removeClass("activePage");
             $(".eventsPageBtn").addClass("activePage");
-            $(".myEventsPageBtn").removeClass("activePage");
             $(".myListingsPageBtn").removeClass("activePage");
             $(".aboutUsPageBtn").removeClass("activePage");
             $(".contactPageBtn").removeClass("activePage");
@@ -581,7 +593,6 @@
             $(".missionPageBtn").addClass("activePage");
             $(".homePageBtn").removeClass("activePage");
             $(".eventsPageBtn").removeClass("activePage");
-            $(".myEventsPageBtn").removeClass("activePage");
             $(".myListingsPageBtn").removeClass("activePage");
             $(".aboutUsPageBtn").removeClass("activePage");
             $(".contactPageBtn").removeClass("activePage");
@@ -590,16 +601,6 @@
             $(".missionPageBtn").removeClass("activePage");
             $(".homePageBtn").removeClass("activePage");
             $(".eventsPageBtn").addClass("activePage");
-            $(".myEventsPageBtn").removeClass("activePage");
-            $(".myListingsPageBtn").removeClass("activePage");
-            $(".aboutUsPageBtn").removeClass("activePage");
-            $(".contactPageBtn").removeClass("activePage");
-        });
-        $(".myEventsPageBtn").click(function (event) {
-            $(".homePageBtn").removeClass("activePage");
-            $(".missionPageBtn").removeClass("activePage");
-            $(".eventsPageBtn").removeClass("activePage");
-            $(".myEventsPageBtn").addClass("activePage");
             $(".myListingsPageBtn").removeClass("activePage");
             $(".aboutUsPageBtn").removeClass("activePage");
             $(".contactPageBtn").removeClass("activePage");
@@ -608,7 +609,6 @@
             $(".homePageBtn").removeClass("activePage");
             $(".missionPageBtn").removeClass("activePage");
             $(".eventsPageBtn").removeClass("activePage");
-            $(".myEventsPageBtn").removeClass("activePage");
             $(".myListingsPageBtn").addClass("activePage");
             $(".aboutUsPageBtn").removeClass("activePage");
             $(".contactPageBtn").removeClass("activePage");
@@ -617,7 +617,6 @@
             $(".homePageBtn").removeClass("activePage");
             $(".missionPageBtn").removeClass("activePage");
             $(".eventsPageBtn").removeClass("activePage");
-            $(".myEventsPageBtn").removeClass("activePage");
             $(".myListingsPageBtn").removeClass("activePage");
             $(".aboutUsPageBtn").addClass("activePage");
             $(".contactPageBtn").removeClass("activePage");
@@ -626,7 +625,6 @@
             $(".homePageBtn").removeClass("activePage");
             $(".missionPageBtn").removeClass("activePage");
             $(".eventsPageBtn").removeClass("activePage");
-            $(".myEventsPageBtn").removeClass("activePage");
             $(".myListingsPageBtn").removeClass("activePage");
             $(".aboutUsPageBtn").removeClass("activePage");
             $(".contactPageBtn").addClass("activePage");
@@ -651,10 +649,10 @@
             event.preventDefault();
             $(".welcomePageWrapper").fadeOut(100);
             $(".submitEventPageWrapper").fadeOut(100);
+            $(".eventsWrapper").fadeOut(100);
             $(".eventsInfoBox").fadeOut(100);
             $(".contactUsWrapper").fadeOut(100);
             $(".aboutUsPageWrapper").fadeOut(100);
-            $(".eventsWrapper").fadeOut(100);
             setTimeout(function () {
                 $(".missionPageWrapper").fadeIn(300);
                 $(".missionPageWrapper").css("display", "block");
@@ -664,10 +662,10 @@
             event.preventDefault();
             $(".missionPageWrapper").fadeOut(100);
             $(".eventsInfoBox").fadeOut(100);
+            $(".eventsWrapper").fadeOut(100);
             $(".submitEventPageWrapper").fadeOut(100);
             $(".contactUsWrapper").fadeOut(100);
             $(".aboutUsPageWrapper").fadeOut(100);
-            $(".eventsWrapper").fadeOut(100);
             setTimeout(function () {
                 $(".welcomePageWrapper").fadeIn(300);
                 $(".welcomePageWrapper").css("display", "block");
@@ -677,29 +675,21 @@
             }, 200);
 
         });
-        // $(".myListingsPageBtn").click(function (event) {
-        //     event.preventDefault();
-        //     $(".missionPageWrapper").fadeOut(100);
-        //     $(".welcomePageWrapper").fadeOut(100);
-        //     $(".eventsInfoBox").fadeOut(100);
-        //     $(".contactUsWrapper").fadeOut(100);
-        //     $(".eventsWrapper").fadeOut(100);
-        //     setTimeout(function () {
-        //         $(".submitEventPageWrapper").fadeIn(300);
-        //         $(".submitEventPageWrapper").css("display", "block");
-        //     }, 200);
-        // });
+        
         $(".myListingsPageBtn").click(function (event) {
             event.preventDefault();
-            $(".missionPageWrapper").fadeOut(100);
             $(".welcomePageWrapper").fadeOut(100);
+            $(".missionPageWrapper").fadeOut(100);
             $(".eventsInfoBox").fadeOut(100);
-            $(".contactUsWrapper").fadeOut(100);
-            $(".aboutUsPageWrapper").fadeOut(100);
             $(".eventsWrapper").fadeOut(100);
+            $(".aboutUsPageWrapper").fadeOut(100);
+            $(".contactUsWrapper").fadeOut(100);
+
             setTimeout(function () {
                 $(".submitEventPageWrapper").fadeIn(300);
                 $(".submitEventPageWrapper").css("display", "grid");
+                $("#submitForm").css("display", "grid");
+
             }, 200);
         });
         $(".aboutUsPageBtn").click(function (event) {
@@ -719,10 +709,11 @@
             event.preventDefault();
             $(".welcomePageWrapper").fadeOut(100);
             $(".missionPageWrapper").fadeOut(100);
-            $(".submitEventPageWrapper").fadeOut(100);
-            $(".aboutUsPageWrapper").fadeOut(100);
             $(".eventsInfoBox").fadeOut(100);
             $(".eventsWrapper").fadeOut(100);
+            $(".submitEventPageWrapper").fadeOut(100);
+            $(".aboutUsPageWrapper").fadeOut(100);
+            
             setTimeout(function () {
                 $(".contactUsWrapper").fadeIn(300);
                 $(".contactUsWrapper").css("display", "block");
@@ -733,21 +724,27 @@
         //Makes the background page color fade alongside transitions
         $(".homePageBtn").click(function () {
             $("body").css("background", "rgb(33, 49, 92)");
+            $(".dropButtons").css("background", "rgb(33, 49, 92)");
         });
         $(".missionPageBtn").click(function () {
             $("body").css("background", "rgb(25, 76, 85)");
+            $(".dropButtons").css("background", "rgb(25, 76, 85)");
         });
         $(".eventsPageBtn").click(function () {
             $("body").css("background", "rgb(33, 49, 92)");
+            $(".dropButtons").css("background", "rgb(33, 49, 92)");
         });
         $(".myListingsPageBtn").click(function () {
             $("body").css("background", "#260E63");
+            $(".dropButtons").css("background", "#260E63");
         });
         $(".aboutUsPageBtn").click(function () {
-            $("body").css("background", "rgb(33, 49, 92)");
+            $("body").css("background", "#5C2045");
+            $(".dropButtons").css("background", "#5C2045");
         })
         $(".contactPageBtn").click(function () {
             $("body").css("background", "#B68D1B");
+            $(".dropButtons").css("background", "#B68D1B");
         });
     </script>
     <script src="./js/eventAjaxDetail.js"></script>
