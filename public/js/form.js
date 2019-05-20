@@ -1,5 +1,9 @@
 // Listen for form submission
 document.getElementById('submitForm').addEventListener('submit', submitForm);
+$('.navigation').on('click', function() {
+	// Resets the form
+	document.getElementById('submitForm').reset();
+})
 
 // Submits the form
 async function submitForm(e) {

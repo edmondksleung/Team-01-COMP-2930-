@@ -4,6 +4,7 @@ $(document).ready(function () {
     $(document).on("click", ".cities", function () {
         // resetting DOM element in the page
         $('.allEventsBox').empty();
+        // $('.eventsInfoBox').empty();
 
         // Grabbing clicked name attribute
         let city = $(this).attr('name');
@@ -27,6 +28,7 @@ $(document).ready(function () {
                     $(".locationInfo").text(data.address);
                     $(".organizerInfo").text(data.organization);
                     $(".emailInfo").text(data.email);
+
 
 
                 }
