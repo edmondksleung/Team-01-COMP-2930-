@@ -1,11 +1,41 @@
 // AJAX to import data from firebase (list of events)
 $(document).ready(function () {
-    $(document).on("click", ".cities", function(){
+
+    $(document).on("click", ".cities", function () {
         // Grabbing clicked name attribute
         let city = $(this).attr('name');
         let locationName = $('.eventsLocation');
         $(locationName).text(city);
         console.log(city);
+        // console.log(city);
+        $(document).on("click", ".readMoreButton", function () {
+            let key = $(this).attr("id");
+            // console.log(key);
+            $.ajax({
+                type: 'GET',
+                url: `https://evolunteer-45c5d.firebaseio.com/events/${city}/${key}.json`,
+                dataType: 'json',
+                success: function (data) {
+                    // adds data from firebase onto event details
+                    console.log(data);
+                    $(`.eventsBox`).hide();
+                    $(`.eventsInfoBox#${key}`).show();
+                    $(`.eventsLocation`).hide(); /*key null*/
+                    $(".locationInfo").text(data.address);
+                    $(".organizerInfo").text(data.organization);
+                    $(".emailInfo").text(data.email);
+
+
+                }
+            });
+        });
+        /* close detail button */
+        $(document).on("click", ".closeDetailsButton", function () {
+            $(".eventsBox").show();
+            $(".eventsInfoBox").hide();
+            $(".eventsLocation").show(); /*key null*/
+        })
+
 
         // resetting DOM element in the page
         $('.allEventsBox').empty();
@@ -19,6 +49,7 @@ $(document).ready(function () {
                 
                 let keys = Object.keys(data);
                 console.log("whats this " + keys);
+                // console.log(keys);
                 // let idkey = $(".readMoreButton").attr("id");
                 // console.log(idkey);
                 // Creating a list of events from firebase
@@ -26,6 +57,7 @@ $(document).ready(function () {
                     // Putting value into dom element
                     let k = keys[i];
                     
+                    // console.log(k);
                     ////////// Creating event box using dom elements /////////
                     let allEventsBox = $('.allEventsBox');
                     let eventsBox = document.createElement('div');
@@ -70,7 +102,12 @@ $(document).ready(function () {
 
                     /* create DETAILED event from firebase */
 
-                    let eventsInfoBox = $(".eventsInfoBox");
+                    // let eventsInfoBox = $(".eventsInfoBox");
+
+                    let eventsInfoBox = document.createElement("div");
+                    $(eventsInfoBox).attr("class", "eventsInfoBox");
+                    $(".eventsWrapper").append(eventsInfoBox);
+
                     let detailsTopBox = document.createElement("div");
                     $(detailsTopBox).attr("class", "detailsTopBox");
                     eventsInfoBox.append(detailsTopBox);
@@ -111,12 +148,12 @@ $(document).ready(function () {
                     $(locationPic).attr("alt", "loc");
                     $(locationInfoBox).append(locationPic);
 
-                    let locationInfo = document.createElement("div");
+                    var locationInfo = document.createElement("div");
                     $(locationInfo).attr("class", "locationInfo");
                     $(locationInfoBox).append(locationInfo);
-                    
+
                     /* date */
-                    
+
                     let dateTimeInfoBox = document.createElement("div");
                     $(dateTimeInfoBox).attr("class", "dateTimeInfoBox");
                     $(specialInfoBox).append(dateTimeInfoBox);
@@ -136,13 +173,13 @@ $(document).ready(function () {
                     let dateInfo = document.createElement("div");
                     $(dateInfo).attr("class", "dateInfo");
                     $(dateTime).append(dateInfo);
-                    
+
                     let timeInfo = document.createElement("div");
                     $(timeInfo).attr("class", "timeInfo");
                     $(dateTime).append(timeInfo);
 
                     /* organizer info box */
-                    
+
                     let organizerInfoBox = document.createElement("div");
                     $(organizerInfoBox).attr("class", "organizerInfoBox");
                     $(specialInfoBox).append(organizerInfoBox);
@@ -175,19 +212,19 @@ $(document).ready(function () {
 
                     /* people count */
 
-                    // let peopleCountBox = document.createElement("div");
-                    // $(peopleCountBox).attr("class", "peopleCountBox");
-                    // $(specialInfoBox).append(peopleCountBox);
+                    let peopleCountBox = document.createElement("div");
+                    $(peopleCountBox).attr("class", "peopleCountBox");
+                    $(specialInfoBox).append(peopleCountBox);
 
-                    // let peoplePic = document.createElement("div");
-                    // $(peoplePic).attr("class", "peoplePic");
-                    // $(peoplePic).attr("src", "./Images/people.png");
-                    // $(peoplePic).attr("alt", "count");
-                    // $(peopleCountBox).append(peoplePic);
+                    let pplPic = document.createElement("img");
+                    $(pplPic).attr("class", "peoplePic");
+                    $(pplPic).attr("src", "./Images/people.png");
+                    $(pplPic).attr("alt", "count");
+                    $(peopleCountBox).append(pplPic);
 
-                    // let count = document.createElement("div");
-                    // $(count).attr("class", "count");
-                    // $(peopleCountBox).append(count);
+                    let count = document.createElement("div");
+                    $(count).attr("class", "count");
+                    $(peopleCountBox).append(count);
 
                     /* credits box */
 
@@ -210,7 +247,7 @@ $(document).ready(function () {
                     $(detailHours).text("Hours Credit");
                     $(creditsBox).append(detailHours);
 
-                    /* description */ 
+                    /* description */
 
                     let infoDescriptionBox = document.createElement("div");
                     $(infoDescriptionBox).attr("class", "infoDescriptionBox");
@@ -237,14 +274,18 @@ $(document).ready(function () {
                     $(joinEventButton).text("Join Event");
                     $(joinEventButtonBox).append(joinEventButton);
 
+                    /**** returns string of the object key and adds the string to an id ****/
+
+                    let objStr = JSON.stringify(k);
+                    // console.log(objStr)
+                    // regex to replace double quotes with nothing
+                    regexReplace = objStr.replace(/\"/g, "");
+                    // console.log(x);
+                    $(readMoreButton).attr("id", regexReplace);
+                    $(eventsBox).attr("id", regexReplace);
+                    $(eventsInfoBox).attr("id", regexReplace);
 
 
-
-
-                    /**** stringify's the object key and adds to id ****/
-
-                    var objStr = JSON.stringify(k);
-                    $(readMoreButton).attr("id", objStr);
 
                     // preview box 
 
@@ -303,6 +344,11 @@ $(document).ready(function () {
                     $(eventMessage).text(data[k].subject);
                     $(month).text(monthString);
                     $(day).text(dayInt);
+                    
+                    // Putting key into dom element
+                    //$(month).text(monthString);
+                    //$(day).text(dayInt);
+                    $(eventMessage).text(data[k].subject);
                     $(peopleCount).text(data[k].userCount);
                     $(creditNum).text(timeCred);
                     
@@ -317,11 +363,10 @@ $(document).ready(function () {
                         return time;
                     }
 
-                }
 
+                }
             }
         });
-
     });
 });
 

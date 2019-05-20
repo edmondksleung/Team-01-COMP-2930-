@@ -8,7 +8,7 @@
 //         "isOrg" : false,
 //         "uid" : user.uid,
 //       });
-    
+
 //   });
 // var city = $(".cities").attr("name");
 // console.log(city);
@@ -24,7 +24,7 @@
 //         success: function (data) {
 //             let keys = Object.keys(data);
 //             console.log(keys);
-            
+
 //             firebase.auth().onAuthStateChanged(function(user){
 
 //                 firebase.database().ref("events/Abbotsford/" + user.uid).update(
