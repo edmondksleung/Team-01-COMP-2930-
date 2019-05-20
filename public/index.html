@@ -650,10 +650,10 @@
             event.preventDefault();
             $(".welcomePageWrapper").fadeOut(100);
             $(".submitEventPageWrapper").fadeOut(100);
+            $(".eventsWrapper").fadeOut(100);
             $(".eventsInfoBox").fadeOut(100);
             $(".contactUsWrapper").fadeOut(100);
             $(".aboutUsPageWrapper").fadeOut(100);
-            $(".eventsWrapper").fadeOut(100);
             setTimeout(function () {
                 $(".missionPageWrapper").fadeIn(300);
                 $(".missionPageWrapper").css("display", "block");
@@ -663,10 +663,10 @@
             event.preventDefault();
             $(".missionPageWrapper").fadeOut(100);
             $(".eventsInfoBox").fadeOut(100);
+            $(".eventsWrapper").fadeOut(100);
             $(".submitEventPageWrapper").fadeOut(100);
             $(".contactUsWrapper").fadeOut(100);
             $(".aboutUsPageWrapper").fadeOut(100);
-            $(".eventsWrapper").fadeOut(100);
             setTimeout(function () {
                 $(".welcomePageWrapper").fadeIn(300);
                 $(".welcomePageWrapper").css("display", "block");
@@ -690,12 +690,13 @@
         // });
         $(".myListingsPageBtn").click(function (event) {
             event.preventDefault();
-            $(".missionPageWrapper").fadeOut(100);
             $(".welcomePageWrapper").fadeOut(100);
+            $(".missionPageWrapper").fadeOut(100);
             $(".eventsInfoBox").fadeOut(100);
-            $(".contactUsWrapper").fadeOut(100);
-            $(".aboutUsPageWrapper").fadeOut(100);
             $(".eventsWrapper").fadeOut(100);
+            $(".aboutUsPageWrapper").fadeOut(100);
+            $(".contactUsWrapper").fadeOut(100);
+
             setTimeout(function () {
                 $(".submitEventPageWrapper").fadeIn(300);
                 $(".submitEventPageWrapper").css("display", "grid");
@@ -720,10 +721,11 @@
             event.preventDefault();
             $(".welcomePageWrapper").fadeOut(100);
             $(".missionPageWrapper").fadeOut(100);
-            $(".submitEventPageWrapper").fadeOut(100);
-            $(".aboutUsPageWrapper").fadeOut(100);
             $(".eventsInfoBox").fadeOut(100);
             $(".eventsWrapper").fadeOut(100);
+            $(".submitEventPageWrapper").fadeOut(100);
+            $(".aboutUsPageWrapper").fadeOut(100);
+            
             setTimeout(function () {
                 $(".contactUsWrapper").fadeIn(300);
                 $(".contactUsWrapper").css("display", "block");
