@@ -548,7 +548,6 @@
             </div>
             <div id="backToTop"></div>
         </div>
-    </div>
 
     <!----------------------------JQUERY/JAVASCRIPT FILES TO BE LOADED AFTER HTML DOCUMENT LOADS-->
     <script>
@@ -700,6 +699,8 @@
             setTimeout(function () {
                 $(".submitEventPageWrapper").fadeIn(300);
                 $(".submitEventPageWrapper").css("display", "grid");
+                $("#submitForm").css("display", "grid");
+
             }, 200);
         });
         $(".aboutUsPageBtn").click(function (event) {

@@ -10,8 +10,8 @@
                     $(".welcomePageWrapper").hide();
                     $(".missionPageWrapper").hide();
                     $(".eventsWrapper").hide();
-                    $(".submitEventPageWrapper").hide();
                     $(".eventsInfoBox").hide();
+                    $(".submitEventPageWrapper").hide();
                     $(".contactUsWrapper").hide();
                     $(".aboutUsPageWrapper").hide();
                     
