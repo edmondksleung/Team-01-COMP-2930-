@@ -15,7 +15,10 @@
 
 #videoPicture {
     grid-area: left;
-    background-image: url("https://i.pinimg.com/originals/e8/88/d4/e888d4feff8fd5ff63a965471a94b874.gif");
+}
+
+#videoPicture img {
+    margin-left: -80px;
 }
 
 input:focus {
@@ -38,7 +41,7 @@ textarea:focus {
 .textbox {
     border: none;
     border-bottom: 1px solid black;
-    width: 450px;
+    width: 300px;
     height: 25px;
     margin-bottom: 15px;
     font-family: 'Source Sans Pro', sans-serif;
@@ -52,7 +55,7 @@ textarea:focus {
     display: grid;
     grid-template-areas:
         "addressGrid cityGrid";
-    grid-template-columns: 66% 33%;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 50px;
 }
 
@@ -60,12 +63,16 @@ textarea:focus {
     grid-area: addressGrid;
 }
 
+#address {
+    width: 375px;
+}
+
 #cityGrid {
     grid-area: cityGrid;
 }
 
 .submitEventPageWrapper #email {
-    width: 450px;
+    width: 375px;
     margin-bottom: 15px;
 }
 
@@ -74,6 +81,22 @@ textarea:focus {
     width: 145px;
     border: 1px solid rgb(100, 100, 100);
     margin-top: 4px;
+}
+
+#city:hover {
+    cursor: pointer;
+}
+
+#dateTime {
+    display: grid;
+    grid-template-areas:
+        "date startTime endTime empty";
+    grid-template-columns: 21% 15% 15% 49%;
+    margin-top: 10px;
+}
+
+#dateDiv {
+    grid-area: date;
 }
 
 #date {
@@ -86,9 +109,34 @@ textarea:focus {
     width: 120px;
 }
 
+#date:hover {
+    cursor: pointer;
+}
+
+#startTimeDiv {
+    grid-area: startTime;
+}
+
+#endTimeDiv {
+    grid-area: endTime;
+}
+
+.submitTime {
+    height: 25px;
+    background-color: rgb(241, 241, 241);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-top: 4px;
+    width: 90px;
+}
+.submitTime:hover {
+    cursor: pointer;
+}
+
 #description {
-    width: 650px;
-    height: 150px;
+    width: 543px;
+    height: 125px;
     margin-top: 4px;
     padding: 10px;
     border: 1px solid rgb(100, 100, 100);
@@ -100,29 +148,22 @@ textarea:focus {
 }
 
 #photo {
-    margin-top: 4px;
+    margin-top: 10px;
 }
 
 #submit {
     width: 50px;
-    margin-top: 25px;
+    margin-top: 10px;
+    background-color: rgb(241, 241, 241);
+    border: 1px solid rgb(100, 100, 100);
+    font-weight: bold;
+    border-radius: 5px;
+    letter-spacing: 1px;
 }
 
 #submit:hover {
     cursor: pointer;
+    background-color: #260E63;
+    color: white;
 }
-
-.submitTime {
-    text-align: left;
-    height: 25px;
-    background-color: rgb(241, 241, 241);
-    border: 1px solid rgb(100, 100, 100);
-    border-radius: 5px;
-    padding-left: 10px;
-    margin-top: 4px;
-    width: 90px;
-}
-
-
-
 
