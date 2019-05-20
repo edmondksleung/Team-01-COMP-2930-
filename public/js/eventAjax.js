@@ -27,8 +27,7 @@ $(document).ready(function () {
                     $(".locationInfo").text(data.address);
                     $(".organizerInfo").text(data.organization);
                     $(".emailInfo").text(data.email);
-
-
+                    $(".infoDescriptionBox").text(data.subject);
                 }
             });
         });
