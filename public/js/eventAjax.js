@@ -2,6 +2,9 @@
 $(document).ready(function () {
 
     $(document).on("click", ".cities", function () {
+        // resetting DOM element in the page
+        $('.allEventsBox').empty();
+
         // Grabbing clicked name attribute
         let city = $(this).attr('name');
         let locationName = $('.eventsLocation');
@@ -24,8 +27,7 @@ $(document).ready(function () {
                     $(".locationInfo").text(data.address);
                     $(".organizerInfo").text(data.organization);
                     $(".emailInfo").text(data.email);
-
-
+                    $(".infoDescriptionBox").text(data.subject);
                 }
             });
         });
@@ -36,12 +38,8 @@ $(document).ready(function () {
             $(".eventsLocation").show(); /*key null*/
         })
 
-
-        // resetting DOM element in the page
-        $('.allEventsBox').empty();
-
-
-        currentRequest = $.ajax({
+        // Creating DOM elements and fetching information from firebase
+        $.ajax({
             type: 'GET',
             url: `https://evolunteer-45c5d.firebaseio.com/events/${city}.json`,
             dataType: 'json',

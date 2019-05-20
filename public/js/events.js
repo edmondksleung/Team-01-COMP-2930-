@@ -11,7 +11,6 @@ $(".homeButton").click(function () {
     $(".subPageWrapper").fadeIn(1000);
     $(document.body).css("background", "rgb(33, 49, 92)");
 
-
 });
 
 //ABOUT US BUTTON-------------------------------------------------------------------

@@ -389,7 +389,7 @@
         </div>
         <!--CREATE FORM BOX-->
         <form id="submitForm">
-            Event Name<br>
+            <br>Event Name<br>
             <input type="text" class="textbox" id="eventName" required><br>
             Organization<br>
             <input type="text" class="textbox" id="organization" required><br>
@@ -418,12 +418,20 @@
                     </select>
                 </div>
             </div>
-            <br>Date<br>
-            <input type="date" id="date" required>
-            <br>Start Time<br>
-            <input type="time" class='submitTime' id="startTime" step='60' required>
-            <br>End Time<br>
-            <input type='time' class='submitTime' id='endTime' required>
+            <div id="dateTime">
+                <div id="dateDiv">
+                    <br>Date<br>
+                    <input type="date" id="date" required>
+                </div>
+                <div id="startTimeDiv">
+                    <br>Start Time<br>
+                    <input type="time" class='submitTime' id="startTime" step='60' required>
+                </div>
+                <div id="endTimeDiv">
+                    <br>End Time<br>
+                    <input type='time' class='submitTime' id='endTime' required>
+                </div>
+            </div>
             <br>Description<br>
             <textarea id="description"></textarea><br>
             <br>Upload Photo<br>
@@ -554,7 +562,6 @@
             </div>
             <div id="backToTop"></div>
         </div>
-    </div>
 
     <!----------------------------JQUERY/JAVASCRIPT FILES TO BE LOADED AFTER HTML DOCUMENT LOADS-->
     <script>
@@ -657,10 +664,10 @@
             event.preventDefault();
             $(".welcomePageWrapper").fadeOut(100);
             $(".submitEventPageWrapper").fadeOut(100);
+            $(".eventsWrapper").fadeOut(100);
             $(".eventsInfoBox").fadeOut(100);
             $(".contactUsWrapper").fadeOut(100);
             $(".aboutUsPageWrapper").fadeOut(100);
-            $(".eventsWrapper").fadeOut(100);
             setTimeout(function () {
                 $(".missionPageWrapper").fadeIn(300);
                 $(".missionPageWrapper").css("display", "block");
@@ -670,10 +677,10 @@
             event.preventDefault();
             $(".missionPageWrapper").fadeOut(100);
             $(".eventsInfoBox").fadeOut(100);
+            $(".eventsWrapper").fadeOut(100);
             $(".submitEventPageWrapper").fadeOut(100);
             $(".contactUsWrapper").fadeOut(100);
             $(".aboutUsPageWrapper").fadeOut(100);
-            $(".eventsWrapper").fadeOut(100);
             setTimeout(function () {
                 $(".welcomePageWrapper").fadeIn(300);
                 $(".welcomePageWrapper").css("display", "block");
@@ -697,15 +704,18 @@
         // });
         $(".myListingsPageBtn").click(function (event) {
             event.preventDefault();
-            $(".missionPageWrapper").fadeOut(100);
             $(".welcomePageWrapper").fadeOut(100);
+            $(".missionPageWrapper").fadeOut(100);
             $(".eventsInfoBox").fadeOut(100);
-            $(".contactUsWrapper").fadeOut(100);
-            $(".aboutUsPageWrapper").fadeOut(100);
             $(".eventsWrapper").fadeOut(100);
+            $(".aboutUsPageWrapper").fadeOut(100);
+            $(".contactUsWrapper").fadeOut(100);
+
             setTimeout(function () {
                 $(".submitEventPageWrapper").fadeIn(300);
                 $(".submitEventPageWrapper").css("display", "grid");
+                $("#submitForm").css("display", "grid");
+
             }, 200);
         });
         $(".aboutUsPageBtn").click(function (event) {
@@ -725,10 +735,11 @@
             event.preventDefault();
             $(".welcomePageWrapper").fadeOut(100);
             $(".missionPageWrapper").fadeOut(100);
-            $(".submitEventPageWrapper").fadeOut(100);
-            $(".aboutUsPageWrapper").fadeOut(100);
             $(".eventsInfoBox").fadeOut(100);
             $(".eventsWrapper").fadeOut(100);
+            $(".submitEventPageWrapper").fadeOut(100);
+            $(".aboutUsPageWrapper").fadeOut(100);
+            
             setTimeout(function () {
                 $(".contactUsWrapper").fadeIn(300);
                 $(".contactUsWrapper").css("display", "block");
@@ -754,8 +765,8 @@
             $(".dropButtons").css("background", "#260E63");
         });
         $(".aboutUsPageBtn").click(function () {
-            $("body").css("background", "rgb(33, 49, 92)");
-            $(".dropButtons").css("background", "rgb(33, 49, 92)");
+            $("body").css("background", "#5C2045");
+            $(".dropButtons").css("background", "#5C2045");
         })
         $(".contactPageBtn").click(function () {
             $("body").css("background", "#B68D1B");

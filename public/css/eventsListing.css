@@ -61,7 +61,6 @@
     width: 100%;
     z-index: 2;
     display: none;
-    position: absolute;
     border-bottom: 2px solid rgb(194, 193, 193);
 }
 
@@ -75,6 +74,7 @@
     font-weight: bold;
     color: white;
     background: rgb(33, 49, 92);
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 /*DROP DOWN BUTTONS HOVER*/
