@@ -1,9 +1,10 @@
 // AJAX to import data from firebase (list of events)
 $(document).ready(function () {
-
-    $(document).on("click", ".cities", function () {
+    $(document).on("click", ".cities", function (e) {
+        e.preventDefault();
         // resetting DOM element in the page
         $('.allEventsBox').empty();
+        // $('.eventsInfoBox').empty();
 
         // Grabbing clicked name attribute
         let city = $(this).attr('name');
@@ -11,26 +12,7 @@ $(document).ready(function () {
         $(locationName).text(city);
         console.log(city);
         // console.log(city);
-        $(document).on("click", ".readMoreButton", function () {
-            let key = $(this).attr("id");
-            // console.log(key);
-            $.ajax({
-                type: 'GET',
-                url: `https://evolunteer-45c5d.firebaseio.com/events/${city}/${key}.json`,
-                dataType: 'json',
-                success: function (data) {
-                    // adds data from firebase onto event details
-                    console.log(data);
-                    $(`.eventsBox`).hide();
-                    $(`.eventsInfoBox#${key}`).show();
-                    $(`.eventsLocation`).hide(); /*key null*/
-                    $(".locationInfo").text(data.address);
-                    $(".organizerInfo").text(data.organization);
-                    $(".emailInfo").text(data.email);
-                    $(".infoDescriptionBox").text(data.subject);
-                }
-            });
-        });
+
         /* close detail button */
         $(document).on("click", ".closeDetailsButton", function () {
             $(".eventsBox").show();
@@ -104,7 +86,7 @@ $(document).ready(function () {
 
                     let eventsInfoBox = document.createElement("div");
                     $(eventsInfoBox).attr("class", "eventsInfoBox");
-                    $(".eventsWrapper").append(eventsInfoBox);
+                    $(".allEventsBox").append(eventsInfoBox);
 
                     let detailsTopBox = document.createElement("div");
                     $(detailsTopBox).attr("class", "detailsTopBox");
@@ -277,11 +259,11 @@ $(document).ready(function () {
                     let objStr = JSON.stringify(k);
                     // console.log(objStr)
                     // regex to replace double quotes with nothing
-                    regexReplace = objStr.replace(/\"/g, "");
+                    replaceQuotes = objStr.replace(/\"/g, "");
                     // console.log(x);
-                    $(readMoreButton).attr("id", regexReplace);
-                    $(eventsBox).attr("id", regexReplace);
-                    $(eventsInfoBox).attr("id", regexReplace);
+                    $(readMoreButton).attr("id", replaceQuotes);
+                    $(eventsBox).attr("id", replaceQuotes);
+                    $(eventsInfoBox).attr("id", replaceQuotes);
 
 
 
@@ -363,6 +345,30 @@ $(document).ready(function () {
 
 
                 }
+            }
+        });
+    });
+    $(document).on("click", ".readMoreButton", function (e) {
+        e.preventDefault();
+        let key = $(this).attr("id");
+        let city2 = $(".eventsLocation").text();
+        console.log(city2);
+        // debugger;
+        // console.log(key);
+        $.ajax({
+            type: 'GET',
+            url: `https://evolunteer-45c5d.firebaseio.com/events/${city2}/${key}.json`,
+            dataType: 'json',
+            success: function (data) {
+                // adds data from firebase onto event details
+                console.log(data);
+                $(`.eventsBox`).hide();
+                $(`.eventsInfoBox#${key}`).show();
+                $(`.eventsLocation`).hide(); /*key null*/
+                $(".locationInfo").text(data.address);
+                $(".organizerInfo").text(data.organization);
+                $(".emailInfo").text(data.email);
+                $(".infoDescriptionBox").text(data.subject);
             }
         });
     });
