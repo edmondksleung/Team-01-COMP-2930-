@@ -109,7 +109,30 @@
     grid-area: rightText;
 }
 
-/*J
+/*INFO PICTURE TEXT 1*/
+#infoPicDesc1 {
+    color: white;
+    margin-left: 250px;
+}
+
+/*INFO PICTURE TEXT 2*/
+#infoPicDesc2 {
+    color: white;
+    margin-left: 270px;
+}
+/*INFO PICTURE TEXT 3*/
+#infoPicDesc3 {
+    color: white;
+    margin-left: 280px;
+}
+
+/*INFO PICTURE TEXT*/
+.infoPicDesc {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/*INFORMATION CONTAINER*/
 #infomatics {
     margin: 20px auto;
     width: 600px;
@@ -122,29 +145,34 @@
     margin-top: 140px;
 }
 
+/*INFO PICTURES CONTAINER*/
 .box {
     background-color: rgb(25, 76, 85);
     color: #fff;
     font-size: 20px;
 }
 
+/*INFO PICTURES 1*/
 #infomatic1 {
     font-size: 65px;
     color: rgb(255, 72, 0);
 }
 
+/*INFO PICTURES 2*/
 #infomatic2 {
     font-size: 65px;
     color: rgb(30, 255, 0);
 
 }
 
+/*INFO PICTURES 3*/
 #infomatic3 {
     font-size: 65px;
     color: rgb(0, 255, 255);
 
 }
 
+/*INFO PICTURES 4*/
 #infomatic4 {
     font-size: 65px;
     color: rgb(248, 109, 45);
@@ -152,9 +180,9 @@
 }
 
 /*MOBILE LAYOUT*/
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 700px) {
 
-    /*MIDDLE THREE PICTURES*/
+    /*MOBILE MIDDLE THREE PICTURES*/
     #threePictures {
         grid-template-areas:
             "leftPicture"
@@ -167,14 +195,14 @@
         grid-template-rows: 200px 50px 200px 50px 200px 50px;
         height: auto;
     }
-
+/*MOBILE INFORMATION CONTAINER*/
     #infomatics {
         grid-template-columns: 100%;
         grid-template-rows: 200px 200px 200px 200px;   
         margin-top: 30px;
 
     }
-
+/* MOBILE INFO PICTURES CONTAINER*/
     .box {
         display: grid;
         align-items: center;
