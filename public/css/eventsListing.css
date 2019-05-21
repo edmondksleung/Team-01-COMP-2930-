@@ -447,7 +447,7 @@
 /*CREDITS INFO BOX*/
 .creditsBox {
     display: grid;
-    grid-template-columns: 50px 15px 500px;
+    grid-template-columns: 50px auto 500px;
     grid-template-rows: 30px;
     font-family: 'Source Sans Pro', sans-serif;
     color: rgb(102, 101, 101);
