@@ -5,10 +5,7 @@
     text-align: center;
 }
 
-<<<<<<< HEAD
-=======
 /*CONTACT LABELS*/
->>>>>>> 19213e124ffbfd49c23a433af662e2fc077b2a42
 span.contactSpan {
     letter-spacing: 3px;
     font-size: 15pt;
@@ -240,5 +237,19 @@ span.contactSpan {
         width: 75px;
         height: 75px;
     }
+
+    /*CHAT BUTTON HOVER EFFECT*/
+    #chatButton:hover {
+        width: 100px;
+        height: 30px;
+        border: 2px solid rgb(255, 204, 0);
+        color: rgb(255, 204, 0);
+        cursor: pointer;
+        letter-spacing: 1px;
+        font-size: 12pt;
+        line-height: 24px;
+        vertical-align: middle;
+    }
+
 
 }
