@@ -117,5 +117,7 @@
         height: 80px;
         z-index: 9999;
     }
-
+    img {
+        text-indent: -99900000px;
+      }
 }
