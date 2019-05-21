@@ -4,14 +4,11 @@ $(document).ready(function () {
         e.preventDefault();
         // resetting DOM element in the page
         $('.allEventsBox').empty();
-        // $('.eventsInfoBox').empty();
 
         // Grabbing clicked name attribute
         let city = $(this).attr('name');
         let locationName = $('.eventsLocation');
         $(locationName).text(city);
-        console.log(city);
-        // console.log(city);
 
         /* close detail button */
         $(document).on("click", ".closeDetailsButton", function () {
@@ -28,16 +25,13 @@ $(document).ready(function () {
             success: function (data) {
 
                 let keys = Object.keys(data);
-                console.log("whats this " + keys);
-                // console.log(keys);
-                // let idkey = $(".readMoreButton").attr("id");
-                // console.log(idkey);
+                // console.log("whats this " + keys);
+
                 // Creating a list of events from firebase
                 for (let i = 0; i < keys.length; i++) {
                     // Putting value into dom element
                     let k = keys[i];
 
-                    // console.log(k);
                     ////////// Creating event box using dom elements /////////
                     let allEventsBox = $('.allEventsBox');
                     let eventsBox = document.createElement('div');
@@ -66,12 +60,6 @@ $(document).ready(function () {
                     readMoreBox.setAttribute('class', 'readMoreBox');
                     eventPicBox.append(readMoreBox);
 
-                    // let eventPic = document.createElement('img');
-                    // eventPic.setAttribute('class', 'eventPic');
-                    // eventPic.setAttribute('src', data[k].imgurl);
-                    // eventPicBox.append(eventPic);
-                    // console.log(data[k].imgurl);
-
                     let emptyDiv = document.createElement('div');
                     readMoreBox.append(emptyDiv);
 
@@ -81,9 +69,6 @@ $(document).ready(function () {
                     $(".readMoreButton").text("info");
 
                     /* create DETAILED event from firebase */
-
-                    // let eventsInfoBox = $(".eventsInfoBox");
-
                     let eventsInfoBox = document.createElement("div");
                     $(eventsInfoBox).attr("class", "eventsInfoBox");
                     $(".allEventsBox").append(eventsInfoBox);
@@ -121,7 +106,6 @@ $(document).ready(function () {
                     $(specialInfoBox).append(locationInfoBox);
 
                     /* location */
-
                     let locationPic = document.createElement("img");
                     $(locationPic).attr("class", "locationPic");
                     $(locationPic).attr("src", "./Images/location.png");
@@ -133,7 +117,6 @@ $(document).ready(function () {
                     $(locationInfoBox).append(locationInfo);
 
                     /* date */
-
                     let dateTimeInfoBox = document.createElement("div");
                     $(dateTimeInfoBox).attr("class", "dateTimeInfoBox");
                     $(specialInfoBox).append(dateTimeInfoBox);
@@ -159,7 +142,6 @@ $(document).ready(function () {
                     $(dateTime).append(timeInfo);
 
                     /* organizer info box */
-
                     let organizerInfoBox = document.createElement("div");
                     $(organizerInfoBox).attr("class", "organizerInfoBox");
                     $(specialInfoBox).append(organizerInfoBox);
@@ -175,7 +157,6 @@ $(document).ready(function () {
                     $(organizerInfoBox).append(organizerInfo);
 
                     /* email */
-
                     let emailInfoBox = document.createElement("div");
                     $(emailInfoBox).attr("class", "emailInfoBox");
                     $(specialInfoBox).append(emailInfoBox);
@@ -191,7 +172,6 @@ $(document).ready(function () {
                     $(emailInfoBox).append(emailInfo);
 
                     /* people count */
-
                     let peopleCountBox = document.createElement("div");
                     $(peopleCountBox).attr("class", "peopleCountBox");
                     $(specialInfoBox).append(peopleCountBox);
@@ -208,7 +188,6 @@ $(document).ready(function () {
                     $(peopleCountBox).append(count);
 
                     /* credits box */
-
                     let creditsBox = document.createElement("div");
                     $(creditsBox).attr("class", "creditsBox");
                     $(specialInfoBox).append(creditsBox);
@@ -229,7 +208,6 @@ $(document).ready(function () {
                     $(creditsBox).append(detailHours);
 
                     /* description */
-
                     let infoDescriptionBox = document.createElement("div");
                     $(infoDescriptionBox).attr("class", "infoDescriptionBox");
                     $(eventsInfoBox).append(infoDescriptionBox);
@@ -239,13 +217,10 @@ $(document).ready(function () {
                     $(infoDescriptionBox).append(desc);
 
                     /* footer */
-                    /* join button */
-
                     let footer = document.createElement("footer");
                     $(eventsInfoBox).append(footer);
 
                     /* join button */
-
                     let joinEventButtonBox = document.createElement("div");
                     $(joinEventButtonBox).attr("class", "joinEventButtonBox");
                     $(footer).append(joinEventButtonBox);
@@ -256,18 +231,15 @@ $(document).ready(function () {
                     $(joinEventButtonBox).append(joinEventButton);
 
                     /**** returns string of the object key and adds the string to an id ****/
-
                     let objStr = JSON.stringify(k);
-                    // console.log(objStr)
+
                     // regex to replace double quotes with nothing
                     noQuotations = objStr.replace(/\"/g, "");
-                    // console.log(x);
                     $(readMoreButton).attr("id", noQuotations);
                     $(eventsBox).attr("id", noQuotations);
                     $(eventsInfoBox).attr("id", noQuotations);
 
                     // preview box 
-
                     let previewBox = document.createElement('div');
                     previewBox.setAttribute('class', 'previewBox');
                     eventsBox.append(previewBox);
@@ -303,7 +275,6 @@ $(document).ready(function () {
                     peopleBox.append(peopleCount);
 
                     // Fetching month and day from date format YYYY-MM-DD
-
                     let tempDate = data[k].date.split("-");
                     let dateStr = tempDate[1] + "-" + tempDate[2] + "-" + tempDate[0];
                     let dateObj = new Date(dateStr);
@@ -319,28 +290,15 @@ $(document).ready(function () {
                     let endTime = toHours(data[k].endTime);
                     var timeCred = new Number(endTime - startTime).toFixed(1);
 
-
                     // Putting value into dom element
                     $(eventMessage).text(data[k].subject);
                     $(month).text(monthString);
                     $(day).text(dayInt);
 
                     // Putting key into dom element
-                    //$(month).text(monthString);
-                    //$(day).text(dayInt);
                     $(eventMessage).text(data[k].subject);
                     $(creditNum).text(timeCred);
                     $(".detailCredits").text(timeCred);
-                    
-                    let countChildRef = firebase.database().ref('events/' + city + '/' + k + '/usersJoined/');
-                    console.log(city + k);
-                    countChildRef.on("value", function (snapshot) {
-                        let numOfParticipants = snapshot.numChildren();
-                        console.log(numOfParticipants);
-                        $(`.peopleCount#${k}`).text(numOfParticipants);
-                        $(`.count#${k}`).text(numOfParticipants);
-                        console.log(k);
-                    });
 
                     function toHours(timeStr1) {
                         let hr = timeStr1.substr(0, timeStr1.indexOf(":"));
@@ -351,28 +309,32 @@ $(document).ready(function () {
 
                         return time;
                     }
+
+                    // Counts the number of unique keys under usersJoined on firebase and sets it to the web DOM
+                    let countChildRef = firebase.database().ref('events/' + city + '/' + k + '/usersJoined/');
+                    console.log(city + k);
+                    countChildRef.on("value", function (snapshot) {
+                        let numOfParticipants = snapshot.numChildren();
+                        console.log(numOfParticipants);
+                        $(`.peopleCount#${k}`).text(numOfParticipants);
+                        $(`.count#${k}`).text(numOfParticipants);
+                        console.log(k);
+                    });
                 }
             }
         });
-
-        // add into page text count
-
-
     });
+    // Button on click and displays the detailed information onto web DOM
     $(document).on("click", ".readMoreButton", function (e) {
         e.preventDefault();
         let key = $(this).attr("id");
         let city = $(".eventsLocation").text();
-        console.log(city);
-        // debugger;
-        // console.log(key);
         $.ajax({
             type: 'GET',
             url: `https://evolunteer-45c5d.firebaseio.com/events/${city}/${key}.json`,
             dataType: 'json',
             success: function (data) {
                 // adds data from firebase onto event details
-                // console.log(data);
                 $(`.eventsBox`).hide();
                 $(`.eventsInfoBox#${key}`).show();
                 $(`.eventsLocation`).hide(); /*key null*/
@@ -383,19 +345,18 @@ $(document).ready(function () {
             }
         });
 
+        // On join event button, event writes to database 
         $(document).on("click", ".joinEventButton", function (e) {
             e.preventDefault();
 
             let user = firebase.auth().currentUser;
             let userID = user.uid;
-            // console.log(userID);
 
             let a = firebase.database().ref(`users/${userID}`);
             let b = firebase.database().ref('events/' + city + '/' + key + '/usersJoined/');
 
             if (user) {
                 a.on("value", function (snapshot) {
-                    // console.log(snapshot.val());
                     //sets snapshot of current user info in new node under event
                     b.child(`${userID}`).set(snapshot.val());
                 });
@@ -403,32 +364,7 @@ $(document).ready(function () {
                 console.log("Setting of user info under event unsuccessful.")
             }
 
-        })
-        // let countChildRef = firebase.database().ref('events/' + city + '/' + key + '/usersJoined/');
-        // countChildRef.once("value", function (snapshot) {
-        //     console.log("count: " + snapshot.numChildren());
-        //     let numOfParticipants = snapshot.numChildren();
-        // });
+
+        });
     });
 });
-
-//     //adds a count of how many unique users
-//     $(".peopleCount").text(numOfParticipants);
-//     $(".count").text(numOfParticipants);
-
-//     //     let {usersAdded} = snap.val();
-//     //     let {usersToAdd} = snap.val();
-//     //     console.log(usersAdded);
-//     //     console.log(usersToAdd);
-//     // usersAdded =+ usersToAdd;
-//     // console.log(usersAdded);
-// })
-
-
-//   var output = document.getElementById("spanCount");
-//   var dbRef = firebase.database().ref().child("AddedCount");
-//   dbRef.on (
-//     "value",    //event to read static snapshot of db at initial call, and future chg
-//     function(snap){        // event callback receives snapshot
-//       output.innerText = snap.val();
-//     });
