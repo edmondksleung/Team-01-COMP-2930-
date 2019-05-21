@@ -209,6 +209,10 @@ textarea:focus {
 #videoPicture{
     display: none;
 }
+
+.submitEventPageWrapper {
+    margin-top: 40px;
+}
 #submitForm {
     grid-area: left;
     padding-top: 10px;
@@ -229,21 +233,26 @@ textarea:focus {
     margin-right: 10px;
 }
 
-#submitEventTitle {
-    display: block;
-    margin-top: -65px;
-    margin-left: 20px;
+
 }
 
-#submitEventTitle span {
-    color: rgb(118, 228, 85);
-    font-size: 25pt;
-}
-
-#submitEventTitle b {
-    font-size: 25pt;
-    color: white;
-    letter-spacing: 5pt;
-}
-}
+@media screen 
+  and (max-width: 700px){
+    #submitEventTitle {
+        display: block;
+        margin-top: -65px;
+        margin-left: 20px;
+    }
+    
+    #submitEventTitle span {
+        color: rgb(118, 228, 85);
+        font-size: 25pt;
+    }
+    
+    #submitEventTitle b {
+        font-size: 25pt;
+        color: white;
+        letter-spacing: 5pt;
+    }
+  }
 
