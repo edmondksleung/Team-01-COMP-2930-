@@ -232,7 +232,7 @@ textarea:focus {
 #submitEventTitle {
     display: block;
     margin-top: -65px;
-    margin-left: 125px;
+    margin-left: 20px;
 }
 
 #submitEventTitle span {

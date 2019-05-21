@@ -87,6 +87,9 @@
 .menuBox {
     display: none;
 }
+.dropDown {
+    display: none;
+}
 
 /*MOBILE LAYOUT*/
 @media only screen and (max-width: 900px) {
