@@ -80,7 +80,7 @@
                 <button class="dropButtons homePageBtn">HOME</button>
                 <button class="dropButtons missionPageBtn">MISSION</button>
                 <button class="dropButtons eventsPageBtn">EVENTS</button>
-                <button class="dropButtons myListingsPageBtn">SUBMIT EVENT</button>
+                <button id="dropSubmit" class="dropButtons myListingsPageBtn">SUBMIT EVENT</button>
                 <button class="dropButtons aboutUsPageBtn">ABOUT US</button>
                 <button class="dropButtons contactPageBtn">CONTACT</button>
                 <button class="dropButtons" onclick="logout()">LOGOUT</button>
@@ -92,7 +92,7 @@
                 <li><a class="homePageBtn">HOME</a></li>
                 <li><a class="missionPageBtn">MISSION</a></li>
                 <li><a class="eventsPageBtn">EVENTS</a></li>
-                <li><a class="myListingsPageBtn">SUBMIT EVENT</a></li>
+                <li id="navSubmit"><a class="myListingsPageBtn">SUBMIT EVENT</a></li>
                 <li><a class="aboutUsPageBtn">ABOUT US</a></li>
                 <li><a class="contactPageBtn">CONTACT</a></li>
                 <li><a onclick="logout()">LOG OUT</a></li>
@@ -753,6 +753,7 @@
     </script>
     <script src="./js/eventAjaxDetail.js"></script>
     <script src="./js/userUpdate.js"></script>
+    <script src="./js/authUser.js"></script>
 
     <script src="./js/logInVerifyTransition.js"></script>
     <script src="./js/signOut.js"></script>

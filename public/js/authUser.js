@@ -7,8 +7,15 @@ firebase.auth().onAuthStateChanged((user) => {
     dbref.on('value', function (snap) {
       console.log(snap.val());
       if (!snap.val()) {
-        $('.myListingsPageBtn').style.display = "none";
+        removeElement('navSubmit');
+        removeElement('dropSubmit');
       }
     });
   }
 });
+
+function removeElement(elementId) {
+  // Removes an element from the document
+  let element = document.getElementById(elementId);
+  element.parentNode.removeChild(element);
+}
