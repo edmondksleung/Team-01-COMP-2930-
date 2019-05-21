@@ -200,3 +200,29 @@ textarea:focus {
     letter-spacing: 2px;
 }
 
+@media screen 
+  and (max-width: 900px){
+#videoPicture{
+    display: none;
+}
+#submitForm {
+    grid-area: left;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    z-index: 5;
+}
+#description {
+    width: 450px;
+}
+
+#dateTime {
+    display: grid;
+    grid-template-areas:
+        "date startTime endTime empty";
+    grid-template-columns: 40% 24% 15% 49%;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+}
+
