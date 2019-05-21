@@ -1,3 +1,4 @@
+/*NAVIGATION BAR CONTAINER*/
 .navigation {
     height: 7vh;
     margin-bottom: 30px;
@@ -7,7 +8,7 @@
     grid-template-columns: 15% 70% 15%;
     display: none;
 }
-
+/*NAVIGATION BAR*/
 .navBar {
     grid-area: middle;
     font-size: 12pt;
@@ -17,10 +18,12 @@
     letter-spacing: 3px;
 }
 
+/*NAVIGATION BAR TAB CONTAINERS*/
 .navBar>ul>li {
     display: inline-block;
 }
 
+/*NAVIGATION BAR TABS*/
 .navBar ul>li>a {
     color: white;
     display: block;
@@ -32,6 +35,7 @@
     padding-bottom: 5px;
 }
 
+/*NAVIGATION BAR TAB CONTAINER LISTS*/
 .navBar ul li ul {
     display: none;
     list-style: none;
@@ -40,6 +44,7 @@
     text-align: left;
 }
 
+/*NAVIGATION BAR TABS HOVER EFFECT*/
 .navBar ul li a:hover {
     cursor: pointer;
     background-color: white;
@@ -47,24 +52,26 @@
     color: rgb(33, 49, 92);
 }
 
-/* Current page nav bar highlight */
+/*CURRENT PAGE NAV BAR HIGHLIGHT*/
 .navBar ul li a.activePage {
     background-color: white;
     border-radius: 5px;
     color: rgb(33, 49, 92);
 }
 
-/* Navbar picture display */
+/*NAVBAR PICTURE DISPLAY*/
 .navBarPic {
     grid-area: middle;
     text-align: center;
 }
 
+/*NAVBAR PICTURE LIST*/
 .navBarPic>ul>li {
     display: inline-block;
     text-decoration: none;
 }
 
+/*NAVBAR PICTURE LIST IMAGES*/
 .navBarPic ul li img {
     display: none;
     list-style: none;
@@ -74,11 +81,12 @@
     margin-left: -355px;
 }
 
-/** Current page picture show */
+/*CURRENT PAGE PICTURE SHOW*/
 .navBarPic ul li img.activePic {
     display: inline-block;
 }
 
+/*LOGOUT BUTTON*/
 #logoutButton1 {
     grid-area: right;
 }

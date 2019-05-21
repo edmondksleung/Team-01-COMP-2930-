@@ -120,6 +120,7 @@
     color: white;
     margin-left: 270px;
 }
+
 /*INFO PICTURE TEXT 3*/
 #infoPicDesc3 {
     color: white;
@@ -195,14 +196,16 @@
         grid-template-rows: 200px 50px 200px 50px 200px 50px;
         height: auto;
     }
-/*MOBILE INFORMATION CONTAINER*/
+
+    /*MOBILE INFORMATION CONTAINER*/
     #infomatics {
         grid-template-columns: 100%;
-        grid-template-rows: 200px 200px 200px 200px;   
+        grid-template-rows: 200px 200px 200px 200px;
         margin-top: 30px;
 
     }
-/* MOBILE INFO PICTURES CONTAINER*/
+
+    /* MOBILE INFO PICTURES CONTAINER*/
     .box {
         display: grid;
         align-items: center;
