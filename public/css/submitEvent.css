@@ -39,7 +39,7 @@ textarea:focus {
     grid-area: right;
     padding-top: 10px;
     padding-bottom: 20px;
-    z-index: 9999;
+    z-index: 9998;
 }
 
 .textbox {
@@ -204,8 +204,8 @@ textarea:focus {
     display: none;
 }
 
-@media screen 
-  and (max-width: 900px){
+@media screen and (max-width: 900px){
+
 #videoPicture{
     display: none;
 }
@@ -213,12 +213,13 @@ textarea:focus {
 .submitEventPageWrapper {
     margin-top: 40px;
 }
+
 #submitForm {
     grid-area: left;
     padding-top: 10px;
     padding-bottom: 20px;
     padding-left: 20px;
-    z-index: 5;
+    z-index: 0;
 }
 #description {
     width: 450px;

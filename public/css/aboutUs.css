@@ -234,7 +234,7 @@
             "picture empty bio";
         grid-template-columns: 100% 0 0;
         height: 65vh;
-        width: 60%;
+        width: 375px;
         margin: 20px auto 5px auto;
         background-color: white;
     }
@@ -245,7 +245,7 @@
             "bio empty picture";
         grid-template-columns: 0 0 100%;
         height: 65vh;
-        width: 60%;
+        width: 375px;
         margin: 20px auto 5px auto;
         background-color: white;
     }
