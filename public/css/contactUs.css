@@ -48,7 +48,7 @@ span.contactSpan {
         "emtpy phoneText chatText emailText empty2";
     grid-template-columns: auto 200px 200px 200px auto;
     grid-template-rows: 150px auto;
-    grid-column-gap: 110px;
+    grid-column-gap: 120px;
     padding-top: 40px;
 }
 
@@ -119,4 +119,49 @@ span.contactSpan {
 
 #emailText {
     grid-area: emailText;
+}
+
+
+@media only screen and (min-width: 801px) and (max-width: 1080px) {
+
+    #contactUsPageContent {
+        display: grid;
+        height: 45vh;
+        grid-template-areas:
+            "phone chat email"
+            "phoneText chatText emailText";
+        grid-template-columns: 40% 20% 40%;
+        grid-template-rows: 150px auto;
+        grid-column-gap: 0px;
+        padding-top: 40px;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    #contactUsPagePicture {
+        height: 35vh;
+        width: 55%;
+        margin: 80px auto 0 auto;
+        background-image: url("https://cdn-images-1.medium.com/max/1600/1*rcR5fPxpf3Vj2GkLBjHJ6Q.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        font-size: 30pt;
+        letter-spacing: 5px;
+        padding-top: 75px;
+    }
+
+    #contactUsPageContent {
+        display: grid;
+        height: 45vh;
+        grid-template-areas:
+            "phone chat email"
+            "phoneText chatText emailText";
+        grid-template-columns: 40% 20% 40%;
+        grid-template-rows: 150px auto;
+        grid-column-gap: 0px;
+        padding-top: 40px;
+    }
 }
