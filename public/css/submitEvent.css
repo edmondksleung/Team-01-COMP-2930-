@@ -39,6 +39,7 @@ textarea:focus {
     grid-area: right;
     padding-top: 10px;
     padding-bottom: 20px;
+    z-index: 9999;
 }
 
 .textbox {
