@@ -291,12 +291,14 @@ $(document).ready(function () {
                     var timeCred = new Number(endTime - startTime).toFixed(1);
 
                     // Putting value into dom element
-                    $(eventMessage).text(data[k].subject);
+                    $(eventMessage).text(data[k].eventName);
                     $(month).text(monthString);
                     $(day).text(dayInt);
+                    $(dateInfo).text(monthString);
+                    $(timeInfo).text(dayInt);
 
                     // Putting key into dom element
-                    $(eventMessage).text(data[k].subject);
+                    $(eventMessage).text(data[k].eventName);
                     $(creditNum).text(timeCred);
                     $(".detailCredits").text(timeCred);
 
@@ -341,7 +343,7 @@ $(document).ready(function () {
                 $(".locationInfo").text(data.address);
                 $(".organizerInfo").text(data.organization);
                 $(".emailInfo").text(data.email);
-                $(".infoDescriptionBox").text(data.subject);
+                $(".infoDescriptionBox").text(data.eventName);
             }
         });
 
