@@ -76,6 +76,10 @@ textarea:focus {
     width: 375px;
 }
 
+#address:hover {
+    width: 390px;
+}
+
 #cityGrid {
     grid-area: cityGrid;
     padding-left: 30px;
@@ -84,6 +88,10 @@ textarea:focus {
 .submitEventPageWrapper #email {
     width: 375px;
     margin-bottom: 15px;
+}
+
+.submitEventPageWrapper #email:hover {
+    width: 390px;
 }
 
 #city {
