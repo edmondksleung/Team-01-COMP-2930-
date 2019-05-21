@@ -89,7 +89,7 @@
 }
 
 /*MOBILE LAYOUT*/
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 900px) {
 
     /*FULL NAVIGATION BAR*/
     .navBar {
