@@ -1,15 +1,21 @@
+/*CONTACT US CONTAINER*/
 .contactUsWrapper {
     display: none;
     color: white;   
     text-align: center;
 }
 
+<<<<<<< HEAD
+=======
+/*CONTACT LABELS*/
+>>>>>>> 19213e124ffbfd49c23a433af662e2fc077b2a42
 span.contactSpan {
     letter-spacing: 3px;
     font-size: 15pt;
     font-weight: bold;
 }
 
+/*MAIN PICTURE*/
 #contactUsPagePicture {
     height: 35vh;
     width: 55%;
@@ -24,15 +30,18 @@ span.contactSpan {
     padding-top: 75px;
 }
 
+/*COMPANY NAME*/
 .companyName {
     font-size: 15pt;
     letter-spacing: 3px;
 }
 
+/*COMPANY NAME LETTER E*/
 .companyName span {
     color: rgb(118, 228, 85);
 }
 
+/*TRANSPARENT BANNER*/
 #opaqueCover {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.288);
@@ -40,6 +49,7 @@ span.contactSpan {
     padding-top: 30px;
 }
 
+/*BOTTOM CONTENT CONTAINER*/
 #contactUsPageContent {
     display: grid;
     height: 45vh;
@@ -52,36 +62,43 @@ span.contactSpan {
     padding-top: 40px;
 }
 
+/*PHONE IMAGE CONTAINER*/
 #phone {
     grid-area: phone;
     width: auto;
     margin: 0 auto;
 }
 
+/*PHONE IMAGE*/
 #phone img {
     width: 125px;
     height: 125px;
 }
 
+/*PHONE TEXT*/
 #phoneText {
     grid-area: phoneText;
 }
 
+/*CHAT IMAGE CONTAINER*/
 #chat {
     grid-area: chat;
     width: auto;
     margin: 0 auto;
 }
 
+/*CHAT IMAGE*/
 #chat img {
     width: 125px;
     height: 125px;
 }
 
+/*CHAT TEXT*/
 #chatText {
     grid-area: chatText;
 }
 
+/*CHAT BUTTON*/
 #chatButton {
     width: 100px;
     height: 30px;
@@ -94,6 +111,7 @@ span.contactSpan {
     font-weight: bold;
 }
 
+/*CHAT BUTTON HOVER EFFECT*/
 #chatButton:hover {
     width: 120px;
     height: 32px;
@@ -106,17 +124,20 @@ span.contactSpan {
     vertical-align: middle;
 }
 
+/*EMAIL IMAGE CONTAINER*/
 .contactUsWrapper #email {
     grid-area: email;
     width: auto;
     margin: 0 auto;
 }
 
+/*EMAIL IMAGE*/
 #email img {
     width: 125px;
     height: 125px;
 }
 
+/*EMAIL TEXT*/
 #emailText {
     grid-area: emailText;
 }
