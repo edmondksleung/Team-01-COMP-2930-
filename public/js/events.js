@@ -1,18 +1,17 @@
 //MENU DROP DOWN----------------------------------------------------
 $(".menuButton").click(function () {
-    $(".dropDownBox").show();
-    $(".dropDown").show();
-
-    $(document).mouseup(function (e) {
-
-        if ($(e.target).is(".menuButton")) {
-            $(".dropDownBox").toggle();
-            $(".dropDown").toggle();
-        } else {
-            $(".dropDownBox").toggle();
+    $(".dropDownBox").toggle();
     $(".dropDown").toggle();
-        }
-    });
+
+    $(document).mouseup(function(e) {
+    var menu = $(".dropDownBox");
+    //If a click is targeted outside of the menu icon
+    if (!menu.is(e.target) && menu.has(e.target).length === 0) 
+    {
+        menu.hide();
+        $(".dropDown").hide();
+    }
+});
 });
 
 //LOGOUT BUTTON-------------------------------------------------------------
