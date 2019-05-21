@@ -1,5 +1,6 @@
 .welcomePageWrapper {
     display: none;
+    height: auto;
 }
 
 .hide {
@@ -128,4 +129,12 @@
   }
   
    
+  @media only screen and (max-width: 700px) {
+    #welcomePageCities {
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "middle";
+        height: auto;
+    }    
+}
 

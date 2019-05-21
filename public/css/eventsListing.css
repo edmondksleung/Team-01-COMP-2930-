@@ -133,6 +133,7 @@
     background: white;
 }
 
+/*INFO BUTTON CONTAINER*/
 .readMoreBox {
     width: 100%;
     display: grid;
@@ -141,6 +142,7 @@
     margin-top: 10px;
 }
 
+/*INFO BUTTON*/
 .readMoreButton {
     border: none;
     width: 64px;
@@ -156,16 +158,18 @@
     color: grey;
 }
 
+/*INFO BUTTON HOVER*/
 .readMoreButton:hover {
     cursor: pointer;
-    background: .55db34;
+    background:#3498db;
     color: white;
 }
 
 .eventPicBox {
+    width: 500px;
     margin-top: -10px;
-    /* background-image: url("../Images/planting.jpeg"); */
-    background-size: cover;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     height: 253px;
 }
 
@@ -470,56 +474,6 @@
 
 }
 
-/*JOINED EVENTS BOX*/
-.joinedEventsBox {
-    display: none;
-}
-
-/*JOINED EVENTS*/
-.joinedEvents {
-    height: 305px;
-    border-bottom: 2px solid rgb(216, 208, 208);
-}
-
-
-/*ALREADY JOINED EVENT INFO PAGE*/
-.joinedEventsInfoBox {
-    display: none;
-    width: 100%;
-    height: auto;
-}
-
-/*ALREADY JOINED EVENT INFO BUTTON BOX*/
-.joinedReadMoreBox {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 85% 15%;
-    position: absolute;
-    z-index: 1;
-    margin-top: 10px;
-}
-
-/*ALREADY JOINED EVENT INFO BUTTON*/
-.joinedReadMoreButton {
-    border: none;
-    width: 64px;
-    height: 33px;
-    border-radius: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 2);
-    background: white;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: bold;
-    font-size: 12pt;
-    outline: none;
-    text-align: center;
-    color: grey;
-}
-
-/*EVENT INFO TOP BOX*/
-.joinedDetailsTopBox {
-    height: auto;
-}
-
 /*TABLET RESOLUTION*/
 @media only screen and (min-width: 1045px) {
 
@@ -549,38 +503,6 @@
     /*PREVIEW MESSAGE CONTAINER FOR EVENTS LISTING*/
     .previewBox {
         border: none;
-    }
-
-    /*TABS CONTAINER*/
-    .tabsBox {
-        display: grid;
-        grid-template-columns: 200px 200px 200px 200px 200px 200px;
-        align-content: center;
-        height: 100px;
-        border-bottom-style: outset;
-        background-color: #2f9e3a;
-        border-bottom: 2px solid rgb(216, 208, 208);
-
-    }
-
-    /*TABS*/
-    .tabs {
-        width: 150px;
-        height: 50px;
-        float: left;
-        font-size: 15pt;
-        background: none;
-        border: none;
-        font-weight: bold;
-        color: white;
-    }
-
-    /*TABS HOVER*/
-    .tabs:hover {
-        cursor: pointer;
-        color: black;
-        background: white;
-        border-radius: 10px;
     }
 }
 
