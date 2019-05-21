@@ -93,11 +93,7 @@
 }
 
 /*MOBILE LAYOUT*/
-<<<<<<< HEAD
 @media only screen and (max-width: 700px) {
-=======
-@media only screen and (max-width: 900px) {
->>>>>>> 04479de7aba7d103c991326bfae64303b92642d0
 
     /*FULL NAVIGATION BAR*/
     .navBar {
