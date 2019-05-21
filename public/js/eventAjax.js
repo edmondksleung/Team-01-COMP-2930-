@@ -26,7 +26,7 @@ $(document).ready(function () {
             url: `https://evolunteer-45c5d.firebaseio.com/events/${city}.json`,
             dataType: 'json',
             success: function (data) {
-                
+
                 let keys = Object.keys(data);
                 console.log("whats this " + keys);
                 // console.log(keys);
@@ -36,7 +36,7 @@ $(document).ready(function () {
                 for (let i = 0; i < keys.length; i++) {
                     // Putting value into dom element
                     let k = keys[i];
-                    
+
                     // console.log(k);
                     ////////// Creating event box using dom elements /////////
                     let allEventsBox = $('.allEventsBox');
@@ -204,6 +204,7 @@ $(document).ready(function () {
 
                     let count = document.createElement("div");
                     $(count).attr("class", "count");
+                    $(count).attr("id", k);
                     $(peopleCountBox).append(count);
 
                     /* credits box */
@@ -259,13 +260,11 @@ $(document).ready(function () {
                     let objStr = JSON.stringify(k);
                     // console.log(objStr)
                     // regex to replace double quotes with nothing
-                    replaceQuotes = objStr.replace(/\"/g, "");
+                    noQuotations = objStr.replace(/\"/g, "");
                     // console.log(x);
-                    $(readMoreButton).attr("id", replaceQuotes);
-                    $(eventsBox).attr("id", replaceQuotes);
-                    $(eventsInfoBox).attr("id", replaceQuotes);
-
-
+                    $(readMoreButton).attr("id", noQuotations);
+                    $(eventsBox).attr("id", noQuotations);
+                    $(eventsInfoBox).attr("id", noQuotations);
 
                     // preview box 
 
@@ -300,40 +299,50 @@ $(document).ready(function () {
 
                     let peopleCount = document.createElement('p');
                     peopleCount.setAttribute('class', 'peopleCount');
+                    $(peopleCount).attr("id", k);
                     peopleBox.append(peopleCount);
 
-
-                    
-
-
                     // Fetching month and day from date format YYYY-MM-DD
-                    
+
                     let tempDate = data[k].date.split("-");
-                    let dateStr = tempDate[1] +"-" + tempDate[2] +"-"+ tempDate[0];
+                    let dateStr = tempDate[1] + "-" + tempDate[2] + "-" + tempDate[0];
                     let dateObj = new Date(dateStr);
-                    let monthString = dateObj.toLocaleString("en-us", {month: "short"});
-                    let dayInt = dateObj.toLocaleString("en-us", {day: "2-digit"});
+                    let monthString = dateObj.toLocaleString("en-us", {
+                        month: "short"
+                    });
+                    let dayInt = dateObj.toLocaleString("en-us", {
+                        day: "2-digit"
+                    });
 
                     // Time credit calculation from start time to end time
                     let startTime = toHours(data[k].startTime);
                     let endTime = toHours(data[k].endTime);
-                    let timeCred = new Number(endTime - startTime).toFixed(1);
+                    var timeCred = new Number(endTime - startTime).toFixed(1);
 
 
                     // Putting value into dom element
                     $(eventMessage).text(data[k].subject);
                     $(month).text(monthString);
                     $(day).text(dayInt);
-                    
+
                     // Putting key into dom element
                     //$(month).text(monthString);
                     //$(day).text(dayInt);
                     $(eventMessage).text(data[k].subject);
-                    $(peopleCount).text(data[k].userCount);
                     $(creditNum).text(timeCred);
+                    $(".detailCredits").text(timeCred);
                     
+                    let countChildRef = firebase.database().ref('events/' + city + '/' + k + '/usersJoined/');
+                    console.log(city + k);
+                    countChildRef.on("value", function (snapshot) {
+                        let numOfParticipants = snapshot.numChildren();
+                        console.log(numOfParticipants);
+                        $(`.peopleCount#${k}`).text(numOfParticipants);
+                        $(`.count#${k}`).text(numOfParticipants);
+                        console.log(k);
+                    });
 
-                    function toHours(timeStr1){
+                    function toHours(timeStr1) {
                         let hr = timeStr1.substr(0, timeStr1.indexOf(":"));
                         let min = timeStr1.substr(timeStr1.indexOf(":") + 1, timeStr1.length);
                         hr = parseInt(hr);
@@ -342,26 +351,28 @@ $(document).ready(function () {
 
                         return time;
                     }
-
-
                 }
             }
         });
+
+        // add into page text count
+
+
     });
     $(document).on("click", ".readMoreButton", function (e) {
         e.preventDefault();
         let key = $(this).attr("id");
-        let city2 = $(".eventsLocation").text();
-        console.log(city2);
+        let city = $(".eventsLocation").text();
+        console.log(city);
         // debugger;
         // console.log(key);
         $.ajax({
             type: 'GET',
-            url: `https://evolunteer-45c5d.firebaseio.com/events/${city2}/${key}.json`,
+            url: `https://evolunteer-45c5d.firebaseio.com/events/${city}/${key}.json`,
             dataType: 'json',
             success: function (data) {
                 // adds data from firebase onto event details
-                console.log(data);
+                // console.log(data);
                 $(`.eventsBox`).hide();
                 $(`.eventsInfoBox#${key}`).show();
                 $(`.eventsLocation`).hide(); /*key null*/
@@ -371,6 +382,53 @@ $(document).ready(function () {
                 $(".infoDescriptionBox").text(data.subject);
             }
         });
+
+        $(document).on("click", ".joinEventButton", function (e) {
+            e.preventDefault();
+
+            let user = firebase.auth().currentUser;
+            let userID = user.uid;
+            // console.log(userID);
+
+            let a = firebase.database().ref(`users/${userID}`);
+            let b = firebase.database().ref('events/' + city + '/' + key + '/usersJoined/');
+
+            if (user) {
+                a.on("value", function (snapshot) {
+                    // console.log(snapshot.val());
+                    //sets snapshot of current user info in new node under event
+                    b.child(`${userID}`).set(snapshot.val());
+                });
+            } else {
+                console.log("Setting of user info under event unsuccessful.")
+            }
+
+        })
+        // let countChildRef = firebase.database().ref('events/' + city + '/' + key + '/usersJoined/');
+        // countChildRef.once("value", function (snapshot) {
+        //     console.log("count: " + snapshot.numChildren());
+        //     let numOfParticipants = snapshot.numChildren();
+        // });
     });
 });
 
+//     //adds a count of how many unique users
+//     $(".peopleCount").text(numOfParticipants);
+//     $(".count").text(numOfParticipants);
+
+//     //     let {usersAdded} = snap.val();
+//     //     let {usersToAdd} = snap.val();
+//     //     console.log(usersAdded);
+//     //     console.log(usersToAdd);
+//     // usersAdded =+ usersToAdd;
+//     // console.log(usersAdded);
+// })
+
+
+//   var output = document.getElementById("spanCount");
+//   var dbRef = firebase.database().ref().child("AddedCount");
+//   dbRef.on (
+//     "value",    //event to read static snapshot of db at initial call, and future chg
+//     function(snap){        // event callback receives snapshot
+//       output.innerText = snap.val();
+//     });
