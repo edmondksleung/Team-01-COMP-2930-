@@ -1,8 +1,10 @@
+/*MISSION PAGE CONTAINER*/
 .missionPageWrapper {
     display: none;
     background-color: rgb(25, 76, 85);
 }
 
+/*HEADING*/
 #missionHeading {
     text-align: center;
     padding-top: 22px;
@@ -12,11 +14,13 @@
     margin-bottom: 200px;
 }
 
+/*HEADING PARAGRAPH*/
 #missionHeading p {
     font-size: 12pt;
     letter-spacing: 1px;
 }
 
+/*EVOLUNTEER HEADING*/
 #missionSubHeading {
     text-align: center;
     font-size: 15pt;
@@ -25,15 +29,18 @@
     color: white;
 }
 
+/*EVOLUNTEER PARAGRAPH MESSAGE*/
 #missionSubHeading p {
     font-size: 12pt;
     letter-spacing: 1px;
 }
 
+/*ECO SPAN*/
 .eco {
     color: rgb(118, 228, 85);
 }
 
+/*THREE PICTURES CONTAINER*/
 #threePictures {
     display: grid;
     height: 30vh;
@@ -48,70 +55,60 @@
     color: white;
 }
 
+/*LEFT PICTURE CONTAINER*/
 #leftPicture {
     grid-area: leftPicture;
     width: auto;
     margin: 0 auto;
 }
 
+/*LEFT PICTURE*/
 #leftPicture img {
     height: 200px;
     width: 200px;
 }
 
+/*LEFT PICTURE TEXT*/
 #leftText {
     grid-area: leftText;
 }
 
+/*MIDDLE PICTURE CONTAINER*/
 #middlePicture {
     grid-area: middlePicture;
     width: auto;
     margin: 0 auto;
 }
 
+/*LEFT PICTURE*/
 #middlePicture img {
     height: 200px;
     width: 200px;
 }
 
+/*LEFT PICTURE TEXT*/
 #middleText {
     grid-area: middleText;
 }
 
+/*RIGHT PICTURE CONTAINER*/
 #rightPicture {
     grid-area: rightPicture;
     width: auto;
     margin: auto auto 20px auto;
 }
 
+/*RIGHT PICTURE*/
 #rightPicture img {
     height: 100px;
     width: 300px;
 }
 
+/*RIGHT PICTURE TEXT*/
 #rightText {
     grid-area: rightText;
 }
 
-#infoPicDesc1 {
-    color: white;
-    margin-left: 250px;
-}
-
-#infoPicDesc2 {
-    color: white;
-    margin-left: 270px;
-}
-
-#infoPicDesc3 {
-    color: white;
-    margin-left: 280px;
-}
-
-.infoPicDesc {
-    margin-top: 20px;
-    display: inline-block;
-}
 
 #infomatics {
     margin: 20px auto;
