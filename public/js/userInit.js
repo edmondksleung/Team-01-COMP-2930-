@@ -5,7 +5,6 @@ firebase.auth().onAuthStateChanged(function (user) {
     {
       "name" : user.displayName,
       "email" : user.email,
-      "isOrg" : false,
       "uid" : user.uid,
     });
   
