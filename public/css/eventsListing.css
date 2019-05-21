@@ -16,7 +16,7 @@
 .allEventsBox {
     display: grid;
     justify-items: center;
-    background-color: #2f9e3a;
+    background-color: white;
 }
 
 /*INDIVIDUAL EVENTS CONTAINER*/
