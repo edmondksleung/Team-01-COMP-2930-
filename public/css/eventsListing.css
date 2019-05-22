@@ -18,6 +18,7 @@
     display: grid;
     justify-items: center;
     background-color: white;
+  
 }
 
 /*INDIVIDUAL EVENTS CONTAINER*/
@@ -257,8 +258,7 @@
     height: auto;
     border: 2px solid grey;
     border-radius: 2px;
-    margin-right: auto;
-    margin-left: auto;
+    margin-left: 500px;
 }
 
 /*EVENT INFO TOP BOX*/
