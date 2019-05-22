@@ -89,9 +89,9 @@ $(document).ready(function () {
 
                     let eventInfoPic = document.createElement("img");
                     $(eventInfoPic).attr("class", "eventInfoPic");
-                    $(eventInfoPic).attr("src", "Images/planting.jpeg");
                     $(eventInfoPic).attr("alt", "eventImage");
                     $(detailsTopBox).append(eventInfoPic);
+                    $(eventInfoPic).attr("src", `${data[k].imgurl}`);
 
                     let eventInfoTitle = document.createElement("div");
                     $(eventInfoTitle).attr("class", "eventInfoTitle");
@@ -296,6 +296,7 @@ $(document).ready(function () {
                     $(day).text(dayInt);
                     $(dateInfo).text(monthString);
                     $(timeInfo).text(dayInt);
+                    $(eventInfoTitle).text(data[k].eventName);
 
                     // Putting key into dom element
                     $(eventMessage).text(data[k].eventName);
@@ -320,7 +321,7 @@ $(document).ready(function () {
                         console.log(numOfParticipants);
                         $(`.peopleCount#${k}`).text(numOfParticipants);
                         $(`.count#${k}`).text(numOfParticipants);
-                        console.log(k);
+                        // console.log(k);
                     });
                 }
             }
@@ -343,7 +344,8 @@ $(document).ready(function () {
                 $(".locationInfo").text(data.address);
                 $(".organizerInfo").text(data.organization);
                 $(".emailInfo").text(data.email);
-                $(".infoDescriptionBox").text(data.eventName);
+                $(".infoDescriptionBox").text(data.content);
+                // console.log(str);
             }
         });
 

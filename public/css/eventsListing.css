@@ -16,6 +16,8 @@
 /*ALL EVENTS CONTAINER*/
 .allEventsBox {
     display: grid;
+    grid-template-areas:
+        "same";
     justify-items: center;
     background-color: white;
 
@@ -132,6 +134,7 @@
     width: 100%;
     height: auto;
     font-size: 13pt;
+    background-color: #2f9e3a48;
 }
 
 /*EVENTS LISTING CREDITS CONTAINER*/
@@ -146,7 +149,6 @@
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 14pt;
     border-bottom: 1px solid rgb(216, 208, 208);
-    background-color: #2f9e3a48;
 }
 
 /*INFO BUTTON CONTAINER*/
@@ -255,23 +257,29 @@
 
 /*EVENT INFO PAGE*/
 .eventsInfoBox {
+    grid-area: same;
     display: none;
-    width: 550px;
+    width: 70%;
     height: auto;
-    border: 2px solid grey;
+    border: 1px solid rgb(100, 100, 100);
     border-radius: 2px;
-    margin-left: 500px;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 /*EVENT INFO TOP BOX*/
 .detailsTopBox {
-    height: auto;
+    width: 100%;
+}
+
+.detailsTopBox img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 /*CLOSE DETAILS BOX*/
 .closeDetailsBox {
     cursor: pointer;
-    transform: translate(517px, 5px);
 }
 
 /*CLOSE DETAILS BUTTON*/
@@ -315,28 +323,24 @@
     width: 100%;
     height: 70px;
     border: none;
-    background: #3498db;
-    border-radius: 3px;
+    background: #2f9e3a;
     color: white;
     font-size: 15pt;
-    font-weight: bold;
-    bottom: 0;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 2);
-
+    letter-spacing: 3px;
 }
 
 /*JOIN EVENT BUTTON HOVER EFFECT*/
 .joinEventButton:hover {
-    background: .0b6dad;
-    color: white;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 2);
+    cursor: pointer;
+    font-size: 16pt;
+    letter-spacing: 4px;
 }
 
 /*EVENT INFO TITLE*/
 .eventInfoTitle {
-    background-color: white;
+    background-color: #2f9e3a48;
     font-size: 17pt;
-    height: 50px;
+    height: 60px;
     text-indent: 30px;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: lighter;
@@ -345,17 +349,14 @@
 /*EVENT SPECIAL INFO BOX*/
 .specialInfoBox {
     background-color: white;
-    margin-top: 2px;
-    margin-bottom: 2px;
     padding: 20px;
-    box-shadow: 0 2px 8px rgba(179, 175, 179, 2);
-    border-radius: 5px;
+    width: 380px;
 }
 
 /*INFO LOCATION BOX*/
 .locationInfoBox {
     display: grid;
-    grid-template-columns: 50px 500px;
+    grid-template-columns: 50px auto;
     grid-template-rows: 30px;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 13pt;
@@ -374,7 +375,7 @@
 /*DATE TIME BOX*/
 .dateTimeInfoBox {
     display: grid;
-    grid-template-columns: 50px 400px;
+    grid-template-columns: 50px 330px;
     grid-template-rows: 30px;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 13pt;
@@ -394,15 +395,14 @@
 /*DATE AND TIME*/
 .dateTime {
     display: grid;
-    grid-template-columns: 110px 110px;
-
+    grid-template-columns: 40px 30px;
 }
 
 
 /*INFO ORGANIZER BOX*/
 .organizerInfoBox {
     display: grid;
-    grid-template-columns: 50px 500px;
+    grid-template-columns: 50px 330px;
     grid-template-rows: 30px;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 13pt;
@@ -421,7 +421,7 @@
 /*INFO EMAIL BOX*/
 .emailInfoBox {
     display: grid;
-    grid-template-columns: 50px 500px;
+    grid-template-columns: 50px 330px;
     grid-template-rows: 30px;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 13pt;
@@ -440,7 +440,7 @@
 /*PEOPLE COUNT INFO BOX*/
 .peopleCountBox {
     display: grid;
-    grid-template-columns: 50px 15px 500px;
+    grid-template-columns: 50px 15px 315px;
     grid-template-rows: 30px;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 13pt;
@@ -459,7 +459,7 @@
 /*CREDITS INFO BOX*/
 .creditsBox {
     display: grid;
-    grid-template-columns: 50px auto 500px;
+    grid-template-columns: 50px 30px 300px;
     grid-template-rows: 30px;
     font-family: 'Source Sans Pro', sans-serif;
     color: rgb(102, 101, 101);
@@ -476,14 +476,12 @@
 
 /*INFO DESCRIPTION BOX*/
 .infoDescriptionBox {
-    background-color: white;
+    background-color: #2f9e3a48;
     padding: 20px;
     margin-bottom: 2px;
     font-family: 'Source Sans Pro', sans-serif;
     text-emphasis: justify;
     color: rgb(102, 101, 101);
-
-
 }
 
 /*TABLET RESOLUTION*/
@@ -497,11 +495,23 @@
     /*ALL EVENTS CONTAINER FOR TABLET RESOLUTION*/
     .allEventsBox {
         display: grid;
+        grid-template-areas:
+            "same same";
         grid-template-columns: 50% 50%;
         justify-items: center;
     }
 
-
+    /*EVENT INFO PAGE*/
+    .eventsInfoBox {
+        grid-area: same;
+        display: none;
+        width: 800px;
+        height: auto;
+        border: 1px solid rgb(100, 100, 100);
+        border-radius: 2px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
 
     /*INDIVIDUAL EVENTS CONTAINER FOR TABLET RESOLUTION*/
     .eventsBox {
@@ -527,3 +537,15 @@
         justify-items: center;
     }
 }
+
+    /*EVENT INFO PAGE*/
+    .eventsInfoBox {
+        grid-area: same;
+        display: none;
+        width: 800px;
+        height: auto;
+        border: 1px solid rgb(100, 100, 100);
+        border-radius: 2px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
