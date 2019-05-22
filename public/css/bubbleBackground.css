@@ -1,3 +1,4 @@
+/*BUBBLES CONTAINER*/
 .bg-bubbles {
     top: 0;
     left: 0;
@@ -6,6 +7,7 @@
     z-index: 1;
 }
 
+/*BUBBLES*/
 .bg-bubbles li {
     position: absolute;
     list-style: none;
@@ -21,11 +23,11 @@
     transition-timing-function: linear;
 }
 
+/*BUBBLES CONTAINER*/
 .bg-bubbles li:nth-child(1) {
     left: 10%;
     border-radius: 50%;
     box-shadow: 0 0 3px rgb(230, 238, 123);
-
 
 }
 

@@ -161,7 +161,7 @@
 /*INFO BUTTON HOVER*/
 .readMoreButton:hover {
     cursor: pointer;
-    background:#3498db;
+    background: #3498db;
     color: white;
 }
 
@@ -195,6 +195,7 @@
     text-align: center;
 
 }
+
 /*EVENT LISTING MONTH*/
 .month {
     margin: 0;
