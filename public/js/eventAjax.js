@@ -345,31 +345,6 @@ $(document).ready(function () {
 
             }
         });
-<<<<<<< HEAD:public/js/eventAjax.js
-
-        $(document).on("click", ".joinEventButton", function (e) {
-            e.preventDefault();
-
-            let user = firebase.auth().currentUser;
-            let userID = user.uid;
-
-            let a = firebase.database().ref(`users/${userID}`);
-            let b = firebase.database().ref('events/' + city + '/' + key + '/usersJoined/');
-
-            if (user) {
-                a.on("value", function (snapshot) {
-                    //sets snapshot of current user info in new node under event
-                    b.child(`${userID}`).set(snapshot.val());
-                    $(".joinEventButton").text("Event Joined");
-                });
-            } else {
-                console.log("Setting of user info under event unsuccessful.")
-            }
-        });
-    })
-});
-// function to convert hh:mm to hours 
-=======
         $.ajax({
             type: 'GET',
             url: `https://evolunteer-45c5d.firebaseio.com/events/${city}/${key}/usersJoined.json`,
@@ -421,7 +396,6 @@ $(document).ready(function () {
 })
 
 
->>>>>>> 41305d0aa895bd654f65b12e5bd1600aaa6c43ea:old code/eventAjax.js
 function toHours(timeStr1) {
     let hr = timeStr1.substr(0, timeStr1.indexOf(":"));
     let min = timeStr1.substr(timeStr1.indexOf(":") + 1, timeStr1.length);
