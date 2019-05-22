@@ -239,7 +239,7 @@ textarea:focus {
 }
 
 /*TABLET LAYOUT*/
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1100px) {
 
     /*TABLET LAYOUT GIF CONTAINER*/
     #videoPicture {
@@ -299,11 +299,4 @@ textarea:focus {
         color: white;
         letter-spacing: 5pt;
     }
-<<<<<<< HEAD
-
-
-  }
-
-=======
 }
->>>>>>> 9d713099898f86380100e208ea54a111dffbbb6e
