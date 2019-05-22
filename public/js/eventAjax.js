@@ -14,8 +14,7 @@ $(document).ready(function () {
         $(document).on("click", ".closeDetailsButton", function () {
             $(".eventsBox").show();
             $(".eventsInfoBox").hide();
-            $(".eventsLocationOpaqueCover").show();
-            /key null/
+            $(".eventsLocationOpaqueCover").show(); /*key null*/
         })
 
         // Creating DOM elements and fetching information from firebase
@@ -231,7 +230,7 @@ $(document).ready(function () {
                     $(joinEventButton).text("Join Event");
                     $(joinEventButtonBox).append(joinEventButton);
 
-                    /** returns string of the object key and adds the string to an id **/
+                    /**** returns string of the object key and adds the string to an id ****/
                     let objStr = JSON.stringify(k);
 
                     // regex to replace double quotes with nothing
@@ -345,57 +344,29 @@ $(document).ready(function () {
 
             }
         });
-        $.ajax({
-            type: 'GET',
-            url: `https://evolunteer-45c5d.firebaseio.com/events/${city}/${key}/usersJoined.json`,
-            dataType: 'json',
-            success: function (data) {
-                let user = firebase.auth().currentUser;
-                let userID = user.uid;
 
-                let a = firebase.database().ref(`users/${userID}`);
-                let b = firebase.database().ref('events/' + city + '/' + key + '/usersJoined/');
-                let x = Object.keys(data);
-                console.log(x);
-                for (let i = 0; i < x.length; i++) {
+        $(document).on("click", ".joinEventButton", function (e) {
+            e.preventDefault();
 
-                    if (x[i] == userID) {
-                        a.on("value", function (snapshot) {
-                            // for users that have joined event previously
-                            $(".joinEventButton").text("Unjoin Event");
-                        });
+            let user = firebase.auth().currentUser;
+            let userID = user.uid;
 
-                    } else {
-                        console.log("Setting of user info under event unsuccessful in firebase.")
-                    }
-                }
-                for (let i = 0; i < x.length; i++) {
-                    console.log(x[i]);
-                    // debugger
-                    $(document).on("click", ".joinEventButton", function () {
+            let a = firebase.database().ref(`users/${userID}`);
+            let b = firebase.database().ref('events/' + city + '/' + key + '/usersJoined/');
 
-                        if (x[i] !== userID) {
-                            // console.log(x);
-
-                            a.on("value", function (snapshot) {
-                                b.child(`${userID}`).set(snapshot.val());
-                                $(".joinEventButton").text("Unjoin Event");
-                            });
-
-
-                        }
-                    });
-                }
-
-
-
-
+            if (user) {
+                a.on("value", function (snapshot) {
+                    //sets snapshot of current user info in new node under event
+                    b.child(`${userID}`).set(snapshot.val());
+                    $(".joinEventButton").text("Event Joined");
+                });
+            } else {
+                console.log("Setting of user info under event unsuccessful.")
             }
-        })
+        });
     })
-})
-
-
+});
+// function to convert hh:mm to hours 
 function toHours(timeStr1) {
     let hr = timeStr1.substr(0, timeStr1.indexOf(":"));
     let min = timeStr1.substr(timeStr1.indexOf(":") + 1, timeStr1.length);
