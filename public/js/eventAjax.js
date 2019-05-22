@@ -303,7 +303,7 @@ $(document).ready(function () {
                     $(eventMessage).text(data[k].eventName);
                     $(creditNum).text(timeCred);
 
-
+                    
                     // Counts the number of unique keys under usersJoined on firebase and sets it to the web DOM
                     let countChildRef = firebase.database().ref('events/' + city + '/' + k + '/usersJoined/');
                     console.log(city + k);
@@ -328,6 +328,10 @@ $(document).ready(function () {
             url: `https://evolunteer-45c5d.firebaseio.com/events/${city}/${key}.json`,
             dataType: 'json',
             success: function (data) {
+                let startTime = toHours(data.startTime);
+                let endTime = toHours(data.endTime);
+                let timeCred = new Number(endTime - startTime).toFixed(1);
+
                 // adds data from firebase onto event details
                 $(`.eventsBox`).hide();
                 $(`.eventsInfoBox#${key}`).show();
@@ -336,6 +340,7 @@ $(document).ready(function () {
                 $(".organizerInfo").text(data.organization);
                 $(".emailInfo").text(data.email);
                 $(".infoDescriptionBox").text(data.content);
+                $(".detailCredits").text(timeCred);
                 // console.log(str);
 
             }

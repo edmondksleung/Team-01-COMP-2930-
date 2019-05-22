@@ -191,6 +191,7 @@ textarea:focus {
     font-size: 11pt;
     font-weight: 300;
     letter-spacing: 1px;
+    resize: none;
 }
 
 /*DESCRIPT INPUT HOVER EFFECT*/
@@ -214,12 +215,14 @@ textarea:focus {
     letter-spacing: 1px;
 }
 
+
 /*POST BUTTON HOVER*/
 #submit:hover {
     cursor: pointer;
     background-color: #260E63;
     color: white;
 }
+
 
 /*ALERT POPUP*/
 .alert {

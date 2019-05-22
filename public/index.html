@@ -248,25 +248,26 @@
         </div>
         <!--CREATE FORM BOX-->
         <form id="submitForm">
-            Event Name<br>
+            Event Name*<br>
             <input type="text" class="textbox" id="eventName" required>
-            Organization<br>
+            Organization*<br>
             <input type="text" class="textbox" id="organization" required>
-            Email<br>
+            Email*<br>
             <input type="email" class="textbox" id="email" required>
             <div id="addressCity">
                 <div id="addressGrid">
-                    Address<br>
+                    Address*<br>
                     <input type="text" class="textbox" id="address" required>
                 </div>
                 <div id="cityGrid">
-                    City/District<br>
+                    City/District*<br>
                     <select name="city" id="city" required>
                         <option value="" disabled selected> -- Select An Option -- </option>
                         <option>Abbotsford</option>
                         <option>Burnaby</option>
                         <option>Chilliwack</option>
                         <option>Coquitlam</option>
+                        <option>Edmonds</option>
                         <option>Langley</option>
                         <option>Maple Ridge</option>
                         <option>Port Moody</option>
@@ -279,22 +280,22 @@
             </div>
             <div id="dateTime">
                 <div id="dateDiv">
-                    Date<br>
+                    Date*<br>
                     <input type="date" id="date" required>
                 </div>
                 <div id="startTimeDiv">
-                    Start Time<br>
+                    Start Time*<br>
                     <input type="time" class='submitTime' id="startTime" step='60' required>
                 </div>
                 <div id="endTimeDiv">
-                    End Time<br>
+                    End Time*<br>
                     <input type='time' class='submitTime' id='endTime' required>
                 </div>
             </div>
-            <br>Description<br>
+            <br>Description*<br>
             <textarea id="description"></textarea><br>
-            Upload Photo<br>
-            <input type="file"   id="photo" accept='image/*'><br>
+            Upload Photo*<br>
+            <input type="file" id="photo" accept='image/*'><br>
             <input type="submit" value="Post" id="submit">
         </form>
     </div>
