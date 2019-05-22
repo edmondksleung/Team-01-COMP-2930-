@@ -11,6 +11,7 @@ $(document).click(function () {
     $(".dropDown").hide();
 });
 
+//HIDE DROP DOWN MENU IF WINDOW RESIZE HIGHER THAN 700 PIXELS-----------------------------
 $(window).resize(function () {
     if ($(window).width() > 700) {
         $(".dropDownBox").hide();
