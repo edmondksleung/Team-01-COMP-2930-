@@ -89,13 +89,13 @@ function saveMessage(eventName, organization, email, address, content, city, dat
 
 // Uploading Image to the storage
 let storageRef = firebase.storage().ref();
-
+var selectedFile = new File([''], "../Images/no-images.png");
 
 document.querySelector('#photo').addEventListener('change', handleFileUploadChange);
 // document.querySelector('#submit').addEventListener('click', handleFileUploadSubmit);
 document.getElementById('submitForm').addEventListener('submit', submitForm);
 
-let selectedFile;
+
 function handleFileUploadChange(event) {
 	selectedFile = event.target.files[0];
 };
@@ -103,8 +103,9 @@ function handleFileUploadChange(event) {
 
 // Uploading Image to the storage
 async function handleFileUploadSubmit(eventName, organization, email, address, content, city, date, timeStamp, startTime, endTime) {
-
-	const uploadTask = storageRef.child(`eventImages/${selectedFile.name}`).put(selectedFile);
+	
+	let	uploadTask = storageRef.child(`eventImages/${selectedFile.name}`).put(selectedFile);
+	debugger
 	//create a child directory called images, and place the file inside this directory
 	uploadTask.on('state_changed', (snapshot) => {
 		// Observe state change events such as progress, pause, and resume
