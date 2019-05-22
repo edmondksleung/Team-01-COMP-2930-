@@ -234,18 +234,18 @@ span.contactSpan {
         height: 75px;
     }
 
-        /*MOBILE LAYOUT PHONE TEXT*/
+    /*MOBILE LAYOUT PHONE TEXT*/
     #phoneText {
         font-size: 10pt;
     }
 
-        /*MOBILE LAYOUT CHAT PICTURE*/
+    /*MOBILE LAYOUT CHAT PICTURE*/
     #chat img {
         width: 75px;
         height: 75px;
     }
 
-        /*MOBILE LAYOUT EMAIL PICTURE*/
+    /*MOBILE LAYOUT EMAIL PICTURE*/
     #email img {
         width: 75px;
         height: 75px;
