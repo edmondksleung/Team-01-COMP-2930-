@@ -100,7 +100,25 @@ body :-ms-input-placeholder {
 }
 
 /*LOGIN FORM INPUTS*/
-.signInPageWrapper form input {
+.signInPageWrapper form input#emailField{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: 0;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 43px;
+    width: 250px;
+    border-radius: 3px;
+    padding: 10px 15px;
+    margin: 0 auto 33px auto;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    transition-duration: 0.25s;
+    font-weight: 300;
+}
+.signInPageWrapper form input#passField{
     -webkit-appearance: none;
     -moz-appearance: none;
     outline: 0;
@@ -120,12 +138,22 @@ body :-ms-input-placeholder {
 }
 
 /*LOGIN INPUT HOVER EFFECT*/
-.signInPageWrapper form input:hover {
+.signInPageWrapper form input#emailField:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.signInPageWrapper form input#passField:hover {
     background-color: rgba(255, 255, 255, 0.4);
 }
 
+
 /*LOGIN INPUT FOCUS*/
-.signInPageWrapper form input:focus {
+.signInPageWrapper form input#emailField:focus {
+    background-color: white;
+    width: 300px;
+    color: rgb(97, 204, 65);
+    border: 2px solid rgb(97, 204, 65);
+}
+.signInPageWrapper form input#passField:focus {
     background-color: white;
     width: 300px;
     color: rgb(97, 204, 65);
@@ -289,6 +317,7 @@ div.cityImage h1:hover {
 
 /* Modal Content */
 #firebaseui-auth-container {
+    color: black;
     position: absolute;
     background-color: #fefefe;
     margin-top: 220px;
