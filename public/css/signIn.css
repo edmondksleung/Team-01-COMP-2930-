@@ -1,3 +1,4 @@
+/*FONT IMPORT*/
 @font-face {
     font-family: 'Source Sans Pro';
     font-style: normal;
@@ -5,6 +6,7 @@
     src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdr.ttf) format('truetype');
 }
 
+/*ALL CONTAINERS*/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,54 +14,54 @@
     font-weight: 300;
 }
 
+/*BODY*/
 body {
     -ms-transition: background 0.3s ease 0s;
-  -moz-transition: background 0.3s ease 0s;
-  -o-transition: background 0.3s ease 0s;
-  -webkit-transition: background 0.3s ease 0s;
-  transition: background 0.3s ease 0s;  
+    -moz-transition: background 0.3s ease 0s;
+    -o-transition: background 0.3s ease 0s;
+    -webkit-transition: background 0.3s ease 0s;
+    transition: background 0.3s ease 0s;
     margin: 0px;
     padding: 0px;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
-    background-color: rgb(33,49,92);
+    background-color: rgb(33, 49, 92);
     min-width: 400px;
 }
 
-
+/* WebKit browsers */
 body ::-webkit-input-placeholder {
-    /* WebKit browsers */
     font-family: 'Source Sans Pro', sans-serif;
     color: white;
     font-weight: 300;
 }
 
+/* Mozilla Firefox 4 to 18 */
 body :-moz-placeholder {
-    /* Mozilla Firefox 4 to 18 */
     font-family: 'Source Sans Pro', sans-serif;
     color: white;
     opacity: 1;
     font-weight: 300;
 }
 
+/* Mozilla Firefox 19+ */
 body ::-moz-placeholder {
-    /* Mozilla Firefox 19+ */
     font-family: 'Source Sans Pro', sans-serif;
     color: white;
     opacity: 1;
     font-weight: 300;
 }
 
+/* Internet Explorer 10+ */
 body :-ms-input-placeholder {
-    /* Internet Explorer 10+ */
     font-family: 'Source Sans Pro', sans-serif;
     color: white;
     font-weight: 300;
 }
 
-.signInPageWrapper {
-    /* background-size: cover;
+/* background-size: cover;
     -moz-background-size: cover;  /* Firefox 3.6 */
+.signInPageWrapper {
     background-position: center;
     position: absolute;
     width: 100%;
@@ -69,11 +71,13 @@ body :-ms-input-placeholder {
     display: none;
 }
 
+/*LOGIN SUCCESS ANIMATION*/
 .signInPageWrapper.form-success .container h1 {
     -webkit-transform: translateY(100px);
     transform: translateY(100px);
 }
 
+/*TOP CONTAINER*/
 .container {
     margin: 0 auto;
     padding: 80px 0;
@@ -81,18 +85,21 @@ body :-ms-input-placeholder {
     text-align: center;
 }
 
+/*COMPANY NAME*/
 .container h1 {
-    transition-duration: 1s;
     /* transition-timing-function: ease-in-put; */
+    transition-duration: 1s;
     font-weight: 200;
 }
 
+/*LOGIN FORM CONTAINER*/
 .signInPageWrapper form {
     padding: 20px 0;
     position: relative;
     z-index: 2;
 }
 
+/*LOGIN FORM INPUTS*/
 .signInPageWrapper form input {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -112,10 +119,12 @@ body :-ms-input-placeholder {
     font-weight: 300;
 }
 
+/*LOGIN INPUT HOVER EFFECT*/
 .signInPageWrapper form input:hover {
     background-color: rgba(255, 255, 255, 0.4);
 }
 
+/*LOGIN INPUT FOCUS*/
 .signInPageWrapper form input:focus {
     background-color: white;
     width: 300px;
@@ -123,6 +132,7 @@ body :-ms-input-placeholder {
     border: 2px solid rgb(97, 204, 65);
 }
 
+/*LOGIN BUTTON*/
 .signInPageWrapper form button {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -139,23 +149,27 @@ body :-ms-input-placeholder {
     margin-bottom: 100px;
 }
 
+/*LOGIN BUTTON HOVER EFFECT*/
 .signInPageWrapper form button:hover {
     background-color: rgba(159, 247, 44, 0.918);
     color: white;
 }
 
+/*LOGO PICTURE*/
 #logo img {
-    z-index:0;
+    z-index: 0;
     margin-top: -80px;
     margin-bottom: -50px;
     width: 400px;
     height: 310px;
 }
 
+/*E SPAN IN COMPANY NAME HIDDEN EGG*/
 #e {
     cursor: pointer;
 }
 
+/*COMPANY NAME*/
 #title {
     font-size: 30pt;
     text-align: center;
@@ -164,10 +178,12 @@ body :-ms-input-placeholder {
     color: white;
 }
 
+/*TITLE LETTER E SPAN STYLE*/
 #title span {
     color: rgb(118, 228, 85);
 }
 
+/*SIGNUP NEW ACCOUNT TEXT*/
 #signUp {
     color: white;
     font-size: 10pt;
@@ -176,11 +192,13 @@ body :-ms-input-placeholder {
     color: white;
 }
 
+/*SIGNUP NEW ACCOUNT HOVER EFFECT*/
 #signUp:hover {
     cursor: pointer;
     color: rgb(118, 228, 85);
 }
 
+/*LOGIN FAILED ANIMATION*/
 #loginButton.invalid {
     background-color: red;
     color: white;
@@ -215,11 +233,13 @@ body :-ms-input-placeholder {
     }
 }
 
+/*MAIN PAGE CONTAINER*/
 .mainPageWrapper {
     display: none;
     overflow: auto;
 }
 
+/*CITY PICTURE*/
 div.cityImage {
     background-repeat: no-repeat;
     background-position: center center;
@@ -229,6 +249,7 @@ div.cityImage {
     width: 100vw;
 }
 
+/*CITY PICTURE TEXT*/
 div.cityImage h1 {
     text-align: center;
     margin: 0;
@@ -241,51 +262,6 @@ div.cityImage h1 {
 div.cityImage h1:hover {
     cursor: pointer;
     color: black;
-}
-
-#logoutBox {
-    height: auto;
-    display: grid;
-    align-items: center;
-    justify-items: center;
-}
-
-#logoutButton {
-    line-height: 0;
-    width: 70px;
-    height: 25px;
-    border: 1px solid #15323d;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    font-size: 12px;
-    font-family: arial, helvetica, sans-serif;
-    padding: 10px 10px 10px 10px;
-    text-decoration: none;
-    display: inline-block;
-    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
-    font-weight: bold;
-    color: #FFFFFF;
-    background-color: #5ecaf5;
-    background-image: (linear, left top, left bottom, from(#a7cfdf), to(#23538a));
-    background-image: -webkit-linear-gradient(top, #a7cfdf, #23538a);
-    background-image: -moz-linear-gradient(top, #a7cfdf, #23538a);
-    background-image: -ms-linear-gradient(top, #a7cfdf, #23538a);
-    background-image: -o-linear-gradient(top, #a7cfdf, #23538a);
-    background-image: linear-gradient(to bottom, #a7cfdf, #23538a);
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#a7cfdf, endColorstr=#23538a);
-}
-
-#logoutButton:hover {
-    cursor: pointer;
-    background-color: #86c8e2;
-    background-image: -webkit-(linear, left top, left bottom, from(#82bbd1), to(#193b61));
-    background-image: -webkit-linear-gradient(top, #82bbd1, #193b61);
-    background-image: -moz-linear-gradient(top, #82bbd1, #193b61);
-    background-image: -ms-linear-gradient(top, #82bbd1, #193b61);
-    background-image: -o-linear-gradient(top, #82bbd1, #193b61);
-    background-image: linear-gradient(to bottom, #82bbd1, #193b61);
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#82bbd1, endColorstr=#193b61);
 }
 
 /* Firebase Login Css Below */
@@ -344,8 +320,9 @@ div.cityImage h1:hover {
     cursor: pointer;
 }
 
+/*CANVAS CONTAINER*/
 canvas {
-	cursor: pointer;
+    cursor: pointer;
     display: block;
     position: absolute;
     display: none;
@@ -353,20 +330,38 @@ canvas {
 
 /* Welcome e button wiggle animation */
 @keyframes wiggle {
-    0% { transform: rotate(80deg); }
-    30% { transform: rotate(-30deg);}
-   80% { transform: rotate(20deg); }
-   85% { transform: rotate(20deg); }
-   95% { transform: rotate(-40deg); }
-  100% { transform: rotate(30deg); }
+    0% {
+        transform: rotate(80deg);
+    }
+
+    30% {
+        transform: rotate(-30deg);
+    }
+
+    80% {
+        transform: rotate(20deg);
+    }
+
+    85% {
+        transform: rotate(20deg);
+    }
+
+    95% {
+        transform: rotate(-40deg);
+    }
+
+    100% {
+        transform: rotate(30deg);
+    }
 }
 
+/*WIGGLE HOVER EFFECT*/
 .wiggle:hover {
-  display: inline-block;
-  animation: wiggle 0.2s infinite;
+    display: inline-block;
+    animation: wiggle 0.2s infinite;
 }
 
+/*WIGGLE HOVER ANIMATION*/
 .wiggle {
-  animation: none;
+    animation: none;
 }
-

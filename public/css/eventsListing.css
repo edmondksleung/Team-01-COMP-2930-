@@ -32,6 +32,7 @@
     border-left: 10px solid #2f9e3a;
 }
 
+/*EVENTS CONTAINER HOVER*/
 .eventsBox:hover {
     border: 1px solid #2f9e3a;
     border-left: 10px solid #2f9e3a;
@@ -111,6 +112,7 @@
     background-repeat: no-repeat;
 }
 
+/*EVENTS LOCATION BANNER TRANSPARENCY*/
 .eventsLocationOpaqueCover {
     width: 100%;
     height: 200px;
