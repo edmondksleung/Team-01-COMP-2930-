@@ -351,40 +351,55 @@ $(document).ready(function () {
             type: 'GET',
             url: `https://evolunteer-45c5d.firebaseio.com/events/${city}/${key}/usersJoined.json`,
             dataType: 'json',
-            success: function(data){
-                let x = Object.keys(data);
-                let currentUser = firebase.auth().currentUser.uid
-                if( x == currentUser){
-                    console.log("yes");
-                }
-                // console.log(x);
+            success: function (data) {
+                var x = Object.keys(data);
+                var currentUser = firebase.auth().currentUser.uid;
+                console.log(x);
+                // debugger
+                for (let i = 0; i < x.length; i++) {
 
+                    let uid = x[i];
+                    if (uid === currentUser) {
+                        $(".joinEventButton").text("Event Joined");
+                        $(document).on("click", ".joinEventButton", function(e){
+                            e.preventDefault();
+                            $(".joinEventButton").text("Join Event");
+                            // $.ajax({
+                            //     type: 'GET',
+                            //     url: `https://evolunteer-45c5d.firebaseio.com/events/${city}/${key}/usersJoined.json`,
+                            //     dataType: 'json',
+                            //     success: function(data){
+                                    
+                            //     }
+                            // })
+                            let userRef = firebase.database().ref('events/' + city + '/' + key + '/usersJoined/' + currentUser);
+                            userRef.remove();
+                        })
+                    } else {
+                        // On join event button, event writes to database 
+                        $(document).on("click", ".joinEventButton", function (e) {
+                            e.preventDefault();
+                            
+                            let user = firebase.auth().currentUser;
+                            let userID = user.uid;
+
+                            let a = firebase.database().ref(`users/${userID}`);
+                            let b = firebase.database().ref('events/' + city + '/' + key + '/usersJoined/');
+
+                            if (user) {
+                                a.on("value", function (snapshot) {
+                                    //sets snapshot of current user info in new node under event
+                                    b.child(`${userID}`).set(snapshot.val());
+                                    $(".joinEventButton").text("Event Joined");
+                                });
+                            } else {
+                                console.log("Setting of user info under event unsuccessful.")
+                            }
+                            
+                        });
+                    }
+                }
             }
         })
-
-        // Used to check if user has already joined event
-        
-
-        // On join event button, event writes to database 
-        $(document).on("click", ".joinEventButton", function (e) {
-            e.preventDefault();
-
-            let user = firebase.auth().currentUser;
-            let userID = user.uid;
-
-            let a = firebase.database().ref(`users/${userID}`);
-            let b = firebase.database().ref('events/' + city + '/' + key + '/usersJoined/');
-
-            if (user) {
-                a.on("value", function (snapshot) {
-                    //sets snapshot of current user info in new node under event
-                    b.child(`${userID}`).set(snapshot.val());
-                });
-            } else {
-                console.log("Setting of user info under event unsuccessful.")
-            }
-
-
-        });
     });
 });

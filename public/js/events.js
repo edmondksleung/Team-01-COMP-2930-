@@ -26,3 +26,11 @@ $(".logoutButton").click(function () {
     window.location = 'signIn.html';
     console.log("test");
 });
+
+//JOIN BUTTON CHANGE TEXT TO UNJOIN EVENT ON CLICK-----------------------------------------------
+$(".joinEventButton").click(function () {
+
+    if (this.value=="JOIN") this.value = "Open Curtain";
+    else this.value = "Close Curtain";
+}
+});
