@@ -214,10 +214,29 @@ textarea:focus {
     border-radius: 5px;
     letter-spacing: 1px;
 }
-
+/*RESET BUTTON*/
+#reset {
+  line-height: 23px;
+  text-align: center;
+  border: 2px dashed #f69c55;    width: 50px;
+    height: 25px;
+    margin-top: 5px;
+    background-color: rgb(241, 241, 241);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    letter-spacing: 1px;
+    display: inline-block;
+}
 
 /*POST BUTTON HOVER*/
 #submit:hover {
+    cursor: pointer;
+    background-color: #260E63;
+    color: white;
+}
+
+/*RESET BUTTON HOVER*/
+#reset:hover {
     cursor: pointer;
     background-color: #260E63;
     color: white;
@@ -242,7 +261,7 @@ textarea:focus {
 }
 
 /*TABLET LAYOUT*/
-@media screen and (max-width: 1100px) {
+@media screen and (min-width: 701px) and (max-width: 1100px) {
 
     /*TABLET LAYOUT GIF CONTAINER*/
     #videoPicture {
