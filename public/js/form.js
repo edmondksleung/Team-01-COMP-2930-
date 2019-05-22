@@ -1,3 +1,8 @@
+// Reset button to reset the form
+$('#reset').on('click', function(){
+	document.getElementById('submitForm').reset();
+})
+
 // Listen for form submission
 document.getElementById('submitForm').addEventListener('submit', submitForm);
 $('.navigation').on('click', function () {
