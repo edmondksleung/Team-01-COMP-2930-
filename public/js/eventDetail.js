@@ -28,8 +28,6 @@ $(document).ready(function () {
   // anchor.append(btn);
   // btn.append("edit");
 
-
-
   // Adds the button element within same, but before <p> tag as "delete"
   // var dlt = $("<button></button");
   //dlt.attr("id", "delete");
@@ -37,7 +35,6 @@ $(document).ready(function () {
   //$("body").append(dlt);
 
   //$("#delete").before(btn);
-
 
   // Removes database child node using delete button within eventDetail.html 
   // Uses jQuery to reference 
