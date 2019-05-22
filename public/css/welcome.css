@@ -95,7 +95,7 @@
 #welcomePageCities {
     background-color: white;
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
         "left right";
     grid-template-columns: 50% 50%;
 }
@@ -125,18 +125,18 @@
 ::-webkit-scrollbar {
     background: transparent;
     width: 0;
-  }
-  
-   /*MOBILE LAYOUT*/
-  @media only screen and (max-width: 700px) {
-      /*MOBILE LAYOUT FOR CITIES*/
+}
+
+/*MOBILE LAYOUT*/
+@media only screen and (max-width: 700px) {
+
+    /*MOBILE LAYOUT FOR CITIES*/
     #welcomePageCities {
         grid-template-columns: 100%;
-        grid-template-areas: 
-        "middle";
+        grid-template-areas:
+            "middle";
         height: auto;
     }
 
-    
-}
 
+}
