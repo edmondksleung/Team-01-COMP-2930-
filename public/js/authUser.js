@@ -1,3 +1,4 @@
+/* AUTHORIZATION OF USER ACCESS, CHECKS IF ORGANIZATION ACC OR NOT AND SHOWS/HIDES SUBMIT EVENT */
 let database = firebase.database();
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
