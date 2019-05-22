@@ -66,7 +66,7 @@ $(document).ready(function () {
                     let readMoreButton = document.createElement('button');
                     readMoreButton.setAttribute('class', 'readMoreButton');
                     readMoreBox.append(readMoreButton);
-                    $(".readMoreButton").text("info");
+                    $(".readMoreButton").text("More Info");
 
                     /* create DETAILED event from firebase */
                     let eventsInfoBox = document.createElement("div");
