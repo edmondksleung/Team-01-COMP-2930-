@@ -98,6 +98,20 @@
     display: none;
 }
 
+<<<<<<< HEAD
+=======
+
+/*NO OUTLINE*/
+* {
+    outline: none;
+}
+
+/*
+.dropDown {
+    display: none;
+}
+
+>>>>>>> bce22a03c148f3e845fe00b182296b024839ea66
 /*MOBILE LAYOUT*/
 @media only screen and (min-width: 751px) and (max-width: 850px) {
 
