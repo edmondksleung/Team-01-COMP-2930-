@@ -18,7 +18,7 @@
     display: grid;
     justify-items: center;
     background-color: white;
-  
+
 }
 
 /*INDIVIDUAL EVENTS CONTAINER*/
@@ -178,7 +178,7 @@
 /*INFO BUTTON HOVER*/
 .readMoreButton:hover {
     cursor: pointer;
-    background:#2f9e3a;
+    background: #2f9e3a;
     color: white;
 }
 

@@ -118,9 +118,10 @@
         height: 80px;
         z-index: 9999;
     }
+
     * {
         outline: none;
     }
-    
+
 
 }
