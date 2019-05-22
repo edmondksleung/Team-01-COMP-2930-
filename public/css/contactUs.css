@@ -1,7 +1,7 @@
 /*CONTACT US CONTAINER*/
 .contactUsWrapper {
     display: none;
-    color: white;   
+    color: white;
     text-align: center;
 }
 
@@ -140,8 +140,10 @@ span.contactSpan {
 }
 
 
+/*DESKTOP LAYOUT*/
 @media only screen and (min-width: 801px) and (max-width: 1080px) {
 
+    /*DESKTOP LAYOUT BOTTOM CONTENT CONTAINER*/
     #contactUsPageContent {
         display: grid;
         height: 45vh;
@@ -156,8 +158,10 @@ span.contactSpan {
 
 }
 
+/*TABLET LAYOUT*/
 @media only screen and (min-width: 601px) and (max-width: 800px) {
 
+    /*TABLET LAYOUT CONTACT US PICTURE*/
     #contactUsPagePicture {
         height: 35vh;
         width: 100%;
@@ -172,6 +176,7 @@ span.contactSpan {
         padding-top: 75px;
     }
 
+    /*TABLET LAYOUT BOTTOM CONTENT CONTAINER*/
     #contactUsPageContent {
         display: grid;
         height: 45vh;
@@ -185,8 +190,10 @@ span.contactSpan {
     }
 }
 
+/*MOBILE LAYOUT*/
 @media only screen and (min-width: 400px) and (max-width: 600px) {
 
+    /*MOBILE LAYOUT CONTACT US PICTURE*/
     #contactUsPagePicture {
         height: 35vh;
         width: 100%;
@@ -201,6 +208,7 @@ span.contactSpan {
         padding-top: 75px;
     }
 
+    /*MOBILE LAYOUT BOTTOM CONTENT CONTAINER*/
     #contactUsPageContent {
         display: grid;
         height: 45vh;
@@ -213,26 +221,31 @@ span.contactSpan {
         padding-top: 40px;
     }
 
+    /*MOBILE LAYOUT CONTACT METHOD TEXT SPAN*/
     span.contactSpan {
         letter-spacing: 2px;
         font-size: 11pt;
         font-weight: bold;
     }
 
+    /*MOBILE LAYOUT PHONE PICTURE*/
     #phone img {
         width: 75px;
         height: 75px;
     }
 
+        /*MOBILE LAYOUT PHONE TEXT*/
     #phoneText {
         font-size: 10pt;
     }
 
+        /*MOBILE LAYOUT CHAT PICTURE*/
     #chat img {
         width: 75px;
         height: 75px;
     }
-    
+
+        /*MOBILE LAYOUT EMAIL PICTURE*/
     #email img {
         width: 75px;
         height: 75px;
