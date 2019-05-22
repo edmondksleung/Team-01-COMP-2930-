@@ -286,6 +286,8 @@
     cursor: pointer;
     font-size: 16pt;
     letter-spacing: 4px;
+    font-weight: bold;
+    background: #22d019;
 }
 
 /*EVENT INFO TITLE*/
