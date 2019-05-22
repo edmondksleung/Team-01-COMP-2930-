@@ -38,6 +38,7 @@
     border-left: 10px solid #2f9e3a;
 }
 
+<<<<<<< HEAD
 /*MENU CONTAINER*/
 .menuButton {
     width: 50px;
@@ -106,6 +107,8 @@
     margin-bottom: 50px;
 }
 
+=======
+>>>>>>> 03b649a5a8a42d1748e2ee6ae4a0256f61eaf5ac
 /*EVENT PAGE LOCATION TEXT*/
 .eventsLocation {
     width: 100%;
@@ -347,8 +350,10 @@
 .eventInfoTitle {
     background-color: #2f9e3a48;
     font-size: 17pt;
-    height: 60px;
-    text-indent: 30px;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    text-indent: 20px;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: lighter;
 }
