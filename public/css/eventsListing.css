@@ -329,7 +329,7 @@
 /*DATE TIME BOX*/
 .dateTimeInfoBox {
     display: grid;
-    grid-template-columns: 50px 330px;
+    grid-template-columns: 50px 530px;
     grid-template-rows: 30px;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 13pt;
@@ -349,7 +349,7 @@
 /*DATE AND TIME*/
 .dateTime {
     display: grid;
-    grid-template-columns: 40px 30px;
+    grid-template-columns: 60px 90px;
 }
 
 
@@ -503,5 +503,6 @@
         border-radius: 2px;
         margin-top: 20px;
         margin-bottom: 50px;
+        margin-left: 500px;
     }
 }
