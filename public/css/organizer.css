@@ -390,6 +390,6 @@ input[type="time"]::-webkit-inner-spin-button {
 /*INPUT CONTAINER*/
 .inputBox {
     border: 1px solid black;
-    
+
     display: grid;
 }

@@ -1,3 +1,4 @@
+/*ABOUT US PAGE CONTAINER*/
 .aboutUsPageWrapper {
     display: none;
     margin: 0px;
@@ -10,10 +11,12 @@
     font-size: 12pt;
 }
 
+/*LETTER E SPAN*/
 .aboutUsPageWrapper span {
     color: rgb(118, 228, 85);
 }
 
+/*WECLOME TEXT*/
 .aboutUsPageWrapper #welcomeText {
     height: 5vh;
     margin-top: 80px;
@@ -21,6 +24,7 @@
     letter-spacing: 5px;
 }
 
+/*TITLE UNDERLINE*/
 .aboutUsPageWrapper #underline {
     width: 145px;
     height: 2px;
@@ -29,6 +33,7 @@
     border-radius: 5px;
 }
 
+/*DESCRIPTION TEXT*/
 #aboutUsPageDescription {
     height: 54.5vh;
     width: 590px;
@@ -36,6 +41,7 @@
     line-height: 25px;
 }
 
+/*GO TO BOTTOM CONTAINER*/
 #aboutUsPageClickDownArea {
     height: 17vh;
     text-align: center;
@@ -44,21 +50,25 @@
     letter-spacing: 2px;
 }
 
+/*GO TO BOTTOM TEXT*/
 #aboutUsPageClickDownText {
     height: 38px;
     width: 250px;
     margin: auto;
 }
 
+/*BREAK POINTS*/
 #aboutUsPageBreakPoint {
     height: 28px;
 }
 
+/*GO TO BOTTOM BUTTON PICTURE*/
 #aboutUsPageClickDownButton img {
     width: 30px;
     height: 30px;
 }
 
+/*GO TO BOTTOM BUTTON HOVER*/
 #aboutUsPageClickDownButton img:hover {
     animation: wiggle 1s infinite;
     cursor: pointer;
@@ -66,12 +76,14 @@
     height: 34px;
 }
 
+/*ABOUT US CONTENT CONTAINER*/
 #aboutUsPageContent {
     background-color: white;
     padding-top: 30px;
     color: black;
 }
 
+/*GROUP PICTURE CONTAINER*/
 #groupPhoto {
     width: 975px;
     height: 70vh;
@@ -79,11 +91,13 @@
     margin-bottom: 10px;
 }
 
+/*GROUP PICTURE*/
 #groupPhoto img {
     width: 100%;
     height: 100%;
 }
 
+/*GROUP PICTURE TEXT*/
 #groupPhotoDescription {
     width: 975px;
     height: 80px;
@@ -92,6 +106,7 @@
     padding: 10px;
 }
 
+/*BIOGRAPHY LAYOUT 1*/
 .bioLayout1 {
     display: grid;
     grid-template-areas:
@@ -103,6 +118,7 @@
     background-color: white;
 }
 
+/*BIOGRAPHY LAYOUT 2*/
 .bioLayout2 {
     display: grid;
     grid-template-areas:
@@ -114,16 +130,19 @@
     background-color: white;
 }
 
+/*BIOGRAPHY PICTURE CONTAINER*/
 .picture {
     grid-area: picture;
     background-color: #e3dfdb;
 }
 
+/*BIOGRAPHY PICTURE*/
 .picture img {
     width: 100%;
     height: 100%;
 }
 
+/*BIOGRAPHY TEXT*/
 .bio {
     grid-area: bio;
     background-color: #e3dfdb;
@@ -133,17 +152,21 @@
     line-height: 22px;
 }
 
+/*BACK TO TOP BUTTON*/
 #backToTop {
     height: 75px;
     background-color: white;
 }
 
+/*HIDDEN*/
 .hidden {
     display: none;
 }
 
+/*TABLET LAYOUT*/
 @media only screen and (min-width: 651px) and (max-width: 1000px) {
 
+    /*TABLET LAYOUT GROUP PICTURE CONTAINER*/
     #groupPhoto {
         width: 90%;
         height: 40vh;
@@ -151,6 +174,7 @@
         margin-bottom: 10px;
     }
 
+    /*TABLET LAYOUT GROUP PICTURE TEXT*/
     #groupPhotoDescription {
         width: 90%;
         height: 85px;
@@ -160,6 +184,7 @@
         font-size: 10pt;
     }
 
+    /*TABLET LAYOUT BIOGRAPHY LAYOUT 1*/
     .bioLayout1 {
         display: grid;
         grid-template-areas:
@@ -170,7 +195,8 @@
         margin: 20px auto 0 auto;
         background-color: white;
     }
-    
+
+    /*TABLET LAYOUT BIOGRAPHY LAYOUT 2*/
     .bioLayout2 {
         display: grid;
         grid-template-areas:
@@ -182,21 +208,25 @@
         background-color: white;
     }
 
+    /*TABLET LAYOUT BIOGRAPHY CONTAINER*/
     .bio {
         font-size: 10pt;
         padding: 20px;
         line-height: 20px;
     }
-    
+
+    /*TABLET LAYOUT BIOGRAPHY PICTURES*/
     .picture {
         grid-area: picture;
         background-color: #e3dfdb;
     }
-    
+
 }
 
+/*MOBILE LAYOUT*/
 @media only screen and (min-width: 400px) and (max-width: 650px) {
 
+    /*MOBILE LAYOUT WELCOME TEXT*/
     .aboutUsPageWrapper #welcomeText {
         height: 5vh;
         margin-top: 20px;
@@ -204,6 +234,7 @@
         letter-spacing: 5px;
     }
 
+    /*MOBILE LAYOUT OUR STORY TEXT*/
     #aboutUsPageDescription {
         height: 80vh;
         width: 360px;
@@ -212,6 +243,7 @@
         font-size: 10pt;
     }
 
+    /*MOBILE LAYOUT GROUP PICTURE CONTAINER*/
     #groupPhoto {
         width: 90%;
         height: 40vh;
@@ -219,6 +251,7 @@
         margin-bottom: 10px;
     }
 
+    /*MOBILE LAYOUT GROUP PICTURE TEXT*/
     #groupPhotoDescription {
         width: 90%;
         height: 100px;
@@ -228,6 +261,7 @@
         font-size: 10pt;
     }
 
+    /*MOBILE LAYOUT BIOGRAPHY LAYOUT 1*/
     .bioLayout1 {
         display: grid;
         grid-template-areas:
@@ -238,7 +272,8 @@
         margin: 20px auto 5px auto;
         background-color: white;
     }
-    
+
+    /*MOBILE LAYOUT BIOGRAPHY LAYOUT 2*/
     .bioLayout2 {
         display: grid;
         grid-template-areas:
@@ -249,16 +284,19 @@
         margin: 20px auto 5px auto;
         background-color: white;
     }
-    
+
+    /*MOBILE LAYOUT BIOGRAPHY PICTURES CONTAINER*/
     .picture {
         grid-area: picture;
         background-color: #e3dfdb;
     }
 
+    /*MOBILE LAYOUT BIOGRAPHY CONTAINERS*/
     .bio {
         display: none;
     }
-    
+
+    /*MOBILE LAYOUT HIDDEN*/
     .hidden {
         display: block;
     }
