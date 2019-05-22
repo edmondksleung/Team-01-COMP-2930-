@@ -32,5 +32,4 @@ $(".joinEventButton").click(function () {
 
     if (this.value=="JOIN") this.value = "Open Curtain";
     else this.value = "Close Curtain";
-}
 });
