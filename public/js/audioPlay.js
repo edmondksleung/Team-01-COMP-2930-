@@ -1,3 +1,4 @@
+        /** AUDIO PLAY HIDDEN EGG FEATURE PT 1/2 */
         //Grabs audio file from folder and upon clicking hidden egg "e", plays audio clip.
         var helloSound = new Audio('../public/Audio/test.mp3');
         helloSound.src = "../public/Audio/test.mp3";

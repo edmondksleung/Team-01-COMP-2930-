@@ -10,9 +10,8 @@ $(document).ready(function(){
     $("#join").on("click", function(){
         dbRef.once("value", )
 
-
-
     })
+
     $("")
         var name = document.getElementById("nextBtn").value;
         var dbref = firebase.database().ref("/");
@@ -25,7 +24,6 @@ $(document).ready(function(){
             "Count" : Count
             });
             window.location.href="./index.html";
-
         }
         
 });

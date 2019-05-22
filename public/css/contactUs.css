@@ -122,14 +122,14 @@ span.contactSpan {
 }
 
 /*EMAIL IMAGE CONTAINER*/
-.contactUsWrapper #email {
+.contactUsWrapper #email2 {
     grid-area: email;
     width: auto;
     margin: 0 auto;
 }
 
 /*EMAIL IMAGE*/
-#email img {
+#email2 img {
     width: 125px;
     height: 125px;
 }
@@ -246,7 +246,7 @@ span.contactSpan {
     }
 
     /*MOBILE LAYOUT EMAIL PICTURE*/
-    #email img {
+    #email2 img {
         width: 75px;
         height: 75px;
     }
