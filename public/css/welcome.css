@@ -1,3 +1,4 @@
+/*WECLOME PAGE CONTAINER*/
 .welcomePageWrapper {
     display: none;
     height: auto;
@@ -6,22 +7,6 @@
 .hide {
     display: none;
 }
-/* width */
-/* ::-webkit-scrollbar {
-    width: 10px;
-  }
-   */
-   
-  /* Handle */
-  /* ::-webkit-scrollbar-thumb {
-    background: rgb(201, 199, 199); 
-    border-radius: 10px;
-  }
-   */
-  /* Handle on hover */
-  /* ::-webkit-scrollbar-thumb:hover {
-    background: rgb(119, 115, 115); 
-  } */
 
 #welcomePageTitle {
     height: 15vh;
