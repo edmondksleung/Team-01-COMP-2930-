@@ -238,6 +238,7 @@ $(document).ready(function () {
                     $(readMoreButton).attr("id", noQuotations);
                     $(eventsBox).attr("id", noQuotations);
                     $(eventsInfoBox).attr("id", noQuotations);
+                    $(joinEventButton).attr("id", noQuotations);
 
                     // preview box 
                     let previewBox = document.createElement('div');
@@ -294,14 +295,15 @@ $(document).ready(function () {
                     $(eventMessage).text(data[k].eventName);
                     $(month).text(monthString);
                     $(day).text(dayInt);
-                    $(dateInfo).text(monthString);
-                    $(timeInfo).text(dayInt);
+                    $(dateInfo).text(monthString + ' ' + dayInt);
+                    $(timeInfo).text(data[k].startTime + ' ~ ' + data[k].endTime);
                     $(eventInfoTitle).text(data[k].eventName);
 
                     // Putting key into dom element
                     $(eventMessage).text(data[k].eventName);
                     $(creditNum).text(timeCred);
                     $(".detailCredits").text(timeCred);
+                    
 
                     function toHours(timeStr1) {
                         let hr = timeStr1.substr(0, timeStr1.indexOf(":"));
@@ -317,7 +319,7 @@ $(document).ready(function () {
                     console.log(city + k);
                     countChildRef.on("value", function (snapshot) {
                         let numOfParticipants = snapshot.numChildren();
-                        console.log(numOfParticipants);
+                        // console.log(numOfParticipants);
                         $(`.peopleCount#${k}`).text(numOfParticipants);
                         $(`.count#${k}`).text(numOfParticipants);
                         // console.log(k);
@@ -331,6 +333,7 @@ $(document).ready(function () {
         e.preventDefault();
         let key = $(this).attr("id");
         let city = $(".eventsLocationOpaqueCover").text();
+
         $.ajax({
             type: 'GET',
             url: `https://evolunteer-45c5d.firebaseio.com/events/${city}/${key}.json`,
@@ -348,59 +351,87 @@ $(document).ready(function () {
 
             }
         });
+        // checks for previously joined users
         $.ajax({
             type: 'GET',
             url: `https://evolunteer-45c5d.firebaseio.com/events/${city}/${key}/usersJoined.json`,
             dataType: 'json',
             success: function (data) {
-                var x = Object.keys(data);
-                var currentUser = firebase.auth().currentUser.uid;
+                let user = firebase.auth().currentUser;
+                let userID = user.uid;
+                console.log(userID);
+                let a = firebase.database().ref(`users/${userID}`);
+                let b = firebase.database().ref('events/' + city + '/' + key + '/usersJoined/');
+                let x = Object.keys(data);
                 console.log(x);
-                // debugger
                 for (let i = 0; i < x.length; i++) {
 
-                    let uid = x[i];
-                    if (uid === currentUser) {
-                        $(".joinEventButton").text("Event Joined");
-                        $(document).on("click", ".joinEventButton", function(e){
-                            e.preventDefault();
-                            $(".joinEventButton").text("Join Event");
-                            // $.ajax({
-                            //     type: 'GET',
-                            //     url: `https://evolunteer-45c5d.firebaseio.com/events/${city}/${key}/usersJoined.json`,
-                            //     dataType: 'json',
-                            //     success: function(data){
-                                    
-                            //     }
-                            // })
-                            let userRef = firebase.database().ref('events/' + city + '/' + key + '/usersJoined/' + currentUser);
-                            userRef.remove();
-                        })
-                    } else {
-                        // On join event button, event writes to database 
-                        $(document).on("click", ".joinEventButton", function (e) {
-                            e.preventDefault();
-                            
-                            let user = firebase.auth().currentUser;
-                            let userID = user.uid;
-
-                            let a = firebase.database().ref(`users/${userID}`);
-                            let b = firebase.database().ref('events/' + city + '/' + key + '/usersJoined/');
-
-                            if (user) {
-                                a.on("value", function (snapshot) {
-                                    //sets snapshot of current user info in new node under event
-                                    b.child(`${userID}`).set(snapshot.val());
-                                    $(".joinEventButton").text("Event Joined");
-                                });
-                            } else {
-                                console.log("Setting of user info under event unsuccessful.")
-                            }
-                            
+                    if (x[i] == userID) {
+                        a.on("value", function (snapshot) {
+                            // for users that have joined event previously
+                            $(".joinEventButton").text("Unjoin Event");
                         });
+
+                    } else {
+                        console.log("changed event button.")
                     }
                 }
             }
-        })
+        });
+
     });
-});
+    $(document).on("click", ".joinEventButton", function (e) {
+        e.preventDefault();
+        let key = $(this).attr("id");
+        console.log(key);
+        let city = $(".eventsLocationOpaqueCover").text();
+        console.log(city);
+        $.ajax({
+            type: 'GET',
+            url: `https://evolunteer-45c5d.firebaseio.com/events/${city}/${key}/usersJoined.json`,
+            dataType: 'json',
+            success: function (data) {
+                let user = firebase.auth().currentUser;
+                let userID = user.uid;
+                console.log(user);
+                console.log(userID);
+
+                let a = firebase.database().ref(`users/${userID}`);
+                let b = firebase.database().ref('events/' + city + '/' + key + '/usersJoined/');
+                let x = Object.keys(data);
+                for (let i = 0; i < x.length; i++) {
+                    // console.log(x[i]);
+                    // debugger
+                    if (x[i] !== userID) {
+                        // console.log(x);
+                        a.on("value", function (snapshot) {
+                            b.child(`${userID}`).set(snapshot.val());
+                            $(".joinEventButton").text("Unjoin Event");
+                        });
+
+                    } else if (x[i] == userID) {
+                        console.log(x[i]);
+                        a.on("value", function (snapshot) {
+                            // b.child(`${userID}`).remove(snapshot.val());
+                            $(`.joinEventButton#$${x[i]}`).text("Join Event");
+                        });
+                        }
+                    }
+                }
+                // for (let i = 0; i < x.length; i++) {
+                //     if (x[i] == userID) {
+                //         $(document).on("click", ".joinEventButton", function () {
+                //             firebase.database().ref('events/' + city + '/' + key + '/usersJoined/' + userID).remove();
+                //             $(".joinEventButton").text("Join Event");
+                //         });
+
+                //     } else {
+                //         console.log("user unsuccessfully joined");
+                //     }
+                // };
+
+    
+    })
+
+})
+    })
