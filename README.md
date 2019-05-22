@@ -17,3 +17,5 @@ All code files should be appropriately sorted in their respective folders ie. cs
 CSS files are seperated by page ie. welcome.css, signIn.css
 
 JS files are sectioned off by functions
+
+There is a folder for old/backup code as well
