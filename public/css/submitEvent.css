@@ -1,3 +1,4 @@
+/*SUBMIT EVENT PAGE CONTAINER*/
 .submitEventPageWrapper {
     display: none;
     grid-template-areas:
@@ -15,26 +16,32 @@
     font-size: 10pt;
 }
 
+/*GIF CONTAINER*/
 #videoPicture {
     grid-area: left;
 }
 
+/*GIF*/
 #videoPicture img {
     margin-left: -80px;
 }
 
+/*INPUT FOCUS*/
 input:focus {
     outline: none;
 }
 
+/*SELECT FOCUS*/
 select:focus {
     outline: none;
 }
 
+/*TEXT AREA FOCUS*/
 textarea:focus {
     outline: none;
 }
 
+/*FORM CONTAINER*/
 #submitForm {
     grid-area: right;
     padding-top: 10px;
@@ -42,6 +49,7 @@ textarea:focus {
     z-index: 9998;
 }
 
+/*INPUT CONTAINERS*/
 .textbox {
     border: none;
     border-bottom: 1px solid black;
@@ -55,11 +63,13 @@ textarea:focus {
     text-align: left;
 }
 
+/*INPUT CONTAINERS HOVER EFFECT*/
 .textbox:hover {
     border-bottom: 1px solid #260E63;
     width: 315px;
 }
 
+/*CITY DROP DOWN*/
 #addressCity {
     display: grid;
     grid-template-areas:
@@ -68,32 +78,39 @@ textarea:focus {
     grid-template-rows: 50px;
 }
 
+/*ADDRESS CONTAINER*/
 #addressGrid {
     grid-area: addressGrid;
 }
 
+/*ADDRESS INPUT*/
 #address {
     width: 375px;
 }
 
+/*ADDRESS HOVER EFFECT*/
 #address:hover {
     width: 390px;
 }
 
+/*CITY CONTAINER*/
 #cityGrid {
     grid-area: cityGrid;
     padding-left: 30px;
 }
 
+/*EMAIL CONTAINER*/
 .submitEventPageWrapper #email {
     width: 375px;
     margin-bottom: 15px;
 }
 
+/*EMAIL HOVER EFFECT*/
 .submitEventPageWrapper #email:hover {
     width: 390px;
 }
 
+/*CITY INPUT*/
 #city {
     height: 25px;
     width: 145px;
@@ -101,10 +118,12 @@ textarea:focus {
     margin-top: 4px;
 }
 
+/*CITY HOVER EFFECT*/
 #city:hover {
     cursor: pointer;
 }
 
+/*DATE AND TIME CONTAINER*/
 #dateTime {
     display: grid;
     grid-template-areas:
@@ -113,10 +132,12 @@ textarea:focus {
     margin-top: 10px;
 }
 
+/*DATE CONTAINER*/
 #dateDiv {
     grid-area: date;
 }
 
+/*DATE INPUT*/
 #date {
     height: 25px;
     background-color: rgb(241, 241, 241);
@@ -127,18 +148,22 @@ textarea:focus {
     width: 125px;
 }
 
+/*DATE HOVER EFFECT*/
 #date:hover {
     cursor: pointer;
 }
 
+/*START TIME CONTAINER*/
 #startTimeDiv {
     grid-area: startTime;
 }
 
+/*END TIME CONTAINER*/
 #endTimeDiv {
     grid-area: endTime;
 }
 
+/*TIME*/
 .submitTime {
     height: 25px;
     background-color: rgb(241, 241, 241);
@@ -148,10 +173,13 @@ textarea:focus {
     margin-top: 4px;
     width: 100px;
 }
+
+/*TIME HOVER EFFECT*/
 .submitTime:hover {
     cursor: pointer;
 }
 
+/*DESCRIPTION INPUT*/
 #description {
     width: 575px;
     height: 125px;
@@ -165,14 +193,17 @@ textarea:focus {
     letter-spacing: 1px;
 }
 
+/*DESCRIPT INPUT HOVER EFFECT*/
 #description:hover {
     border: 1px solid #260E63;
 }
 
+/*UPLOAD PHOTO INPUT*/
 #photo {
     margin-top: 10px;
 }
 
+/*POST BUTTON*/
 #submit {
     width: 50px;
     height: 25px;
@@ -183,12 +214,14 @@ textarea:focus {
     letter-spacing: 1px;
 }
 
+/*POST BUTTON HOVER*/
 #submit:hover {
     cursor: pointer;
     background-color: #260E63;
     color: white;
 }
 
+/*ALERT POPUP*/
 .alert {
     grid-area: alert;
     background-color: rgba(38, 14, 99, 0.342);
@@ -200,59 +233,70 @@ textarea:focus {
     letter-spacing: 2px;
 }
 
+/*EVENT NAME INPUT*/
 #submitEventTitle {
     display: none;
 }
 
-@media screen and (max-width: 900px){
+/*TABLET LAYOUT*/
+@media screen and (max-width: 900px) {
 
-#videoPicture{
-    display: none;
+    /*TABLET LAYOUT GIF CONTAINER*/
+    #videoPicture {
+        display: none;
+    }
+
+    /*TABLET LAYOUT SUBMIT EVENT PAGE CONTAINER*/
+    .submitEventPageWrapper {
+        margin-top: 40px;
+    }
+
+    /*TABLET LAYOUT FORM CONTAINER*/
+    #submitForm {
+        grid-area: left;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        z-index: 0;
+    }
+
+    /*TABLET LAYOUT DESCRIPTION INPUT*/
+    #description {
+        width: 450px;
+    }
+
+    /*TABLET LAYOUT DATE TIME CONTAINER*/
+    #dateTime {
+        display: grid;
+        grid-template-areas:
+            "date startTime endTime empty";
+        grid-template-columns: 40% 24% 15% 49%;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+
 }
 
-.submitEventPageWrapper {
-    margin-top: 40px;
-}
+/*MOBILE LAYOUT*/
+@media screen and (max-width: 700px) {
 
-#submitForm {
-    grid-area: left;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    z-index: 0;
-}
-#description {
-    width: 450px;
-}
-
-#dateTime {
-    display: grid;
-    grid-template-areas:
-        "date startTime endTime empty";
-    grid-template-columns: 40% 24% 15% 49%;
-    margin-top: 10px;
-    margin-right: 10px;
-}
-
-}
-
-@media screen 
-  and (max-width: 700px){
+    /*MOBILE LAYOUT EVENT NAME INPUT*/
     #submitEventTitle {
         display: block;
         margin-top: -65px;
         margin-left: 20px;
     }
-    
+
+    /*MOBILE LAYOUT EVENT NAME INPUT SPAN*/
     #submitEventTitle span {
         color: rgb(118, 228, 85);
         font-size: 25pt;
     }
-    
+
+    /*MOBILE LAYOUT EVENT NAME INPUT B*/
     #submitEventTitle b {
         font-size: 25pt;
         color: white;
         letter-spacing: 5pt;
     }
-  }
-
+}
