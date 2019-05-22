@@ -94,6 +94,18 @@
     cursor: pointer;
 }
 
+   /*EVENT INFO PAGE*/
+   .eventsInfoBox {
+    grid-area: same;
+    display: none;
+    width: 550px;
+    height: auto;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 2px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
 /*EVENT PAGE LOCATION TEXT*/
 .eventsLocation {
     width: 100%;
@@ -122,6 +134,7 @@
     line-height: 200px;
     vertical-align: middle;
 }
+
 
 /*ALL INDIVIDUAL EVENTS*/
 .events {
@@ -252,19 +265,7 @@
 .peopleCount {
     font-weight: bold;
     font-family: 'Source Sans Pro', sans-serif;
-    color: .3498db;
-}
-
-/*EVENT INFO PAGE*/
-.eventsInfoBox {
-    grid-area: same;
-    display: none;
-    width: 70%;
-    height: auto;
-    border: 1px solid rgb(100, 100, 100);
-    border-radius: 2px;
-    margin-top: 20px;
-    margin-bottom: 50px;
+    color: #3498db;
 }
 
 /*EVENT INFO TOP BOX*/
@@ -280,6 +281,8 @@
 /*CLOSE DETAILS BOX*/
 .closeDetailsBox {
     cursor: pointer;
+    float: right;
+    margin-right: 25px;
 }
 
 /*CLOSE DETAILS BUTTON*/
@@ -287,13 +290,17 @@
     width: 25px;
     height: 25px;
     position: absolute;
+    background: white;
+    border-radius: 2px;
+    border: none;
 }
 
 /*CLOSE DETAILS BUTTON HOVER*/
 .closeDetailsButton:hover {
     filter: invert(100%);
     background: grey;
-    border-radius: 5px;
+    border-radius: 2px;
+    border: none;
 }
 
 /*EVENT INFO PICTURE CONTAINER*/
@@ -497,15 +504,16 @@
         display: grid;
         grid-template-areas:
             "same same";
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 100%;
         justify-items: center;
+        
     }
 
     /*EVENT INFO PAGE*/
     .eventsInfoBox {
         grid-area: same;
         display: none;
-        width: 800px;
+        width: 600px;
         height: auto;
         border: 1px solid rgb(100, 100, 100);
         border-radius: 2px;
@@ -533,19 +541,20 @@
 @media only screen and (min-width: 1575px) {
     .allEventsBox {
         display: grid;
-        grid-template-columns: 33% 33% 33%;
+        grid-template-columns: 100%;
         justify-items: center;
+
     }
-}
 
     /*EVENT INFO PAGE*/
     .eventsInfoBox {
         grid-area: same;
         display: none;
-        width: 800px;
+        width: 650px;
         height: auto;
         border: 1px solid rgb(100, 100, 100);
         border-radius: 2px;
         margin-top: 20px;
         margin-bottom: 50px;
     }
+}
