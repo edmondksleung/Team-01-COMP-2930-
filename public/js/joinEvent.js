@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 // // for the current user
 // // create this user node in the datebase
 // // firebase.auth().onAuthStateChanged(function (user) {
@@ -10,6 +11,20 @@
 // //       });
 
 // //   });
+=======
+// for the current user
+// create this user node in the datebase
+// firebase.auth().onAuthStateChanged(function (user) {
+//     firebase.database().ref("users/" + user.uid).update(
+//       {
+//         "name" : user.displayName,
+//         "email" : user.email,
+//         "isOrg" : false,
+//         "uid" : user.uid,
+//       });
+
+//   });
+>>>>>>> Stashed changes
 // var city = $(".cities").attr("name");
 // // console.log(city);
 // $(document).on("click", ".joinEventButton", function(){
@@ -34,6 +49,11 @@
 //         success: function (data) {
 //             let keys = Object.keys(data);
 //             console.log(keys);
+<<<<<<< Updated upstream
+=======
+
+//             firebase.auth().onAuthStateChanged(function(user){
+>>>>>>> Stashed changes
 
 //             firebase.auth().onAuthStateChanged(function (user) {
 
