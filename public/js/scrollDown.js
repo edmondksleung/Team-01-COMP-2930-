@@ -11,6 +11,3 @@ $("#aboutUsPageClickButton").click(function () {
         scrollTop: $("#aboutUsPageBreakPoint").offset().top
     }, 500);
 });
-
-
-

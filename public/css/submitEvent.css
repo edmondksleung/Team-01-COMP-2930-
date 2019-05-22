@@ -215,12 +215,14 @@ textarea:focus {
     letter-spacing: 1px;
 }
 
+
 /*POST BUTTON HOVER*/
 #submit:hover {
     cursor: pointer;
     background-color: #260E63;
     color: white;
 }
+
 
 /*ALERT POPUP*/
 .alert {

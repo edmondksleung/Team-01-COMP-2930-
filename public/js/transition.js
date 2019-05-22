@@ -6,5 +6,3 @@ $(".cities").click(function () {
   $('.eventsWrapper').css('display', 'block');
   $(".dropButtons").css("background", "#2f9e3a");
 });
-
-

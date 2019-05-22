@@ -302,6 +302,10 @@ $(document).ready(function () {
                     $(eventMessage).text(data[k].eventName);
                     $(creditNum).text(timeCred);
                     $(".detailCredits").text(timeCred);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 749a4efc4a681959ba85735f2ae18c48fb479b2d
 
                     function toHours(timeStr1) {
                         let hr = timeStr1.substr(0, timeStr1.indexOf(":"));

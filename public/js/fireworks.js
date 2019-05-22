@@ -1,5 +1,5 @@
         /** FIREWORKS ANIMATION CODE COURTESY OF HAIQING WANG*/
-        
+
         // Sets up windows with request anim frame on canvas
         window.requestAnimFrame = (function () {
             return window.requestAnimationFrame ||
@@ -246,4 +246,3 @@
         });
         // once the window loads, ready up the fireworks
         window.onload = loop;
-    
