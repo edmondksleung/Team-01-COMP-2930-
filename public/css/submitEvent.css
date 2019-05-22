@@ -24,6 +24,7 @@
 /*GIF*/
 #videoPicture img {
     margin-left: -80px;
+    height: 90%;
 }
 
 /*INPUT FOCUS*/
@@ -204,11 +205,18 @@ textarea:focus {
     margin-top: 10px;
 }
 
+#resetSubmit {
+    display: grid;
+    grid-template-areas:
+        "reset submit";
+    grid-template-columns: 10% 90%;
+}
+
 /*POST BUTTON*/
 #submit {
+    grid-area: submit;
     width: 50px;
     height: 25px;
-    margin-top: 10px;
     background-color: rgb(241, 241, 241);
     border: 1px solid rgb(100, 100, 100);
     border-radius: 5px;
@@ -216,11 +224,11 @@ textarea:focus {
 }
 /*RESET BUTTON*/
 #reset {
-  line-height: 23px;
-  text-align: center;
-  border: 2px dashed #f69c55;    width: 50px;
+    grid-area: reset;
+    line-height: 23px;
+    text-align: center;
+    border: 2px dashed #f69c55;    width: 50px;
     height: 25px;
-    margin-top: 5px;
     background-color: rgb(241, 241, 241);
     border: 1px solid rgb(100, 100, 100);
     border-radius: 5px;
@@ -261,7 +269,7 @@ textarea:focus {
 }
 
 /*TABLET LAYOUT*/
-@media screen and (min-width: 701px) and (max-width: 1100px) {
+@media screen and (max-width: 1100px) {
 
     /*TABLET LAYOUT GIF CONTAINER*/
     #videoPicture {
@@ -297,10 +305,27 @@ textarea:focus {
         margin-right: 10px;
     }
 
+       /*DATE AND TIME CONTAINER*/
+    #dateTime {
+        display: grid;
+        grid-template-areas:
+            "date startTime endTime empty";
+        grid-template-columns: 49% 25% 25% 1%;
+        margin-top: 10px;
+    }
+
+    #resetSubmit {
+        display: grid;
+        grid-template-areas:
+            "reset submit";
+        grid-template-columns: 15% 75%;
+    }
+
+
 }
 
 /*MOBILE LAYOUT*/
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1110px) {
 
     /*MOBILE LAYOUT EVENT NAME INPUT*/
     #submitEventTitle {
@@ -321,4 +346,39 @@ textarea:focus {
         color: white;
         letter-spacing: 5pt;
     }
+
+    #address {
+        width: 240px;
+    }
+
+    /*ADDRESS HOVER EFFECT*/
+    #address:hover {
+        width: 240px;
+    }
+
+    /*DATE AND TIME CONTAINER*/
+    #dateTime {
+        display: grid;
+        grid-template-areas:
+            "date startTime endTime empty";
+        grid-template-columns: 49% 25% 25% 1%;
+        margin-top: 10px;
+    }
+
+    #resetSubmit {
+        display: grid;
+        grid-template-areas:
+            "reset submit";
+        grid-template-columns: 15% 75%;
+    }
+
+    /*CITY DROP DOWN*/
+    #addressCity {
+        display: grid;
+        grid-template-areas:
+            "addressGrid cityGrid";
+        grid-template-columns: 56% 44%;
+        grid-template-rows: 50px;
+    }
+
 }
