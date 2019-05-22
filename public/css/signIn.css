@@ -100,7 +100,25 @@ body :-ms-input-placeholder {
 }
 
 /*LOGIN FORM INPUTS*/
-.signInPageWrapper form input {
+.signInPageWrapper form input#emailField{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: 0;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 43px;
+    width: 250px;
+    border-radius: 3px;
+    padding: 10px 15px;
+    margin: 0 auto 33px auto;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    transition-duration: 0.25s;
+    font-weight: 300;
+}
+.signInPageWrapper form input#passField{
     -webkit-appearance: none;
     -moz-appearance: none;
     outline: 0;
@@ -120,12 +138,22 @@ body :-ms-input-placeholder {
 }
 
 /*LOGIN INPUT HOVER EFFECT*/
-.signInPageWrapper form input:hover {
+.signInPageWrapper form input#emailField:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.signInPageWrapper form input#passField:hover {
     background-color: rgba(255, 255, 255, 0.4);
 }
 
+
 /*LOGIN INPUT FOCUS*/
-.signInPageWrapper form input:focus {
+.signInPageWrapper form input#emailField:focus {
+    background-color: white;
+    width: 300px;
+    color: rgb(97, 204, 65);
+    border: 2px solid rgb(97, 204, 65);
+}
+.signInPageWrapper form input#passField:focus {
     background-color: white;
     width: 300px;
     color: rgb(97, 204, 65);
@@ -133,7 +161,7 @@ body :-ms-input-placeholder {
 }
 
 /*LOGIN BUTTON*/
-.signInPageWrapper form button {
+.signInPageWrapper form button#loginButton {
     -webkit-appearance: none;
     -moz-appearance: none;
     outline: 0;
@@ -150,7 +178,7 @@ body :-ms-input-placeholder {
 }
 
 /*LOGIN BUTTON HOVER EFFECT*/
-.signInPageWrapper form button:hover {
+.signInPageWrapper form button#loginButton:hover {
     background-color: rgba(159, 247, 44, 0.918);
     color: white;
 }
@@ -199,7 +227,7 @@ body :-ms-input-placeholder {
 }
 
 /*LOGIN FAILED ANIMATION*/
-#loginButton.invalid {
+.signInPageWrapper form button#loginButton.invalid {
     background-color: red;
     color: white;
     /* also need animation and -moz-animation */
@@ -289,13 +317,14 @@ div.cityImage h1:hover {
 
 /* Modal Content */
 #firebaseui-auth-container {
+    color: black;
     position: absolute;
     background-color: #fefefe;
     margin-top: 220px;
-    margin-left: 35%;
+    margin-left: 33%;
     padding: 0;
     border: 1px solid #888;
-    width: 30%;
+    width: 35%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     animation-name: animatetop;
     animation-duration: 0.4s
@@ -364,4 +393,36 @@ canvas {
 /*WIGGLE HOVER ANIMATION*/
 .wiggle {
     animation: none;
+}
+
+@media screen and (max-width: 980px) {
+    /* Modal Content */
+#firebaseui-auth-container {
+    position: absolute;
+    background-color: #fefefe;
+    margin-top: 220px;
+    margin-left: 25%;
+    padding: 0;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+}
+
+@media screen and (max-width: 650px) {
+    /* Modal Content */
+#firebaseui-auth-container {
+    position: absolute;
+    background-color: #fefefe;
+    margin-top: 220px;
+    margin-left: 15%;
+    padding: 0;
+    border: 1px solid #888;
+    width: 70%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
 }
