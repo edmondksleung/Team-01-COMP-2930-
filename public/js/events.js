@@ -1,17 +1,22 @@
-//MENU DROP DOWN----------------------------------------------------
+//MENU DROP DOWN TOGGLE----------------------------------------------------
 $(".menuButton").click(function () {
+    event.stopPropagation();
     $(".dropDownBox").toggle();
     $(".dropDown").toggle();
+});
 
-    $(document).mouseup(function(e) {
-    var menu = $(".dropDownBox");
-    //If a click is targeted outside of the menu icon
-    if (!menu.is(e.target) && menu.has(e.target).length === 0) 
-    {
-        menu.hide();
+//MENU DROP DOWN HIDE ON CLICK ANYWHERE ELSE ON PAGE------------------------------
+$(document).click(function () {
+    $(".dropDownBox").hide();
+    $(".dropDown").hide();
+});
+
+//HIDE DROP DOWN MENU IF WINDOW RESIZE HIGHER THAN 700 PIXELS-----------------------------
+$(window).resize(function () {
+    if ($(window).width() > 700) {
+        $(".dropDownBox").hide();
         $(".dropDown").hide();
     }
-});
 });
 
 //LOGOUT BUTTON-------------------------------------------------------------

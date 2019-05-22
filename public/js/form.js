@@ -1,6 +1,6 @@
 // Listen for form submission
 document.getElementById('submitForm').addEventListener('submit', submitForm);
-$('.navigation').on('click', function() {
+$('.navigation').on('click', function () {
 	// Resets the form
 	document.getElementById('submitForm').reset();
 })
@@ -24,10 +24,10 @@ async function submitForm(e) {
 	// Parses "-"
 	tempDate = date.split("-");
 	//date = tempDate[1] +"-" + tempDate[2] +"-"+ tempDate[0];
-	
+
 	// Reorganizes format into mm,dd,yyyy and converts into timestamp
 	let timeStamp = new Date(tempDate[1] + "," + tempDate[2] + "," + tempDate[0]).getTime();
-	
+
 	// Saves message
 	await handleFileUploadSubmit(eventName, organization, email, address, content, city, date, timeStamp, startTime, endTime);
 
@@ -36,7 +36,7 @@ async function submitForm(e) {
 
 	// Hide Alert after certain time
 	setTimeout(function () {
-	document.querySelector('.alert').style.display = "none";
+		document.querySelector('.alert').style.display = "none";
 	}, 2000);
 
 	// Resets the form

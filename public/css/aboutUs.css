@@ -1,3 +1,4 @@
+/*ABOUT US PAGE CONTAINER*/
 .aboutUsPageWrapper {
     display: none;
     margin: 0px;
@@ -10,10 +11,12 @@
     font-size: 12pt;
 }
 
+/*LETTER E SPAN*/
 .aboutUsPageWrapper span {
     color: rgb(118, 228, 85);
 }
 
+/*WECLOME TEXT*/
 .aboutUsPageWrapper #welcomeText {
     height: 5vh;
     margin-top: 80px;
@@ -21,6 +24,7 @@
     letter-spacing: 5px;
 }
 
+/*TITLE UNDERLINE*/
 .aboutUsPageWrapper #underline {
     width: 145px;
     height: 2px;
@@ -29,13 +33,15 @@
     border-radius: 5px;
 }
 
+/*DESCRIPTION TEXT*/
 #aboutUsPageDescription {
     height: 54.5vh;
-    width: 50%;
+    width: 590px;
     margin: 20px auto 25px auto;
     line-height: 25px;
 }
 
+/*GO TO BOTTOM CONTAINER*/
 #aboutUsPageClickDownArea {
     height: 17vh;
     text-align: center;
@@ -44,21 +50,25 @@
     letter-spacing: 2px;
 }
 
+/*GO TO BOTTOM TEXT*/
 #aboutUsPageClickDownText {
     height: 38px;
     width: 250px;
     margin: auto;
 }
 
+/*BREAK POINTS*/
 #aboutUsPageBreakPoint {
     height: 28px;
 }
 
+/*GO TO BOTTOM BUTTON PICTURE*/
 #aboutUsPageClickDownButton img {
     width: 30px;
     height: 30px;
 }
 
+/*GO TO BOTTOM BUTTON HOVER*/
 #aboutUsPageClickDownButton img:hover {
     animation: wiggle 1s infinite;
     cursor: pointer;
@@ -66,64 +76,73 @@
     height: 34px;
 }
 
+/*ABOUT US CONTENT CONTAINER*/
 #aboutUsPageContent {
     background-color: white;
     padding-top: 30px;
     color: black;
 }
 
+/*GROUP PICTURE CONTAINER*/
 #groupPhoto {
-    width: 70%;
-    height: 60vh;
+    width: 975px;
+    height: 70vh;
     margin: 0 auto;
     margin-bottom: 10px;
 }
 
+/*GROUP PICTURE*/
 #groupPhoto img {
     width: 100%;
     height: 100%;
 }
 
+/*GROUP PICTURE TEXT*/
 #groupPhotoDescription {
-    width: 70%;
+    width: 975px;
     height: 80px;
     background-color: #e3dfdb;
     margin: 0 auto;
     padding: 10px;
 }
 
+/*BIOGRAPHY LAYOUT 1*/
 .bioLayout1 {
     display: grid;
     grid-template-areas:
         "picture empty bio";
     grid-template-columns: 31% 2% 67%;
     height: 50vh;
-    width: 70%;
+    width: 975px;
     margin: 20px auto 0 auto;
     background-color: white;
 }
 
+/*BIOGRAPHY LAYOUT 2*/
 .bioLayout2 {
     display: grid;
     grid-template-areas:
         "bio empty picture";
     grid-template-columns: 67% 2% 31%;
     height: 50vh;
-    width: 70%;
+    width: 975px;
     margin: 20px auto 0 auto;
     background-color: white;
 }
 
+/*BIOGRAPHY PICTURE CONTAINER*/
 .picture {
     grid-area: picture;
     background-color: #e3dfdb;
 }
 
+/*BIOGRAPHY PICTURE*/
 .picture img {
     width: 100%;
     height: 100%;
 }
 
+/*BIOGRAPHY TEXT*/
 .bio {
     grid-area: bio;
     background-color: #e3dfdb;
@@ -133,7 +152,153 @@
     line-height: 22px;
 }
 
+/*BACK TO TOP BUTTON*/
 #backToTop {
     height: 75px;
     background-color: white;
+}
+
+/*HIDDEN*/
+.hidden {
+    display: none;
+}
+
+/*TABLET LAYOUT*/
+@media only screen and (min-width: 651px) and (max-width: 1000px) {
+
+    /*TABLET LAYOUT GROUP PICTURE CONTAINER*/
+    #groupPhoto {
+        width: 90%;
+        height: 40vh;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    /*TABLET LAYOUT GROUP PICTURE TEXT*/
+    #groupPhotoDescription {
+        width: 90%;
+        height: 85px;
+        background-color: #e3dfdb;
+        margin: 0 auto;
+        padding: 10px;
+        font-size: 10pt;
+    }
+
+    /*TABLET LAYOUT BIOGRAPHY LAYOUT 1*/
+    .bioLayout1 {
+        display: grid;
+        grid-template-areas:
+            "picture empty bio";
+        grid-template-columns: 35% 2% 63%;
+        height: 55vh;
+        width: 90%;
+        margin: 20px auto 0 auto;
+        background-color: white;
+    }
+
+    /*TABLET LAYOUT BIOGRAPHY LAYOUT 2*/
+    .bioLayout2 {
+        display: grid;
+        grid-template-areas:
+            "bio empty picture";
+        grid-template-columns: 63% 2% 35%;
+        height: 55vh;
+        width: 90%;
+        margin: 20px auto 0 auto;
+        background-color: white;
+    }
+
+    /*TABLET LAYOUT BIOGRAPHY CONTAINER*/
+    .bio {
+        font-size: 10pt;
+        padding: 20px;
+        line-height: 20px;
+    }
+
+    /*TABLET LAYOUT BIOGRAPHY PICTURES*/
+    .picture {
+        grid-area: picture;
+        background-color: #e3dfdb;
+    }
+
+}
+
+/*MOBILE LAYOUT*/
+@media only screen and (min-width: 400px) and (max-width: 650px) {
+
+    /*MOBILE LAYOUT WELCOME TEXT*/
+    .aboutUsPageWrapper #welcomeText {
+        height: 5vh;
+        margin-top: 20px;
+        font-size: 20pt;
+        letter-spacing: 5px;
+    }
+
+    /*MOBILE LAYOUT OUR STORY TEXT*/
+    #aboutUsPageDescription {
+        height: 80vh;
+        width: 360px;
+        margin: 20px auto 25px auto;
+        line-height: 25px;
+        font-size: 10pt;
+    }
+
+    /*MOBILE LAYOUT GROUP PICTURE CONTAINER*/
+    #groupPhoto {
+        width: 90%;
+        height: 40vh;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    /*MOBILE LAYOUT GROUP PICTURE TEXT*/
+    #groupPhotoDescription {
+        width: 90%;
+        height: 100px;
+        background-color: #e3dfdb;
+        margin: 0 auto;
+        padding: 10px;
+        font-size: 10pt;
+    }
+
+    /*MOBILE LAYOUT BIOGRAPHY LAYOUT 1*/
+    .bioLayout1 {
+        display: grid;
+        grid-template-areas:
+            "picture empty bio";
+        grid-template-columns: 100% 0 0;
+        height: 65vh;
+        width: 375px;
+        margin: 20px auto 5px auto;
+        background-color: white;
+    }
+
+    /*MOBILE LAYOUT BIOGRAPHY LAYOUT 2*/
+    .bioLayout2 {
+        display: grid;
+        grid-template-areas:
+            "bio empty picture";
+        grid-template-columns: 0 0 100%;
+        height: 65vh;
+        width: 375px;
+        margin: 20px auto 5px auto;
+        background-color: white;
+    }
+
+    /*MOBILE LAYOUT BIOGRAPHY PICTURES CONTAINER*/
+    .picture {
+        grid-area: picture;
+        background-color: #e3dfdb;
+    }
+
+    /*MOBILE LAYOUT BIOGRAPHY CONTAINERS*/
+    .bio {
+        display: none;
+    }
+
+    /*MOBILE LAYOUT HIDDEN*/
+    .hidden {
+        display: block;
+    }
+
 }

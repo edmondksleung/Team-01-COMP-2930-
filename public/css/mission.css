@@ -1,8 +1,10 @@
+/*MISSION PAGE CONTAINER*/
 .missionPageWrapper {
     display: none;
     background-color: rgb(25, 76, 85);
 }
 
+/*HEADING*/
 #missionHeading {
     text-align: center;
     padding-top: 22px;
@@ -12,11 +14,13 @@
     margin-bottom: 200px;
 }
 
+/*HEADING PARAGRAPH*/
 #missionHeading p {
     font-size: 12pt;
     letter-spacing: 1px;
 }
 
+/*EVOLUNTEER HEADING*/
 #missionSubHeading {
     text-align: center;
     font-size: 15pt;
@@ -25,15 +29,18 @@
     color: white;
 }
 
+/*EVOLUNTEER PARAGRAPH MESSAGE*/
 #missionSubHeading p {
     font-size: 12pt;
     letter-spacing: 1px;
 }
 
+/*ECO SPAN*/
 .eco {
     color: rgb(118, 228, 85);
 }
 
+/*THREE PICTURES CONTAINER*/
 #threePictures {
     display: grid;
     height: 30vh;
@@ -48,71 +55,85 @@
     color: white;
 }
 
+/*LEFT PICTURE CONTAINER*/
 #leftPicture {
     grid-area: leftPicture;
     width: auto;
     margin: 0 auto;
 }
 
+/*LEFT PICTURE*/
 #leftPicture img {
     height: 200px;
     width: 200px;
 }
 
+/*LEFT PICTURE TEXT*/
 #leftText {
     grid-area: leftText;
 }
 
+/*MIDDLE PICTURE CONTAINER*/
 #middlePicture {
     grid-area: middlePicture;
     width: auto;
     margin: 0 auto;
 }
 
+/*LEFT PICTURE*/
 #middlePicture img {
     height: 200px;
     width: 200px;
 }
 
+/*LEFT PICTURE TEXT*/
 #middleText {
     grid-area: middleText;
 }
 
+/*RIGHT PICTURE CONTAINER*/
 #rightPicture {
     grid-area: rightPicture;
     width: auto;
     margin: auto auto 20px auto;
 }
 
+/*RIGHT PICTURE*/
 #rightPicture img {
     height: 100px;
     width: 300px;
 }
 
+/*RIGHT PICTURE TEXT*/
 #rightText {
     grid-area: rightText;
 }
 
+/*INFO PICTURE TEXT 1*/
 #infoPicDesc1 {
     color: white;
     margin-left: 250px;
 }
 
+/*INFO PICTURE TEXT 2*/
 #infoPicDesc2 {
     color: white;
     margin-left: 270px;
 }
 
+/*INFO PICTURE TEXT 3*/
 #infoPicDesc3 {
     color: white;
     margin-left: 280px;
 }
 
+/*INFO PICTURE TEXT*/
 .infoPicDesc {
     margin-top: 20px;
     display: inline-block;
 }
 
+/*INFORMATION CONTAINER*/
 #infomatics {
     margin: 20px auto;
     width: 600px;
@@ -125,29 +146,34 @@
     margin-top: 140px;
 }
 
+/*INFO PICTURES CONTAINER*/
 .box {
     background-color: rgb(25, 76, 85);
     color: #fff;
     font-size: 20px;
 }
 
+/*INFO PICTURES 1*/
 #infomatic1 {
     font-size: 65px;
     color: rgb(255, 72, 0);
 }
 
+/*INFO PICTURES 2*/
 #infomatic2 {
     font-size: 65px;
     color: rgb(30, 255, 0);
 
 }
 
+/*INFO PICTURES 3*/
 #infomatic3 {
     font-size: 65px;
     color: rgb(0, 255, 255);
 
 }
 
+/*INFO PICTURES 4*/
 #infomatic4 {
     font-size: 65px;
     color: rgb(248, 109, 45);
@@ -157,7 +183,7 @@
 /*MOBILE LAYOUT*/
 @media only screen and (max-width: 700px) {
 
-    /*MIDDLE THREE PICTURES*/
+    /*MOBILE MIDDLE THREE PICTURES*/
     #threePictures {
         grid-template-areas:
             "leftPicture"
@@ -171,17 +197,21 @@
         height: auto;
     }
 
+    /*MOBILE INFORMATION CONTAINER*/
     #infomatics {
+        width: 100%;
         grid-template-columns: 100%;
-        grid-template-rows: 200px 200px 200px 200px;   
+        grid-template-rows: 200px 200px 200px 200px;
         margin-top: 30px;
-
+        justify-items: center;
     }
 
+    /* MOBILE INFO PICTURES CONTAINER*/
     .box {
         display: grid;
         align-items: center;
         justify-items: center;
-        grid-auto-rows: 90px 20px
+        grid-auto-rows: 90px 20px;
+
     }
 }

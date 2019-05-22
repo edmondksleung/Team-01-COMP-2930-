@@ -1,17 +1,22 @@
+/*CONTACT US CONTAINER*/
 .contactUsWrapper {
     display: none;
-    color: white;   
+    color: white;
     text-align: center;
 }
+
+/*CONTACT LABELS*/
 span.contactSpan {
     letter-spacing: 3px;
     font-size: 15pt;
     font-weight: bold;
 }
 
+/*MAIN PICTURE*/
 #contactUsPagePicture {
     height: 35vh;
     width: 55%;
+    min-width: 800px;
     margin: 80px auto 0 auto;
     background-image: url("https://cdn-images-1.medium.com/max/1600/1*rcR5fPxpf3Vj2GkLBjHJ6Q.gif");
     background-repeat: no-repeat;
@@ -22,15 +27,18 @@ span.contactSpan {
     padding-top: 75px;
 }
 
+/*COMPANY NAME*/
 .companyName {
     font-size: 15pt;
     letter-spacing: 3px;
 }
 
+/*COMPANY NAME LETTER E*/
 .companyName span {
     color: rgb(118, 228, 85);
 }
 
+/*TRANSPARENT BANNER*/
 #opaqueCover {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.288);
@@ -38,47 +46,56 @@ span.contactSpan {
     padding-top: 30px;
 }
 
+/*BOTTOM CONTENT CONTAINER*/
 #contactUsPageContent {
     display: grid;
     height: 45vh;
     grid-template-areas:
         "empty phone chat email empty2"
         "emtpy phoneText chatText emailText empty2";
-    grid-template-columns: 15% 23.3% 23.4% 23.3% 15%;
+    grid-template-columns: auto 200px 200px 200px auto;
     grid-template-rows: 150px auto;
+    grid-column-gap: 120px;
     padding-top: 40px;
 }
 
+/*PHONE IMAGE CONTAINER*/
 #phone {
     grid-area: phone;
     width: auto;
     margin: 0 auto;
 }
 
+/*PHONE IMAGE*/
 #phone img {
     width: 125px;
     height: 125px;
 }
 
+/*PHONE TEXT*/
 #phoneText {
     grid-area: phoneText;
 }
 
+/*CHAT IMAGE CONTAINER*/
 #chat {
     grid-area: chat;
     width: auto;
     margin: 0 auto;
 }
 
+/*CHAT IMAGE*/
 #chat img {
     width: 125px;
     height: 125px;
 }
 
+/*CHAT TEXT*/
 #chatText {
     grid-area: chatText;
 }
 
+/*CHAT BUTTON*/
 #chatButton {
     width: 100px;
     height: 30px;
@@ -91,6 +108,7 @@ span.contactSpan {
     font-weight: bold;
 }
 
+/*CHAT BUTTON HOVER EFFECT*/
 #chatButton:hover {
     width: 120px;
     height: 32px;
@@ -103,17 +121,148 @@ span.contactSpan {
     vertical-align: middle;
 }
 
+/*EMAIL IMAGE CONTAINER*/
 .contactUsWrapper #email {
     grid-area: email;
     width: auto;
     margin: 0 auto;
 }
 
+/*EMAIL IMAGE*/
 #email img {
     width: 125px;
     height: 125px;
 }
 
+/*EMAIL TEXT*/
 #emailText {
     grid-area: emailText;
+}
+
+
+/*DESKTOP LAYOUT*/
+@media only screen and (min-width: 801px) and (max-width: 1080px) {
+
+    /*DESKTOP LAYOUT BOTTOM CONTENT CONTAINER*/
+    #contactUsPageContent {
+        display: grid;
+        height: 45vh;
+        grid-template-areas:
+            "phone chat email"
+            "phoneText chatText emailText";
+        grid-template-columns: 40% 20% 40%;
+        grid-template-rows: 150px auto;
+        grid-column-gap: 0px;
+        padding-top: 40px;
+    }
+
+}
+
+/*TABLET LAYOUT*/
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+
+    /*TABLET LAYOUT CONTACT US PICTURE*/
+    #contactUsPagePicture {
+        height: 35vh;
+        width: 100%;
+        min-width: 10px;
+        margin: 80px auto 0 auto;
+        background-image: url("https://cdn-images-1.medium.com/max/1600/1*rcR5fPxpf3Vj2GkLBjHJ6Q.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        font-size: 30pt;
+        letter-spacing: 5px;
+        padding-top: 75px;
+    }
+
+    /*TABLET LAYOUT BOTTOM CONTENT CONTAINER*/
+    #contactUsPageContent {
+        display: grid;
+        height: 45vh;
+        grid-template-areas:
+            "phone chat email"
+            "phoneText chatText emailText";
+        grid-template-columns: 40% 20% 40%;
+        grid-template-rows: 150px auto;
+        grid-column-gap: 0px;
+        padding-top: 40px;
+    }
+}
+
+/*MOBILE LAYOUT*/
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+
+    /*MOBILE LAYOUT CONTACT US PICTURE*/
+    #contactUsPagePicture {
+        height: 35vh;
+        width: 100%;
+        min-width: 10px;
+        margin: 80px auto 20px auto;
+        background-image: url("https://cdn-images-1.medium.com/max/1600/1*rcR5fPxpf3Vj2GkLBjHJ6Q.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        font-size: 30pt;
+        letter-spacing: 5px;
+        padding-top: 75px;
+    }
+
+    /*MOBILE LAYOUT BOTTOM CONTENT CONTAINER*/
+    #contactUsPageContent {
+        display: grid;
+        height: 45vh;
+        grid-template-areas:
+            "phone chat email"
+            "phoneText chatText emailText";
+        grid-template-columns: 40% 20% 40%;
+        grid-template-rows: 125px auto;
+        grid-column-gap: 0px;
+        padding-top: 40px;
+    }
+
+    /*MOBILE LAYOUT CONTACT METHOD TEXT SPAN*/
+    span.contactSpan {
+        letter-spacing: 2px;
+        font-size: 11pt;
+        font-weight: bold;
+    }
+
+    /*MOBILE LAYOUT PHONE PICTURE*/
+    #phone img {
+        width: 75px;
+        height: 75px;
+    }
+
+    /*MOBILE LAYOUT PHONE TEXT*/
+    #phoneText {
+        font-size: 10pt;
+    }
+
+    /*MOBILE LAYOUT CHAT PICTURE*/
+    #chat img {
+        width: 75px;
+        height: 75px;
+    }
+
+    /*MOBILE LAYOUT EMAIL PICTURE*/
+    #email img {
+        width: 75px;
+        height: 75px;
+    }
+
+    /*CHAT BUTTON HOVER EFFECT*/
+    #chatButton:hover {
+        width: 100px;
+        height: 30px;
+        border: 2px solid rgb(255, 204, 0);
+        color: rgb(255, 204, 0);
+        cursor: pointer;
+        letter-spacing: 1px;
+        font-size: 12pt;
+        line-height: 24px;
+        vertical-align: middle;
+    }
+
+
 }

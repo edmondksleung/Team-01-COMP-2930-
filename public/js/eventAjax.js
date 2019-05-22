@@ -4,20 +4,17 @@ $(document).ready(function () {
         e.preventDefault();
         // resetting DOM element in the page
         $('.allEventsBox').empty();
-        // $('.eventsInfoBox').empty();
 
         // Grabbing clicked name attribute
         let city = $(this).attr('name');
-        let locationName = $('.eventsLocation');
+        let locationName = $('.eventsLocationOpaqueCover');
         $(locationName).text(city);
-        console.log(city);
-        // console.log(city);
 
         /* close detail button */
         $(document).on("click", ".closeDetailsButton", function () {
             $(".eventsBox").show();
             $(".eventsInfoBox").hide();
-            $(".eventsLocation").show(); /*key null*/
+            $(".eventsLocationOpaqueCover").show(); /*key null*/
         })
 
         // Creating DOM elements and fetching information from firebase
@@ -26,18 +23,15 @@ $(document).ready(function () {
             url: `https://evolunteer-45c5d.firebaseio.com/events/${city}.json`,
             dataType: 'json',
             success: function (data) {
-                
+
                 let keys = Object.keys(data);
-                console.log("whats this " + keys);
-                // console.log(keys);
-                // let idkey = $(".readMoreButton").attr("id");
-                // console.log(idkey);
+                // console.log("whats this " + keys);
+
                 // Creating a list of events from firebase
                 for (let i = 0; i < keys.length; i++) {
                     // Putting value into dom element
                     let k = keys[i];
-                    
-                    // console.log(k);
+
                     ////////// Creating event box using dom elements /////////
                     let allEventsBox = $('.allEventsBox');
                     let eventsBox = document.createElement('div');
@@ -66,24 +60,15 @@ $(document).ready(function () {
                     readMoreBox.setAttribute('class', 'readMoreBox');
                     eventPicBox.append(readMoreBox);
 
-                    // let eventPic = document.createElement('img');
-                    // eventPic.setAttribute('class', 'eventPic');
-                    // eventPic.setAttribute('src', data[k].imgurl);
-                    // eventPicBox.append(eventPic);
-                    // console.log(data[k].imgurl);
-
                     let emptyDiv = document.createElement('div');
                     readMoreBox.append(emptyDiv);
 
                     let readMoreButton = document.createElement('button');
                     readMoreButton.setAttribute('class', 'readMoreButton');
                     readMoreBox.append(readMoreButton);
-                    $(".readMoreButton").text("info");
+                    $(".readMoreButton").text("More Info");
 
                     /* create DETAILED event from firebase */
-
-                    // let eventsInfoBox = $(".eventsInfoBox");
-
                     let eventsInfoBox = document.createElement("div");
                     $(eventsInfoBox).attr("class", "eventsInfoBox");
                     $(".allEventsBox").append(eventsInfoBox);
@@ -104,9 +89,9 @@ $(document).ready(function () {
 
                     let eventInfoPic = document.createElement("img");
                     $(eventInfoPic).attr("class", "eventInfoPic");
-                    $(eventInfoPic).attr("src", "Images/planting.jpeg");
                     $(eventInfoPic).attr("alt", "eventImage");
                     $(detailsTopBox).append(eventInfoPic);
+                    $(eventInfoPic).attr("src", `${data[k].imgurl}`);
 
                     let eventInfoTitle = document.createElement("div");
                     $(eventInfoTitle).attr("class", "eventInfoTitle");
@@ -121,7 +106,6 @@ $(document).ready(function () {
                     $(specialInfoBox).append(locationInfoBox);
 
                     /* location */
-
                     let locationPic = document.createElement("img");
                     $(locationPic).attr("class", "locationPic");
                     $(locationPic).attr("src", "./Images/location.png");
@@ -133,7 +117,6 @@ $(document).ready(function () {
                     $(locationInfoBox).append(locationInfo);
 
                     /* date */
-
                     let dateTimeInfoBox = document.createElement("div");
                     $(dateTimeInfoBox).attr("class", "dateTimeInfoBox");
                     $(specialInfoBox).append(dateTimeInfoBox);
@@ -159,7 +142,6 @@ $(document).ready(function () {
                     $(dateTime).append(timeInfo);
 
                     /* organizer info box */
-
                     let organizerInfoBox = document.createElement("div");
                     $(organizerInfoBox).attr("class", "organizerInfoBox");
                     $(specialInfoBox).append(organizerInfoBox);
@@ -175,7 +157,6 @@ $(document).ready(function () {
                     $(organizerInfoBox).append(organizerInfo);
 
                     /* email */
-
                     let emailInfoBox = document.createElement("div");
                     $(emailInfoBox).attr("class", "emailInfoBox");
                     $(specialInfoBox).append(emailInfoBox);
@@ -191,7 +172,6 @@ $(document).ready(function () {
                     $(emailInfoBox).append(emailInfo);
 
                     /* people count */
-
                     let peopleCountBox = document.createElement("div");
                     $(peopleCountBox).attr("class", "peopleCountBox");
                     $(specialInfoBox).append(peopleCountBox);
@@ -204,10 +184,10 @@ $(document).ready(function () {
 
                     let count = document.createElement("div");
                     $(count).attr("class", "count");
+                    $(count).attr("id", k);
                     $(peopleCountBox).append(count);
 
                     /* credits box */
-
                     let creditsBox = document.createElement("div");
                     $(creditsBox).attr("class", "creditsBox");
                     $(specialInfoBox).append(creditsBox);
@@ -228,7 +208,6 @@ $(document).ready(function () {
                     $(creditsBox).append(detailHours);
 
                     /* description */
-
                     let infoDescriptionBox = document.createElement("div");
                     $(infoDescriptionBox).attr("class", "infoDescriptionBox");
                     $(eventsInfoBox).append(infoDescriptionBox);
@@ -238,13 +217,10 @@ $(document).ready(function () {
                     $(infoDescriptionBox).append(desc);
 
                     /* footer */
-                    /* join button */
-
                     let footer = document.createElement("footer");
                     $(eventsInfoBox).append(footer);
 
                     /* join button */
-
                     let joinEventButtonBox = document.createElement("div");
                     $(joinEventButtonBox).attr("class", "joinEventButtonBox");
                     $(footer).append(joinEventButtonBox);
@@ -255,20 +231,15 @@ $(document).ready(function () {
                     $(joinEventButtonBox).append(joinEventButton);
 
                     /**** returns string of the object key and adds the string to an id ****/
-
                     let objStr = JSON.stringify(k);
-                    // console.log(objStr)
+
                     // regex to replace double quotes with nothing
-                    replaceQuotes = objStr.replace(/\"/g, "");
-                    // console.log(x);
-                    $(readMoreButton).attr("id", replaceQuotes);
-                    $(eventsBox).attr("id", replaceQuotes);
-                    $(eventsInfoBox).attr("id", replaceQuotes);
-
-
+                    noQuotations = objStr.replace(/\"/g, "");
+                    $(readMoreButton).attr("id", noQuotations);
+                    $(eventsBox).attr("id", noQuotations);
+                    $(eventsInfoBox).attr("id", noQuotations);
 
                     // preview box 
-
                     let previewBox = document.createElement('div');
                     previewBox.setAttribute('class', 'previewBox');
                     eventsBox.append(previewBox);
@@ -300,40 +271,39 @@ $(document).ready(function () {
 
                     let peopleCount = document.createElement('p');
                     peopleCount.setAttribute('class', 'peopleCount');
+                    $(peopleCount).attr("id", k);
                     peopleBox.append(peopleCount);
 
-
-                    
-
-
                     // Fetching month and day from date format YYYY-MM-DD
-                    
                     let tempDate = data[k].date.split("-");
-                    let dateStr = tempDate[1] +"-" + tempDate[2] +"-"+ tempDate[0];
+                    let dateStr = tempDate[1] + "-" + tempDate[2] + "-" + tempDate[0];
                     let dateObj = new Date(dateStr);
-                    let monthString = dateObj.toLocaleString("en-us", {month: "short"});
-                    let dayInt = dateObj.toLocaleString("en-us", {day: "2-digit"});
+                    let monthString = dateObj.toLocaleString("en-us", {
+                        month: "short"
+                    });
+                    let dayInt = dateObj.toLocaleString("en-us", {
+                        day: "2-digit"
+                    });
 
                     // Time credit calculation from start time to end time
                     let startTime = toHours(data[k].startTime);
                     let endTime = toHours(data[k].endTime);
-                    let timeCred = new Number(endTime - startTime).toFixed(1);
-
+                    var timeCred = new Number(endTime - startTime).toFixed(1);
 
                     // Putting value into dom element
-                    $(eventMessage).text(data[k].subject);
+                    $(eventMessage).text(data[k].eventName);
                     $(month).text(monthString);
                     $(day).text(dayInt);
-                    
-                    // Putting key into dom element
-                    //$(month).text(monthString);
-                    //$(day).text(dayInt);
-                    $(eventMessage).text(data[k].subject);
-                    $(peopleCount).text(data[k].userCount);
-                    $(creditNum).text(timeCred);
-                    
+                    $(dateInfo).text(monthString);
+                    $(timeInfo).text(dayInt);
+                    $(eventInfoTitle).text(data[k].eventName);
 
-                    function toHours(timeStr1){
+                    // Putting key into dom element
+                    $(eventMessage).text(data[k].eventName);
+                    $(creditNum).text(timeCred);
+                    $(".detailCredits").text(timeCred);
+
+                    function toHours(timeStr1) {
                         let hr = timeStr1.substr(0, timeStr1.indexOf(":"));
                         let min = timeStr1.substr(timeStr1.indexOf(":") + 1, timeStr1.length);
                         hr = parseInt(hr);
@@ -343,34 +313,62 @@ $(document).ready(function () {
                         return time;
                     }
 
-
+                    // Counts the number of unique keys under usersJoined on firebase and sets it to the web DOM
+                    let countChildRef = firebase.database().ref('events/' + city + '/' + k + '/usersJoined/');
+                    console.log(city + k);
+                    countChildRef.on("value", function (snapshot) {
+                        let numOfParticipants = snapshot.numChildren();
+                        console.log(numOfParticipants);
+                        $(`.peopleCount#${k}`).text(numOfParticipants);
+                        $(`.count#${k}`).text(numOfParticipants);
+                        // console.log(k);
+                    });
                 }
             }
         });
     });
+    // Button on click and displays the detailed information onto web DOM
     $(document).on("click", ".readMoreButton", function (e) {
         e.preventDefault();
         let key = $(this).attr("id");
-        let city2 = $(".eventsLocation").text();
-        console.log(city2);
-        // debugger;
-        // console.log(key);
+        let city = $(".eventsLocationOpaqueCover").text();
         $.ajax({
             type: 'GET',
-            url: `https://evolunteer-45c5d.firebaseio.com/events/${city2}/${key}.json`,
+            url: `https://evolunteer-45c5d.firebaseio.com/events/${city}/${key}.json`,
             dataType: 'json',
             success: function (data) {
                 // adds data from firebase onto event details
-                console.log(data);
                 $(`.eventsBox`).hide();
                 $(`.eventsInfoBox#${key}`).show();
                 $(`.eventsLocation`).hide(); /*key null*/
                 $(".locationInfo").text(data.address);
                 $(".organizerInfo").text(data.organization);
                 $(".emailInfo").text(data.email);
-                $(".infoDescriptionBox").text(data.subject);
+                $(".infoDescriptionBox").text(data.content);
+                // console.log(str);
             }
+        });
+
+        // On join event button, event writes to database 
+        $(document).on("click", ".joinEventButton", function (e) {
+            e.preventDefault();
+
+            let user = firebase.auth().currentUser;
+            let userID = user.uid;
+
+            let a = firebase.database().ref(`users/${userID}`);
+            let b = firebase.database().ref('events/' + city + '/' + key + '/usersJoined/');
+
+            if (user) {
+                a.on("value", function (snapshot) {
+                    //sets snapshot of current user info in new node under event
+                    b.child(`${userID}`).set(snapshot.val());
+                });
+            } else {
+                console.log("Setting of user info under event unsuccessful.")
+            }
+
+
         });
     });
 });
-
