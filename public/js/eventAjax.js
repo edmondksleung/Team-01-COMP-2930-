@@ -89,7 +89,6 @@ $(document).ready(function () {
 
                     let eventInfoPic = document.createElement("img");
                     $(eventInfoPic).attr("class", "eventInfoPic");
-                    // $(eventInfoPic).attr("src", "Images/planting.jpeg");
                     $(eventInfoPic).attr("alt", "eventImage");
                     $(detailsTopBox).append(eventInfoPic);
                     $(eventInfoPic).attr("src", `${data[k].imgurl}`);
