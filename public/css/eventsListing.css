@@ -23,6 +23,18 @@
 
 }
 
+    /*EVENT INFO PAGE*/
+    .eventsInfoBox {
+        grid-area: same;
+        display: none;
+        width: 550px;
+        height: auto;
+        border: 1px solid rgb(100, 100, 100);
+        border-radius: 2px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
 /*INDIVIDUAL EVENTS CONTAINER*/
 .eventsBox {
     width: 500px;
@@ -38,77 +50,6 @@
     border-left: 10px solid #2f9e3a;
 }
 
-<<<<<<< HEAD
-/*MENU CONTAINER*/
-.menuButton {
-    width: 50px;
-    height: 50px;
-    border: none;
-    background: none;
-    filter: invert(1);
-    margin: 15px;
-}
-
-/*MENU IMAGE*/
-.menuPic {
-    width: 40px;
-    height: 40px;
-}
-
-/*MENU IMAGE HOVER*/
-.menuPic:hover {
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-}
-
-/*DROP DOWN MENU CONTAINER*/
-.dropDownBox {
-    display: none;
-}
-
-/*DROP DOWN MENU*/
-.dropDown {
-    width: 100%;
-    z-index: 2;
-    position: absolute;
-    display: none;
-    border-bottom: 2px solid rgb(194, 193, 193);
-}
-
-/*DROP DOWN BUTTONS*/
-.dropButtons {
-    display: block;
-    width: 100%;
-    height: 60px;
-    font-size: 20pt;
-    border: none;
-    font-weight: bold;
-    color: white;
-    background: rgb(33, 49, 92);
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
-/*DROP DOWN BUTTONS HOVER*/
-.dropButtons:hover {
-    background: #3498db !important;
-    cursor: pointer;
-}
-
-   /*EVENT INFO PAGE*/
-   .eventsInfoBox {
-    grid-area: same;
-    display: none;
-    width: 550px;
-    height: auto;
-    border: 1px solid rgb(100, 100, 100);
-    border-radius: 2px;
-    margin-top: 20px;
-    margin-bottom: 50px;
-}
-
-=======
->>>>>>> 03b649a5a8a42d1748e2ee6ae4a0256f61eaf5ac
 /*EVENT PAGE LOCATION TEXT*/
 .eventsLocation {
     width: 100%;
