@@ -303,7 +303,7 @@ $(document).ready(function () {
                     $(eventMessage).text(data[k].eventName);
                     $(creditNum).text(timeCred);
 
-                    
+
                     // Counts the number of unique keys under usersJoined on firebase and sets it to the web DOM
                     let countChildRef = firebase.database().ref('events/' + city + '/' + k + '/usersJoined/');
                     console.log(city + k);
