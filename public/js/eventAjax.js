@@ -7,14 +7,14 @@ $(document).ready(function () {
 
         // Grabbing clicked name attribute
         let city = $(this).attr('name');
-        let locationName = $('.eventsLocation');
+        let locationName = $('.eventsLocationOpaqueCover');
         $(locationName).text(city);
 
         /* close detail button */
         $(document).on("click", ".closeDetailsButton", function () {
             $(".eventsBox").show();
             $(".eventsInfoBox").hide();
-            $(".eventsLocation").show(); /*key null*/
+            $(".eventsLocationOpaqueCover").show(); /*key null*/
         })
 
         // Creating DOM elements and fetching information from firebase
@@ -330,7 +330,7 @@ $(document).ready(function () {
     $(document).on("click", ".readMoreButton", function (e) {
         e.preventDefault();
         let key = $(this).attr("id");
-        let city = $(".eventsLocation").text();
+        let city = $(".eventsLocationOpaqueCover").text();
         $.ajax({
             type: 'GET',
             url: `https://evolunteer-45c5d.firebaseio.com/events/${city}/${key}.json`,
@@ -339,7 +339,7 @@ $(document).ready(function () {
                 // adds data from firebase onto event details
                 $(`.eventsBox`).hide();
                 $(`.eventsInfoBox#${key}`).show();
-                $(`.eventsLocation`).hide(); /*key null*/
+                $(`.eventsLocationOpaqueCover`).hide(); /*key null*/
                 $(".locationInfo").text(data.address);
                 $(".organizerInfo").text(data.organization);
                 $(".emailInfo").text(data.email);

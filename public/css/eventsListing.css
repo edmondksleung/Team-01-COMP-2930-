@@ -98,8 +98,19 @@
     align-items: center;
     justify-items: center;
     letter-spacing: 10pt;
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/a0/FuturebigToronto.jpg);
+    background-image: url("../Images/vancouver.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.eventsLocationOpaqueCover {
+    width: 100%;
+    height: 200px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.247);
+    text-align: center;
+    line-height: 200px;
+    vertical-align: middle;
 }
 
 /*ALL INDIVIDUAL EVENTS*/
