@@ -215,8 +215,26 @@ textarea:focus {
     letter-spacing: 1px;
 }
 
+/*RESET BUTTON*/
+#reset {
+    width: 50px;
+    height: 25px;
+    margin-top: 10px;
+    background-color: rgb(241, 241, 241);
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+
 /*POST BUTTON HOVER*/
 #submit:hover {
+    cursor: pointer;
+    background-color: #260E63;
+    color: white;
+}
+
+/*RESET BUTTON HOVER*/
+#reset:hover {
     cursor: pointer;
     background-color: #260E63;
     color: white;
