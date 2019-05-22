@@ -98,6 +98,12 @@
     display: none;
 }
 
+
+/*NO OUTLINE*/
+* {
+    outline: none;
+}
+
 /*
 .dropDown {
     display: none;
@@ -122,6 +128,4 @@
     * {
         outline: none;
     }
-
-
 }

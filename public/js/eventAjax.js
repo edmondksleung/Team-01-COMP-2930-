@@ -309,7 +309,6 @@ $(document).ready(function () {
                         hr = parseInt(hr);
                         min = parseInt(min);
                         let time = hr + (min / 60);
-
                         return time;
                     }
 
@@ -340,14 +339,32 @@ $(document).ready(function () {
                 // adds data from firebase onto event details
                 $(`.eventsBox`).hide();
                 $(`.eventsInfoBox#${key}`).show();
-                $(`.eventsLocation`).hide(); /*key null*/
+                // $(`.eventsLocation`).hide(); /*key null*/
                 $(".locationInfo").text(data.address);
                 $(".organizerInfo").text(data.organization);
                 $(".emailInfo").text(data.email);
                 $(".infoDescriptionBox").text(data.content);
                 // console.log(str);
+
             }
         });
+        $.ajax({
+            type: 'GET',
+            url: `https://evolunteer-45c5d.firebaseio.com/events/${city}/${key}/usersJoined.json`,
+            dataType: 'json',
+            success: function(data){
+                let x = Object.keys(data);
+                let currentUser = firebase.auth().currentUser.uid
+                if( x == currentUser){
+                    console.log("yes");
+                }
+                // console.log(x);
+
+            }
+        })
+
+        // Used to check if user has already joined event
+        
 
         // On join event button, event writes to database 
         $(document).on("click", ".joinEventButton", function (e) {
