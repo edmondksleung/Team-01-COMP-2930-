@@ -301,17 +301,8 @@ $(document).ready(function () {
                     // Putting key into dom element
                     $(eventMessage).text(data[k].eventName);
                     $(creditNum).text(timeCred);
-                    $(".detailCredits").text(timeCred);
 
-                    function toHours(timeStr1) {
-                        let hr = timeStr1.substr(0, timeStr1.indexOf(":"));
-                        let min = timeStr1.substr(timeStr1.indexOf(":") + 1, timeStr1.length);
-                        hr = parseInt(hr);
-                        min = parseInt(min);
-                        let time = hr + (min / 60);
-                        return time;
-                    }
-
+                    
                     // Counts the number of unique keys under usersJoined on firebase and sets it to the web DOM
                     let countChildRef = firebase.database().ref('events/' + city + '/' + k + '/usersJoined/');
                     console.log(city + k);
@@ -336,6 +327,10 @@ $(document).ready(function () {
             url: `https://evolunteer-45c5d.firebaseio.com/events/${city}/${key}.json`,
             dataType: 'json',
             success: function (data) {
+                let startTime = toHours(data.startTime);
+                let endTime = toHours(data.endTime);
+                let timeCred = new Number(endTime - startTime).toFixed(1);
+
                 // adds data from firebase onto event details
                 $(`.eventsBox`).hide();
                 $(`.eventsInfoBox#${key}`).show();
@@ -344,6 +339,7 @@ $(document).ready(function () {
                 $(".organizerInfo").text(data.organization);
                 $(".emailInfo").text(data.email);
                 $(".infoDescriptionBox").text(data.content);
+                $(".detailCredits").text(timeCred);
                 // console.log(str);
 
             }
@@ -453,3 +449,12 @@ $(document).ready(function () {
         })
     });
 });
+
+function toHours(timeStr1) {
+    let hr = timeStr1.substr(0, timeStr1.indexOf(":"));
+    let min = timeStr1.substr(timeStr1.indexOf(":") + 1, timeStr1.length);
+    hr = parseInt(hr);
+    min = parseInt(min);
+    let time = hr + (min / 60);
+    return time;
+}
