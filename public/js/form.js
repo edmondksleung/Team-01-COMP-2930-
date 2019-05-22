@@ -100,8 +100,8 @@ function handleFileUploadChange(event) {
 
 // Uploading Image to the storage
 async function handleFileUploadSubmit(eventName, organization, email, address, content, city, date, timeStamp, startTime, endTime) {
-	
-	let	uploadTask = storageRef.child(`eventImages/${selectedFile.name}`).put(selectedFile);
+
+	let uploadTask = storageRef.child(`eventImages/${selectedFile.name}`).put(selectedFile);
 	debugger
 	//create a child directory called images, and place the file inside this directory
 	uploadTask.on('state_changed', (snapshot) => {

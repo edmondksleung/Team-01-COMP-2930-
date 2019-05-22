@@ -61,4 +61,3 @@
             $(".aboutUsPageBtn").removeClass("activePage");
             $(".contactPageBtn").addClass("activePage");
         });
-    

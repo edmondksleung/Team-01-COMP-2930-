@@ -302,7 +302,7 @@ $(document).ready(function () {
                     $(eventMessage).text(data[k].eventName);
                     $(creditNum).text(timeCred);
                     $(".detailCredits").text(timeCred);
-                    
+
 
                     function toHours(timeStr1) {
                         let hr = timeStr1.substr(0, timeStr1.indexOf(":"));
@@ -414,23 +414,23 @@ $(document).ready(function () {
                             // b.child(`${userID}`).remove(snapshot.val());
                             $(`.joinEventButton#$${x[i]}`).text("Join Event");
                         });
-                        }
                     }
                 }
-                // for (let i = 0; i < x.length; i++) {
-                //     if (x[i] == userID) {
-                //         $(document).on("click", ".joinEventButton", function () {
-                //             firebase.database().ref('events/' + city + '/' + key + '/usersJoined/' + userID).remove();
-                //             $(".joinEventButton").text("Join Event");
-                //         });
+            }
+            // for (let i = 0; i < x.length; i++) {
+            //     if (x[i] == userID) {
+            //         $(document).on("click", ".joinEventButton", function () {
+            //             firebase.database().ref('events/' + city + '/' + key + '/usersJoined/' + userID).remove();
+            //             $(".joinEventButton").text("Join Event");
+            //         });
 
-                //     } else {
-                //         console.log("user unsuccessfully joined");
-                //     }
-                // };
+            //     } else {
+            //         console.log("user unsuccessfully joined");
+            //     }
+            // };
 
-    
+
+        })
+
     })
-
 })
-    })

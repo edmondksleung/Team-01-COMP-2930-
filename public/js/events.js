@@ -30,6 +30,6 @@ $(".logoutButton").click(function () {
 //JOIN BUTTON CHANGE TEXT TO UNJOIN EVENT ON CLICK-----------------------------------------------
 $(".joinEventButton").click(function () {
 
-    if (this.value=="JOIN") this.value = "Open Curtain";
+    if (this.value == "JOIN") this.value = "Open Curtain";
     else this.value = "Close Curtain";
 });
