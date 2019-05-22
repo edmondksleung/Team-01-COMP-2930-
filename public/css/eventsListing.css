@@ -176,7 +176,11 @@
 /*INFO BUTTON HOVER*/
 .readMoreButton:hover {
     cursor: pointer;
+<<<<<<< HEAD
+    background: #3498db;
+=======
     background:#2f9e3a;
+>>>>>>> 0c1fe1282a4a7dcdebafae71b7f15272f7986b6d
     color: white;
 }
 

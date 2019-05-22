@@ -1,28 +1,15 @@
+/*WECLOME PAGE CONTAINER*/
 .welcomePageWrapper {
     display: none;
     height: auto;
 }
 
+/*HIDDEN*/
 .hide {
     display: none;
 }
-/* width */
-/* ::-webkit-scrollbar {
-    width: 10px;
-  }
-   */
-   
-  /* Handle */
-  /* ::-webkit-scrollbar-thumb {
-    background: rgb(201, 199, 199); 
-    border-radius: 10px;
-  }
-   */
-  /* Handle on hover */
-  /* ::-webkit-scrollbar-thumb:hover {
-    background: rgb(119, 115, 115); 
-  } */
 
+/*PAGE TITLE*/
 #welcomePageTitle {
     height: 15vh;
     font-size: 30pt;
@@ -33,15 +20,18 @@
     padding-top: 25px;
 }
 
+/*TITLE SPAN E*/
 #welcomePageTitle span {
     color: rgb(118, 228, 85);
 }
 
+/*LOGO CONTAINER*/
 #welcomePageLogo {
     text-align: center;
     z-index: 2;
 }
 
+/*LOGO*/
 #welcomePageLogo img {
     z-index: 2;
     margin-top: -30px;
@@ -50,6 +40,7 @@
     height: 310px;
 }
 
+/*MOTTO MESSAGE*/
 #mottoStatement {
     height: 27vh;
     padding: 50px 25px 25px 25px;
@@ -59,10 +50,12 @@
     letter-spacing: 2px;
 }
 
+/*MOTTO SPAN E*/
 #mottoStatement span {
     color: rgb(118, 228, 85);
 }
 
+/*TO BOTTOM BUTTON CONTAINER*/
 #clickDownArea {
     height: 17vh;
     padding-top: 5px;
@@ -72,21 +65,25 @@
     letter-spacing: 2px;
 }
 
+/*TO BOTTOM TEXT*/
 #clickDownText {
     height: 50px;
     width: 250px;
     margin: auto;
 }
 
+/*BREAK POINT*/
 #breakPoint {
     height: 8px;
 }
 
+/*TO BOTTOM BUTTON IMAGE*/
 #clickDownButton img {
     width: 30px;
     height: 30px;
 }
 
+/*TO BOTTOM BUTTON IMAGE HOVER*/
 #clickDownButton img:hover {
     animation: wiggle 1s infinite;
     cursor: pointer;
@@ -94,6 +91,7 @@
     height: 34px;
 }
 
+/*CITIES CONTAINER*/
 #welcomePageCities {
     background-color: white;
     display: grid;
@@ -102,6 +100,7 @@
     grid-template-columns: 50% 50%;
 }
 
+/*CITIES*/
 .cities {
     width: auto;
     height: auto;
@@ -115,21 +114,22 @@
     letter-spacing: 10px;
 }
 
-
+/*CITIES HOVER*/
 .cities:hover {
     font-size: 25pt;
     letter-spacing: 15px;
     color: rgb(255, 204, 0);
 }
 
-/* width */
+/*WIDTH*/
 ::-webkit-scrollbar {
     background: transparent;
     width: 0;
   }
   
-   
+   /*MOBILE LAYOUT*/
   @media only screen and (max-width: 700px) {
+      /*MOBILE LAYOUT FOR CITIES*/
     #welcomePageCities {
         grid-template-columns: 100%;
         grid-template-areas: 
