@@ -98,14 +98,16 @@
     display: none;
 }
 
-/*
-.dropDown {
-    display: none;
+/*MOBILE LAYOUT*/
+@media only screen and (min-width: 751px) and (max-width: 850px) {
+
+    /*FULL NAVIGATION BAR*/
+    .navBar {
+        font-size: 10pt;
+    }
 }
 
-/*MOBILE LAYOUT*/
-@media only screen and (max-width: 700px) {
-
+@media only screen and (max-width: 750px) {
     /*FULL NAVIGATION BAR*/
     .navBar {
         display: none;
@@ -122,6 +124,4 @@
     * {
         outline: none;
     }
-
-
 }
