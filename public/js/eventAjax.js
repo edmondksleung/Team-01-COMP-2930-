@@ -302,7 +302,7 @@ $(document).ready(function () {
                     $(eventMessage).text(data[k].eventName);
                     $(creditNum).text(timeCred);
 
-                    
+
                     // Counts the number of unique keys under usersJoined on firebase and sets it to the web DOM
                     let countChildRef = firebase.database().ref('events/' + city + '/' + k + '/usersJoined/');
                     console.log(city + k);
@@ -344,112 +344,29 @@ $(document).ready(function () {
 
             }
         });
-        $.ajax({
-            type: 'GET',
-            url: `https://evolunteer-45c5d.firebaseio.com/events/${city}/${key}/usersJoined.json`,
-            dataType: 'json',
-            success: function (data) {
-                let user = firebase.auth().currentUser;
-                let userID = user.uid;
 
-                let a = firebase.database().ref(`users/${userID}`);
-                let b = firebase.database().ref('events/' + city + '/' + key + '/usersJoined/');
-                let x = Object.keys(data);
-                console.log(x);
-                for (let i = 0; i < x.length; i++) {
+        $(document).on("click", ".joinEventButton", function (e) {
+            e.preventDefault();
 
-                    if (x[i] == userID) {
-                        a.on("value", function (snapshot) {
-                            // for users that have joined event previously
-                            $(".joinEventButton").text("Unjoin Event");
-                        });
+            let user = firebase.auth().currentUser;
+            let userID = user.uid;
 
-                    } else {
-                        console.log("Setting of user info under event unsuccessful in firebase.")
-                    }
-                }
-            }
-        })
+            let a = firebase.database().ref(`users/${userID}`);
+            let b = firebase.database().ref('events/' + city + '/' + key + '/usersJoined/');
 
-        $.ajax({
-            type: 'GET',
-            url: `https://evolunteer-45c5d.firebaseio.com/events/${city}/${key}/usersJoined.json`,
-            dataType: 'json',
-            success: function (data) {
-                // var x = Object.keys(data);
-                // console.log(x);
-                // var currentUserID = firebase.auth().currentUser.uid;
-                // console.log(x);
-                $(document).on("click", ".joinEventButton", function (e) {
-                    e.preventDefault();
-
-                    let user = firebase.auth().currentUser;
-                    let userID = user.uid;
-                    console.log(user);
-                    console.log(userID);
-
-
-                    let a = firebase.database().ref(`users/${userID}`);
-                    let b = firebase.database().ref('events/' + city + '/' + key + '/usersJoined/');
-                    let x = Object.keys(data);
-                    console.log(x);
-                    for (let i = 0; i < x.length; i++) {
-                        console.log(x[i]);
-                        // debugger
-                        if (x[i] !== userID) {
-                            // console.log(x);
-                            a.on("value", function (snapshot) {
-                                b.child(`${userID}`).set(snapshot.val());
-                                $(".joinEventButton").text("Unjoin Event");
-                            });
-
-                        } else {
-                            // $(".joinEventButton").text("Join Event");
-                        }
-                    }
-                    for (let i = 0; i < x.length; i++) {
-                        $(document).on("click", ".joinEventButton", function () {
-
-                        if (x[i] == userID) {
-                            console.log(x);
-                                // firebase.database().ref('events/' + city + '/' + key + '/usersJoined/' + userID).remove();
-                                $(".joinEventButton").text("Join Event");
-                            }
-
-                        })
-                    };
-
+            if (user) {
+                a.on("value", function (snapshot) {
+                    //sets snapshot of current user info in new node under event
+                    b.child(`${userID}`).set(snapshot.val());
+                    $(".joinEventButton").text("Event Joined");
                 });
-
-
-
-                // for (let i = 0; i < x.length; i++) {
-                //     // when user clicks on join event, button will change 
-                //     let uid = x[i];
-                //     // checks if database has current user key under specific event
-                //     // if event has uid, then joinEventButton becomes event joined
-                //     if (uid === currentUser) {
-                //         $(".joinEventButton").text("Event Joined");
-
-
-                //             // $(document).on("click", ".joinEventButton", function (e) {
-                //             //     e.preventDefault();
-                //             //     $(".joinEventButton").text("Join Event");
-
-                //             //     let userRef = firebase.database().ref('events/' + city + '/' + key + '/usersJoined/' + currentUser);
-                //             //     userRef.remove();
-                //             // })
-                //         }
-                //     } else {
-                //         // On join event button, event writes to database 
-
-                //     }
-                // }
+            } else {
+                console.log("Setting of user info under event unsuccessful.")
             }
-        })
-    });
+        });
+    })
 });
-
+// function to convert hh:mm to hours 
 function toHours(timeStr1) {
     let hr = timeStr1.substr(0, timeStr1.indexOf(":"));
     let min = timeStr1.substr(timeStr1.indexOf(":") + 1, timeStr1.length);
