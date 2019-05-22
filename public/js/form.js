@@ -84,9 +84,6 @@ function saveMessage(eventName, organization, email, address, content, city, dat
 	// });
 }
 
-
-
-
 // Uploading Image to the storage
 let storageRef = firebase.storage().ref();
 var selectedFile = new File([''], "../Images/no-images.png");
@@ -130,4 +127,6 @@ async function handleFileUploadSubmit(eventName, organization, email, address, c
 	// 	return downloadURL;
 
 	// });
+
+
 };
