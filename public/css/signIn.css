@@ -199,7 +199,7 @@ body :-ms-input-placeholder {
 }
 
 /*LOGIN FAILED ANIMATION*/
-#loginButton.invalid {
+.signInPageWrapper form button#loginButton.invalid {
     background-color: red;
     color: white;
     /* also need animation and -moz-animation */
