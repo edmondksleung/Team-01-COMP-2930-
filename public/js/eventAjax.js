@@ -339,7 +339,7 @@ $(document).ready(function () {
                 // adds data from firebase onto event details
                 $(`.eventsBox`).hide();
                 $(`.eventsInfoBox#${key}`).show();
-                $(`.eventsLocationOpaqueCover`).hide(); /*key null*/
+                $(`.eventsLocation`).hide(); /*key null*/
                 $(".locationInfo").text(data.address);
                 $(".organizerInfo").text(data.organization);
                 $(".emailInfo").text(data.email);
