@@ -121,8 +121,7 @@ $(document).ready(function () {
                     $(dateTimeInfoBox).attr("class", "dateTimeInfoBox");
                     $(specialInfoBox).append(dateTimeInfoBox);
 
-                    /* you spelt calendar wrong and wasted 2 hours of my life shane */
-
+                    /* calendar */
                     let calenderPic = document.createElement("img");
                     $(calenderPic).attr("class", "calenderPic");
                     $(calenderPic).attr("src", "./Images/calender.png");
