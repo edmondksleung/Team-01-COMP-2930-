@@ -133,7 +133,7 @@ body :-ms-input-placeholder {
 }
 
 /*LOGIN BUTTON*/
-.signInPageWrapper form button {
+.signInPageWrapper form button#loginButton {
     -webkit-appearance: none;
     -moz-appearance: none;
     outline: 0;
@@ -150,7 +150,7 @@ body :-ms-input-placeholder {
 }
 
 /*LOGIN BUTTON HOVER EFFECT*/
-.signInPageWrapper form button:hover {
+.signInPageWrapper form button#loginButton:hover {
     background-color: rgba(159, 247, 44, 0.918);
     color: white;
 }
@@ -292,10 +292,10 @@ div.cityImage h1:hover {
     position: absolute;
     background-color: #fefefe;
     margin-top: 220px;
-    margin-left: 35%;
+    margin-left: 33%;
     padding: 0;
     border: 1px solid #888;
-    width: 30%;
+    width: 35%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     animation-name: animatetop;
     animation-duration: 0.4s
@@ -364,4 +364,36 @@ canvas {
 /*WIGGLE HOVER ANIMATION*/
 .wiggle {
     animation: none;
+}
+
+@media screen and (max-width: 980px) {
+    /* Modal Content */
+#firebaseui-auth-container {
+    position: absolute;
+    background-color: #fefefe;
+    margin-top: 220px;
+    margin-left: 25%;
+    padding: 0;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+}
+
+@media screen and (max-width: 650px) {
+    /* Modal Content */
+#firebaseui-auth-container {
+    position: absolute;
+    background-color: #fefefe;
+    margin-top: 220px;
+    margin-left: 15%;
+    padding: 0;
+    border: 1px solid #888;
+    width: 70%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
 }
