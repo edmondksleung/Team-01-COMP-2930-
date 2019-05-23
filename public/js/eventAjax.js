@@ -327,6 +327,7 @@ $(document).ready(function () {
             url: `https://evolunteer-45c5d.firebaseio.com/events/${city}/${key}.json`,
             dataType: 'json',
             success: function (data) {
+                console.log(data);
                 let startTime = toHours(data.startTime);
                 let endTime = toHours(data.endTime);
                 let timeCred = new Number(endTime - startTime).toFixed(1);
@@ -340,10 +341,48 @@ $(document).ready(function () {
                 $(".emailInfo").text(data.email);
                 $(".infoDescriptionBox").text(data.content);
                 $(".detailCredits").text(timeCred);
-                // console.log(str);
+
+                // console.log(userID);
+                // console.log(user);
+                // let a = firebase.database().ref(`users/${userID}`);
+                // let b = firebase.database().ref('events/' + city + '/' + key + '/usersJoined/');
+
+                //  if (user) {
+                //     a.on("value", function (snapshot) {
+                //         //sets snapshot of current user info in new node under event
+                //         $(".joinEventButton").text("Event Joined");
+                //     });
+                // } else {
+                //     console.log("Setting of user info under event unsuccessful.")
+                // }
 
             }
         });
+        $.ajax({
+            type: 'GET',
+            url: `https://evolunteer-45c5d.firebaseio.com/events/${city}/${key}/usersJoined.json`,
+            dataType: 'json',
+            success: function (data) {
+                let user = firebase.auth().currentUser;
+                let userID = user.uid;
+
+                let a = firebase.database().ref(`users/${userID}`);
+                let b = firebase.database().ref('events/' + city + '/' + key + '/usersJoined/');
+                let x = Object.keys(data);
+                console.log(x);
+                for (let i = 0; i < x.length; i++) {
+
+                    if (x[i] == userID) {
+                        //sets snapshot of current user info in new node under event
+                        // for users that have joined event previously
+                        $(".joinEventButton").text("Unjoin Event");
+
+                    }
+
+                }
+            }
+        })
+
 
         $(document).on("click", ".joinEventButton", function (e) {
             e.preventDefault();
